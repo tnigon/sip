@@ -7,27 +7,31 @@ The results from this analysis are organized such that the meta results files ha
 
 ## Environment
 ```
-conda create -n msi_sip python=3.7 -y`conda config --env --add channels conda-forge
+conda create -n msi_sip python=3.7 -y
+conda config --env --add channels conda-forge
 conda config --env --set channel_priority strict
 conda install python=3 geopandas -y
 
-`conda install -c conda-forge hs-process`
-`conda install -c conda-forge scikit-learn`
-`conda install -c conda-forge globus-sdk`
-`conda install -c conda-forge tqdm`
-`conda install -c conda-forge boto3`
-`pip install git+git://github.com/tnigon/hs_process.git@2927346f4c513a217ac8ad076e494dd1adbf70e1 --upgrade`
+conda install -c conda-forge hs-process
+conda install -c conda-forge scikit-learn
+conda install -c conda-forge globus-sdk
+conda install -c conda-forge tqdm
+conda install -c conda-forge boto3
+pip install git+git://github.com/tnigon/hs_process.git@2927346f4c513a217ac8ad076e494dd1adbf70e1 --upgrade
 ```
 
 ## Minnesota Supercomputer Institute (MSI)
 [The Minnnesota Supercoputer Institute](https://www.msi.umn.edu/) high performance computing (HPC) and data storage resources were used to complete this project. Without access to resources like this, this project would not be feasible.
 
 ### Run a job on MSI
-- login via PuTTY
-- `ssh mangi`
-- `cd ../public/hs_process`
-- `conda activate msi_sip_37`
-- `qsub <job_file.pbs>`
+Login to MSI via PuTTY
+```
+ssh mangi
+cd ../public/hs_process
+conda activate msi_sip_37
+qsub <job_file.pbs>
+```
+
 More information at [MSI Job Submission and Scheduling (PBS Scripts)](https://www.msi.umn.edu/content/job-submission-and-scheduling-pbs-scripts)
 
 ### MSI notes
@@ -113,17 +117,21 @@ At the highest level, there are two directories:
 
 ## Hyperparameter tuning loop
 Tuning and all subsequent steps are carried out separately for each ground truth measurement (biomass, tissue nitrogen concentration, and nitrogen uptake), as well as each set of available features to be evaluated.
+
 Ground truth measurements:
 - above-ground biomass (kg ha-1)
 - total nitrogen uptake (kg ha-1)
 - tissue nitrogen concenteration (%)
+
 Available features to consider:
 - spectral features only
 - spectral features plus the 10th percentile MCARI2 value
 - spectral derivative features only
+
 Supervised regression models evaluated:
 - Lasso regression
 - Partial least squares regression
+
 Hyperparameter tuning is carried out by splitting the training dataset (60% of samples) using a repeated stratified k-fold cross validation (4 splits and 3 replications). Thus, each tuning fold uses 75% of the training samples, which use 60% of the total samples.
 The results of hyperparameter tuning are saved to the "tuning" folder in the appropriate directory
 
