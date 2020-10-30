@@ -6,10 +6,10 @@ This repository aims to track project scripts, methodology, and data over time b
 The results from this analysis are organized such that the meta results files have "msi_X" in there filename, indicating the MSI run number. For example, msi_1_hs_settings.csv is a table of the image processing settings evaluated in MSI run #1. There is also a folder titled "msi_X_results" (e.g., msi_1_results) that contains a directory for each image processing scenario (e.g., "mis_1_results/msi_1_005" contains the results for MSI run #1, image processing scenario #5).
 
 ## Environment
-`conda create -n msi_sip python=3.7 -y`
-`conda config --env --add channels conda-forge`
-`conda config --env --set channel_priority strict`
-`conda install python=3 geopandas -y`
+```
+conda create -n msi_sip python=3.7 -y`conda config --env --add channels conda-forge
+conda config --env --set channel_priority strict
+conda install python=3 geopandas -y
 
 `conda install -c conda-forge hs-process`
 `conda install -c conda-forge scikit-learn`
@@ -17,6 +17,7 @@ The results from this analysis are organized such that the meta results files ha
 `conda install -c conda-forge tqdm`
 `conda install -c conda-forge boto3`
 `pip install git+git://github.com/tnigon/hs_process.git@2927346f4c513a217ac8ad076e494dd1adbf70e1 --upgrade`
+```
 
 ## Minnesota Supercomputer Institute (MSI)
 [The Minnnesota Supercoputer Institute](https://www.msi.umn.edu/) high performance computing (HPC) and data storage resources were used to complete this project. Without access to resources like this, this project would not be feasible.
