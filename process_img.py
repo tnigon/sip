@@ -12,7 +12,7 @@ import os
 
 # In[Set defaults]
 n_jobs = 4
-msi_test = False
+msi_run_id = None
 idx_min = 0
 idx_max = 1
 
@@ -22,23 +22,22 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
     parser = argparse.ArgumentParser()
     parser.add_argument('-n', '--n_jobs',
                         help='Number of CPU cores to use.')
-    parser.add_argument('-m', '--msi_test',
-                        help='Whether to run on MSI (True) or on local machin (False).')
+    parser.add_argument('-m', '--msi_run_id',
+                        help='The MSI run ID; use 0 to run on local machine.')
     parser.add_argument('-i', '--idx_min',
                         help='Minimum idx to consider in df_grid')
     parser.add_argument('-d', '--idx_max',
                         help='Minimum idx to consider in df_grid')
     args = parser.parse_args()
 
-    if args.msi_test is not None:
-        msi_test = args.msi_test
-    else:
-        msi_test = True
     if args.n_jobs is not None:
         n_jobs = eval(args.n_jobs)
     else:
         n_jobs = 1
-
+    if args.msi_run_id is not None:
+        msi_run_id = eval(args.msi_run_id)
+    else:
+        msi_run_id = 0
     if args.idx_min is not None:
         idx_min = eval(args.idx_min)
     else:
@@ -49,8 +48,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         idx_max = idx_min + 1
 
     # In[Prep I/O]
-    if msi_test is True or msi_test == 'True':
-        msi_run_id = 1
+	if msi_run_id > 0:  # be sure to set keyrings
         dir_base = '/panfs/roc/groups/5/yangc1/public/hs_process'
     else:
         msi_run_id = 0

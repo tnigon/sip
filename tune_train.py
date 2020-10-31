@@ -22,7 +22,7 @@ import globus_sdk
 
 # In[Set defaults]
 n_jobs = 4
-msi_run_id = 0
+msi_run_id = None
 y_label = 'biomass_kgha'
 idx_min = 0
 idx_max = 1

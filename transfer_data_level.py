@@ -12,6 +12,7 @@ import globus_sdk
 CLIENT_ID = ''
 TRANSFER_TOKEN = ''
 TRANSFER_REFRESH_TOKEN = ''
+msi_run_id = None
 idx_grid = None
 level = 'segment'
 
@@ -25,7 +26,8 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
                         help='Transfer access token.')
     parser.add_argument('-r', '--TRANSFER_REFRESH_TOKEN',
                         help='Transfer refresh token.')
-
+    parser.add_argument('-m', '--msi_run_id',
+                        help='The MSI run ID; use 0 to run on local machine.')
     parser.add_argument('-i', '--idx_grid',
                         help='Row index from df_grid to transfer image data for.')
     parser.add_argument('-l', '--level',
@@ -44,7 +46,10 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         TRANSFER_REFRESH_TOKEN = args.TRANSFER_REFRESH_TOKEN
     else:
         TRANSFER_REFRESH_TOKEN = ''
-
+    if args.msi_run_id is not None:
+        msi_run_id = eval(args.msi_run_id)
+    else:
+        msi_run_id = 0
     if args.idx_grid is not None:
         idx_grid = eval(args.idx_grid)
     else:
@@ -53,8 +58,11 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         level = args.level.lower()
 
     # In[Prep I/O]
-    msi_run_id = 1
-    dir_base = '/panfs/roc/groups/5/yangc1/public/hs_process'
+	if msi_run_id > 0:  # be sure to set keyrings
+        dir_base = '/panfs/roc/groups/5/yangc1/public/hs_process'
+    else:
+        msi_run_id = 0
+        dir_base = r'G:\BBE\AGROBOT\Shared Work\hs_process_results'
 
     dir_data = os.path.join(dir_base, 'data')
     dir_results = os.path.join(dir_base, 'results')
