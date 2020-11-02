@@ -48,7 +48,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         idx_max = idx_min + 1
 
     # In[Prep I/O]
-	if msi_run_id > 0:  # be sure to set keyrings
+    if msi_run_id > 0:  # be sure to set keyrings
         dir_base = '/panfs/roc/groups/5/yangc1/public/hs_process'
     else:
         msi_run_id = 0
