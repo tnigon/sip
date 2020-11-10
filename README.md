@@ -17,7 +17,8 @@ conda install -c conda-forge scikit-learn
 conda install -c conda-forge globus-sdk
 conda install -c conda-forge tqdm
 conda install -c conda-forge boto3
-pip install git+git://github.com/tnigon/hs_process.git@2927346f4c513a217ac8ad076e494dd1adbf70e1 --upgrade
+pip install git+https://github.com/maroba/findiff.git
+pip install git+https://github.com/tnigon/hs_process.git@2927346f4c513a217ac8ad076e494dd1adbf70e1 --upgrade
 ```
 
 ## Minnesota Supercomputer Institute (MSI)

@@ -128,24 +128,35 @@ def get_idx_grid(dir_results_msi, msi_run_id, idx_min=0):
 def grid_n_levels(df_grid):
     n_clip = len(df_grid['clip'].unique())
     n_smooth = len(df_grid['smooth'].unique())
+    n_bin = len(df_grid['bin'].unique())
     n_segment = len(df_grid['segment'].unique())
-    return n_clip, n_smooth, n_segment
+    return n_clip, n_smooth, n_bin, n_segment
 
 def clean_df_grid(df_grid):
-    for idx, row_n in df_grid.iterrows():
+    # [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+    # for proc_step,  in ['clip', 'smooth', 'bin', 'segment', 'feature'] and i in range(10):
+    #     print(proc_step, i)
+
+    scenarios = [(idx, row_n, proc_step) for idx, row_n in df_grid.iterrows()
+                 for proc_step in ['clip', 'smooth', 'bin', 'segment']]
+    for idx, row_n, proc_step in scenarios:
         try:
-            df_grid.loc[idx]['clip'] = literal_eval(row_n['clip'])
-        except ValueError:
-            pass
-        try:
-            df_grid.loc[idx]['smooth'] = literal_eval(row_n['smooth'])
-        except ValueError:
-            pass
-        try:
-            df_grid.loc[idx]['segment'] = literal_eval(row_n['segment'])
+            df_grid.loc[idx][proc_step] = literal_eval(row_n[proc_step])
         except ValueError:
             pass
     return df_grid
+        # try:
+        #     df_grid.loc[idx]['smooth'] = literal_eval(row_n['smooth'])
+        # except ValueError:
+        #     pass
+        # try:
+        #     df_grid.loc[idx]['bin'] = literal_eval(row_n['smooth'])
+        # except ValueError:
+        #     pass
+        # try:
+        #     df_grid.loc[idx]['segment'] = literal_eval(row_n['segment'])
+        # except ValueError:
+        #     pass
 
 def recurs_dir(base_dir, search_ext='.bip', level=None):
     '''
@@ -258,11 +269,14 @@ def get_msi_segment_dir(row, level='segment'):
     '''
     panel_type = row['dir_panels']
     crop_type = row['crop']
-    clip_type, wl_bands = get_clip_type(row)
-    smooth_type, window_size, order = get_smooth_type(row)
-    segment_type, method, wl1, wl2, wl3, mask_percentile, mask_side = get_segment_type(row)
+    clip_type, _ = get_clip_type(row)
+    smooth_type, _, _ = get_smooth_type(row)
+    bin_type, _, _, _ = get_bin_type(row)
+    segment_type, _, _, _, _, _, _ = get_segment_type(row)
     if level == 'segment':
-        msi_seg_dir = '/'.join((panel_type, crop_type, clip_type, smooth_type, segment_type))
+        msi_seg_dir = '/'.join((panel_type, crop_type, clip_type, smooth_type, bin_type, segment_type))
+    elif level == 'bin':
+        msi_seg_dir = '/'.join((panel_type, crop_type, clip_type, smooth_type, bin_type))
     elif level == 'smooth':
         msi_seg_dir = '/'.join((panel_type, crop_type, clip_type, smooth_type))
     elif level == 'clip':
@@ -304,7 +318,7 @@ def get_globus_data_dir(dir_base, msi_run_id, row,
 
     Parameters:
         level (``str``): The data directory level to transfer; must
-            be one of ['segment', 'smooth', 'clip', 'crop'].
+            be one of ['segment', 'bin', 'smooth', 'clip', 'crop'].
     '''
     msi_seg_dir = get_msi_segment_dir(row, level=level)
     label_base = 'msi_' + str(msi_run_id) + '_' + str(row.name).zfill(3)
@@ -522,7 +536,9 @@ def proc_files_count(proc_dict, n_jobs, msi_run_id, key, dir_data, row, ext='.sp
     proc_dict['n_jobs'] = [n_jobs]
     proc_dict['msi_run_id'] = [msi_run_id]
     # dir_data has to be explicit if we're going to do this for every single level..
-    n_files_proc = len(recurs_dir(get_spec_data(dir_data, row), search_ext=ext))
+    # n_files_proc = len(recurs_dir(get_spec_data(dir_data, row, feat='reflectance'), search_ext=ext))
+    n_files_proc = len(fnmatch.filter(os.listdir(
+        get_spec_data(dir_data, row, feat='reflectance')), '*' + ext))
     proc_dict[key] = [n_files_proc]
     return proc_dict, n_files_proc
 
@@ -585,6 +601,33 @@ def get_smooth_type(row):
         smooth_type = 'smooth_window_{0}'.format(window_size)
     return smooth_type, window_size, order
 
+def get_bin_type(row):
+    '''
+    Determines the bin type being used in this scenario (and updates
+    accordingly)
+
+    Parameters:
+        row (``pd.Series``):
+    '''
+    if row['bin'] is None:
+        method_bin = None
+    else:
+        method_bin = row['bin']['method']
+    if method_bin == 'spectral_mimic':
+        sensor = row['bin']['sensor']
+        bandwidth = None
+        bin_type = 'bin_mimic_{0}'.format(sensor.replace('-', '_'))
+    elif method_bin == 'spectral_resample':
+        sensor = None
+        bandwidth = row['bin']['bandwidth']
+        bin_type = 'bin_resample_{0}nm'.format(bandwidth)
+    else:
+        sensor = None
+        bandwidth = None
+        bin_type = 'bin_none'
+
+    return bin_type, method_bin, sensor, bandwidth
+
 def get_segment_type(row):
     '''
     Determines the segment type being used in this scenario and returns other relevant
@@ -603,6 +646,18 @@ def get_segment_type(row):
         wl1 = row['segment']['wl1']
         wl2 = row['segment']['wl2']
         wl3 = row['segment']['wl3']
+        mask_percentile = row['segment']['mask_percentile']
+        mask_side = row['segment']['mask_side']
+        if isinstance(mask_percentile, list):
+            mask_pctl_print = '_'.join([str(x) for x in mask_percentile])
+            segment_type = 'seg_{0}_{1}_{2}'.format(method, mask_pctl_print, get_side_inverse(mask_side))
+        else:
+            segment_type = 'seg_{0}_{1}_{2}'.format(method, mask_percentile, get_side_inverse(mask_side))
+    elif row['segment']['method'] == 'ndi':
+        method = row['segment']['method']
+        wl1 = row['segment']['wl1']
+        wl2 = row['segment']['wl2']
+        wl3 = None
         mask_percentile = row['segment']['mask_percentile']
         mask_side = row['segment']['mask_side']
         if isinstance(mask_percentile, list):
@@ -641,17 +696,31 @@ def smooth_get_base_dir(dir_data, panel_type, crop_type, clip_type):
         base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type)
     return base_dir
 
+def bin_get_base_dir(dir_data, panel_type, crop_type, clip_type, smooth_type):
+    '''
+    Gets the base directory for the binned images
+    '''
+    if smooth_type == 'smooth_none' and clip_type == 'clip_none':
+        base_dir = os.path.join(dir_data, panel_type, crop_type)
+    elif smooth_type == 'smooth_none' and clip_type != 'clip_none':
+        base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type)
+    else:  # smooth_type != 'smooth_none'
+        base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type, smooth_type)
+    return base_dir
+
 def seg_get_base_dir(dir_data, panel_type, crop_type, clip_type, smooth_type,
-                     wl_bands=None, window_size=None):
+                     bin_type):
     '''
     Gets the base directory for the segmented images
     '''
-    if wl_bands is None and window_size is None:
+    if bin_type == 'bin_none' and smooth_type == 'smooth_none' and clip_type == 'clip_none':
         base_dir = os.path.join(dir_data, panel_type, crop_type)
-    elif wl_bands is not None and window_size is None:  # wl_bands corresponds to clip_type
+    elif bin_type == 'bin_none' and smooth_type == 'smooth_none' and clip_type != 'clip_none':
         base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type)
-    else:  # basically, if window size is not none, use smooth_type directory
+    elif bin_type == 'bin_none' and smooth_type != 'smooth_none' and clip_type == 'clip_none':
         base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type, smooth_type)
+    else:  # bin_type != 'bin_none'
+        base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type, smooth_type, bin_type)
     return base_dir
 
 def crop(df_crop, panel_type, dir_out_crop, out_force=True, n_files=854,
@@ -694,7 +763,42 @@ def crop(df_crop, panel_type, dir_out_crop, out_force=True, n_files=854,
     hsbatch.spatial_crop(fname_sheet=df_crop_aerf_whole, method='many_gdf',
                          gdf=gdf_aerf, base_dir_out=dir_out_crop,
                          folder_name=folder_name, name_append=name_append)
-    hsbatch = None
+
+def chunk_by_n(array, n):
+    arrays = np.array_split(array, n)
+    list_out = []
+    for l in arrays:
+        list_out.append(l.tolist())
+    return list_out
+
+def check_missed_files(fname_list, base_dir_out, ext_out, f_pp, row, base_dir_f,
+                       out_force, lock):
+    '''
+    Check if any files were not processed that were supposed to be processed.
+
+    Parameters:
+        f_pp (function): The parallel processing function to run to
+            complete the processing of the missing files.
+        **kwargs (dict): keyword arguments to pass to f_pp.
+    '''
+    # Goal: take out filepaths and end text
+    to_process = [os.path.splitext(os.path.basename(i))[0].rsplit('-')[0] for i in fname_list]
+    name_ex, ext = os.path.splitext(fname_list[0])
+    end_str = '-' + '-'.join(name_ex.split('-')[1:]) + ext
+    # Find processed files without filepaths and end text
+    # base_dir_spec = os.path.join(dir_out_mask, 'reflectance')
+    fname_list_complete = fnmatch.filter(os.listdir(base_dir_out), '*' + ext_out)  # no filepath
+    processed = [os.path.splitext(i)[0].rsplit('-')[0] for i in fname_list_complete]
+
+    missed = [f for f in to_process if f not in processed]
+    base_dir = os.path.dirname(fname_list[0])
+    fname_list_missed = [os.path.join(base_dir, f + end_str) for f in missed]
+    if len(missed) > 0:
+        print('There were {0} images that slipped through the cracks. '
+              'Processing them manually now...\n'.format(len(missed)))
+        print('Directory: {0}'.format(base_dir))
+        print('Here are the missed images:\n{0}\n'.format(missed))
+        f_pp(fname_list_missed, row, base_dir_f, out_force, lock)
 
 def clip(dir_data, row, out_force=True, n_files=854):
     '''
@@ -719,30 +823,6 @@ def clip(dir_data, row, out_force=True, n_files=854):
                               wl_bands=wl_bands)
     else:
         print('Clip: ``clip_type`` is None, so there is nothing to process.')
-
-# def clip_init(dir_data, row, n_files=854):
-#     '''
-#     Determines the image files that should be clipped
-#     '''
-#     panel_type = row['dir_panels']
-#     crop_type = row['crop']
-#     clip_type, wl_bands = get_clip_type(row)
-#     base_dir = os.path.join(dir_data, panel_type, crop_type)
-#     dir_out_clip = os.path.join(dir_data, panel_type, crop_type, clip_type)
-#     if check_processing(dir_out_clip, ext='.bip', n_files=n_files):
-#         fname_list = []
-#     elif wl_bands is None:
-#         fname_list = []
-#     else:
-#         fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
-#     return fname_list, wl_bands, dir_out_clip
-
-def chunk_by_n(array, n):
-    arrays = np.array_split(array, n)
-    list_out = []
-    for l in arrays:
-        list_out.append(l.tolist())
-    return list_out
 
 def clip_f_pp(fname_list_clip, wl_bands, dir_out_clip, out_force, lock):
     '''
@@ -771,7 +851,6 @@ def clip_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
     m = Manager()
     lock = m.Lock()
 
-    # fname_list_clip, wl_bands, dir_out_clip = clip_init(dir_data, row, n_files=n_files)
     panel_type = row['dir_panels']
     crop_type = row['crop']
     clip_type, wl_bands = get_clip_type(row)
@@ -780,13 +859,15 @@ def clip_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
     already_processed = check_processing(dir_out_clip, ext='.bip', n_files=n_files)
     if out_force is False and already_processed is True:
         fname_list = []
-    elif wl_bands is None:
+    elif clip_type == 'clip_none':
         fname_list = []
     else:
-        fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
+        fname_list = fnmatch.filter(os.listdir(base_dir), '*.bip')  # no filepath
+        fname_list = [os.path.join(base_dir, f) for f in fname_list]
+        # fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
 
     chunk_size = int(len(fname_list) / (n_jobs*2))
-    if wl_bands is None or len(fname_list) == 0:
+    if len(fname_list) == 0:
         print('Clip: ``clip_type`` is either None and there is nothing to '
               'process, or all the images are already processed.')
     else:
@@ -797,13 +878,10 @@ def clip_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
                 clip_f_pp, chunks, it.repeat(wl_bands),
                 it.repeat(dir_out_clip), it.repeat(out_force), it.repeat(lock))
 
-        # np.random.shuffle(fname_list)  # studies have different size images, so shuffling makes each chunk more similar
-        # if chunk_size == 0:
-        #     chunk_size = 1
-        # chunks = [fname_list[x:x+chunk_size] for x in range(0, len(fname_list), chunk_size)]
-        # with ProcessPoolExecutor() as executor:
-        #     array = [(fname_chunk, wl_bands, dir_out_clip, out_force) for fname_chunk in chunks]
-        #     executor.map(clip_f_pp, *zip(*array))
+        ext = '.bip'
+        print(5)
+        check_missed_files(fname_list, dir_out_clip, ext, clip_f_pp, row,
+                           dir_out_clip, out_force, lock)
 
 def smooth(dir_data, row, out_force=True, n_files=854):
     '''
@@ -866,12 +944,14 @@ def smooth_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
     already_processed = check_processing(dir_out_smooth, ext='.bip', n_files=n_files)
     if out_force is False and already_processed is True:
         fname_list = []
-    elif window_size is None:
+    elif smooth_type == 'smooth_none':
         fname_list = []
     else:
-        fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
+        fname_list = fnmatch.filter(os.listdir(base_dir), '*.bip')  # no filepath
+        fname_list = [os.path.join(base_dir, f) for f in fname_list]
+        # fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
 
-    if window_size is None or len(fname_list) == 0:
+    if len(fname_list) == 0:
         print('Smooth: ``smooth_type`` is either None and there is nothing to '
               'process, or all the images are already processed.')
     else:
@@ -883,13 +963,95 @@ def smooth_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
                 it.repeat(order), it.repeat(dir_out_smooth),
                 it.repeat(out_force), it.repeat(lock))
 
-        # chunk_size = int(len(fname_list) / (os.cpu_count()*2))
-        # if chunk_size == 0:
-        #     chunk_size = 1
-        # chunks = [fname_list[x:x+chunk_size] for x in range(0, len(fname_list), chunk_size)]
-        # with ProcessPoolExecutor() as executor:
-        #     array = [(fname_chunk, window_size, order, dir_out_smooth, out_force) for fname_chunk in chunks]
-        #     executor.map(smooth_f_pp, *zip(*array))
+        ext = '.bip'
+        check_missed_files(fname_list, dir_out_smooth, ext, smooth_f_pp, row,
+                           dir_out_smooth, out_force, lock)
+
+def bin_f_pp(fname_list_bin, row, dir_out_bin, out_force, lock):
+    '''
+    Parallel processing: spectral mimic/resampling for each of the datacubes
+    according to instructions in df_grid organized for multi-core processing.
+    '''
+    print(row)
+    bin_type, method_bin, sensor, wavelength = get_bin_type(row)
+    msg = ('``bin_type`` must not be ``None``')
+    assert bin_type is not None, msg
+
+    hsbatch = batch(lock=lock)
+    hsbatch.io.set_io_defaults(force=out_force)
+    folder_name = None
+    name_append = os.path.split(dir_out_bin)[-1].replace('_', '-')
+    if method_bin == 'spectral_resample':
+        hsbatch.spectral_resample(
+            fname_list=fname_list_bin, folder_name=folder_name,
+            name_append=name_append, base_dir_out=dir_out_bin,
+            wavelength=wavelength)
+    elif method_bin == 'spectral_mimic':
+        hsbatch.spectral_mimic(
+            fname_list=fname_list_bin, folder_name=folder_name,
+            name_append=name_append, base_dir_out=dir_out_bin,
+            sensor=sensor)
+    else:
+        print('Bin: method "{0}" is not supported.'.format(method_bin))
+
+def bin_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
+    '''
+    Actual execution of spectral resampling/mimicking via multi-core processing
+    '''
+    m = Manager()
+    lock = m.Lock()
+    panel_type = row['dir_panels']
+    crop_type = row['crop']
+    clip_type, wl_bands = get_clip_type(row)
+    smooth_type, window_size, order = get_smooth_type(row)
+    bin_type, method_bin, sensor, wavelength = get_bin_type(row)
+
+    base_dir = bin_get_base_dir(dir_data, panel_type, crop_type, clip_type,
+                                smooth_type)
+    dir_out_bin = os.path.join(dir_data, panel_type, crop_type, clip_type,
+                               smooth_type, bin_type)
+    already_processed = check_processing(dir_out_bin, ext='.bip', n_files=n_files)
+    if out_force is False and already_processed is True:
+        fname_list = []
+    elif bin_type == 'bin_none':
+        fname_list = []
+    else:
+        fname_list = fnmatch.filter(os.listdir(base_dir), '*.bip')  # no filepath
+        fname_list = [os.path.join(base_dir, f) for f in fname_list]
+        # fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
+
+    if len(fname_list) == 0:
+        print('Bin: ``bin_type`` is either None and there is nothing to '
+              'process, or all the images are already processed.')
+    else:
+        chunks = chunk_by_n(fname_list, n_jobs*2)
+        chunk_avg = sum([len(i) for i in chunks]) / len(chunks)
+        with ProcessPoolExecutor(max_workers=n_jobs) as executor:
+            executor.map(
+                bin_f_pp, chunks, it.repeat(row),
+                it.repeat(dir_out_bin), it.repeat(out_force), it.repeat(lock))
+
+        ext = '.bip'
+        check_missed_files(fname_list, dir_out_bin, ext, bin_f_pp, row,
+                           dir_out_bin, out_force, lock)
+
+        # # Goal: take out filepaths and end text
+        # to_process = [os.path.splitext(os.path.basename(i))[0].rsplit('-')[0] for i in fname_list]
+        # name_ex, ext = os.path.splitext(fname_list[0])
+        # end_str = '-' + '-'.join(name_ex.split('-')[1:]) + ext
+        # # Find processed files without filepaths and end text
+        # base_dir_seg = os.path.join(base_dir_bm, segment_type)
+        # fname_list_complete = fnmatch.filter(os.listdir(base_dir_seg), '*' + '.spec')  # no filepath
+        # processed = [os.path.splitext(i)[0].rsplit('-')[0] for i in fname_list_complete]
+
+        # missed = [f for f in to_process if f not in processed]
+        # # base_dir = os.path.dirname(fname_list[0])
+        # fname_list_missed = [os.path.join(base_dir, f + end_str) for f in missed]
+        # if len(missed) > 0:
+        #     print('There were {0} images that slipped through the cracks. '
+        #           'Processing them manually now...\n'.format(len(missed)))
+        #     print('Here are the missed images:\n{0}\n'.format(missed))
+        #     bin_f_pp(fname_list_missed, row, dir_out_bin, out_force, lock)
 
 def parse_wls(wl, idx=0):
     '''
@@ -943,20 +1105,53 @@ def seg_zero_step(fname_list_seg, base_dir_bm, hsbatch, row):
     base_dir can also be a list of filenames (implemented for multi-core
     processing)
     '''
-    segment_type, method, wl1, wl2, wl3, mask_percentile, mask_side = get_segment_type(row)
+    segment_type, _, _, _, _, _, _ = get_segment_type(row)
 
     name_append_spec = segment_type.replace('_', '-')
     hsbatch.cube_to_spectra(
-        fname_list=fname_list_seg, folder_name=segment_type,
-        name_append=name_append_spec, base_dir_out=base_dir_bm, geotiff=False)
+        fname_list=fname_list_seg, folder_name='reflectance',
+        name_append=name_append_spec,
+        base_dir_out=os.path.join(base_dir_bm, segment_type),
+        write_geotiff=False)
+
+    fname_list_derivative = fnmatch.filter(os.listdir(os.path.join(
+        base_dir_bm, segment_type, 'reflectance')), '*.spec')  # no filepath
+    fname_list_derivative = [os.path.join(
+        base_dir_bm, segment_type, 'reflectance', f)
+        for f in fname_list_derivative]
+    # fname_list_derivative = recurs_dir(
+    #     os.path.join(base_dir_bm, segment_type, 'reflectance'),
+    #     search_ext='.spec', level=0)
+    name_append_der = name_append_spec + '-derivative'
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_derivative, folder_name='derivative_1',
+        name_append=name_append_der, order=1,
+        base_dir_out=os.path.join(base_dir_bm, segment_type),
+        out_force=True)  # out_force because only checking for reflectance
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_derivative, folder_name='derivative_2',
+        name_append=name_append_der, order=2,
+        base_dir_out=os.path.join(base_dir_bm, segment_type),
+        out_force=True)  # out_force because only checking for reflectance
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_derivative, folder_name='derivative_3',
+        name_append=name_append_der, order=3,
+        base_dir_out=os.path.join(base_dir_bm, segment_type),
+        out_force=True)  # out_force because only checking for reflectance
 
     folder_name = 'bm_mcari2'
     name_append = folder_name.replace('_', '-')
-    # base_dir_bm = os.path.join(base_dir_bm, folder_name)
     hsbatch.segment_band_math(
         fname_list=fname_list_seg, folder_name=folder_name,
-        name_append=name_append, base_dir_out=base_dir_bm, geotiff=False,
+        name_append=name_append, base_dir_out=base_dir_bm, write_geotiff=False,
         method='mcari2', wl1=[800], wl2=[670], wl3=[550], plot_out=False,
+        out_force=False)
+    folder_name = 'bm_ndi'
+    name_append = folder_name.replace('_', '-')
+    hsbatch.segment_band_math(
+        fname_list=fname_list_seg, folder_name=folder_name,
+        name_append=name_append, base_dir_out=base_dir_bm, write_geotiff=False,
+        method='ndi', wl1=[770, 800], wl2=[650, 680], plot_out=False,
         out_force=False)
 
 def seg_one_step(base_dir, base_dir_bm, hsbatch, row):
@@ -973,14 +1168,14 @@ def seg_one_step(base_dir, base_dir_bm, hsbatch, row):
     else:
         fname_list_seg = None
     segment_type, method, wl1, wl2, wl3, mask_percentile, mask_side = get_segment_type(row)
-    # hsbatch = batch()
-    if method == 'mcari2':
-        folder_name = 'bm_mcari2'
+
+    if isinstance(method, str):
+        folder_name = 'bm_{0}'.format(method)
         name_append = folder_name.replace('_', '-')
         base_dir_bm = os.path.join(base_dir_bm, folder_name)
         hsbatch.segment_band_math(
             fname_list=fname_list_seg, base_dir=base_dir, folder_name=None,
-            name_append=name_append, base_dir_out=base_dir_bm, geotiff=False,
+            name_append=name_append, base_dir_out=base_dir_bm, write_geotiff=False,
             method=method, wl1=wl1, wl2=wl2, wl3=wl3, plot_out=False,
             out_force=False)
     elif method == [545, 565]:
@@ -989,7 +1184,7 @@ def seg_one_step(base_dir, base_dir_bm, hsbatch, row):
         base_dir_bm = os.path.join(base_dir_bm, folder_name)
         hsbatch.segment_composite_band(
             fname_list=fname_list_seg, base_dir=base_dir, folder_name=None,
-            name_append=name_append, base_dir_out=base_dir_bm, geotiff=False,
+            name_append=name_append, base_dir_out=base_dir_bm, write_geotiff=False,
             wl1=method, list_range=True, plot_out=False, out_force=False)
     elif method == [800, 820]:
         folder_name = 'bm_nir'
@@ -997,17 +1192,34 @@ def seg_one_step(base_dir, base_dir_bm, hsbatch, row):
         base_dir_bm = os.path.join(base_dir_bm, folder_name)
         hsbatch.segment_composite_band(
             fname_list=fname_list_seg, base_dir=base_dir, folder_name=None,
-            name_append=name_append, base_dir_out=base_dir_bm, geotiff=False,
+            name_append=name_append, base_dir_out=base_dir_bm, write_geotiff=False,
             wl1=method, list_range=True, plot_out=False, out_force=False)
 
     base_dir_out = os.path.split(base_dir_bm)[0]
     name_append = segment_type.replace('_', '-')
     hsbatch.segment_create_mask(
         fname_list=fname_list_seg,
-        base_dir=base_dir, mask_dir=base_dir_bm, folder_name=segment_type,
-        name_append=name_append, base_dir_out=base_dir_out,
+        base_dir=base_dir, mask_dir=base_dir_bm, folder_name='reflectance',
+        name_append=name_append, base_dir_out=os.path.join(base_dir_out, segment_type),
         write_datacube=True, write_spec=True, write_geotiff=False,
         mask_percentile=mask_percentile, mask_side=mask_side, out_force=True)
+
+    fname_list_derivative = recurs_dir(
+        os.path.join(base_dir_out, segment_type, 'reflectance'),
+        search_ext='.spec', level=0)
+    name_append_der = name_append + '-derivative'
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_derivative, folder_name='derivative_1',
+        name_append=name_append_der, order=1,
+        base_dir_out=os.path.join(base_dir_out, segment_type))
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_derivative, folder_name='derivative_2',
+        name_append=name_append_der, order=2,
+        base_dir_out=os.path.join(base_dir_out, segment_type))
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_derivative, folder_name='derivative_3',
+        name_append=name_append_der, order=3,
+        base_dir_out=os.path.join(base_dir_out, segment_type))
 
 def seg_two_step(base_dir, base_dir_bm, hsbatch, row):
     '''
@@ -1026,13 +1238,14 @@ def seg_two_step(base_dir, base_dir_bm, hsbatch, row):
     segment_type, methods, wl1, wl2, wl3, mask_percentiles, mask_sides = get_segment_type(row)
     mask_dirs = []
     for i, method in enumerate(methods):
-        if method == 'mcari2':
-            folder_name = 'bm_mcari2'
+        if isinstance(method, str):
+        # if method == 'mcari2':
+            folder_name = 'bm_{0}'.format(method)
             name_append = folder_name.replace('_', '-')
             mask_dirs.append(os.path.join(base_dir_bm, folder_name))
             hsbatch.segment_band_math(
                 fname_list=fname_list_seg, base_dir=base_dir, folder_name=None,  name_append=name_append,
-                base_dir_out=mask_dirs[i], geotiff=False, method=method,
+                base_dir_out=mask_dirs[i], write_geotiff=False, method=method,
                 wl1=wl1[i], wl2=wl2[i], wl3=wl3[i], plot_out=False, out_force=False)
         elif method == [545, 565]:
             folder_name = 'bm_green'
@@ -1040,7 +1253,7 @@ def seg_two_step(base_dir, base_dir_bm, hsbatch, row):
             mask_dirs.append(os.path.join(base_dir_bm, folder_name))
             hsbatch.segment_composite_band(
                 fname_list=fname_list_seg, base_dir=base_dir, folder_name=None, name_append=name_append,
-                base_dir_out=mask_dirs[i], geotiff=False, wl1=method,
+                base_dir_out=mask_dirs[i], write_geotiff=False, wl1=method,
                 list_range=True, plot_out=False, out_force=False)
         elif method == [800, 820]:
             folder_name = 'bm_nir'
@@ -1048,16 +1261,38 @@ def seg_two_step(base_dir, base_dir_bm, hsbatch, row):
             mask_dirs.append(os.path.join(base_dir_bm, folder_name))
             hsbatch.segment_composite_band(
                 fname_list=fname_list_seg, base_dir=base_dir, folder_name=None, name_append=name_append,
-                base_dir_out=mask_dirs[i], geotiff=False, wl1=method,
+                base_dir_out=mask_dirs[i], write_geotiff=False, wl1=method,
                 list_range=True, plot_out=False, out_force=False)
 
     base_dir_out = os.path.split(mask_dirs[0])[0]
     name_append = segment_type.replace('_', '-')
+    # hsbatch.segment_create_mask(
+    #     fname_list=fname_list_seg, base_dir=base_dir, mask_dir=mask_dirs, folder_name=segment_type,
+    #     name_append=name_append, base_dir_out=base_dir_out,
+    #     write_datacube=True, write_spec=True, write_geotiff=False,
+    #     mask_percentile=mask_percentiles, mask_side=mask_sides, out_force=True)
     hsbatch.segment_create_mask(
-        fname_list=fname_list_seg, base_dir=base_dir, mask_dir=mask_dirs, folder_name=segment_type,
-        name_append=name_append, base_dir_out=base_dir_out,
+        fname_list=fname_list_seg, base_dir=base_dir, mask_dir=mask_dirs, folder_name='reflectance',
+        name_append=name_append, base_dir_out=os.path.join(base_dir_out, segment_type),
         write_datacube=True, write_spec=True, write_geotiff=False,
         mask_percentile=mask_percentiles, mask_side=mask_sides, out_force=True)
+
+    fname_list_derivative = recurs_dir(
+        os.path.join(base_dir_out, segment_type, 'reflectance'),
+        search_ext='.spec', level=0)
+    name_append_der = name_append + '-derivative'
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_derivative, folder_name='derivative_1',
+        name_append=name_append_der, order=1,
+        base_dir_out=os.path.join(base_dir_out, segment_type))
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_derivative, folder_name='derivative_2',
+        name_append=name_append_der, order=2,
+        base_dir_out=os.path.join(base_dir_out, segment_type))
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_derivative, folder_name='derivative_3',
+        name_append=name_append_der, order=3,
+        base_dir_out=os.path.join(base_dir_out, segment_type))
 
     # base_dir_mask = os.path.join(base_dir_bm, segment_type)
     # fname_list_complete = fnmatch.filter(os.listdir(base_dir_out), '*' + '.spec')
@@ -1080,7 +1315,7 @@ def seg(dir_data, row, out_force=True, n_files=854):
     smooth_type, window_size, order = get_smooth_type(row)
     segment_type, method, _, _, _, _, _ = get_segment_type(row)
 
-    base_dir = seg_get_base_dir(dir_data, panel_type, crop_type, clip_type, smooth_type, wl_bands, window_size)
+    base_dir = seg_get_base_dir(dir_data, panel_type, crop_type, clip_type, smooth_type, bin_type)
     base_dir_bm = os.path.join(dir_data, panel_type, crop_type, clip_type,
                                smooth_type)
     dir_out_mask = os.path.join(dir_data, panel_type, crop_type, clip_type,
@@ -1103,22 +1338,20 @@ def seg(dir_data, row, out_force=True, n_files=854):
         name_append = segment_type.replace('_', '-')
         hsbatch.cube_to_spectra(base_dir=base_dir, folder_name=segment_type,
                                 name_append=name_append,
-                                base_dir_out=base_dir_bm, geotiff=False)
+                                base_dir_out=base_dir_bm, write_geotiff=False)
 
 def seg_f_pp(fname_list_seg, row, base_dir_bm, out_force, lock):
     '''
     Parallel processing: segments each of the datacubes according to
     instructions in df_grid organized for multi-core processing.
     '''
-    segment_type, method, _, _, _, _, _ = get_segment_type(row)
-    msg = ('``segment_type`` must not be ``None``')
-    assert segment_type is not None, msg
+    _, method_seg, _, _, _, _, _ = get_segment_type(row)
 
     hsbatch = batch(lock=lock)
     hsbatch.io.set_io_defaults(force=out_force)
-    if isinstance(method, list) and len(method) == 2: # two step
+    if isinstance(method_seg, list) and len(method_seg) == 2: # two step
         seg_two_step(fname_list_seg, base_dir_bm, hsbatch, row)
-    elif method is not None:  # one step
+    elif method_seg is not None:  # one step
         seg_one_step(fname_list_seg, base_dir_bm, hsbatch, row)
     else:
         seg_zero_step(fname_list_seg, base_dir_bm, hsbatch, row)
@@ -1133,64 +1366,106 @@ def seg_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
 
     panel_type = row['dir_panels']
     crop_type = row['crop']
-    clip_type, wl_bands = get_clip_type(row)
-    smooth_type, window_size, order = get_smooth_type(row)
-    segment_type, method, _, _, _, _, _ = get_segment_type(row)
+    clip_type, _ = get_clip_type(row)
+    smooth_type, _, _ = get_smooth_type(row)
+    bin_type, _, _, _ = get_bin_type(row)
+    segment_type, method_seg, _, _, _, _, _ = get_segment_type(row)
 
     base_dir = seg_get_base_dir(dir_data, panel_type, crop_type, clip_type,
-                                smooth_type, wl_bands, window_size)
+                                smooth_type, bin_type)
     base_dir_bm = os.path.join(dir_data, panel_type, crop_type, clip_type,
-                               smooth_type)
+                               smooth_type, bin_type)
     dir_out_mask = os.path.join(dir_data, panel_type, crop_type, clip_type,
-                                smooth_type, segment_type)
+                                smooth_type, bin_type, segment_type)
     already_processed = check_processing(dir_out_mask, ext='.bip', n_files=n_files)
     if out_force is False and already_processed is True:
         fname_list = []
-    # elif window_size is None:
+    # elif segment_type == 'seg_none':  # can't do this because we still have to run seg_zero_step
     #     fname_list = []
     else:
-        fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
+        fname_list = fnmatch.filter(os.listdir(base_dir), '*.bip')  # no filepath
+        fname_list = [os.path.join(base_dir, f) for f in fname_list]
+        # fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
 
     if len(fname_list) == 0:
-        print('Segment: There are no images in ``fname_list`` to process.\n')
+        print('Segment: all images are already processed.\n')
     else:
-        if method is None:
+        if method_seg is None:
             print('Segment: ``segment_type`` is None, so there will not be any '
-                  'segmentation/masking performed.')
+                  'segmentation/masking performed. Mean spectra and derivative '
+                  'spectra are being extracted...')
         chunks = chunk_by_n(fname_list, n_jobs*2)
-        print('Length of fname_list: {0}'.format(len(fname_list)))
-        print('Number of chunks: {0}'.format(len(chunks)))
+        # print('Length of fname_list: {0}'.format(len(fname_list)))
+        # print('Number of chunks: {0}'.format(len(chunks)))
         chunk_avg = sum([len(i) for i in chunks]) / len(chunks)
-        print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
-        print('Number of cores: {0}\n'.format(n_jobs))
+        # print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
+        # print('Number of cores: {0}\n'.format(n_jobs))
         with ProcessPoolExecutor(max_workers=n_jobs) as executor:
             executor.map(
                 seg_f_pp, chunks, it.repeat(row),
                 it.repeat(base_dir_bm), it.repeat(out_force), it.repeat(lock))
 
-        # Goal: take out filepaths and end text
-        to_process = [os.path.splitext(os.path.basename(i))[0].rsplit('-')[0] for i in fname_list]
-        name_ex, ext = os.path.splitext(fname_list[0])
-        end_str = '-' + '-'.join(name_ex.split('-')[1:]) + ext
-        # Find processed files without filepaths and end text
-        base_dir_seg = os.path.join(base_dir_bm, segment_type)
-        fname_list_complete = fnmatch.filter(os.listdir(base_dir_seg), '*' + '.spec')  # no filepath
-        processed = [os.path.splitext(i)[0].rsplit('-')[0] for i in fname_list_complete]
+        base_dir_out = os.path.join(dir_out_mask, 'reflectance')
+        ext = '.spec'
+        # ext = '.bip'
+        # print(base_dir_out)
+        check_missed_files(fname_list, base_dir_out, ext, seg_f_pp, row,
+                           base_dir_bm, out_force, lock)
 
-        missed = [f for f in to_process if f not in processed]
-        # base_dir = os.path.dirname(fname_list[0])
-        fname_list_missed = [os.path.join(base_dir, f + end_str) for f in missed]
-        if len(missed) > 0:
-            print('There were {0} images that slipped through the cracks. '
-                  'Processing them manually now...\n'.format(len(missed)))
-            print('Here are the missed images:\n{0}\n'.format(missed))
-            seg_f_pp(fname_list_missed, row, base_dir_bm, out_force, lock)
-            # print('Here are the filenames that are being passed to '
-            #       '"seg_f_pp": {0}\n'.format(fname_list_missed))
-            # print('Here is the full fname_list: {0}\n'.format(fname_list))
-            # print('Here is the full fname_list_complete: {0}\n'.format(fname_list_complete))
-            # print('Here is the full processed: {0}\n'.format(processed))
-            # print('Here is base_dir_seg: {0}\n'.format(base_dir_seg))
+def feats_f_pp(fname_list_derivative, dir_out_derivative, name_append,
+               out_force, lock):
+    '''
+    Parallel processing: calculates the derivative spectra for each of the
+    datacubes according to instructions in df_grid organized for multi-core
+    processing.
+    '''
+    hsbatch = batch(lock=lock)
+    hsbatch.io.set_io_defaults(force=out_force)
+    folder_name = None
+    # name_append = os.path.split(dir_out_derivative)[-1].replace('_', '-')
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_derivative, folder_name=None,
+        name_append=name_append, base_dir_out=dir_out_derivative)
+
+def feats_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
+    '''
+    Actual execution of spectral derivative calculation via multi-core processing
+    '''
+    m = Manager()
+    lock = m.Lock()
+
+    panel_type = row['dir_panels']
+    crop_type = row['crop']
+    clip_type, wl_bands = get_clip_type(row)
+    smooth_type, window_size, order = get_smooth_type(row)
+    bin_type, _, _, _ = get_bin_type(row)
+    segment_type, method_seg, _, _, _, _, _ = get_segment_type(row)
+    feature_type = row['features']
+
+    if feature_type == 'reflectance' or feature_type is None:  # we don't have to do anything since this was already done in segmentatino step
+        print('Features: ``feature_type`` is either None or "reflectance" and '
+              'there is nothing to process.')
+        return
+
+    # base_dir_feat = seg_get_base_dir(dir_data, panel_type, crop_type,
+    #                                  clip_type, smooth_type, bin_type)
+    base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type,
+                            smooth_type, bin_type, segment_type)
+    dir_out_derivative = os.path.join(base_dir, feature_type)
+    name_append = segment_type.replace('_', '-')  #  want to keep this to keep file names unique
+    already_processed = check_processing(dir_out_derivative, ext='.spec', n_files=n_files)
+    if out_force is False and already_processed is True:
+        fname_list = []
+    else:
+        fname_list = recurs_dir(os.path.join(base_dir, 'reflectance'), search_ext='.spec', level=0)
+
+    chunk_size = int(len(fname_list) / (n_jobs*2))
+    np.random.shuffle(fname_list)  # studies have different size images, so shuffling makes each chunk more similar
+    chunks = chunk_by_n(fname_list, n_jobs*2)
+    with ProcessPoolExecutor(max_workers=n_jobs) as executor:
+        executor.map(
+            feats_f_pp, chunks, it.repeat(dir_out_derivative),
+            it.repeat(name_append), it.repeat(out_force), it.repeat(lock))
 
 # In[Training initialization functions]
 def load_ground_data(data_dir):
@@ -1217,28 +1492,35 @@ def load_ground_data(data_dir):
     del df_ground['date_image']
     return df_ground
 
-def get_spec_data(dir_data, row):
+def get_spec_data(dir_data, row, feat='reflectance'):
     '''
     Searches for hyperspectral .spec files; from here, can be loaed in for
     supervised regression or simply counted to be sure all expected files were
     processed
+
+    Parameters:
+        feat (``str``): must be either "reflectance" or "derivative",
+        indicating which directory path to return.
     '''
     panel_type = row['dir_panels']
     crop_type = row['crop']
     clip_type, _ = get_clip_type(row)
     smooth_type, _, _ = get_smooth_type(row)
+    bin_type, _, _, _ = get_bin_type(row)
     segment_type, _, _, _, _, _, _ = get_segment_type(row)
-    base_dir_spec = os.path.join(dir_data, panel_type, crop_type,
-                                 clip_type, smooth_type, segment_type)
+    base_dir_spec = os.path.join(dir_data, panel_type, crop_type, clip_type,
+                                 smooth_type, bin_type, segment_type, feat)
     return base_dir_spec
 
-def load_spec_data(dir_data, row):
+def load_spec_data(dir_data, row, feat='reflectance'):
     '''
     Loads the hyperspectral image data for supervised regression
 
     Must have the following meta columns: study, date, plot_id
+
+    feat must be one of "reflectance" or "derivative".
     '''
-    base_dir_spec = get_spec_data(dir_data, row)
+    base_dir_spec = get_spec_data(dir_data, row, feat)
     hsbatch = batch()
     df_spec = hsbatch.spectra_to_df(
         base_dir=base_dir_spec, search_ext='spec', dir_level=0)

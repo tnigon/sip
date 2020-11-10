@@ -127,7 +127,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
     dir_results_msi = os.path.join(dir_results, 'msi_' + str(msi_run_id) + '_results')
 
     df_grid = pd.read_csv(os.path.join(dir_results, 'msi_' + str(msi_run_id) + '_hs_settings.csv'), index_col=0)
-    n_clip, n_smooth, n_segment = grid_n_levels(df_grid)
+    n_clip, n_smooth, n_bin, n_segment = grid_n_levels(df_grid)
     df_grid = clean_df_grid(df_grid)
 
 
