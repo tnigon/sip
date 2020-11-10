@@ -50,6 +50,9 @@ units_list = ['kg ha$^{-1}$', '%', 'kg ha$^{-1}$']
 legend_cols_list = [6, 6, 6]
 start_alpha_list = [1e-4, 1e-4, 1e-4]
 start_step_pct_list = [0.05, 0.05, 0.05]
+
+features = ['reflectance', 'derivative_1', 'derivative_2']
+
 extra_feats_list = [None, ['pctl_10th']]  # this can be looked at as a "features" list - in the simple case, I am using only spectral, or spectral + auxiliary features
 extra_feats_names = ['spectral', 'aux_mcari2_pctl_10th']
 
@@ -196,7 +199,8 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         cv_rep_strat = get_repeated_stratified_kfold(
             df_train, n_splits=n_splits, n_repeats=n_repeats, random_state=random_seed)
         # check_stratified_proportions(df_train, cv_rep_strat)
-        for extra_feats, extra_name in zip(extra_feats_list, extra_feats_names):
+        for feat in features:
+        # for extra_feats, extra_name in zip(extra_feats_list, extra_feats_names):
             if time_dict['time_start'] == [None]:
                 time_dict, time_last = time_loop_init(time_dict, msi_run_id, row.name, n_jobs)
                 time_dict, time_last = time_step(time_dict, 'init1', time_last)
@@ -206,7 +210,8 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
             print('Feature set: {0}\n'.format(extra_name))
             time_dict['y_label'] = y_label
             time_dict['feats'] = extra_name
-            X1, y1 = get_X_and_y(df_train, meta_bands, y_label, random_seed, extra=extra_feats)
+            X1, y1 = get_X_and_y(df_train, meta_bands, y_label, random_seed, extra=None)
+            # X1, y1 = get_X_and_y(df_train, meta_bands, y_label, random_seed, extra=extra_feats)
             df_tune_all_list = (None,) * len(model_list)
 
             logspace_list_full, start_alpha, start_step_pct = build_feat_selection_df(
