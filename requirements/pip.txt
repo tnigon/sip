@@ -1,0 +1,2 @@
+pip install git+git://github.com/maroba/findiff.git@master
+pip install git+git://github.com/tnigon/hs_process.git@dev

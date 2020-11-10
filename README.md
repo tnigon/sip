@@ -5,7 +5,17 @@ This repository aims to track project scripts, methodology, and data over time b
 
 The results from this analysis are organized such that the meta results files have "msi_X" in there filename, indicating the MSI run number. For example, msi_1_hs_settings.csv is a table of the image processing settings evaluated in MSI run #1. There is also a folder titled "msi_X_results" (e.g., msi_1_results) that contains a directory for each image processing scenario (e.g., "mis_1_results/msi_1_005" contains the results for MSI run #1, image processing scenario #5).
 
-## Environment
+
+## Setup and Installation
+There is an *environment.yml* file that can be used to create the environment and install the dependencies. After cloning from Github, create the environment:
+Pip dependencies should be installed separately.
+```
+conda env create -n sip_run_2 -f sip/environment.yml
+pip install git+git://github.com/maroba/findiff.git@master
+pip install git+git://github.com/tnigon/hs_process.git@dev
+```
+
+
 ```
 conda create -n msi_sip python=3.7 -y
 conda config --env --add channels conda-forge

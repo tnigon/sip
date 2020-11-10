@@ -1,0 +1,12 @@
+channels:
+    - conda-forge
+dependencies:
+    - python=3.8
+    - geopandas=0.8.*
+    - hs-process=0.0.3
+    - scikit-learn=0.23.*
+    - globus-sdk=1.9.*
+    - tqdm=4.51.*
+    - boto3=1.16.*
+    - git=2.23.*
+    - pip=20.2.*

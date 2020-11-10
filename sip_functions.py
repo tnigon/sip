@@ -973,7 +973,7 @@ def bin_f_pp(fname_list_bin, row, dir_out_bin, out_force, lock):
     according to instructions in df_grid organized for multi-core processing.
     '''
     print(row)
-    bin_type, method_bin, sensor, wavelength = get_bin_type(row)
+    bin_type, method_bin, sensor, bandwidth = get_bin_type(row)
     msg = ('``bin_type`` must not be ``None``')
     assert bin_type is not None, msg
 
@@ -985,7 +985,7 @@ def bin_f_pp(fname_list_bin, row, dir_out_bin, out_force, lock):
         hsbatch.spectral_resample(
             fname_list=fname_list_bin, folder_name=folder_name,
             name_append=name_append, base_dir_out=dir_out_bin,
-            wavelength=wavelength)
+            bandwidth=bandwidth)
     elif method_bin == 'spectral_mimic':
         hsbatch.spectral_mimic(
             fname_list=fname_list_bin, folder_name=folder_name,
@@ -1004,7 +1004,7 @@ def bin_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
     crop_type = row['crop']
     clip_type, wl_bands = get_clip_type(row)
     smooth_type, window_size, order = get_smooth_type(row)
-    bin_type, method_bin, sensor, wavelength = get_bin_type(row)
+    bin_type, method_bin, sensor, bandwidth = get_bin_type(row)
 
     base_dir = bin_get_base_dir(dir_data, panel_type, crop_type, clip_type,
                                 smooth_type)
@@ -1395,11 +1395,11 @@ def seg_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
                   'segmentation/masking performed. Mean spectra and derivative '
                   'spectra are being extracted...')
         chunks = chunk_by_n(fname_list, n_jobs*2)
-        # print('Length of fname_list: {0}'.format(len(fname_list)))
-        # print('Number of chunks: {0}'.format(len(chunks)))
+        print('Length of fname_list: {0}'.format(len(fname_list)))
+        print('Number of chunks: {0}'.format(len(chunks)))
         chunk_avg = sum([len(i) for i in chunks]) / len(chunks)
-        # print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
-        # print('Number of cores: {0}\n'.format(n_jobs))
+        print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
+        print('Number of cores: {0}\n'.format(n_jobs))
         with ProcessPoolExecutor(max_workers=n_jobs) as executor:
             executor.map(
                 seg_f_pp, chunks, it.repeat(row),
