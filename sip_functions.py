@@ -972,7 +972,6 @@ def bin_f_pp(fname_list_bin, row, dir_out_bin, out_force, lock):
     Parallel processing: spectral mimic/resampling for each of the datacubes
     according to instructions in df_grid organized for multi-core processing.
     '''
-    print(row)
     bin_type, method_bin, sensor, bandwidth = get_bin_type(row)
     msg = ('``bin_type`` must not be ``None``')
     assert bin_type is not None, msg
