@@ -105,8 +105,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
     df_grid = hs_grid_search(hs_settings, msi_run_id, dir_out=dir_results)
     time_dict = time_setup_img(dir_results, msi_run_id)
     proc_dict = proc_files_count_setup(dir_results, msi_run_id)
-
-    print('n_jobs: {0}'.format(n_jobs))
+    # print('n_jobs: {0}'.format(n_jobs))
 
     # In[Process images]
     for idx_grid, row in df_grid.iterrows():

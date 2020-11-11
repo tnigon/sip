@@ -53,8 +53,8 @@ start_step_pct_list = [0.05, 0.05, 0.05]
 
 features = ['reflectance', 'derivative_1', 'derivative_2']
 
-extra_feats_list = [None, ['pctl_10th']]  # this can be looked at as a "features" list - in the simple case, I am using only spectral, or spectral + auxiliary features
-extra_feats_names = ['spectral', 'aux_mcari2_pctl_10th']
+# extra_feats_list = [None, ['pctl_10th']]  # this can be looked at as a "features" list - in the simple case, I am using only spectral, or spectral + auxiliary features
+# extra_feats_names = ['spectral', 'aux_mcari2_pctl_10th']
 
 # In[Get arguments]
 if __name__ == "__main__":  # required on Windows, so just do on all..
@@ -175,13 +175,13 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
 
         # Tuning loop
         # TODO: Check to see if all tuning, training, etc. is already complete..?
-        # Load data just processed
-        df_spec, meta_bands, bands = load_spec_data(dir_data, row)
+        # Load data just processed ['reflectance', 'derivative_1', 'derivative_2', 'derivative_3']
+        # df_spec, meta_bands, bands = load_spec_data(dir_data, row)
         time_dict, time_last = time_step(time_dict, 'init1', time_last)
         df_bm_stats = load_preseg_stats(dir_data, row, bm_folder_name='bm_mcari2')
         time_dict, time_last = time_step(time_dict, 'init2', time_last)
         df_ground = load_ground_data(dir_data)
-        df_join_base = join_ground_bm_spec(df_ground, df_bm_stats, df_spec)
+        # df_join_base = join_ground_bm_spec(df_ground, df_bm_stats, df_spec)
         create_readme(dir_results_msi, msi_run_id, row)
         random_seed = get_random_seed(dir_results_msi, msi_run_id, row, seed=random_seed)
         time_dict, time_last = time_step(time_dict, 'init3', time_last)
@@ -192,14 +192,16 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         #     continue
         print('\nResponse variable: {0}\n'.format(y_label))
         # y_label = 'nup_kgha'
-        df_join = df_join_base.dropna(subset=[y_label], how='all')
-        save_joined_df(dir_results_msi, df_join, msi_run_id, row.name, y_label)
-        df_train, df_test = split_train_test(
-            df_join, random_seed=random_seed, stratify=df_join['dataset_id'])
-        cv_rep_strat = get_repeated_stratified_kfold(
-            df_train, n_splits=n_splits, n_repeats=n_repeats, random_state=random_seed)
-        # check_stratified_proportions(df_train, cv_rep_strat)
         for feat in features:
+            df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+            df_join_base = join_ground_bm_spec(df_ground, df_bm_stats, df_spec)
+            df_join = df_join_base.dropna(subset=[y_label], how='all')
+            save_joined_df(dir_results_msi, df_join, msi_run_id, row.name, y_label)
+            df_train, df_test = split_train_test(
+                df_join, random_seed=random_seed, stratify=df_join['dataset_id'])
+            cv_rep_strat = get_repeated_stratified_kfold(
+                df_train, n_splits=n_splits, n_repeats=n_repeats, random_state=random_seed)
+        # check_stratified_proportions(df_train, cv_rep_strat)
         # for extra_feats, extra_name in zip(extra_feats_list, extra_feats_names):
             if time_dict['time_start'] == [None]:
                 time_dict, time_last = time_loop_init(time_dict, msi_run_id, row.name, n_jobs)
@@ -207,9 +209,11 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
                 time_dict, time_last = time_step(time_dict, 'init2', time_last)
                 time_dict, time_last = time_step(time_dict, 'init3', time_last)
             # make the rest of this a single function to parallelize the tuning/training/testing!
-            print('Feature set: {0}\n'.format(extra_name))
+            print('Feature set: {0}\n'.format(feat))
+            # print('Feature set: {0}\n'.format(extra_name))
             time_dict['y_label'] = y_label
-            time_dict['feats'] = extra_name
+            time_dict['feats'] = feat
+            # time_dict['feats'] = extra_name
             X1, y1 = get_X_and_y(df_train, meta_bands, y_label, random_seed, extra=None)
             # X1, y1 = get_X_and_y(df_train, meta_bands, y_label, random_seed, extra=extra_feats)
             df_tune_all_list = (None,) * len(model_list)
@@ -240,8 +244,11 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
             time_dict, time_last = time_step(time_dict, 'tune3', time_last)
             df_params_mode, df_params_mode_count = tuning_mode_count(df_params)
             dir_out_list_tune, folder_list_tune = set_up_output_dir(
-                dir_results_msi, msi_run_id, row.name, y_label, extra_name,
+                dir_results_msi, msi_run_id, row.name, y_label, feat,
                 test_or_tune='tuning')
+            # dir_out_list_tune, folder_list_tune = set_up_output_dir(
+            #     dir_results_msi, msi_run_id, row.name, y_label, extra_name,
+            #     test_or_tune='tuning')
             fname_base_tune = '_'.join((folder_list_tune[0], folder_list_tune[1]))
             save_tuning_results(
                     dir_out_list_tune[3], df_tune_list, model_list, df_params,
@@ -250,12 +257,13 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
             time_dict, time_last = time_step(time_dict, 'tune4', time_last)
             fname_feats_readme = os.path.join(dir_out_list_tune[2], folder_list_tune[2] + '_README.txt')
             fname_data = os.path.join(dir_out_list_tune[1], fname_base_tune + '_data.csv')
-            feats_readme(fname_feats_readme, fname_data, meta_bands, extra_feats)
+            feats_readme(fname_feats_readme, fname_data, meta_bands, feat)
+            # feats_readme(fname_feats_readme, fname_data, meta_bands, extra_feats)
 
             # Testing
             print('Testing...\n')
             X1_test, y1_test = get_X_and_y(
-                df_test, meta_bands, y_label, random_seed, extra=extra_feats)
+                df_test, meta_bands, y_label, random_seed, extra=None)
             feat_n_list =list(df_tune_list[0]['feat_n'])  # should be same for all models
 
             df_pred_list, df_score_list = test_predictions(
@@ -264,11 +272,11 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
                 n_feats_linspace)
 
             dir_out_list_test, folder_list_test = set_up_output_dir(
-                dir_results_msi, msi_run_id, row.name, y_label, extra_name,
+                dir_results_msi, msi_run_id, row.name, y_label, feat,
                 test_or_tune='testing')
             set_up_summary_files(dir_results, y_label, n_feats_linspace, msi_run_id)  # initialize summary files
             fname_base_test = '_'.join((folder_list_test[0], folder_list_test[1]))
-            metadata = [msi_run_id, row.name, y_label, extra_feats]
+            metadata = [msi_run_id, row.name, y_label, feat]
             append_test_scores(dir_results, y_label, df_score_list, model_list, metadata)
             save_test_results(dir_out_list_test[3], df_pred_list, df_score_list,
                               model_list, fname_base_test)

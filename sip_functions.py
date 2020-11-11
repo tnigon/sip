@@ -609,7 +609,7 @@ def get_bin_type(row):
     Parameters:
         row (``pd.Series``):
     '''
-    if row['bin'] is None:
+    if pd.isnull(row['bin']):
         method_bin = None
     else:
         method_bin = row['bin']['method']
@@ -1497,9 +1497,10 @@ def load_preseg_stats(dir_data, row, bm_folder_name='bm_mcari2'):
     crop_type = row['crop']
     clip_type, _ = get_clip_type(row)
     smooth_type, _, _ = get_smooth_type(row)
+    bin_type, _, _, _ = get_bin_type(row)
     segment_type, _, _, _, _, _, _ = get_segment_type(row)
-    base_dir_bm = os.path.join(dir_data, panel_type, crop_type,
-                               clip_type, smooth_type, bm_folder_name)
+    base_dir_bm = os.path.join(dir_data, panel_type, crop_type, clip_type,
+                               smooth_type, bin_type, bm_folder_name)
     stats_csv = bm_folder_name.replace('_', '-') + '-stats.csv'
     df_bm_stats = pd.read_csv(os.path.join(base_dir_bm, stats_csv))
     df_bm_stats = insert_date_study(df_bm_stats)
@@ -1535,9 +1536,10 @@ def join_ground_bm_spec(df_ground, df_bm_stats, df_spec, on=['study', 'date', 'p
     unique dataset will be given an "dataset_id" to help with stratified
     sampling later on
     '''
-    df_ground.insert(0, 'dataset_id', None)
-    df_ground['dataset_id'] = df_ground.groupby(['study','date']).ngroup()
-    df_join = df_ground.merge(df_bm_stats, on=on)
+    df_ground_copy = df_ground.copy()
+    df_ground_copy.insert(0, 'dataset_id', None)
+    df_ground_copy['dataset_id'] = df_ground_copy.groupby(['study','date']).ngroup()
+    df_join = df_ground_copy.merge(df_bm_stats, on=on)
     df_join = df_join.merge(df_spec, on=on)
     return df_join
 
@@ -1573,6 +1575,7 @@ def create_readme(dir_results, msi_run_id, row):
         f.write('Crop type: {0}\n'.format(row['crop']))
         f.write('Clip type: {0}\n'.format(row['clip']))
         f.write('Smooth type: {0}\n'.format(row['smooth']))
+        f.write('Bin type: {0}\n'.format(row['bin']))
         f.write('Segment type: {0}\n\n'.format(row['segment']))
 
 def write_to_readme(msg, dir_results, msi_run_id, row):
