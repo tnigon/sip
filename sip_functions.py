@@ -565,6 +565,7 @@ def print_details(row):
     print('Crop type: {0}'.format(row['crop']))
     print('Clip type: {0}'.format(row['clip']))
     print('Smooth type: {0}'.format(row['smooth']))
+    print('Bin type: {0}'.format(row['bin']))
     print('Segment type: {0}'.format(row['segment']))
 
 def get_clip_type(row):
@@ -765,6 +766,7 @@ def crop(df_crop, panel_type, dir_out_crop, out_force=True, n_files=854,
                          folder_name=folder_name, name_append=name_append)
 
 def chunk_by_n(array, n):
+    np.random.shuffle(array)  # studies have different size images, so shuffling makes each chunk more similar
     arrays = np.array_split(array, n)
     list_out = []
     for l in arrays:
@@ -871,16 +873,14 @@ def clip_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
         print('Clip: ``clip_type`` is either None and there is nothing to '
               'process, or all the images are already processed.')
     else:
-        np.random.shuffle(fname_list)  # studies have different size images, so shuffling makes each chunk more similar
         chunks = chunk_by_n(fname_list, n_jobs*2)
         with ProcessPoolExecutor(max_workers=n_jobs) as executor:
             executor.map(
                 clip_f_pp, chunks, it.repeat(wl_bands),
                 it.repeat(dir_out_clip), it.repeat(out_force), it.repeat(lock))
 
-        ext = '.bip'
-        print(5)
-        check_missed_files(fname_list, dir_out_clip, ext, clip_f_pp, row,
+        ext_out = '.bip'
+        check_missed_files(fname_list, dir_out_clip, ext_out, clip_f_pp, row,
                            dir_out_clip, out_force, lock)
 
 def smooth(dir_data, row, out_force=True, n_files=854):
@@ -1206,7 +1206,7 @@ def seg_one_step(fname_list_seg, base_dir_bm, hsbatch, row):
         write_datacube=True, write_spec=False, write_geotiff=False,
         mask_percentile=mask_percentile, mask_side=mask_side, out_force=True)
 
-    seg_spec_and_derivative(fname_list_seg, dir_out_mask, name_append)
+    seg_spec_and_derivative(fname_list_seg, dir_out_mask, name_append, hsbatch)
 
 def seg_two_step(fname_list_seg, base_dir_bm, hsbatch, row):
     '''

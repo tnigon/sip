@@ -53,7 +53,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
     else:
         msi_run_id = 0
         n_jobs = 4
-        idx_min = 0
+        idx_min = 54
         idx_max = idx_min + 1
         dir_base = r'G:\BBE\AGROBOT\Shared Work\hs_process_results'
 
@@ -109,7 +109,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
 
     # In[Process images]
     for idx_grid, row in df_grid.iterrows():
-        # if idx_grid >= 9:
+        # if idx_grid >= 54:
         #     break
         if idx_grid < idx_min:
             print('Skipping past idx_grix {0}...'.format(idx_grid))
