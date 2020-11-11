@@ -1106,8 +1106,9 @@ def seg_spec_and_derivative(fname_list_seg, dir_out_mask, name_append,
     # If seg is None, then be sure to grab dirname(fname_list_seg[0])
     if os.path.split(dir_out_mask)[-1] == 'seg_none':
         dir_unmask = os.path.dirname(fname_list_seg[0])
-        fname_list_mask = fnmatch.filter(os.listdir(dir_unmask), '*.bip')
-        fname_list_mask = [os.path.join(dir_unmask, f) for f in fname_list_mask]
+        fname_sample = fnmatch.filter(os.listdir(dir_unmask), '*.bip')[0]
+        name_append_dirname = os.path.splitext(fname_sample)[0].split('-', maxsplit=1)[-1]
+        fname_list_mask = [os.path.join(dir_unmask, f) + '-' + name_append_dirname + '.bip' for f in fname_list_names]
     else:
         fname_list_mask = [os.path.join(dir_out_mask, f) + '-' + name_append + '.bip' for f in fname_list_names]
 
@@ -1305,7 +1306,6 @@ def seg_f_pp(fname_list_seg, row, base_dir_bm, out_force, lock):
         seg_one_step(fname_list_seg, base_dir_bm, hsbatch, row)
     else:
         seg_zero_step(fname_list_seg, base_dir_bm, hsbatch, row)
-
 
 def seg_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
     '''
