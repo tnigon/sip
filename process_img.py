@@ -53,7 +53,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
     else:
         msi_run_id = 0
         n_jobs = 4
-        idx_min = 8
+        idx_min = 0
         idx_max = idx_min + 1
         dir_base = r'G:\BBE\AGROBOT\Shared Work\hs_process_results'
 

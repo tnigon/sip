@@ -1095,9 +1095,21 @@ def get_side_inverse(mask_side):
         mask_side_inv = 'outside'
     return mask_side_inv
 
-def seg_spec_and_derivative(fname_list_seg, dir_out_mask, name_append, hsbatch):
+def seg_spec_and_derivative(fname_list_seg, dir_out_mask, name_append,
+                            hsbatch):
+    '''
+    Calculates spectra and derivative spectra for all files and saves to
+    "reflectance" and "derivative_x" folders.
+    '''
     fname_list_names = [os.path.splitext(os.path.basename(f))[0].split('-')[0] for f in fname_list_seg]
-    fname_list_mask = [os.path.join(dir_out_mask, f) + '-' + name_append + '.bip' for f in fname_list_names]
+
+    # If seg is None, then be sure to grab dirname(fname_list_seg[0])
+    if os.path.split(dir_out_mask)[-1] == 'seg_none':
+        dir_unmask = os.path.dirname(fname_list_seg[0])
+        fname_list_mask = fnmatch.filter(os.listdir(dir_unmask), '*.bip')
+        fname_list_mask = [os.path.join(dir_unmask, f) for f in fname_list_mask]
+    else:
+        fname_list_mask = [os.path.join(dir_out_mask, f) + '-' + name_append + '.bip' for f in fname_list_names]
 
     hsbatch.cube_to_spectra(
         fname_list=fname_list_mask, base_dir_out=dir_out_mask,
@@ -1129,37 +1141,9 @@ def seg_zero_step(fname_list_seg, base_dir_bm, hsbatch, row):
     '''
     segment_type, _, _, _, _, _, _ = get_segment_type(row)
 
-    name_append_spec = segment_type.replace('_', '-')
-    hsbatch.cube_to_spectra(
-        fname_list=fname_list_seg, folder_name='reflectance',
-        name_append=name_append_spec,
-        base_dir_out=os.path.join(base_dir_bm, segment_type),
-        write_geotiff=False)
-
-    fname_list_derivative = fnmatch.filter(os.listdir(os.path.join(
-        base_dir_bm, segment_type, 'reflectance')), '*.spec')  # no filepath
-    fname_list_derivative = [os.path.join(
-        base_dir_bm, segment_type, 'reflectance', f)
-        for f in fname_list_derivative]
-    # fname_list_derivative = recurs_dir(
-    #     os.path.join(base_dir_bm, segment_type, 'reflectance'),
-    #     search_ext='.spec', level=0)
-    name_append_der = name_append_spec + '-derivative'
-    hsbatch.spectra_derivative(
-        fname_list=fname_list_derivative, folder_name='derivative_1',
-        name_append=name_append_der, order=1,
-        base_dir_out=os.path.join(base_dir_bm, segment_type),
-        out_force=True)  # out_force because only checking for reflectance
-    hsbatch.spectra_derivative(
-        fname_list=fname_list_derivative, folder_name='derivative_2',
-        name_append=name_append_der, order=2,
-        base_dir_out=os.path.join(base_dir_bm, segment_type),
-        out_force=True)  # out_force because only checking for reflectance
-    hsbatch.spectra_derivative(
-        fname_list=fname_list_derivative, folder_name='derivative_3',
-        name_append=name_append_der, order=3,
-        base_dir_out=os.path.join(base_dir_bm, segment_type),
-        out_force=True)  # out_force because only checking for reflectance
+    dir_out_mask = os.path.join(base_dir_bm, segment_type)
+    name_append = segment_type.replace('_', '-')
+    seg_spec_and_derivative(fname_list_seg, dir_out_mask, name_append, hsbatch)
 
     folder_name = 'bm_mcari2'
     name_append = folder_name.replace('_', '-')
