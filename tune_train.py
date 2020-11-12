@@ -131,9 +131,9 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         dir_base = '/panfs/roc/groups/5/yangc1/public/hs_process'
     else:
         msi_run_id = 0
-        idx_min = 13
+        idx_min = 0
         idx_max = idx_min + 1
-        feat = 'derivative_1'
+        feat = 'reflectance'
         dir_base = r'G:\BBE\AGROBOT\Shared Work\hs_process_results'
 
     dir_data = os.path.join(dir_base, 'data')
@@ -184,13 +184,14 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
 
         # Tuning loop
         # TODO: Check to see if all tuning, training, etc. is already complete..?
-        df_ground = load_ground_data(dir_data)
+        df_ground = load_ground_data(dir_data, y_label)
         create_readme(dir_results_msi, msi_run_id, row)
         random_seed = get_random_seed(dir_results_msi, msi_run_id, row, seed=random_seed)
         time_dict, time_last = time_step(time_dict, 'load_ground', time_last)
 
         tracemalloc.start()
-        print('\nResponse variable: {0}\n'.format(y_label))
+        print('\nResponse variable: {0}'.format(y_label))
+        print('Number of observations: {0}\n'.format(len(df_ground)))
         # y_label = 'nup_kgha'
         # for feat in features:
         print('Feature set: {0}\n'.format(feat))

@@ -1423,23 +1423,24 @@ def feats_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
             it.repeat(name_append), it.repeat(out_force), it.repeat(lock))
 
 # In[Training initialization functions]
-def load_ground_data(data_dir):
+def load_ground_data(dir_data, y_label='biomass_kgha'):
     '''
     Loads the ground data for supervised regression. This should be saved to the
     MSI data directory
     '''
-    fname_wells_18 = os.path.join(data_dir, 'wells_ground_data_2018.csv')
-    fname_wells_19 = os.path.join(data_dir, 'wells_ground_data_2019.csv')
-    fname_aerf_19 = os.path.join(data_dir, 'aerf_ground_data.csv')
+    fname_wells_18 = os.path.join(dir_data, 'wells_ground_data_2018.csv')
+    fname_wells_19 = os.path.join(dir_data, 'wells_ground_data_2019.csv')
+    fname_aerf_19 = os.path.join(dir_data, 'aerf_ground_data.csv')
     df1 = pd.read_csv(fname_wells_18)
     df2 = pd.read_csv(fname_wells_19)
     df3 = pd.read_csv(fname_aerf_19)
     col = ['study', 'date_image', 'plot_id', 'trt', 'rate_n_pp_kgha',
            'rate_n_sd_plan_kgha', 'rate_n_total_kgha', 'growth_stage',
-           'tissue_n_pct', 'biomass_kgha', 'nup_kgha']
-    df_wells1 = df1[pd.notnull(df1['growth_stage'])][col].reset_index(drop=True)
-    df_wells2 = df2[pd.notnull(df2['growth_stage'])][col].reset_index(drop=True)
-    df_aerf = df3[pd.notnull(df3['growth_stage'])][col].reset_index(drop=True)
+           y_label]
+           # 'tissue_n_pct', 'biomass_kgha', 'nup_kgha']
+    df_wells1 = df1[pd.notnull(df1[y_label])][col].reset_index(drop=True)
+    df_wells2 = df2[pd.notnull(df2[y_label])][col].reset_index(drop=True)
+    df_aerf = df3[pd.notnull(df3[y_label])][col].reset_index(drop=True)
     df_ground = df_wells1.append(df_wells2).reset_index(drop=True)
     df_ground = df_ground.append(df_aerf).reset_index(drop=True)
     df_ground.insert(1, 'date', None)

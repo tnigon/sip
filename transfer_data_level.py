@@ -67,8 +67,9 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
     dir_data = os.path.join(dir_base, 'data')
     dir_results = os.path.join(dir_base, 'results')
     dir_results_msi = os.path.join(dir_results, 'msi_' + str(msi_run_id) + '_results')
+    dir_results_meta = os.path.join(dir_results, 'msi_' + str(msi_run_id) + '_results_meta')
 
-    df_grid = pd.read_csv(os.path.join(dir_results, 'msi_' + str(msi_run_id) + '_hs_settings.csv'), index_col=0)
+    df_grid = pd.read_csv(os.path.join(dir_results_meta, 'msi_' + str(msi_run_id) + '_hs_settings.csv'), index_col=0)
     df_grid = clean_df_grid(df_grid)
 
     row = df_grid.loc[idx_grid]
