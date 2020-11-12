@@ -294,15 +294,20 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
                     ('preds', folder_list_test[1], folder_list_test[2],
                     str(feat_n).zfill(3) + '-feats.png'))
                 fname_out_fig1 = os.path.join(
-                    dir_out_list_test[3], 'figures', preds_name)
-                try:
-                    fig1 = plot_pred_figure(
-                        fname_out_fig1, feat_n, df_pred_list, df_score_list,
-                        model_list, x_label, y_label=y_label1, y_col=y_col,
-                        units=units, save_plot=True, legend_cols=legend_cols)
-                except TypeError:
-                    print('y_col: {0}'.format(y_col))
-                    print('y_label1: {0}'.format(y_label1))
+                    dir_out_list_test[3], 'figures', preds_name)                    
+
+                print('filename: {0}'.format(fname_out_fig1))
+                print('feat_n: {0}'.format(feat_n))
+                print('x_label: {0}'.format(x_label))
+                print('y_label1: {0}'.format(y_label1))
+                print('y_col: {0}'.format(y_col))
+                print('units: {0}'.format(units))
+                print('legend_cols: {0}'.format(legend_cols))
+
+                fig1 = plot_pred_figure(
+                    fname_out_fig1, feat_n, df_pred_list, df_score_list,
+                    model_list, x_label, y_label=y_label1, y_col=y_col,
+                    units=units, save_plot=True, legend_cols=legend_cols)
         score_name = '_'.join(
             ('scores', folder_list_test[1], folder_list_test[2] + '.png'))
         fname_out_fig2 = os.path.join(
