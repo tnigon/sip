@@ -1,9 +1,9 @@
 #!/bin/bash -l
 #SBATCH --job-name=sip_2_train_4-6
 #SBATCH --nodes=1
-#SBATCH --ntasks=4
+#SBATCH --ntasks=8
 #SBATCH --mem-per-cpu=2gb
-#SBATCH -t 8:00:00
+#SBATCH -t 6:00:00
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=nigo0024@umn.edu
 #SBATCH -o ./reports/R-%j-%x.out

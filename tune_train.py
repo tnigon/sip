@@ -303,6 +303,12 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
                 print('y_col: {0}'.format(y_col))
                 print('units: {0}'.format(units))
                 print('legend_cols: {0}'.format(legend_cols))
+                print('len(df_pred0): {0}'.format(len(df_pred_list[0])))
+                print('len(df_pred1): {0}'.format(len(df_pred_list[1])))
+                print('len(df_score0): {0}'.format(len(df_score_list[0])))
+                print('len(df_score1): {0}'.format(len(df_score_list[1])))
+                print('model0: {0}'.format(model_list[0]))
+                print('model1: {0}'.format(model_list[1]))
 
                 fig1 = plot_pred_figure(
                     fname_out_fig1, feat_n, df_pred_list, df_score_list,
