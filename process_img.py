@@ -53,15 +53,18 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
     else:
         msi_run_id = 0
         n_jobs = 4
-        idx_min = 54
+        idx_min = 12
         idx_max = idx_min + 1
         dir_base = r'G:\BBE\AGROBOT\Shared Work\hs_process_results'
 
     dir_data = os.path.join(dir_base, 'data')
     dir_results = os.path.join(dir_base, 'results')
     dir_results_msi = os.path.join(dir_results, 'msi_' + str(msi_run_id) + '_results')
+    dir_results_meta = os.path.join(dir_results, 'msi_' + str(msi_run_id) + '_results_meta')
     if not os.path.isdir(dir_results_msi):
         os.mkdir(dir_results_msi)
+    if not os.path.isdir(dir_results_meta):
+        os.mkdir(dir_results_meta)
 
     # In[Grid search settings]
     hs_settings = {
@@ -102,9 +105,9 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
                     ],
         # 'features': ['reflectance', 'derivative']  # whether to use reflectance or derivative for model training
         }
-    df_grid = hs_grid_search(hs_settings, msi_run_id, dir_out=dir_results)
-    time_dict = time_setup_img(dir_results, msi_run_id)
-    proc_dict = proc_files_count_setup(dir_results, msi_run_id)
+    df_grid = hs_grid_search(hs_settings, msi_run_id, dir_out=dir_results_meta)
+    time_dict = time_setup_img(dir_results_meta, msi_run_id)
+    proc_dict = proc_files_count_setup(dir_results_meta, msi_run_id)
     # print('n_jobs: {0}'.format(n_jobs))
 
     # In[Process images]
@@ -141,7 +144,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         # feats_pp(dir_data, row, n_jobs, out_force=False, n_files=n_files)
         # time_dict, time_last = time_step(time_dict, 'derivative', time_last)
 
-        time_dict = append_times(dir_results, time_dict, msi_run_id)  # Saves timing
+        time_dict = append_times(dir_results_meta, time_dict, msi_run_id)  # Saves timing
 
         # Count and save results
         proc_dict['grid_idx'] = [idx_grid]
@@ -152,4 +155,4 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
                            'expected.\nProcessed: {1}\nExpected: {2}\n'
                            ''.format(idx_grid, n_files_proc, n_files))
             warnings.warn(msg_n_files, RuntimeWarning)
-        proc_dict = proc_files_append(dir_results, proc_dict, msi_run_id)  # Saves file count
+        proc_dict = proc_files_append(dir_results_meta, proc_dict, msi_run_id)  # Saves file count

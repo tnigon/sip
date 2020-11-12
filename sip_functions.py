@@ -415,10 +415,10 @@ def time_setup_img(dir_out, msi_run_id):
     row
     '''
     cols = ['msi_run_id', 'grid_idx', 'n_jobs', 'time_start', 'time_end', 'time_total',
-            'crop', 'clip', 'smooth', 'segment']
+            'crop', 'clip', 'smooth', 'bin', 'segment']
 
     pathlib.Path(dir_out).mkdir(parents=True, exist_ok=True)
-    fname_times = os.path.join(dir_out, 'time_msi_' + str(msi_run_id) + '_imgproc.csv')
+    fname_times = os.path.join(dir_out, 'msi_' + str(msi_run_id) + '_time_imgproc.csv')
     if not os.path.isfile(fname_times):
         df_times = pd.DataFrame(columns=cols)
         df_times.to_csv(fname_times, index=False)
@@ -431,10 +431,12 @@ def time_setup_training(dir_out, msi_run_id):
     row
     '''
     cols = ['n_jobs', 'msi_run_id', 'grid_idx', 'y_label', 'feats',
-            'time_start', 'time_end', 'time_total', 'init1', 'init2', 'init3',
+            'time_start', 'time_end', 'time_total',
+            # 'init1', 'init2', 'init3',
+            'load_ground', 'load_spec', 'join_data',
             'feat_sel', 'tune1', 'tune2', 'tune3', 'tune4', 'test', 'plot']
     pathlib.Path(dir_out).mkdir(parents=True, exist_ok=True)
-    fname_times = os.path.join(dir_out, 'time_msi_' + str(msi_run_id) + '_train.csv')
+    fname_times = os.path.join(dir_out, 'msi_' + str(msi_run_id) + '_time_train.csv')
     if not os.path.isfile(fname_times):
         df_times = pd.DataFrame(columns=cols)
         df_times.to_csv(fname_times, index=False)
@@ -478,9 +480,9 @@ def append_times(dir_out, time_dict, msi_run_id):
     time_dict['time_total'] = [str(time_total)]
 
     if 'segment' in time_dict.keys():
-        fname = 'time_msi_' + str(msi_run_id) + '_imgproc.csv'
+        fname = 'msi_' + str(msi_run_id) + '_time_imgproc.csv'
     else:
-        fname = 'time_msi_' + str(msi_run_id) + '_train.csv'
+        fname = 'msi_' + str(msi_run_id) + '_time_train.csv'
     fname_times = os.path.join(dir_out, fname)
     df_time = pd.DataFrame.from_dict(time_dict)
     df_time.to_csv(fname_times, header=None, mode='a', index=False,
@@ -2497,9 +2499,10 @@ def feats_readme(fname_feats_readme, fname_data, meta_bands, extra_feats=None):
     '''
     with open(os.path.join(fname_feats_readme), 'w+') as f:
         f.write('Features available for tuning:\n\n')
-        f.write('Feature number: Wavelength (for spectral features only)\n'
-                '"Extra" features are described by the column name from their '
-                'input data source\n')
+        f.write('Feature number: Wavelength (for spectral and derivative '
+                'features only)\n'
+                'Any "extra" features are described by the column name from '
+                'their input data source\n')
         f.write('Training data is saved at:\n')
         f.write('{0}\n'.format(fname_data))
         for k, v in sorted(meta_bands.items()):
