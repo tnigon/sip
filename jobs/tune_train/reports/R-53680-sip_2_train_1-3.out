@@ -1,0 +1,893 @@
+
+Processing scenario ID: 0
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: biomass_kgha
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 50.0
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 25.0
+Features selected: 15
+Iterations without progress: 0
+
+alpha: 12.5
+Features selected: 18
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 11.25
+Features selected: 25
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 10.6875
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 10.153125
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 9.64546875
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 9.1631953125
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 8.705035546875
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 8.269783769531248
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 7.856294581054685
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 8.228434850683591
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 8.187292676430173
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 8.146356213048023
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 8.105624431982783
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 8.065096309822868
+Features selected: 29
+Iterations without progress: 3
+
+alpha: 8.024770828273754
+Features selected: 29
+Iterations without progress: 4
+
+alpha: 7.984646974132385
+Features selected: 29
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 30 feature(s) (minimum alpha value to use).
+
+Using up to 29 selected features
+
+Length of logspace_list: 300
+Number of chunks: 8
+Average length of each chunk: 37.5
+Number of cores: 4
+
+Hyperparameter tuning...
+
+Length of logspace_list: 56
+Number of chunks: 8
+Average length of each chunk: 7.0
+Number of cores: 4
+
+Number of features: 9
+Number of features: 16
+Number of features: 17
+Number of features: 27
+Number of features: 13
+Number of features: 1
+Number of features: 20
+Number of features: 28
+Number of features: 4
+Number of features: 7
+Number of features: 17
+Number of features: 11
+Number of features: 27
+Number of features: 15
+Number of features: 2
+Number of features: 8
+Number of features: 19
+Number of features: 19
+Number of features: 22
+Number of features: 9
+Number of features: 11
+Number of features: 25
+Number of features: 20
+Number of features: 28
+Number of features: 25
+Number of features: 8
+Number of features: 5
+Number of features: 6
+Number of features: 3
+Number of features: 23
+Number of features: 9
+Number of features: 20
+Number of features: 14
+Number of features: 24
+Number of features: 14
+Number of features: 10
+Number of features: 28
+Number of features: 18
+Number of features: 10
+Number of features: 4
+Number of features: 29
+Number of features: 21
+Number of features: 11
+Number of features: 27
+Number of features: 12
+Number of features: 21
+Number of features: 18
+Number of features: 28
+Number of features: 19
+Number of features: 28
+Number of features: 10
+Number of features: 16
+Number of features: 16
+Number of features: 10
+Number of features: 22
+Number of features: 18
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=9370 KiB, count=4346, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=5692 KiB, count=78771, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/artist.py:70: size=4535 KiB, count=16500, average=281 B
+GLOBUS TRANSFER task_id: d0167176-24a2-11eb-b161-0ee0d5d9299f
+Waiting for transfer d0167176-24a2-11eb-b161-0ee0d5d9299f to complete...
+Transfer d0167176-24a2-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 0cd2959a-24a3-11eb-b161-0ee0d5d9299f
+
+Processing scenario ID: 1
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: biomass_kgha
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 379.2707312712883
+Features selected: 7
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 189.63536563564415
+Features selected: 7
+Iterations without progress: 1
+
+alpha: 94.81768281782207
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 47.40884140891104
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 23.70442070445552
+Features selected: 14
+Iterations without progress: 0
+
+alpha: 11.85221035222776
+Features selected: 19
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 10.666989317004983
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 9.600290385304485
+Features selected: 25
+Iterations without progress: 1
+
+alpha: 8.640261346774036
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 7.7762352120966325
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 8.553858733306296
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 8
+Average length of each chunk: 37.5
+Number of cores: 4
+
+Hyperparameter tuning...
+
+Length of logspace_list: 46
+Number of chunks: 8
+Average length of each chunk: 5.8
+Number of cores: 4
+
+Number of features: 8
+Number of features: 24
+Number of features: 13
+Number of features: 25
+Number of features: 9
+Number of features: 10
+Number of features: 7
+Number of features: 14
+Number of features: 10
+Number of features: 9
+Number of features: 14
+Number of features: 27
+Number of features: 3
+Number of features: 5
+Number of features: 2
+Number of features: 10
+Number of features: 26
+Number of features: 4
+Number of features: 25
+Number of features: 12
+Number of features: 1
+Number of features: 20
+Number of features: 16
+Number of features: 6
+Number of features: 22
+Number of features: 15
+Number of features: 9
+Number of features: 15
+Number of features: 21
+Number of features: 28
+Number of features: 4
+Number of features: 8
+Number of features: 21
+Number of features: 16
+Number of features: 9
+Number of features: 18
+Number of features: 23
+Number of features: 11
+Number of features: 11
+Number of features: 8
+Number of features: 17
+Number of features: 25
+Number of features: 29
+Number of features: 5
+Number of features: 24
+Number of features: 19
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=17.8 MiB, count=8465, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=11.1 MiB, count=157825, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/artist.py:70: size=8865 KiB, count=32282, average=281 B
+GLOBUS TRANSFER task_id: dc468f84-24a3-11eb-b536-02d9497ca481
+Waiting for transfer dc468f84-24a3-11eb-b536-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: e276eb1a-24a3-11eb-b536-02d9497ca481
+
+Processing scenario ID: 2
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: biomass_kgha
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.01
+New "step_pct": 0.1
+alpha: 384.92364299878335
+Features selected: 6
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 192.46182149939168
+Features selected: 6
+Iterations without progress: 1
+
+alpha: 96.23091074969584
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 48.11545537484792
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 24.05772768742396
+Features selected: 16
+Iterations without progress: 0
+
+alpha: 12.02886384371198
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 6.01443192185599
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 11.427420651526381
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 10.856049618950061
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 10.313247138002557
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 9.79758478110243
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 9.307705542047307
+Features selected: 26
+Iterations without progress: 1
+
+alpha: 8.842320264944941
+Features selected: 26
+Iterations without progress: 2
+
+Old "step_pct": 0.05
+New "step_pct": 0.025
+alpha: 8.621262258321318
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 8.405730701863284
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 8.195587434316701
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 7.990697748458784
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 8.17509846573091
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 8
+Average length of each chunk: 37.5
+Number of cores: 4
+
+Hyperparameter tuning...
+
+Length of logspace_list: 49
+Number of chunks: 8
+Average length of each chunk: 6.1
+Number of cores: 4
+
+Number of features: 23
+Number of features: 6
+Number of features: 14
+Number of features: 3
+Number of features: 22
+Number of features: 16
+Number of features: 14
+Number of features: 7
+Number of features: 17
+Number of features: 14
+Number of features: 13
+Number of features: 23
+Number of features: 5
+Number of features: 26
+Number of features: 11
+Number of features: 26
+Number of features: 4
+Number of features: 25
+Number of features: 26
+Number of features: 17
+Number of features: 8
+Number of features: 1
+Number of features: 17
+Number of features: 13
+Number of features: 9
+Number of features: 11
+Number of features: 26
+Number of features: 25
+Number of features: 15
+Number of features: 2
+Number of features: 16
+Number of features: 18
+Number of features: 28
+Number of features: 10
+Number of features: 10
+Number of features: 22
+Number of features: 7
+Number of features: 17
+Number of features: 27
+Number of features: 29
+Number of features: 16
+Number of features: 21
+Number of features: 6
+Number of features: 13
+Number of features: 22
+Number of features: 17
+Number of features: 17
+Number of features: 16
+Number of features: 20
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+y_col: biomass_kgha
+y_label1: Measured Above-ground Biomass
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=26.4 MiB, count=12530, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=16.1 MiB, count=228224, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/artist.py:70: size=12.7 MiB, count=47564, average=281 B
+GLOBUS TRANSFER task_id: 03c0c010-24a5-11eb-b161-0ee0d5d9299f
+Waiting for transfer 03c0c010-24a5-11eb-b161-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 09f3f9f2-24a5-11eb-b161-0ee0d5d9299f
+
+Processing scenario ID: 0
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: nup_kgha
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 5.0
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 2.5
+Features selected: 6
+Iterations without progress: 1
+
+alpha: 1.25
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 0.625
+Features selected: 12
+Iterations without progress: 0
+
+alpha: 0.3125
+Features selected: 14
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.28125
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 0.253125
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 0.2278125
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.20503125
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.18452812500000002
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 0.16607531250000002
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.18268284375000002
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 8
+Average length of each chunk: 37.5
+Number of cores: 4
+
+Hyperparameter tuning...
+
+Length of logspace_list: 47
+Number of chunks: 8
+Average length of each chunk: 5.9
+Number of cores: 4
+

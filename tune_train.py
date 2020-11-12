@@ -122,6 +122,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
     assert y_label in y_label_list, ('{0} must be one of {1}'
                                      ''.format(y_label, y_label_list))
     y_idx = y_label_list.index(y_label)
+    y_col = y_label  # weird bug when plotting
     assert feat in features, ('{0} must be one of {1}'.format(feat, features))
 
 
@@ -292,10 +293,14 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
                     str(feat_n).zfill(3) + '-feats.png'))
                 fname_out_fig1 = os.path.join(
                     dir_out_list_test[3], 'figures', preds_name)
-                fig1 = plot_pred_figure(
-                    fname_out_fig1, feat_n, df_pred_list, df_score_list,
-                    model_list, x_label, y_label=y_label1, y_col=y_label,
-                    units=units, save_plot=True, legend_cols=legend_cols)
+                try:
+                    fig1 = plot_pred_figure(
+                        fname_out_fig1, feat_n, df_pred_list, df_score_list,
+                        model_list, x_label, y_label=y_label1, y_col=y_col,
+                        units=units, save_plot=True, legend_cols=legend_cols)
+                except TypeError:
+                    print('y_col: {0}'.format(y_col))
+                    print('y_label1: {0}'.format(y_label1))
         score_name = '_'.join(
             ('scores', folder_list_test[1], folder_list_test[2] + '.png'))
         fname_out_fig2 = os.path.join(
