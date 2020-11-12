@@ -408,6 +408,17 @@ def restart_script():
     # os.execv(sys.executable, ['python'] + sys.argv)
     os.execv(sys.executable, ['python', __file__] + sys.argv[1:])
 
+def save_n_obs(dir_results_meta, df_join, msi_run_id, grid_idx, y_label, feat):
+    fname = os.path.join(dir_results_meta, 'msi_{0}_n_observations.csv'
+                         ''.format(msi_run_id))
+    if not os.path.exists(fname):
+        with open(fname, 'w+') as f:
+            f.write('msi_run_id, grid_idx, y_label, feature, obs_n\n')
+
+    with open(fname, 'a+') as f:
+        f.write('{0}, {1}, {2}, {3}, {4}\n'
+                ''.format(msi_run_id, grid_idx, y_label, feat, len(df_join)))
+
 # In[Timing functions]
 def time_setup_img(dir_out, msi_run_id):
     '''
