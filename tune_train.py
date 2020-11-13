@@ -288,32 +288,26 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         x_label = 'Predicted {0}'.format(label_print)
         y_label1 = 'Measured {0}'.format(label_print)
         y_label2 = '{0} MAE'.format(label_print)
+
+        renamed_list = []
+        for idx_rename, df_temp in enumerate(df_pred_list):
+            col_names_dict = dict(zip(df_temp.columns, [str(i) for i in df_temp.columns]))
+            # convert all columns to str type and be sure x and y are also str
+            renamed_list.append(df_temp.rename(columns=col_names_dict))
+        df_pred_list = tuple(renamed_list)
+
         for idx, df_score in enumerate(df_score_list):
             for feat_n in df_score[pd.notnull(df_score['feats'])]['feat_n']:
                 preds_name = '_'.join(
                     ('preds', folder_list_test[1], folder_list_test[2],
                     str(feat_n).zfill(3) + '-feats.png'))
                 fname_out_fig1 = os.path.join(
-                    dir_out_list_test[3], 'figures', preds_name)                    
-
-                print('filename: {0}'.format(fname_out_fig1))
-                print('feat_n: {0}'.format(feat_n))
-                print('x_label: {0}'.format(x_label))
-                print('y_label1: {0}'.format(y_label1))
-                print('y_col: {0}'.format(y_col))
-                print('units: {0}'.format(units))
-                print('legend_cols: {0}'.format(legend_cols))
-                print('len(df_pred0): {0}'.format(len(df_pred_list[0])))
-                print('len(df_pred1): {0}'.format(len(df_pred_list[1])))
-                print('len(df_score0): {0}'.format(len(df_score_list[0])))
-                print('len(df_score1): {0}'.format(len(df_score_list[1])))
-                print('model0: {0}'.format(model_list[0]))
-                print('model1: {0}'.format(model_list[1]))
-
+                    dir_out_list_test[3], 'figures', preds_name)
                 fig1 = plot_pred_figure(
                     fname_out_fig1, feat_n, df_pred_list, df_score_list,
                     model_list, x_label, y_label=y_label1, y_col=y_col,
                     units=units, save_plot=True, legend_cols=legend_cols)
+
         score_name = '_'.join(
             ('scores', folder_list_test[1], folder_list_test[2] + '.png'))
         fname_out_fig2 = os.path.join(

@@ -3107,13 +3107,12 @@ def plot_meas_pred(feat_n, y_col, df_preds, ax,
         _, min_plot = get_min_max(df_preds, feat_n, y_col)
 
     x_lin = np.linspace(min_plot, max_plot, 2)
-    ax = sns.lineplot(x_lin, x_lin, color=linecolor, ax=ax, zorder=0.8, linewidth=2)
+    ax = sns.lineplot(x=x_lin, y=x_lin, color=linecolor, ax=ax, zorder=0.8, linewidth=2)
     ax.lines[0].set_linestyle('--')
     ax = sns.scatterplot(x=feat_n, y=y_col, data=df_preds,
                          hue='study', style=style,
                          hue_order=hue_order, style_order=style_order,
-                         markers=markers,
-                          ax=ax,
+                         markers=markers, ax=ax,
                          legend=legend, palette=colors)
     ax.set_ylim([min_plot, max_plot])
     ax.set_xlim([min_plot, max_plot])
