@@ -3112,7 +3112,7 @@ def plot_meas_pred(feat_n, y_col, df_preds, ax,
     ax = sns.scatterplot(x=feat_n, y=y_col, data=df_preds,
                          hue='study', style=style,
                          hue_order=hue_order, style_order=style_order,
-                         markers=markers, ax=ax,
+                         markers=markers[:len(style_order)], ax=ax,
                          legend=legend, palette=colors)
     ax.set_ylim([min_plot, max_plot])
     ax.set_xlim([min_plot, max_plot])

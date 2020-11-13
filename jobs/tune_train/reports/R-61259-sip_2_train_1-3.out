@@ -1,0 +1,4193 @@
+
+Processing scenario ID: 0
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 50.0
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 25.0
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 12.5
+Features selected: 17
+Iterations without progress: 0
+
+alpha: 6.25
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 11.875
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 11.28125
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 10.7171875
+Features selected: 24
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.01
+alpha: 10.610015624999999
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 10.50391546875
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 10.3988763140625
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 10.294887550921874
+Features selected: 27
+Iterations without progress: 1
+
+alpha: 10.191938675412656
+Features selected: 27
+Iterations without progress: 2
+
+alpha: 10.09001928865853
+Features selected: 27
+Iterations without progress: 3
+
+alpha: 9.989119095771944
+Features selected: 27
+Iterations without progress: 4
+
+alpha: 9.889227904814224
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 9.790335625766081
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 9.692432269508421
+Features selected: 28
+Iterations without progress: 2
+
+alpha: 9.595507946813337
+Features selected: 28
+Iterations without progress: 3
+
+alpha: 9.499552867345203
+Features selected: 28
+Iterations without progress: 4
+
+alpha: 9.40455733867175
+Features selected: 28
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 30 feature(s) (minimum alpha value to use).
+
+Using up to 28 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 44
+Number of chunks: 16
+Average length of each chunk: 2.8
+Number of cores: 8
+
+Number of features: 28
+Number of features: 9
+Number of features: 8
+Number of features: 8
+Number of features: 10
+Number of features: 10
+Number of features: 12
+Number of features: 9
+Number of features: 21
+Number of features: 11
+Number of features: 4
+Number of features: 25
+Number of features: 9
+Number of features: 19
+Number of features: 9
+Number of features: 20
+Number of features: 19
+Number of features: 10
+Number of features: 20
+Number of features: 1
+Number of features: 14
+Number of features: 8
+Number of features: 5
+Number of features: 6
+Number of features: 5
+Number of features: 21
+Number of features: 5
+Number of features: 4
+Number of features: 14
+Number of features: 28
+Number of features: 7
+Number of features: 18
+Number of features: 2
+Number of features: 7
+Number of features: 24
+Number of features: 17
+Number of features: 22
+Number of features: 6
+Number of features: 20
+Number of features: 15
+Number of features: 3
+Number of features: 15
+Number of features: 16
+Number of features: 27
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=5106 KiB, count=70671, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=3989 KiB, count=1850, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=3027 KiB, count=47887, average=65 B
+GLOBUS TRANSFER task_id: 7d511b78-254f-11eb-b161-0ee0d5d9299f
+Waiting for transfer 7d511b78-254f-11eb-b161-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 95b1fb6a-254f-11eb-b161-0ee0d5d9299f
+
+Processing scenario ID: 1
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.01
+New "step_pct": 0.1
+alpha: 423.20508024022877
+Features selected: 7
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 211.60254012011438
+Features selected: 7
+Iterations without progress: 1
+
+alpha: 105.80127006005719
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 52.900635030028596
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 26.450317515014298
+Features selected: 13
+Iterations without progress: 0
+
+alpha: 13.225158757507149
+Features selected: 17
+Iterations without progress: 0
+
+alpha: 6.6125793787535745
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 12.56390081963179
+Features selected: 32
+Iterations without progress: 0
+
+alpha: 11.9357057786502
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 11.33892048971769
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 10.771974465231805
+Features selected: 23
+Iterations without progress: 1
+
+alpha: 10.233375741970214
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 9.721706954871703
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 9.235621607128117
+Features selected: 26
+Iterations without progress: 1
+
+alpha: 8.77384052677171
+Features selected: 26
+Iterations without progress: 2
+
+alpha: 8.335148500433124
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 7.918391075411468
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 7.522471521640894
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 7.1463479455588494
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 6.789030548280906
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 7.110616205831056
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 54
+Number of chunks: 16
+Average length of each chunk: 3.4
+Number of cores: 8
+
+Number of features: 19
+Number of features: 17
+Number of features: 23
+Number of features: 9
+Number of features: 12
+Number of features: 12
+Number of features: 22
+Number of features: 1
+Number of features: 21
+Number of features: 11
+Number of features: 7
+Number of features: 8
+Number of features: 5
+Number of features: 25
+Number of features: 24
+Number of features: 22
+Number of features: 7
+Number of features: 10
+Number of features: 11
+Number of features: 11
+Number of features: 27
+Number of features: 25
+Number of features: 13
+Number of features: 14
+Number of features: 22
+Number of features: 13
+Number of features: 9
+Number of features: 8
+Number of features: 16
+Number of features: 17
+Number of features: 28
+Number of features: 10
+Number of features: 15
+Number of features: 10
+Number of features: 10
+Number of features: 2
+Number of features: 3
+Number of features: 4
+Number of features: 11
+Number of features: 23
+Number of features: 29
+Number of features: 20
+Number of features: 26
+Number of features: 16
+Number of features: 6
+Number of features: 21
+Number of features: 21
+Number of features: 20
+Number of features: 26
+Number of features: 18
+Number of features: 9
+Number of features: 21
+Number of features: 22
+Number of features: 13
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=11.0 MiB, count=155750, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=8647 KiB, count=4010, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=6750 KiB, count=107145, average=65 B
+GLOBUS TRANSFER task_id: 97a671f2-2550-11eb-b537-02d9497ca481
+Waiting for transfer 97a671f2-2550-11eb-b537-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: afa1d974-2550-11eb-b537-02d9497ca481
+
+Processing scenario ID: 2
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 337.75426977697515
+Features selected: 5
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 168.87713488848757
+Features selected: 5
+Iterations without progress: 1
+
+alpha: 84.43856744424379
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 42.219283722121894
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 21.109641861060947
+Features selected: 13
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 18.998677674954852
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 17.098809907459366
+Features selected: 23
+Iterations without progress: 1
+
+alpha: 15.388928916713429
+Features selected: 23
+Iterations without progress: 2
+
+alpha: 13.850036025042087
+Features selected: 23
+Iterations without progress: 3
+
+alpha: 12.46503242253788
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 11.218529180284092
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 10.096676262255682
+Features selected: 25
+Iterations without progress: 1
+
+alpha: 9.087008636030115
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 8.178307772427104
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 7.360476995184394
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 8.096524694702833
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 47
+Number of chunks: 16
+Average length of each chunk: 2.9
+Number of cores: 8
+
+Number of features: 24
+Number of features: 4
+Number of features: 2
+Number of features: 5
+Number of features: 3
+Number of features: 21
+Number of features: 5
+Number of features: 11
+Number of features: 20
+Number of features: 6
+Number of features: 8
+Number of features: 9
+Number of features: 14
+Number of features: 7
+Number of features: 10
+Number of features: 15
+Number of features: 19
+Number of features: 9
+Number of features: 23
+Number of features: 3
+Number of features: 23
+Number of features: 17
+Number of features: 7
+Number of features: 11
+Number of features: 10
+Number of features: 11
+Number of features: 8
+Number of features: 27
+Number of features: 25
+Number of features: 6
+Number of features: 12
+Number of features: 25
+Number of features: 22
+Number of features: 10
+Number of features: 12
+Number of features: 4
+Number of features: 10
+Number of features: 16
+Number of features: 13
+Number of features: 27
+Number of features: 26
+Number of features: 18
+Number of features: 1
+Number of features: 4
+Number of features: 28
+Number of features: 15
+Number of features: 16
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=16.7 MiB, count=236282, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=12.8 MiB, count=6074, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=10239 KiB, count=162534, average=65 B
+GLOBUS TRANSFER task_id: a11b056c-2551-11eb-8fb9-0a34088e79f9
+Waiting for transfer a11b056c-2551-11eb-8fb9-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: b9685d18-2551-11eb-8fb9-0a34088e79f9
+
+Processing scenario ID: 0
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 5.0
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 2.5
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 1.25
+Features selected: 7
+Iterations without progress: 1
+
+alpha: 0.625
+Features selected: 12
+Iterations without progress: 0
+
+alpha: 0.3125
+Features selected: 14
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.28125
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 0.253125
+Features selected: 21
+Iterations without progress: 1
+
+alpha: 0.2278125
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 0.20503125
+Features selected: 22
+Iterations without progress: 1
+
+alpha: 0.18452812500000002
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 0.16607531250000002
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 0.14946778125000001
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.16441455937500002
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.16277041378125
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.16114270964343752
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.15953128254700313
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.1579359697215331
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 0.15635661002431775
+Features selected: 28
+Iterations without progress: 2
+
+alpha: 0.15479304392407456
+Features selected: 28
+Iterations without progress: 3
+
+alpha: 0.15620025341429344
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 55
+Number of chunks: 16
+Average length of each chunk: 3.4
+Number of cores: 8
+
+Number of features: 4
+Number of features: 11
+Number of features: 16
+Number of features: 7
+Number of features: 14
+Number of features: 9
+Number of features: 19
+Number of features: 2
+Number of features: 25
+Number of features: 5
+Number of features: 19
+Number of features: 10
+Number of features: 6
+Number of features: 28
+Number of features: 15
+Number of features: 14
+Number of features: 9
+Number of features: 8
+Number of features: 8
+Number of features: 3
+Number of features: 21
+Number of features: 10
+Number of features: 6
+Number of features: 21
+Number of features: 9
+Number of features: 23
+Number of features: 5
+Number of features: 7
+Number of features: 22
+Number of features: 15
+Number of features: 13
+Number of features: 13
+Number of features: 20
+Number of features: 12
+Number of features: 6
+Number of features: 22
+Number of features: 16
+Number of features: 18
+Number of features: 17
+Number of features: 5
+Number of features: 13
+Number of features: 14
+Number of features: 1
+Number of features: 23
+Number of features: 24
+Number of features: 18
+Number of features: 16
+Number of features: 14
+Number of features: 18
+Number of features: 15
+Number of features: 17
+Number of features: 19
+Number of features: 16
+Number of features: 17
+Number of features: 26
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=5502 KiB, count=76148, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=4300 KiB, count=1994, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=3254 KiB, count=51456, average=65 B
+GLOBUS TRANSFER task_id: 774baea2-2552-11eb-b161-0ee0d5d9299f
+Waiting for transfer 774baea2-2552-11eb-b161-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 7d7a8df2-2552-11eb-b161-0ee0d5d9299f
+
+Processing scenario ID: 1
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.001
+New "step_pct": 0.01
+alpha: 7.731912544007525
+Features selected: 7
+Iterations without progress: 0
+
+Old "step_pct": 0.01
+New "step_pct": 0.1
+alpha: 6.958721289606772
+Features selected: 7
+Iterations without progress: 1
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 3.479360644803386
+Features selected: 7
+Iterations without progress: 2
+
+alpha: 1.739680322401693
+Features selected: 7
+Iterations without progress: 3
+
+alpha: 0.8698401612008465
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 0.43492008060042325
+Features selected: 12
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.3914280725403809
+Features selected: 20
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.2
+alpha: 0.3131424580323048
+Features selected: 20
+Iterations without progress: 1
+
+Old "step_pct": 0.2
+New "step_pct": 0.4
+alpha: 0.18788547481938286
+Features selected: 19
+Iterations without progress: 0
+
+Old "step_pct": 0.4
+New "step_pct": 0.08
+alpha: 0.17285463683383223
+Features selected: 25
+Iterations without progress: 0
+
+Old "step_pct": 0.08
+New "step_pct": 0.016
+alpha: 0.17008896264449092
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.16736753924217906
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.1646896586143042
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.16205462407647533
+Features selected: 29
+Iterations without progress: 3
+
+alpha: 0.1594617500912517
+Features selected: 29
+Iterations without progress: 4
+
+alpha: 0.15691036208979167
+Features selected: 29
+Iterations without progress: 5
+
+alpha: 0.154399796296355
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.15192939955561333
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 0.15415275662228084
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.15390611221168518
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.15365986243214647
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.1538814872337313
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 50
+Number of chunks: 16
+Average length of each chunk: 3.1
+Number of cores: 8
+
+Number of features: 23
+Number of features: 8
+Number of features: 19
+Number of features: 3
+Number of features: 19
+Number of features: 9
+Number of features: 29
+Number of features: 4
+Number of features: 15
+Number of features: 20
+Number of features: 10
+Number of features: 20
+Number of features: 22
+Number of features: 7
+Number of features: 24
+Number of features: 1
+Number of features: 10
+Number of features: 11
+Number of features: 7
+Number of features: 28
+Number of features: 8
+Number of features: 16
+Number of features: 19
+Number of features: 5
+Number of features: 7
+Number of features: 2
+Number of features: 25
+Number of features: 28
+Number of features: 7
+Number of features: 8
+Number of features: 10
+Number of features: 27
+Number of features: 6
+Number of features: 7
+Number of features: 9
+Number of features: 12
+Number of features: 17
+Number of features: 24
+Number of features: 5
+Number of features: 20
+Number of features: 13
+Number of features: 7
+Number of features: 29
+Number of features: 19
+Number of features: 6
+Number of features: 14
+Number of features: 25
+Number of features: 19
+Number of features: 4
+Number of features: 6
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=10.4 MiB, count=147688, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=8336 KiB, count=3866, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=6258 KiB, count=98849, average=65 B
+GLOBUS TRANSFER task_id: 286e4104-2553-11eb-8fb9-0a34088e79f9
+Waiting for transfer 286e4104-2553-11eb-8fb9-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 46bd064a-2553-11eb-8fb9-0a34088e79f9
+
+Processing scenario ID: 2
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.00016
+New "step_pct": 0.0016
+alpha: 7.681763842707866
+Features selected: 6
+Iterations without progress: 0
+
+Old "step_pct": 0.0016
+New "step_pct": 0.016
+alpha: 7.558855621224541
+Features selected: 6
+Iterations without progress: 1
+
+Old "step_pct": 0.016
+New "step_pct": 0.16
+alpha: 6.349438721828614
+Features selected: 6
+Iterations without progress: 2
+
+Old "step_pct": 0.16
+New "step_pct": 0.8
+alpha: 1.2698877443657226
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.25397754887314444
+Features selected: 7
+Iterations without progress: 0
+
+Old "step_pct": 0.8
+New "step_pct": 0.16
+alpha: 0.21334114105344132
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.24991390809117414
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.2535711847949474
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 59
+Number of chunks: 16
+Average length of each chunk: 3.7
+Number of cores: 8
+
+Number of features: 5
+Number of features: 19
+Number of features: 24
+Number of features: 20
+Number of features: 14
+Number of features: 21
+Number of features: 5
+Number of features: 3
+Number of features: 5
+Number of features: 13
+Number of features: 21
+Number of features: 22
+Number of features: 25
+Number of features: 6
+Number of features: 7
+Number of features: 8
+Number of features: 28
+Number of features: 9
+Number of features: 25
+Number of features: 7
+Number of features: 10
+Number of features: 16
+Number of features: 8
+Number of features: 15
+Number of features: 8
+Number of features: 24
+Number of features: 29
+Number of features: 2
+Number of features: 26
+Number of features: 5
+Number of features: 17
+Number of features: 20
+Number of features: 17
+Number of features: 13
+Number of features: 23
+Number of features: 23
+Number of features: 5
+Number of features: 21
+Number of features: 9
+Number of features: 6
+Number of features: 22
+Number of features: 4
+Number of features: 25
+Number of features: 16
+Number of features: 20
+Number of features: 27
+Number of features: 9
+Number of features: 6
+Number of features: 23
+Number of features: 4
+Number of features: 6
+Number of features: 19
+Number of features: 12
+Number of features: 11
+Number of features: 1
+Number of features: 28
+Number of features: 10
+Number of features: 4
+Number of features: 22
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=16.0 MiB, count=227041, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=12.5 MiB, count=5930, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=9745 KiB, count=154223, average=65 B
+GLOBUS TRANSFER task_id: 1d71ead4-2554-11eb-b537-02d9497ca481
+Waiting for transfer 1d71ead4-2554-11eb-b537-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 3bc461ec-2554-11eb-b537-02d9497ca481
+
+Processing scenario ID: 0
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.05
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.025
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.0125
+Features selected: 15
+Iterations without progress: 0
+
+alpha: 0.00625
+Features selected: 20
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.005625000000000001
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.0061875
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 50
+Number of chunks: 16
+Average length of each chunk: 3.1
+Number of cores: 8
+
+Number of features: 27
+Number of features: 8
+Number of features: 23
+Number of features: 6
+Number of features: 5
+Number of features: 25
+Number of features: 13
+Number of features: 7
+Number of features: 12
+Number of features: 8
+Number of features: 16
+Number of features: 24
+Number of features: 19
+Number of features: 6
+Number of features: 5
+Number of features: 3
+Number of features: 5
+Number of features: 15
+Number of features: 1
+Number of features: 9
+Number of features: 26
+Number of features: 27
+Number of features: 10
+Number of features: 11
+Number of features: 26
+Number of features: 6
+Number of features: 7
+Number of features: 26
+Number of features: 2
+Number of features: 4
+Number of features: 17
+Number of features: 5
+Number of features: 28
+Number of features: 14
+Number of features: 22
+Number of features: 7
+Number of features: 6
+Number of features: 14
+Number of features: 6
+Number of features: 5
+Number of features: 7
+Number of features: 29
+Number of features: 0
+Number of features: 7
+Number of features: 18
+Number of features: 28
+Number of features: 8
+Number of features: 20
+Number of features: 25
+Number of features: 6
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=5808 KiB, count=80385, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=4507 KiB, count=2090, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=3470 KiB, count=54982, average=65 B
+GLOBUS TRANSFER task_id: d51d0740-2554-11eb-b537-02d9497ca481
+Waiting for transfer d51d0740-2554-11eb-b537-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: f36e3354-2554-11eb-b537-02d9497ca481
+
+Processing scenario ID: 1
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.01
+New "step_pct": 0.1
+alpha: 0.2784375
+Features selected: 3
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 0.13921875
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.069609375
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.0348046875
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 0.01740234375
+Features selected: 15
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.015662109375
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 0.0140958984375
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 0.01268630859375
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.011417677734375001
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 0.010275909960937501
+Features selected: 24
+Iterations without progress: 1
+
+alpha: 0.009248318964843752
+Features selected: 24
+Iterations without progress: 2
+
+alpha: 0.008323487068359376
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 0.007491138361523439
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.006742024525371096
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 0.006067822072833986
+Features selected: 25
+Iterations without progress: 1
+
+alpha: 0.005461039865550588
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.004914935878995529
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.0054064294668950815
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 63
+Number of chunks: 16
+Average length of each chunk: 3.9
+Number of cores: 8
+
+Number of features: 17
+Number of features: 13
+Number of features: 0
+Number of features: 23
+Number of features: 18
+Number of features: 24
+Number of features: 3
+Number of features: 2
+Number of features: 21
+Number of features: 10
+Number of features: 7
+Number of features: 11
+Number of features: 14
+Number of features: 5
+Number of features: 7
+Number of features: 10
+Number of features: 22
+Number of features: 4
+Number of features: 9
+Number of features: 16
+Number of features: 6
+Number of features: 15
+Number of features: 5
+Number of features: 21
+Number of features: 26
+Number of features: 26
+Number of features: 6
+Number of features: 1
+Number of features: 7
+Number of features: 3
+Number of features: 25
+Number of features: 10
+Number of features: 10
+Number of features: 25
+Number of features: 13
+Number of features: 5
+Number of features: 7
+Number of features: 11
+Number of features: 15
+Number of features: 17
+Number of features: 8
+Number of features: 5
+Number of features: 26
+Number of features: 26
+Number of features: 27
+Number of features: 11
+Number of features: 25
+Number of features: 5
+Number of features: 6
+Number of features: 25
+Number of features: 4
+Number of features: 24
+Number of features: 6
+Number of features: 19
+Number of features: 16
+Number of features: 14
+Number of features: 12
+Number of features: 6
+Number of features: 26
+Number of features: 6
+Number of features: 4
+Number of features: 6
+Number of features: 27
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=11.2 MiB, count=158789, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=8750 KiB, count=4058, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=6959 KiB, count=110731, average=64 B
+GLOBUS TRANSFER task_id: 93ae71b2-2555-11eb-b161-0ee0d5d9299f
+Waiting for transfer 93ae71b2-2555-11eb-b161-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: ac0f6aa4-2555-11eb-b161-0ee0d5d9299f
+
+Processing scenario ID: 2
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.01
+New "step_pct": 0.1
+alpha: 0.2432893260102787
+Features selected: 4
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 0.12164466300513935
+Features selected: 4
+Iterations without progress: 1
+
+alpha: 0.060822331502569674
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.030411165751284837
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 0.015205582875642418
+Features selected: 12
+Iterations without progress: 0
+
+alpha: 0.007602791437821209
+Features selected: 17
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.0068425122940390885
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.007526763523442997
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.007451495888208567
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.007376980929326481
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 0.007303211120033216
+Features selected: 28
+Iterations without progress: 2
+
+alpha: 0.007230179008832884
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.007157877218744555
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.007222948829824051
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 55
+Number of chunks: 16
+Average length of each chunk: 3.4
+Number of cores: 8
+
+Number of features: 10
+Number of features: 4
+Number of features: 18
+Number of features: 23
+Number of features: 21
+Number of features: 5
+Number of features: 0
+Number of features: 7
+Number of features: 7
+Number of features: 17
+Number of features: 26
+Number of features: 1
+Number of features: 6
+Number of features: 23
+Number of features: 22
+Number of features: 7
+Number of features: 28
+Number of features: 15
+Number of features: 9
+Number of features: 25
+Number of features: 17
+Number of features: 13
+Number of features: 7
+Number of features: 12
+Number of features: 11
+Number of features: 6
+Number of features: 14
+Number of features: 7
+Number of features: 18
+Number of features: 15
+Number of features: 3
+Number of features: 8
+Number of features: 16
+Number of features: 7
+Number of features: 20
+Number of features: 6
+Number of features: 29
+Number of features: 24
+Number of features: 26
+Number of features: 16
+Number of features: 13
+Number of features: 6
+Number of features: 8
+Number of features: 10
+Number of features: 14
+Number of features: 8
+Number of features: 9
+Number of features: 12
+Number of features: 11
+Number of features: 2
+Number of features: 8
+Number of features: 7
+Number of features: 27
+Number of features: 13
+Number of features: 6
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=16.1 MiB, count=228370, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=12.6 MiB, count=5978, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=9733 KiB, count=153851, average=65 B
+GLOBUS TRANSFER task_id: 499bf80a-2556-11eb-b537-02d9497ca481
+Waiting for transfer 499bf80a-2556-11eb-b537-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 67e91b3a-2556-11eb-b537-02d9497ca481
+
+Processing scenario ID: 0
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 50.0
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 25.0
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 12.5
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 6.25
+Features selected: 15
+Iterations without progress: 0
+
+alpha: 3.125
+Features selected: 20
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 2.8125
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 2.53125
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 2.278125
+Features selected: 27
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 2.16421875
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 2.266734375
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 42
+Number of chunks: 16
+Average length of each chunk: 2.6
+Number of cores: 8
+
+Number of features: 19
+Number of features: 6
+Number of features: 15
+Number of features: 26
+Number of features: 5
+Number of features: 10
+Number of features: 1
+Number of features: 18
+Number of features: 27
+Number of features: 24
+Number of features: 2
+Number of features: 9
+Number of features: 25
+Number of features: 29
+Number of features: 21
+Number of features: 22
+Number of features: 18
+Number of features: 12
+Number of features: 23
+Number of features: 23
+Number of features: 21
+Number of features: 5
+Number of features: 11
+Number of features: 17
+Number of features: 8
+Number of features: 25
+Number of features: 27
+Number of features: 24
+Number of features: 14
+Number of features: 20
+Number of features: 30
+Number of features: 4
+Number of features: 13
+Number of features: 14
+Number of features: 13
+Number of features: 5
+Number of features: 28
+Number of features: 7
+Number of features: 16
+Number of features: 11
+Number of features: 3
+Number of features: 6
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=6419 KiB, count=88839, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=4895 KiB, count=2270, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=3914 KiB, count=62311, average=64 B
+GLOBUS TRANSFER task_id: e9a02826-2556-11eb-b537-02d9497ca481
+Waiting for transfer e9a02826-2556-11eb-b537-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 07f4df92-2557-11eb-b537-02d9497ca481
+
+Processing scenario ID: 1
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 107.66988281249999
+Features selected: 5
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 53.834941406249996
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 26.917470703124998
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 13.458735351562499
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 6.7293676757812495
+Features selected: 15
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 6.056430908203125
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 5.450787817382812
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 4.905709035644531
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 4.415138132080078
+Features selected: 25
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 4.194381225476074
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 3.98466216420227
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 3.7854290559921564
+Features selected: 28
+Iterations without progress: 2
+
+alpha: 3.5961576031925486
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 3.416349723032921
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 3.245532236881275
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 3.083255625037211
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 3.2293045756968684
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 35
+Number of chunks: 16
+Average length of each chunk: 2.2
+Number of cores: 8
+
+Number of features: 4
+Number of features: 9
+Number of features: 2
+Number of features: 10
+Number of features: 15
+Number of features: 23
+Number of features: 5
+Number of features: 19
+Number of features: 13
+Number of features: 23
+Number of features: 7
+Number of features: 29
+Number of features: 26
+Number of features: 10
+Number of features: 9
+Number of features: 11
+Number of features: 14
+Number of features: 29
+Number of features: 22
+Number of features: 28
+Number of features: 8
+Number of features: 17
+Number of features: 6
+Number of features: 3
+Number of features: 27
+Number of features: 16
+Number of features: 18
+Number of features: 27
+Number of features: 25
+Number of features: 28
+Number of features: 12
+Number of features: 21
+Number of features: 24
+Number of features: 1
+Number of features: 24
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=11.9 MiB, count=169060, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=9345 KiB, count=4334, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=7387 KiB, count=117432, average=64 B
+GLOBUS TRANSFER task_id: 79f8ddc8-2557-11eb-b537-02d9497ca481
+Waiting for transfer 79f8ddc8-2557-11eb-b537-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 98486a14-2557-11eb-b537-02d9497ca481
+
+Processing scenario ID: 2
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 153.39196734560124
+Features selected: 3
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 76.69598367280062
+Features selected: 3
+Iterations without progress: 1
+
+alpha: 38.34799183640031
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 19.173995918200156
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 9.586997959100078
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 4.793498979550039
+Features selected: 16
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 4.314149081595035
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 3.882734173435532
+Features selected: 23
+Iterations without progress: 1
+
+alpha: 3.494460756091979
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 3.145014680482781
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 2.830513212434503
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 2.5474618911910527
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 2.802208080310158
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 41
+Number of chunks: 16
+Average length of each chunk: 2.6
+Number of cores: 8
+
+Number of features: 8
+Number of features: 19
+Number of features: 13
+Number of features: 4
+Number of features: 4
+Number of features: 23
+Number of features: 3
+Number of features: 3
+Number of features: 29
+Number of features: 16
+Number of features: 25
+Number of features: 2
+Number of features: 24
+Number of features: 29
+Number of features: 28
+Number of features: 10
+Number of features: 13
+Number of features: 19
+Number of features: 11
+Number of features: 21
+Number of features: 22
+Number of features: 4
+Number of features: 19
+Number of features: 18
+Number of features: 6
+Number of features: 15
+Number of features: 23
+Number of features: 22
+Number of features: 7
+Number of features: 18
+Number of features: 1
+Number of features: 9
+Number of features: 5
+Number of features: 14
+Number of features: 28
+Number of features: 16
+Number of features: 20
+Number of features: 5
+Number of features: 24
+Number of features: 14
+Number of features: 26
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=16.9 MiB, count=239114, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=13.0 MiB, count=6194, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=10.1 MiB, count=163975, average=65 B
+GLOBUS TRANSFER task_id: 091622b8-2558-11eb-8fb9-0a34088e79f9
+Waiting for transfer 091622b8-2558-11eb-8fb9-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 1540ff04-2558-11eb-8fb9-0a34088e79f9
+
+Processing scenario ID: 0
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.5
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 0.25
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 0.125
+Features selected: 14
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.1125
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 0.10125
+Features selected: 22
+Iterations without progress: 1
+
+alpha: 0.09112500000000001
+Features selected: 22
+Iterations without progress: 2
+
+alpha: 0.08201250000000002
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 0.07381125000000002
+Features selected: 24
+Iterations without progress: 1
+
+alpha: 0.06643012500000002
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.05978711250000002
+Features selected: 27
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 0.056797756875000015
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.05948817693750002
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.05919073605281252
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.05889478237254846
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.058600308460685716
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.05830730691838229
+Features selected: 29
+Iterations without progress: 3
+
+alpha: 0.058015770383790376
+Features selected: 29
+Iterations without progress: 4
+
+alpha: 0.057725691531871424
+Features selected: 29
+Iterations without progress: 5
+
+alpha: 0.057986762498598486
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 44
+Number of chunks: 16
+Average length of each chunk: 2.8
+Number of cores: 8
+
+Number of features: 21
+Number of features: 5
+Number of features: 22
+Number of features: 17
+Number of features: 7
+Number of features: 20
+Number of features: 14
+Number of features: 22
+Number of features: 8
+Number of features: 8
+Number of features: 8
+Number of features: 27
+Number of features: 6
+Number of features: 16
+Number of features: 17
+Number of features: 23
+Number of features: 23
+Number of features: 12
+Number of features: 24
+Number of features: 10
+Number of features: 2
+Number of features: 7
+Number of features: 25
+Number of features: 26
+Number of features: 12
+Number of features: 18
+Number of features: 1
+Number of features: 11
+Number of features: 11
+Number of features: 6
+Number of features: 27
+Number of features: 7
+Number of features: 3
+Number of features: 28
+Number of features: 9
+Number of features: 13
+Number of features: 5
+Number of features: 22
+Number of features: 29
+Number of features: 4
+Number of features: 15
+Number of features: 8
+Number of features: 26
+Number of features: 9
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=5703 KiB, count=78928, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=4455 KiB, count=2066, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=3373 KiB, count=53341, average=65 B
+GLOBUS TRANSFER task_id: 8a6af5aa-2558-11eb-8fb9-0a34088e79f9
+Waiting for transfer 8a6af5aa-2558-11eb-8fb9-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 96935002-2558-11eb-8fb9-0a34088e79f9
+
+Processing scenario ID: 1
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.0005
+New "step_pct": 0.005
+alpha: 2.8848414343052746
+Features selected: 4
+Iterations without progress: 0
+
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 2.740599362590011
+Features selected: 4
+Iterations without progress: 1
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 1.3702996812950055
+Features selected: 4
+Iterations without progress: 2
+
+alpha: 0.6851498406475027
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.34257492032375136
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 0.17128746016187568
+Features selected: 13
+Iterations without progress: 0
+
+alpha: 0.08564373008093784
+Features selected: 17
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.07707935707284407
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.08478729278012848
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 34
+Number of chunks: 16
+Average length of each chunk: 2.1
+Number of cores: 8
+
+Number of features: 2
+Number of features: 21
+Number of features: 5
+Number of features: 17
+Number of features: 13
+Number of features: 3
+Number of features: 9
+Number of features: 22
+Number of features: 20
+Number of features: 4
+Number of features: 24
+Number of features: 25
+Number of features: 15
+Number of features: 11
+Number of features: 8
+Number of features: 25
+Number of features: 13
+Number of features: 7
+Number of features: 12
+Number of features: 15
+Number of features: 16
+Number of features: 19
+Number of features: 18
+Number of features: 27
+Number of features: 16
+Number of features: 10
+Number of features: 1
+Number of features: 14
+Number of features: 6
+Number of features: 23
+Number of features: 17
+Number of features: 6
+Number of features: 26
+Number of features: 7
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=10.9 MiB, count=154746, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=8698 KiB, count=4034, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=6612 KiB, count=104607, average=65 B
+GLOBUS TRANSFER task_id: 00b3789a-2559-11eb-8fb9-0a34088e79f9
+Waiting for transfer 00b3789a-2559-11eb-8fb9-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 0ce6ea0c-2559-11eb-8fb9-0a34088e79f9
+
+Processing scenario ID: 2
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.01
+New "step_pct": 0.1
+alpha: 3.8154281751057817
+Features selected: 3
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 1.9077140875528908
+Features selected: 3
+Iterations without progress: 1
+
+alpha: 0.9538570437764454
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.4769285218882227
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.23846426094411136
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 0.11923213047205568
+Features selected: 17
+Iterations without progress: 0
+
+alpha: 0.05961606523602784
+Features selected: 20
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.05365445871242506
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.05901990458366756
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 37
+Number of chunks: 16
+Average length of each chunk: 2.3
+Number of cores: 8
+
+Number of features: 5
+Number of features: 4
+Number of features: 9
+Number of features: 23
+Number of features: 8
+Number of features: 16
+Number of features: 21
+Number of features: 22
+Number of features: 15
+Number of features: 13
+Number of features: 7
+Number of features: 17
+Number of features: 5
+Number of features: 10
+Number of features: 12
+Number of features: 6
+Number of features: 2
+Number of features: 4
+Number of features: 3
+Number of features: 18
+Number of features: 27
+Number of features: 21
+Number of features: 26
+Number of features: 12
+Number of features: 5
+Number of features: 1
+Number of features: 17
+Number of features: 14
+Number of features: 28
+Number of features: 22
+Number of features: 19
+Number of features: 11
+Number of features: 16
+Number of features: 20
+Number of features: 4
+Number of features: 29
+Number of features: 6
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=16.1 MiB, count=228469, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=12.6 MiB, count=5978, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=9739 KiB, count=153948, average=65 B
+GLOBUS TRANSFER task_id: 78ee8188-2559-11eb-b537-02d9497ca481
+Waiting for transfer 78ee8188-2559-11eb-b537-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 851d2018-2559-11eb-b537-02d9497ca481
+
+Processing scenario ID: 0
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.05
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.025
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.0125
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.00625
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.003125
+Features selected: 15
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.0028125000000000003
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 0.0025312500000000005
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.0027843750000000004
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 40
+Number of chunks: 16
+Average length of each chunk: 2.5
+Number of cores: 8
+
+Number of features: 12
+Number of features: 1
+Number of features: 26
+Number of features: 11
+Number of features: 23
+Number of features: 3
+Number of features: 21
+Number of features: 28
+Number of features: 10
+Number of features: 5
+Number of features: 23
+Number of features: 15
+Number of features: 4
+Number of features: 3
+Number of features: 16
+Number of features: 14
+Number of features: 8
+Number of features: 9
+Number of features: 4
+Number of features: 22
+Number of features: 23
+Number of features: 6
+Number of features: 17
+Number of features: 25
+Number of features: 24
+Number of features: 19
+Number of features: 20
+Number of features: 26
+Number of features: 2
+Number of features: 24
+Number of features: 17
+Number of features: 22
+Number of features: 18
+Number of features: 27
+Number of features: 26
+Number of features: 13
+Number of features: 7
+Number of features: 22
+Number of features: 24
+Number of features: 25
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=5772 KiB, count=79884, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=4481 KiB, count=2078, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=3436 KiB, count=54419, average=65 B
+GLOBUS TRANSFER task_id: e8ae09ee-2559-11eb-b161-0ee0d5d9299f
+Waiting for transfer e8ae09ee-2559-11eb-b161-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 070e53d0-255a-11eb-b161-0ee0d5d9299f
+
+Processing scenario ID: 1
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.01
+New "step_pct": 0.1
+alpha: 0.12529687500000003
+Features selected: 1
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 0.06264843750000001
+Features selected: 1
+Iterations without progress: 1
+
+alpha: 0.03132421875000001
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.015662109375000004
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.007831054687500002
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.003915527343750001
+Features selected: 13
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.003523974609375001
+Features selected: 22
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.02
+alpha: 0.003453495117187501
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.003384425214843751
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.003316736710546876
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.0032504019763359383
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0031853939368092195
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.003121686058073035
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.0030592523369115743
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.002998067290173343
+Features selected: 29
+Iterations without progress: 3
+
+alpha: 0.002938105944369876
+Features selected: 29
+Iterations without progress: 4
+
+alpha: 0.0028793438254824783
+Features selected: 29
+Iterations without progress: 5
+
+alpha: 0.0028217569489728286
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.002765321809993372
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.0027100153737935045
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.0027597911663733853
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 43
+Number of chunks: 16
+Average length of each chunk: 2.7
+Number of cores: 8
+
+Number of features: 29
+Number of features: 28
+Number of features: 19
+Number of features: 5
+Number of features: 2
+Number of features: 27
+Number of features: 7
+Number of features: 13
+Number of features: 26
+Number of features: 8
+Number of features: 15
+Number of features: 28
+Number of features: 21
+Number of features: 22
+Number of features: 5
+Number of features: 23
+Number of features: 21
+Number of features: 27
+Number of features: 28
+Number of features: 4
+Number of features: 18
+Number of features: 19
+Number of features: 27
+Number of features: 21
+Number of features: 6
+Number of features: 4
+Number of features: 7
+Number of features: 22
+Number of features: 26
+Number of features: 16
+Number of features: 1
+Number of features: 4
+Number of features: 5
+Number of features: 12
+Number of features: 3
+Number of features: 25
+Number of features: 6
+Number of features: 4
+Number of features: 14
+Number of features: 5
+Number of features: 22
+Number of features: 29
+Number of features: 20
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=10.5 MiB, count=149192, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=8310 KiB, count=3854, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=6436 KiB, count=102069, average=65 B
+GLOBUS TRANSFER task_id: 64715ffe-255a-11eb-8fb9-0a34088e79f9
+Waiting for transfer 64715ffe-255a-11eb-8fb9-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 82c224c0-255a-11eb-8fb9-0a34088e79f9
+
+Processing scenario ID: 2
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.002
+New "step_pct": 0.02
+alpha: 0.13522976715229587
+Features selected: 1
+Iterations without progress: 0
+
+Old "step_pct": 0.02
+New "step_pct": 0.2
+alpha: 0.1081838137218367
+Features selected: 1
+Iterations without progress: 1
+
+Old "step_pct": 0.2
+New "step_pct": 0.4
+alpha: 0.06491028823310202
+Features selected: 1
+Iterations without progress: 2
+
+Old "step_pct": 0.4
+New "step_pct": 0.8
+alpha: 0.012982057646620401
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.0025964115293240797
+Features selected: 8
+Iterations without progress: 0
+
+Old "step_pct": 0.8
+New "step_pct": 0.16
+alpha: 0.0021809856846322266
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.0025548689448548945
+Features selected: 33
+Iterations without progress: 0
+
+alpha: 0.0025139910417372163
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0024737671850694207
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 0.00243418691010831
+Features selected: 28
+Iterations without progress: 2
+
+alpha: 0.002395239919546577
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.0024302922110521364
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 36
+Number of chunks: 16
+Average length of each chunk: 2.2
+Number of cores: 8
+
+Number of features: 11
+Number of features: 15
+Number of features: 1
+Number of features: 19
+Number of features: 2
+Number of features: 23
+Number of features: 5
+Number of features: 16
+Number of features: 21
+Number of features: 15
+Number of features: 9
+Number of features: 12
+Number of features: 20
+Number of features: 14
+Number of features: 27
+Number of features: 16
+Number of features: 14
+Number of features: 4
+Number of features: 8
+Number of features: 3
+Number of features: 26
+Number of features: 24
+Number of features: 18
+Number of features: 25
+Number of features: 17
+Number of features: 27
+Number of features: 15
+Number of features: 29
+Number of features: 28
+Number of features: 24
+Number of features: 15
+Number of features: 10
+Number of features: 13
+Number of features: 28
+Number of features: 7
+Number of features: 29
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=16.0 MiB, count=225850, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=12.3 MiB, count=5846, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=9787 KiB, count=155251, average=65 B
+GLOBUS TRANSFER task_id: e4ce0db4-255a-11eb-8fb9-0a34088e79f9
+Waiting for transfer e4ce0db4-255a-11eb-8fb9-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 0352afce-255b-11eb-8fb9-0a34088e79f9
+
+Processing scenario ID: 0
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 50.0
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 25.0
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 12.5
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 6.25
+Features selected: 17
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 5.625
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 6.1875
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 27
+Number of chunks: 16
+Average length of each chunk: 1.7
+Number of cores: 8
+
+Number of features: 9
+Number of features: 13
+Number of features: 3
+Number of features: 27
+Number of features: 25
+Number of features: 4
+Number of features: 26
+Number of features: 1
+Number of features: 16
+Number of features: 18
+Number of features: 24
+Number of features: 8
+Number of features: 12
+Number of features: 15
+Number of features: 7
+Number of features: 17
+Number of features: 28
+Number of features: 5
+Number of features: 19
+Number of features: 14
+Number of features: 6
+Number of features: 21
+Number of features: 11
+Number of features: 2
+Number of features: 10
+Number of features: 22
+Number of features: 20
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=5702 KiB, count=78915, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=4377 KiB, count=2030, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=3447 KiB, count=54769, average=64 B
+GLOBUS TRANSFER task_id: 76bf04b2-255b-11eb-b537-02d9497ca481
+Waiting for transfer 76bf04b2-255b-11eb-b537-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 82f10618-255b-11eb-b537-02d9497ca481
+
+Processing scenario ID: 1
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.01
+New "step_pct": 0.1
+alpha: 278.4375
+Features selected: 1
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 139.21875
+Features selected: 1
+Iterations without progress: 1
+
+alpha: 69.609375
+Features selected: 1
+Iterations without progress: 2
+
+alpha: 34.8046875
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 17.40234375
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 8.701171875
+Features selected: 14
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 7.8310546875
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 7.04794921875
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 6.343154296875
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 6.9774697265625
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 36
+Number of chunks: 16
+Average length of each chunk: 2.2
+Number of cores: 8
+
+Number of features: 10
+Number of features: 3
+Number of features: 6
+Number of features: 14
+Number of features: 11
+Number of features: 5
+Number of features: 23
+Number of features: 16
+Number of features: 10
+Number of features: 7
+Number of features: 18
+Number of features: 15
+Number of features: 25
+Number of features: 15
+Number of features: 8
+Number of features: 27
+Number of features: 13
+Number of features: 16
+Number of features: 22
+Number of features: 2
+Number of features: 24
+Number of features: 9
+Number of features: 19
+Number of features: 12
+Number of features: 20
+Number of features: 26
+Number of features: 17
+Number of features: 9
+Number of features: 25
+Number of features: 26
+Number of features: 26
+Number of features: 1
+Number of features: 27
+Number of features: 20
+Number of features: 4
+Number of features: 19
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=10.7 MiB, count=151284, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=8440 KiB, count=3914, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=6512 KiB, count=103210, average=65 B
+GLOBUS TRANSFER task_id: ee007ac4-255b-11eb-b161-0ee0d5d9299f
+Waiting for transfer ee007ac4-255b-11eb-b161-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 0c635b6c-255c-11eb-b161-0ee0d5d9299f
+
+Processing scenario ID: 2
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.01
+New "step_pct": 0.1
+alpha: 313.98613769531255
+Features selected: 1
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 156.99306884765628
+Features selected: 1
+Iterations without progress: 1
+
+alpha: 78.49653442382814
+Features selected: 1
+Iterations without progress: 2
+
+alpha: 39.24826721191407
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 19.624133605957034
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 9.812066802978517
+Features selected: 12
+Iterations without progress: 0
+
+alpha: 4.906033401489259
+Features selected: 19
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 4.415430061340333
+Features selected: 27
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 4.194658558273316
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 3.98492563035965
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 4.173685265481949
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 32
+Number of chunks: 16
+Average length of each chunk: 2.0
+Number of cores: 8
+
+Number of features: 12
+Number of features: 5
+Number of features: 10
+Number of features: 1
+Number of features: 23
+Number of features: 24
+Number of features: 16
+Number of features: 3
+Number of features: 22
+Number of features: 11
+Number of features: 28
+Number of features: 25
+Number of features: 18
+Number of features: 17
+Number of features: 8
+Number of features: 27
+Number of features: 2
+Number of features: 9
+Number of features: 23
+Number of features: 22
+Number of features: 19
+Number of features: 20
+Number of features: 17
+Number of features: 14
+Number of features: 6
+Number of features: 13
+Number of features: 4
+Number of features: 29
+Number of features: 21
+Number of features: 15
+Number of features: 7
+Number of features: 26
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=16.6 MiB, count=235596, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=12.8 MiB, count=6074, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=10237 KiB, count=162506, average=65 B
+GLOBUS TRANSFER task_id: 7d939ae0-255c-11eb-8fb9-0a34088e79f9
+Waiting for transfer 7d939ae0-255c-11eb-8fb9-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: a1d6ef60-255c-11eb-8fb9-0a34088e79f9
+
+Processing scenario ID: 0
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 5.0
+Features selected: 1
+Iterations without progress: 0
+
+alpha: 2.5
+Features selected: 1
+Iterations without progress: 1
+
+alpha: 1.25
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.625
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 0.3125
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 0.15625
+Features selected: 15
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.140625
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.1265625
+Features selected: 27
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 0.12023437499999999
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.1259296875
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.1253000390625
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.1246735388671875
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.12405017117285157
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.12461120209775392
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 32
+Number of chunks: 16
+Average length of each chunk: 2.0
+Number of cores: 8
+
+Number of features: 1
+Number of features: 6
+Number of features: 26
+Number of features: 2
+Number of features: 5
+Number of features: 10
+Number of features: 4
+Number of features: 14
+Number of features: 11
+Number of features: 17
+Number of features: 20
+Number of features: 7
+Number of features: 22
+Number of features: 12
+Number of features: 3
+Number of features: 9
+Number of features: 20
+Number of features: 16
+Number of features: 18
+Number of features: 15
+Number of features: 25
+Number of features: 24
+Number of features: 23
+Number of features: 30
+Number of features: 25
+Number of features: 13
+Number of features: 27
+Number of features: 29
+Number of features: 8
+Number of features: 28
+Number of features: 19
+Number of features: 26
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=6158 KiB, count=85228, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=4714 KiB, count=2186, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=3745 KiB, count=59583, average=64 B
+GLOBUS TRANSFER task_id: 137542ca-255d-11eb-b161-0ee0d5d9299f
+Waiting for transfer 137542ca-255d-11eb-b161-0ee0d5d9299f to complete...
+Transfer 137542ca-255d-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 137542ca-255d-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 137542ca-255d-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 3 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 86beca08-255d-11eb-b161-0ee0d5d9299f
+
+Processing scenario ID: 1
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.0005
+New "step_pct": 0.005
+alpha: 6.199407304363257
+Features selected: 1
+Iterations without progress: 0
+
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 5.889436939145094
+Features selected: 1
+Iterations without progress: 1
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 2.944718469572547
+Features selected: 1
+Iterations without progress: 2
+
+alpha: 1.4723592347862735
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.7361796173931368
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.3680898086965684
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 0.1840449043482842
+Features selected: 15
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.16564041391345577
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 0.1490763725221102
+Features selected: 22
+Iterations without progress: 1
+
+alpha: 0.1341687352698992
+Features selected: 22
+Iterations without progress: 2
+
+Old "step_pct": 0.1
+New "step_pct": 0.02
+alpha: 0.13148536056450122
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.1288556533532112
+Features selected: 26
+Iterations without progress: 1
+
+alpha: 0.12627854028614696
+Features selected: 26
+Iterations without progress: 2
+
+alpha: 0.12375296948042402
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.12127791009081554
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.11885235188899923
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 0.11647530485121925
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.11414579875419487
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.11186288277911097
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.11391750715668647
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 35
+Number of chunks: 16
+Average length of each chunk: 2.2
+Number of cores: 8
+
+Number of features: 10
+Number of features: 21
+Number of features: 1
+Number of features: 21
+Number of features: 11
+Number of features: 7
+Number of features: 24
+Number of features: 20
+Number of features: 2
+Number of features: 5
+Number of features: 15
+Number of features: 4
+Number of features: 19
+Number of features: 8
+Number of features: 9
+Number of features: 25
+Number of features: 27
+Number of features: 29
+Number of features: 23
+Number of features: 20
+Number of features: 14
+Number of features: 3
+Number of features: 22
+Number of features: 23
+Number of features: 26
+Number of features: 17
+Number of features: 16
+Number of features: 18
+Number of features: 23
+Number of features: 12
+Number of features: 28
+Number of features: 13
+Number of features: 22
+Number of features: 6
+Number of features: 22
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=11.4 MiB, count=161446, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=9112 KiB, count=4226, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=6837 KiB, count=107975, average=65 B
+GLOBUS TRANSFER task_id: f7a8d222-255d-11eb-b161-0ee0d5d9299f
+Waiting for transfer f7a8d222-255d-11eb-b161-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 16086ba6-255e-11eb-b161-0ee0d5d9299f
+
+Processing scenario ID: 2
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.002
+New "step_pct": 0.02
+alpha: 5.581957850677637
+Features selected: 1
+Iterations without progress: 0
+
+Old "step_pct": 0.02
+New "step_pct": 0.2
+alpha: 4.4655662805421095
+Features selected: 1
+Iterations without progress: 1
+
+Old "step_pct": 0.2
+New "step_pct": 0.4
+alpha: 2.6793397683252658
+Features selected: 1
+Iterations without progress: 2
+
+Old "step_pct": 0.4
+New "step_pct": 0.8
+alpha: 0.535867953665053
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.10717359073301058
+Features selected: 13
+Iterations without progress: 0
+
+Old "step_pct": 0.8
+New "step_pct": 0.16
+alpha: 0.09002581621572889
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.10545881328128241
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 32
+Number of chunks: 16
+Average length of each chunk: 2.0
+Number of cores: 8
+
+Number of features: 19
+Number of features: 15
+Number of features: 24
+Number of features: 1
+Number of features: 3
+Number of features: 21
+Number of features: 21
+Number of features: 27
+Number of features: 5
+Number of features: 8
+Number of features: 23
+Number of features: 20
+Number of features: 13
+Number of features: 2
+Number of features: 9
+Number of features: 22
+Number of features: 7
+Number of features: 24
+Number of features: 6
+Number of features: 25
+Number of features: 18
+Number of features: 18
+Number of features: 26
+Number of features: 16
+Number of features: 10
+Number of features: 23
+Number of features: 14
+Number of features: 17
+Number of features: 11
+Number of features: 19
+Number of features: 4
+Number of features: 12
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=17.3 MiB, count=244898, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=13.3 MiB, count=6314, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=10.5 MiB, count=170126, average=64 B
+GLOBUS TRANSFER task_id: 808376d8-255e-11eb-b537-02d9497ca481
+Waiting for transfer 808376d8-255e-11eb-b537-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 98e1368e-255e-11eb-b537-02d9497ca481
+
+Processing scenario ID: 0
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.05
+Features selected: 1
+Iterations without progress: 0
+
+alpha: 0.025
+Features selected: 1
+Iterations without progress: 1
+
+alpha: 0.0125
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.00625
+Features selected: 12
+Iterations without progress: 0
+
+alpha: 0.003125
+Features selected: 15
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.0028125000000000003
+Features selected: 24
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 0.002671875
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.00253828125
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0024113671875
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 0.002290798828125
+Features selected: 28
+Iterations without progress: 2
+
+alpha: 0.0023993103515625
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 49
+Number of chunks: 16
+Average length of each chunk: 3.1
+Number of cores: 8
+
+Number of features: 19
+Number of features: 12
+Number of features: 23
+Number of features: 1
+Number of features: 24
+Number of features: 13
+Number of features: 20
+Number of features: 20
+Number of features: 21
+Number of features: 3
+Number of features: 23
+Number of features: 29
+Number of features: 24
+Number of features: 25
+Number of features: 27
+Number of features: 24
+Number of features: 14
+Number of features: 8
+Number of features: 13
+Number of features: 9
+Number of features: 13
+Number of features: 29
+Number of features: 15
+Number of features: 19
+Number of features: 4
+Number of features: 12
+Number of features: 12
+Number of features: 21
+Number of features: 26
+Number of features: 10
+Number of features: 6
+Number of features: 25
+Number of features: 13
+Number of features: 23
+Number of features: 18
+Number of features: 28
+Number of features: 15
+Number of features: 22
+Number of features: 11
+Number of features: 16
+Number of features: 7
+Number of features: 14
+Number of features: 24
+Number of features: 17
+Number of features: 22
+Number of features: 22
+Number of features: 22
+Number of features: 21
+Number of features: 5
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=5889 KiB, count=81508, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=4532 KiB, count=2102, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=3551 KiB, count=56403, average=64 B
+GLOBUS TRANSFER task_id: 041eddfc-255f-11eb-b537-02d9497ca481
+Waiting for transfer 041eddfc-255f-11eb-b537-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 104a9008-255f-11eb-b537-02d9497ca481
+
+Processing scenario ID: 1
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 0.11396724169921875
+Features selected: 1
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.056983620849609375
+Features selected: 1
+Iterations without progress: 1
+
+alpha: 0.028491810424804687
+Features selected: 1
+Iterations without progress: 2
+
+alpha: 0.014245905212402344
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.007122952606201172
+Features selected: 13
+Iterations without progress: 0
+
+alpha: 0.003561476303100586
+Features selected: 15
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.003205328672790527
+Features selected: 26
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 0.0030450622391510005
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0028928091271934503
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.0030298369279552454
+Features selected: 32
+Iterations without progress: 0
+
+alpha: 0.003014687743315469
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.0029996143045988915
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.002984616233075897
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.0029981144974465922
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 46
+Number of chunks: 16
+Average length of each chunk: 2.9
+Number of cores: 8
+
+Number of features: 16
+Number of features: 8
+Number of features: 1
+Number of features: 7
+Number of features: 14
+Number of features: 13
+Number of features: 28
+Number of features: 27
+Number of features: 29
+Number of features: 14
+Number of features: 22
+Number of features: 25
+Number of features: 12
+Number of features: 23
+Number of features: 11
+Number of features: 17
+Number of features: 4
+Number of features: 15
+Number of features: 30
+Number of features: 26
+Number of features: 24
+Number of features: 3
+Number of features: 5
+Number of features: 19
+Number of features: 13
+Number of features: 6
+Number of features: 26
+Number of features: 18
+Number of features: 13
+Number of features: 21
+Number of features: 27
+Number of features: 12
+Number of features: 22
+Number of features: 9
+Number of features: 14
+Number of features: 23
+Number of features: 16
+Number of features: 10
+Number of features: 12
+Number of features: 15
+Number of features: 13
+Number of features: 15
+Number of features: 18
+Number of features: 2
+Number of features: 14
+Number of features: 20
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=11.8 MiB, count=167327, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=9293 KiB, count=4310, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=7260 KiB, count=115258, average=64 B
+GLOBUS TRANSFER task_id: 7c57bf82-255f-11eb-8fb9-0a34088e79f9
+Waiting for transfer 7c57bf82-255f-11eb-8fb9-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 94b49726-255f-11eb-8fb9-0a34088e79f9
+
+Processing scenario ID: 2
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.0005
+New "step_pct": 0.005
+alpha: 0.14915619624796797
+Features selected: 1
+Iterations without progress: 0
+
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 0.14169838643556956
+Features selected: 1
+Iterations without progress: 1
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.07084919321778478
+Features selected: 1
+Iterations without progress: 2
+
+alpha: 0.03542459660889239
+Features selected: 1
+Iterations without progress: 3
+
+alpha: 0.017712298304446195
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.008856149152223098
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 0.004428074576111549
+Features selected: 14
+Iterations without progress: 0
+
+alpha: 0.0022140372880557744
+Features selected: 19
+Iterations without progress: 0
+
+alpha: 0.004206670847305971
+Features selected: 32
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.1
+alpha: 0.003786003762575374
+Features selected: 19
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.2
+alpha: 0.0030288030100602994
+Features selected: 20
+Iterations without progress: 0
+
+Old "step_pct": 0.2
+New "step_pct": 0.04
+alpha: 0.002907650889657887
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.0027913448540715716
+Features selected: 27
+Iterations without progress: 1
+
+alpha: 0.0026796910599087087
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0025725034175123605
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.002469603280811866
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.002370819149579391
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.0024597248676886184
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Length of logspace_list: 41
+Number of chunks: 16
+Average length of each chunk: 2.6
+Number of cores: 8
+
+Number of features: 27
+Number of features: 22
+Number of features: 25
+Number of features: 15
+Number of features: 5
+Number of features: 20
+Number of features: 4
+Number of features: 13
+Number of features: 22
+Number of features: 28
+Number of features: 1
+Number of features: 28
+Number of features: 3
+Number of features: 29
+Number of features: 24
+Number of features: 23
+Number of features: 11
+Number of features: 19
+Number of features: 8
+Number of features: 12
+Number of features: 12
+Number of features: 23
+Number of features: 10
+Number of features: 14
+Number of features: 19
+Number of features: 9
+Number of features: 13
+Number of features: 10
+Number of features: 18
+Number of features: 21
+Number of features: 7
+Number of features: 14
+Number of features: 6
+Number of features: 29
+Number of features: 17
+Number of features: 24
+Number of features: 28
+Number of features: 16
+Number of features: 27
+Number of features: 11
+Number of features: 20
+las_alpha
+pls_n_components
+pls_scale
+Testing...
+
+[ Top 3 ]
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:200: size=17.1 MiB, count=242639, average=74 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/lines.py:366: size=13.2 MiB, count=6278, average=2208 B
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/matplotlib/transforms.py:116: size=10.3 MiB, count=166552, average=65 B
+GLOBUS TRANSFER task_id: f8e288de-255f-11eb-8fb9-0a34088e79f9
+Waiting for transfer f8e288de-255f-11eb-8fb9-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 17388df6-2560-11eb-8fb9-0a34088e79f9
+
+Processing scenario ID: 0
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+GLOBUS TRANSFER task_id: 1a6c2db6-2560-11eb-8fb9-0a34088e79f9
+Waiting for transfer 1a6c2db6-2560-11eb-8fb9-0a34088e79f9 to complete...
+Transfer 1a6c2db6-2560-11eb-8fb9-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 1a6c2db6-2560-11eb-8fb9-0a34088e79f9 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 1a6c2db6-2560-11eb-8fb9-0a34088e79f9 has not yet finished; transfer submitted 3 minute(s) ago
+Transfer 1a6c2db6-2560-11eb-8fb9-0a34088e79f9 has not yet finished; transfer submitted 4 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: b7a2dfc6-2560-11eb-8fb9-0a34088e79f9
+
+Processing scenario ID: 1
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+GLOBUS TRANSFER task_id: b99319c2-2560-11eb-b161-0ee0d5d9299f
+Waiting for transfer b99319c2-2560-11eb-b161-0ee0d5d9299f to complete...
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 2 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 3 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 4 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 5 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 6 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 7 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 8 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 9 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 10 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 11 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 12 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 13 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 14 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 15 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 16 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 17 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 18 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 19 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 20 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 21 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 22 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 23 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 24 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 25 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 26 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 27 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 28 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 29 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 30 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 31 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 32 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 33 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 34 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 35 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 36 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 37 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 38 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 39 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 40 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 41 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 42 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 43 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 44 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 45 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 46 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 47 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 48 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 49 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 50 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 51 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 52 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 53 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 54 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 55 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 56 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 57 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 58 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 59 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 60 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 61 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 62 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 63 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 64 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 65 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 66 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 67 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 68 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 69 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 70 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 71 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 72 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 73 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 74 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 75 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 76 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 77 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 78 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 79 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 80 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 81 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 82 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 83 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 84 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 85 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 86 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 87 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 88 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 89 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 90 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 91 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 92 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 93 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 94 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 95 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 96 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 97 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 98 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 99 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 100 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 101 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 102 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 103 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 104 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 105 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 106 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 107 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 108 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 109 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 110 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 111 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 112 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 113 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 114 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 115 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 116 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 117 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 118 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 119 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 120 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 121 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 122 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 123 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 124 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 125 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 126 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 127 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 128 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 129 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 130 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 131 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 132 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 133 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 134 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 135 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 136 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 137 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 138 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 139 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 140 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 141 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 142 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 143 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 144 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 145 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 146 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 147 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 148 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 149 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 150 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 151 minute(s) ago
+Transfer b99319c2-2560-11eb-b161-0ee0d5d9299f has not yet finished; transfer submitted 152 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 6edb7ada-2576-11eb-b537-02d9497ca481
