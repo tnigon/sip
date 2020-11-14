@@ -293,6 +293,13 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
             renamed_list.append(df_temp.rename(columns=col_names_dict))
         df_pred_list = tuple(renamed_list)
 
+        # get a tight_layout error on first plot
+        f, axes_dummy = plt.subplots(1, len(model_list), figsize=(len(model_list)*5, 5.5), sharex=True, sharey=True)
+        for ax in axes_dummy:
+            sns.scatterplot(x=[1,2], y=[1,2], ax=ax)
+        f.tight_layout()
+        plt.close(f)
+
         for idx, df_score in enumerate(df_score_list):
             for feat_n in df_score[pd.notnull(df_score['feats'])]['feat_n']:
                 preds_name = '_'.join(

@@ -3220,6 +3220,8 @@ def legend_resize(fig, leg, twinx=False, twinx_right=0.93):
     height_fig = fig.get_window_extent().height
     legend_adjust = (1 - (height_leg / height_fig)) * 0.98
     right = twinx_right if twinx is True else 1
+    print(legend_adjust)
+    print(right)
     fig.tight_layout(rect=[0, 0, right, legend_adjust])
     return fig
 
@@ -3368,7 +3370,7 @@ def plot_pred_figure(fname_out, feat_n,
                      x_label='Predicted', y_label='Measured', y_col='nup_kgha',
                      units=None, save_plot=True,
                      fontsize=16, fontcolor='#464646', linecolor='#464646',
-                      legend_cols=4):
+                     legend_cols=4):
     '''
     Builds an axes for every regression model, then adds them dynamically to
     the matplotlib figure to be saved
