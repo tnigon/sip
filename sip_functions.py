@@ -444,8 +444,8 @@ def time_setup_training(dir_out, msi_run_id):
     cols = ['n_jobs', 'msi_run_id', 'grid_idx', 'y_label', 'feats',
             'time_start', 'time_end', 'time_total',
             # 'init1', 'init2', 'init3',
-            'load_ground', 'load_spec', 'join_data',
-            'feat_sel', 'tune1', 'tune2', 'tune3', 'tune4', 'test', 'plot']
+            'load_ground', 'load_spec', 'join_data', 'feat_sel', 'tune',
+            'test', 'plot']
     pathlib.Path(dir_out).mkdir(parents=True, exist_ok=True)
     fname_times = os.path.join(dir_out, 'msi_' + str(msi_run_id) + '_time_train.csv')
     if not os.path.isfile(fname_times):
@@ -2299,6 +2299,13 @@ def execute_tuning(alpha_list, X, y, model_list, param_grid_dict, standardize, s
         for idx1, (model, param_grid) in enumerate(zip(model_list, param_grid_dict)):
             cv_rep_strat = get_repeated_stratified_kfold(
                 df_train, n_splits, n_repeats, random_seed)
+
+            # will show a verbose warning if n_components exceeds n_feats
+            if 'regressor__n_components' in param_grid:
+                n_comp = param_grid['regressor__n_components']
+                n_comp_trim = [i for i in n_comp if i >= len(feats)]
+                param_grid['regressor__n_components'] = n_comp_trim
+
             df_tune_temp = tune_model(
                 X_select, y, model, param_grid_dict[param_grid],
                 standardize, scoring, scoring_refit, key, cv_rep_strat,
@@ -2328,11 +2335,11 @@ def execute_tuning_pp(
     chunks = chunk_by_n(logspace_list, n_jobs*2)
     if len(logspace_list) < n_jobs * 2:
         chunks = chunk_by_n(logspace_list, n_jobs)
-    print('Length of logspace_list: {0}'.format(len(logspace_list)))
-    print('Number of chunks: {0}'.format(len(chunks)))
+    # print('Length of logspace_list: {0}'.format(len(logspace_list)))
+    # print('Number of chunks: {0}'.format(len(chunks)))
     chunk_avg = sum([len(i) for i in chunks]) / len(chunks)
-    print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
-    print('Number of cores: {0}\n'.format(n_jobs))
+    # print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
+    # print('Number of cores: {0}\n'.format(n_jobs))
     with ProcessPoolExecutor(max_workers=n_jobs) as executor:
         # for alpha, df_tune_feat_list in zip(reversed(logspace_list), executor.map(execute_tuning, it.repeat(X1), it.repeat(y1), it.repeat(model_list), it.repeat(param_grid_dict), reversed(logspace_list),
         #                                                                           it.repeat(standardize), it.repeat(scoring), it.repeat(scoring_refit), it.repeat(max_iter), it.repeat(random_seed),

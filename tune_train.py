@@ -134,6 +134,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         idx_min = 0
         idx_max = idx_min + 1
         feat = 'reflectance'
+        n_jobs = 4
         dir_base = r'G:\BBE\AGROBOT\Shared Work\hs_process_results'
 
     dir_data = os.path.join(dir_base, 'data')
@@ -235,13 +236,9 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
             logspace_list, X1, y1, model_list, param_grid_dict,
             standardize, scoring, scoring_refit, max_iter, random_seed,
             key, df_train, n_splits, n_repeats, df_tune_all_list, n_jobs_tuning)
-        time_dict, time_last = time_step(time_dict, 'tune1', time_last)
-
         df_tune_list = filter_tuning_results(df_tune_all_list, score)
-        time_dict, time_last = time_step(time_dict, 'tune2', time_last)
         df_params = summarize_tuning_results(
             df_tune_list, model_list, param_grid_dict, key)
-        time_dict, time_last = time_step(time_dict, 'tune3', time_last)
         df_params_mode, df_params_mode_count = tuning_mode_count(df_params)
         dir_out_list_tune, folder_list_tune = set_up_output_dir(
             dir_results_msi, msi_run_id, row.name, y_label, feat,
@@ -254,7 +251,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
                 dir_out_list_tune[3], df_tune_list, model_list, df_params,
                 df_params_mode, df_params_mode_count, meta_bands,
                 fname_base_tune)
-        time_dict, time_last = time_step(time_dict, 'tune4', time_last)
+        time_dict, time_last = time_step(time_dict, 'tune', time_last)
         fname_feats_readme = os.path.join(dir_out_list_tune[2], folder_list_tune[2] + '_README.txt')
         fname_data = os.path.join(dir_out_list_tune[1], fname_base_tune + '_data.csv')
         feats_readme(fname_feats_readme, fname_data, meta_bands, extra_feats=None)
