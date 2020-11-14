@@ -312,26 +312,14 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         fig2 = plot_score_figure(
             fname_out_fig2, df_score_list, model_list, y_label=y_label2,
             units=units, obj1='mae', obj2='r2', save_plot=True)
-        # time_label = ('sttp-' + y_label + '-' + extra_name)
         time_dict, time_last = time_step(time_dict, 'plot', time_last)
 
         snapshot = tracemalloc.take_snapshot()
         top_stats = snapshot.statistics('lineno')
 
-        print("[ Top 3 ]")
-        for stat in top_stats[:3]:
-            print(stat)
-
         time_dict = append_times(dir_results_meta, time_dict, msi_run_id)
-
         label_base = 'idx_grid_' + str(idx_grid).zfill(3)
-
         client = globus_sdk.NativeAppAuthClient(CLIENT_ID)
-        # dir_source_data, dir_dest_data = get_globus_data_dir(
-        #     dir_base, msi_run_id, row)
-        # transfer_result, delete_result = globus_transfer(
-        #     dir_source_data, dir_dest_data, TRANSFER_REFRESH_TOKEN, client, TRANSFER_TOKEN,
-        #     label=label_base + '-data', delete=True)
 
         dir_source_results, dir_dest_results = get_globus_results_dir(
             dir_base, msi_run_id, row)
