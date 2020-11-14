@@ -3197,7 +3197,7 @@ def plot_legend(fig, ax, df_preds, feat_n, colors,
         h1_new.append(handle_new)
     h1_new.append(mlines.Line2D([], [], alpha=0.0, label=l1[-1]))
     leg = fig.legend(h2 + h1_new, l2 + l1, loc='upper center',
-                      bbox_to_anchor=(0.5, 1.0),
+                     bbox_to_anchor=(0.5, 1.0),
                      fontsize=fontsize*0.85, framealpha=0.85,
                      ncol=ncol, handletextpad=0.1,  # spacing between handle and label
                      columnspacing=0.5,
@@ -3220,8 +3220,6 @@ def legend_resize(fig, leg, twinx=False, twinx_right=0.93):
     height_fig = fig.get_window_extent().height
     legend_adjust = (1 - (height_leg / height_fig)) * 0.98
     right = twinx_right if twinx is True else 1
-    print(legend_adjust)
-    print(right)
     fig.tight_layout(rect=[0, 0, right, legend_adjust])
     return fig
 
