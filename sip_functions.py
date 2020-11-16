@@ -39,7 +39,7 @@ from sklearn.metrics import r2_score
 
 from scipy.stats import rankdata
 import warnings
-# from sklearn.utils.testing import ignore_warnings
+from sklearn.utils._testing import ignore_warnings
 from sklearn.exceptions import ConvergenceWarning
 
 # Plotting
@@ -1740,6 +1740,7 @@ def param_grid_add_key(param_grid_dict, key='regressor__'):
         param_grid_mod[model] = {f'{key}{k}': v for k, v in param_grid_mod[model].items()}
     return param_grid_mod
 
+@ignore_warnings(category=ConvergenceWarning)
 def feat_selection_lasso(X, y, alpha, max_iter, random_seed):
     '''
     Feature selection via lasso algorithm
@@ -2128,11 +2129,11 @@ def filter_logspace_list_pp(logspace_list, X1, y1, max_iter, random_seed, n_jobs
     chunks = chunk_by_n(logspace_list, n_jobs*2)
     if len(logspace_list) < n_jobs * 2:
         chunks = chunk_by_n(logspace_list, n_jobs)
-    print('Length of logspace_list: {0}'.format(len(logspace_list)))
-    print('Number of chunks: {0}'.format(len(chunks)))
+    # print('Length of logspace_list: {0}'.format(len(logspace_list)))
+    # print('Number of chunks: {0}'.format(len(chunks)))
     chunk_avg = sum([len(i) for i in chunks]) / len(chunks)
-    print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
-    print('Number of cores: {0}\n'.format(n_jobs))
+    # print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
+    # print('Number of cores: {0}\n'.format(n_jobs))
     df_all = None
     with ProcessPoolExecutor(max_workers=n_jobs) as executor:
         for df_feats in executor.map(
@@ -2147,6 +2148,7 @@ def filter_logspace_list_pp(logspace_list, X1, y1, max_iter, random_seed, n_jobs
     logspace_list_filtered = list(reversed(sorted(df_all['alpha'])))
     return logspace_list_filtered
 
+@ignore_warnings(category=ConvergenceWarning)
 def model_tuning(model, param_grid, standardize, scoring, refit,
                  X_select, y, cv_rep_strat, n_jobs=1):
     '''
@@ -2164,6 +2166,7 @@ def model_tuning(model, param_grid, standardize, scoring, refit,
             'yeo-johnson', standardize=standardize))
     clf = GridSearchCV(transformer, param_grid, n_jobs=n_jobs, cv=cv_rep_strat,
                        return_train_score=True, scoring=scoring, refit=refit)
+    # with ignore_warnings(category=ConvergenceWarning):
     clf.fit(X_select, y)
     df_tune = pd.DataFrame(clf.cv_results_)
     return df_tune, transformer
@@ -2287,47 +2290,41 @@ def execute_tuning(alpha_list, X, y, model_list, param_grid_dict, standardize, s
         'score_train_r2', 'std_train_r2', 'score_val_r2', 'std_val_r2',
         'tune_params', 'features', 'feat_ranking']
 
-    param_grid_dict = param_grid_add_key(param_grid_dict, key)
-    # pg_las_mod, pg_svr_mod, pg_rf_mod, pg_pls_mod = get_param_grids(
-    #     key, pg_las, pg_svr, pg_rf, pg_pls)
+    param_grid_dict_key = param_grid_add_key(param_grid_dict, key)
     df_tune_feat_list = (None,) * len(model_list)
+    # alpha_list = chunks[7]
     for alpha in alpha_list:
         X_select, feats, feat_ranking = feat_selection_lasso(
             X, y, alpha, max_iter, random_seed)
 
         print('Number of features: {0}'.format(len(feats)))
         temp_list = []
-        for idx1, (model, param_grid) in enumerate(zip(model_list, param_grid_dict.values())):
+        for idx1, (model, param_grid) in enumerate(zip(model_list, param_grid_dict_key.values())):
             cv_rep_strat = get_repeated_stratified_kfold(
                 df_train, n_splits, n_repeats, random_seed)
 
-            pg_deepcopy = deepcopy(param_grid)
+            param_grid_dc = deepcopy(param_grid)
             # will show a verbose warning if n_components exceeds n_feats
-            if 'regressor__n_components' in pg_deepcopy:
-                n_comp = pg_deepcopy['regressor__n_components']
-                # print('check_key0: {0}'.format(n_comp))
-                n_comp_trim = [i for i in n_comp if i <= len(feats)]
-                pg_deepcopy['regressor__n_components'] = n_comp_trim
-                # print('check_key1: {0}'.format(param_grid['regressor__n_components']))
-            # else:
-                # print('check_key3: {0}'.format(param_grid))
-            if (isinstance(model, PLSRegression)) and len(feats) <= 1:
-                continue
-
+            if f'{key}n_components' in param_grid_dc:
+                n_comp = param_grid_dc[f'{key}n_components']
+                if len(feats) < max(n_comp):
+                    print('Trimming excess components in <param_grid>...')
+                    n_comp_trim = [i for i in n_comp if i <= len(feats)]
+                    param_grid_dc[f'{key}n_components'] = n_comp_trim
+                    # print('n_components: {0}'.format(param_grid_dc[f'{key}n_components']))
             df_tune_temp = tune_model(
-                X_select, y, model, pg_deepcopy,
+                X_select, y, model, param_grid_dc,
                 standardize, scoring, scoring_refit, key, cv_rep_strat,
                 feats, feat_ranking, alpha, cols)
             if print_results is True:
                 print_model(model)
                 print('R2: {0:.3f}\n'.format(df_tune_temp['score_val_r2'].values[0]))
             temp_list.append(df_tune_temp)
-        if df_tune_feat_list is None:
-            df_tune_feat_list = tuple(temp_list)
-        else:
-            df_tune_feat_list = append_tuning_results(df_tune_feat_list, temp_list)
+        df_tune_feat_list = append_tuning_results(df_tune_feat_list, temp_list)
     return df_tune_feat_list
 
+# len(df_tune_feat_list[0])
+# len(df_tune_feat_list[1])
 # @ignore_warnings(category=ConvergenceWarning)
 def execute_tuning_pp(
         logspace_list, X1, y1, model_list, param_grid_dict, standardize,
@@ -2340,7 +2337,7 @@ def execute_tuning_pp(
     # lock = m.Lock()
     # chunks = chunk_by_n(reversed(logspace_list))
     # chunk_size = int(len(logspace_list) / (n_jobs*2)) + 1
-    chunks = chunk_by_n(logspace_list, n_jobs*2)
+    chunks = chunk_by_n(logspace_list, n_jobs*2)  # remember this shuffles logspace_list
     if len(logspace_list) < n_jobs * 2:
         chunks = chunk_by_n(logspace_list, n_jobs)
     # print('Length of logspace_list: {0}'.format(len(logspace_list)))
@@ -2348,6 +2345,7 @@ def execute_tuning_pp(
     chunk_avg = sum([len(i) for i in chunks]) / len(chunks)
     # print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
     # print('Number of cores: {0}\n'.format(n_jobs))
+
     with ProcessPoolExecutor(max_workers=n_jobs) as executor:
         # for alpha, df_tune_feat_list in zip(reversed(logspace_list), executor.map(execute_tuning, it.repeat(X1), it.repeat(y1), it.repeat(model_list), it.repeat(param_grid_dict), reversed(logspace_list),
         #                                                                           it.repeat(standardize), it.repeat(scoring), it.repeat(scoring_refit), it.repeat(max_iter), it.repeat(random_seed),
@@ -2387,18 +2385,18 @@ def filter_tuning_results(df_tune_all_list, score):
     '''
     df_tune_list = ()
     for df_tune in df_tune_all_list:
-        # if df_tune is not None:
-        idx = df_tune.groupby(['feat_n'])[score].transform(max) == df_tune[score]
-        idx_feat1 = df_tune['feat_n'].searchsorted(1, side='left')  # if first non-zero feat_n row is NaN, include that so other dfs have same number of rows (PLS)
-        if np.isnan(df_tune.iloc[idx_feat1][score]):
-            idx.iloc[idx_feat1] = True
+        df_tune = df_tune.reset_index(drop=True)
+        array_idx = df_tune.groupby(['feat_n'])[score].transform(max) == df_tune[score]
+        # if first non-zero feat_n row is NaN, include that so other dfs have same number of rows (PLS)
+        if np.isnan(df_tune.loc[df_tune['feat_n'].idxmin(),score]):
+            array_idx.loc[df_tune['feat_n'].idxmin()] = True
         df_tune['feat_n'] = df_tune['feat_n'].apply(pd.to_numeric)
-        df_filtered = df_tune[idx].drop_duplicates(['feat_n']).sort_values('feat_n').reset_index(drop=True)
-        # df_tune_list.append(df_filtered)
+        df_filtered = df_tune[array_idx].drop_duplicates(['feat_n']).sort_values('feat_n').reset_index(drop=True)
         df_tune_list += (df_filtered,)
     return df_tune_list
 
-def summarize_tuning_loop(df_tune_list, model_list, idx, data, df_params, key):
+# def summarize_tuning_loop(df_tune_list, model_list, idx, data, df_params, key):
+def summarize_tuning_loop(df_tune_list, model_list, idx, data_dict, df_params, key):
     '''
     Detailed loop getting hyperparameters for all the models
     '''
@@ -2409,7 +2407,8 @@ def summarize_tuning_loop(df_tune_list, model_list, idx, data, df_params, key):
                 las_alpha = las_params[f'{key}alpha']
             except TypeError:  # when cell is nan instead of dict
                 continue  # go to next index where there is actually data
-            data.extend([las_alpha])
+            # data.extend([las_alpha])
+            data_dict['las_alpha'] = [las_alpha]
         elif isinstance(model_list[idx_df], SVR):
             svr_params = df.loc[idx]['tune_params']
             svr_kernel = svr_params[f'{key}kernel']
@@ -2419,29 +2418,36 @@ def summarize_tuning_loop(df_tune_list, model_list, idx, data, df_params, key):
                 svr_gamma = np.nan
             svr_C = svr_params[f'{key}C']
             svr_epsilon = svr_params[f'{key}epsilon']
-            data.extend([svr_kernel, svr_gamma, svr_C, svr_epsilon])
+            # data.extend([svr_kernel, svr_gamma, svr_C, svr_epsilon])
+            data_dict['svr_kernel'] = [svr_kernel]
+            data_dict['svr_gamma'] = [svr_gamma]
+            data_dict['svr_C'] = [svr_C]
+            data_dict['svr_epsilon'] = [svr_epsilon]
         elif isinstance(model_list[idx_df], RandomForestRegressor):
             rf_params = df.loc[idx]['tune_params']
             rf_min_samples_split = rf_params[f'{key}min_samples_split']
             rf_max_feats = rf_params[f'{key}max_features']
-            data.extend([rf_min_samples_split, rf_max_feats])
-        elif isinstance(model_list[idx_df], PLSRegression) and len(df) > idx:
-            try:
-                pls_params = df.loc[idx]['tune_params']
-                try:
-                    pls_n_components = pls_params[f'{key}n_components']
-                    pls_scale = pls_params[f'{key}scale']
-                except TypeError:
-                    pls_n_components = np.nan
-                    pls_scale = np.nan
-            except KeyError:
+            # data.extend([rf_min_samples_split, rf_max_feats])
+            data_dict['rf_min_samples_split'] = [rf_min_samples_split]
+            data_dict['rf_max_feats'] = [rf_max_feats]
+        elif isinstance(model_list[idx_df], PLSRegression):
+            # The model shouldn't even be in model_list if there is no information for it.
+            # This was changed when the PLS component list was modified to cut out
+            # components that are greater than number of features (e.g., we can't
+            # tune on 8 components with 4 features).
+
+            # Thus, assume the "garbage" was filtered out already and we will only
+            # arrive here if 'tune_params' exists.
+            pls_params = df.loc[idx]['tune_params']
+            if pd.notnull(pls_params):
+                pls_n_components = pls_params[f'{key}n_components']
+                pls_scale = pls_params[f'{key}scale']
+            else:
                 pls_n_components = np.nan
                 pls_scale = np.nan
-
-            data.extend([pls_n_components, pls_scale])
-        elif isinstance(model_list[idx_df], PLSRegression) and len(df) <= idx:
-            data.extend([np.nan, np.nan])
-    df_temp = pd.DataFrame(data=[data], columns=df_params.columns)
+            data_dict['pls_n_components'] = [pls_n_components]
+            data_dict['pls_scale'] = [pls_scale]
+    df_temp = pd.DataFrame.from_dict(data=data_dict)
     df_params = df_params.append(df_temp)
     return df_params
 
@@ -2454,34 +2460,38 @@ def summarize_tuning_results(df_tune_list, model_list, param_grid_dict, key=''):
     for k1, v1 in param_grid_dict.items():
         for k2, v2 in param_grid_dict[k1].items():
             k2_short = k2.replace(key, '')
-            print(k1 + '_' + k2_short)
+            # print(k1 + '_' + k2_short)
             cols_params.append(k1 + '_' + k2_short)
     df_params = pd.DataFrame(columns=cols_params)
     num_rows = len(df_tune_list[0])  # all dfs should be same length
     for idx in range(num_rows):
-        feat_n = df_tune_list[0].loc[idx]['feat_n']  # should be the same for all dfs
-        data = [feat_n]
+        # By setting data_dict values to nan by default, we don't have to worry
+        # about an item in the list not existing in df_tune_list (e.g., when
+        # n_components is 8 and n_feats is 4)
+        data_dict = {i: np.nan for i in cols_params}
+        data_dict['feat_n'] = df_tune_list[0].loc[idx]['feat_n']  # should be the same for all dfs
+        # if len(df_tune_list) > 1:
+        #     break
         df_params = summarize_tuning_loop(
-            df_tune_list, model_list, idx, data, df_params, key)
+            df_tune_list, model_list, idx, data_dict, df_params, key)
     return df_params.reset_index(drop=True)
 
 def append_tuning_results(df_tune_all_list, df_tune_feat_list):
+    '''
+    Appends tune_feat to tune_all as a list/tuple
+    '''
+    msg = ('<df_tune_all_list> and <df_tune_feat_list> must be the same '
+           'length.')
+    assert len(df_tune_all_list) == len(df_tune_feat_list), msg
     df_out_list = ()
     for df_all, df_single in zip(df_tune_all_list, df_tune_feat_list):
-        # print(df_single)
-        # print('\n\n\n')
-        # print(df_single[0])
+
         if df_all is None and df_single is not None:
             df_all = df_single.copy()
-
-        # if df_all is None:
-        #     if df_single is not None:
-        #         df_all = df_single.copy()
         elif df_all is not None and df_single is not None:
             df_all = df_all.append(df_single)
         else:
             pass
-        # df_out_list.append(df_all)
         df_out_list += (df_all,)
     return df_out_list
 

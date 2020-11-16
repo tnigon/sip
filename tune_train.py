@@ -131,7 +131,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         dir_base = '/panfs/roc/groups/5/yangc1/public/hs_process'
     else:
         msi_run_id = 0
-        idx_min = 0
+        idx_min = 4
         idx_max = idx_min + 1
         feat = 'reflectance'
         n_jobs = 4
