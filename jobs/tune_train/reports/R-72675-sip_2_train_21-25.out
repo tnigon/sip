@@ -1,0 +1,1544 @@
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+
+Processing scenario ID: 20
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 25 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 16
+Number of features: 22
+Number of features: 4
+Number of features: 12
+Number of features: 4
+Number of features: 24
+Number of features: 25
+Number of features: 4
+Number of features: 10
+Number of features: 18
+Number of features: 13
+Number of features: 12
+Number of features: 9
+Number of features: 14
+Number of features: 11
+Number of features: 1
+Number of features: 23
+Number of features: 20
+Number of features: 5
+Number of features: 11
+Number of features: 14
+Number of features: 3
+Number of features: 4
+Number of features: 2
+Number of features: 14
+Number of features: 8
+Number of features: 19
+Number of features: 16
+Number of features: 8
+Number of features: 5
+Number of features: 3
+Number of features: 17
+Number of features: 24
+Number of features: 21
+Number of features: 7
+Number of features: 5
+Number of features: 13
+Number of features: 13
+Number of features: 2
+Number of features: 17
+Number of features: 10
+Number of features: 15
+Number of features: 6
+Number of features: 14
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+
+Processing scenario ID: 20
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 25 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 7
+Number of features: 19
+Number of features: 19
+Number of features: 8
+Number of features: 4
+Number of features: 10
+Number of features: 8
+Number of features: 20
+Number of features: 13
+Number of features: 3
+Number of features: 7
+Number of features: 10
+Number of features: 10
+Number of features: 11
+Number of features: 9
+Number of features: 20
+Number of features: 18
+Number of features: 8
+Number of features: 18
+Number of features: 3
+Number of features: 11
+Number of features: 14
+Number of features: 24
+Number of features: 23
+Number of features: 1
+Number of features: 9
+Number of features: 2
+Number of features: 22
+Number of features: 5
+Number of features: 21
+Number of features: 9
+Number of features: 17
+Number of features: 3
+Number of features: 8
+Number of features: 9
+Number of features: 19
+Number of features: 4
+Number of features: 16
+Number of features: 5
+Number of features: 6
+Number of features: 12
+Number of features: 8
+Number of features: 15
+Number of features: 7
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+
+Processing scenario ID: 20
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.1
+alpha: 0.0009000000000000001
+Features selected: 15
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.2
+alpha: 0.0007200000000000002
+Features selected: 16
+Iterations without progress: 0
+
+Old "step_pct": 0.2
+New "step_pct": 0.4
+alpha: 0.0004320000000000001
+Features selected: 17
+Iterations without progress: 0
+
+Old "step_pct": 0.4
+New "step_pct": 0.08
+alpha: 0.0003974400000000001
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 0.0003656448000000001
+Features selected: 22
+Iterations without progress: 1
+
+alpha: 0.0003363932160000001
+Features selected: 22
+Iterations without progress: 2
+
+alpha: 0.0003094817587200001
+Features selected: 19
+Iterations without progress: 0
+
+alpha: 0.0002847232180224001
+Features selected: 19
+Iterations without progress: 1
+
+alpha: 0.0002619453605806081
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 0.00024098973173415945
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 0.0002217105531954267
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 0.0002039737089397926
+Features selected: 22
+Iterations without progress: 1
+
+alpha: 0.0001876558122246092
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 0.00017264334724664045
+Features selected: 23
+Iterations without progress: 1
+
+alpha: 0.00015883187946690922
+Features selected: 23
+Iterations without progress: 2
+
+alpha: 0.0001461253291095565
+Features selected: 23
+Iterations without progress: 3
+
+alpha: 0.00013443530278079197
+Features selected: 23
+Iterations without progress: 4
+
+alpha: 0.0001236804785583286
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 0.00011378604027366232
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 0.00010468315705176934
+Features selected: 23
+Iterations without progress: 1
+
+alpha: 9.630850448762779e-05
+Features selected: 23
+Iterations without progress: 2
+
+alpha: 8.860382412861757e-05
+Features selected: 23
+Iterations without progress: 3
+
+alpha: 8.151551819832817e-05
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 7.499427674246192e-05
+Features selected: 24
+Iterations without progress: 1
+
+alpha: 6.899473460306497e-05
+Features selected: 24
+Iterations without progress: 2
+
+alpha: 6.347515583481978e-05
+Features selected: 24
+Iterations without progress: 3
+
+alpha: 5.83971433680342e-05
+Features selected: 24
+Iterations without progress: 4
+
+alpha: 5.372537189859146e-05
+Features selected: 24
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 25 feature(s) (minimum alpha value to use).
+
+Using up to 24 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 14
+Number of features: 11
+Number of features: 15
+Number of features: 8
+Number of features: 16
+Number of features: 10
+Number of features: 1
+Number of features: 6
+Number of features: 2
+Number of features: 3
+Number of features: 20
+Number of features: 22
+Number of features: 20
+Number of features: 5
+Number of features: 15
+Number of features: 13
+Number of features: 4
+Number of features: 14
+Number of features: 24
+Number of features: 3
+Number of features: 23
+Number of features: 14
+Number of features: 3
+Number of features: 6
+Number of features: 12
+Number of features: 16
+Number of features: 15
+Number of features: 15
+Number of features: 7
+Number of features: 17
+Number of features: 7
+Number of features: 16
+Number of features: 21
+Number of features: 22
+Number of features: 4
+Number of features: 4
+Number of features: 18
+Number of features: 4
+Number of features: 17
+Number of features: 9
+Number of features: 19
+Number of features: 16
+Number of features: 13
+Number of features: 2
+Number of features: 21
+Number of features: 22
+Number of features: 21
+Number of features: 5
+Number of features: 22
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+
+Processing scenario ID: 20
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 25 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 21
+Number of features: 7
+Number of features: 10
+Number of features: 6
+Number of features: 2
+Number of features: 15
+Number of features: 15
+Number of features: 10
+Number of features: 4
+Number of features: 1
+Number of features: 13
+Number of features: 10
+Number of features: 7
+Number of features: 6
+Number of features: 20
+Number of features: 8
+Number of features: 20
+Number of features: 23
+Number of features: 17
+Number of features: 16
+Number of features: 11
+Number of features: 16
+Number of features: 18
+Number of features: 24
+Number of features: 5
+Number of features: 23
+Number of features: 3
+Number of features: 21
+Number of features: 22
+Number of features: 14
+Number of features: 22
+Number of features: 12
+Number of features: 17
+Number of features: 16
+Number of features: 23
+Number of features: 20
+Number of features: 19
+Number of features: 9
+Number of features: 24
+Number of features: 9
+Number of features: 19
+Number of features: 21
+Number of features: 19
+Number of features: 25
+Number of features: 20
+Number of features: 18
+Number of features: 22
+Number of features: 22
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+
+Processing scenario ID: 20
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.1
+alpha: 0.0009000000000000001
+Features selected: 17
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.2
+alpha: 0.0007200000000000002
+Features selected: 16
+Iterations without progress: 0
+
+Old "step_pct": 0.2
+New "step_pct": 0.4
+alpha: 0.0004320000000000001
+Features selected: 16
+Iterations without progress: 1
+
+alpha: 0.00025920000000000007
+Features selected: 18
+Iterations without progress: 0
+
+alpha: 0.00015552000000000003
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 9.331200000000002e-05
+Features selected: 21
+Iterations without progress: 0
+
+Old "step_pct": 0.4
+New "step_pct": 0.2
+alpha: 7.464960000000002e-05
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 5.971968000000002e-05
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 4.777574400000002e-05
+Features selected: 22
+Iterations without progress: 1
+
+alpha: 3.8220595200000014e-05
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 3.057647616000001e-05
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 2.446118092800001e-05
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 1.956894474240001e-05
+Features selected: 23
+Iterations without progress: 1
+
+alpha: 2.397195730944001e-05
+Features selected: 25
+Iterations without progress: 0
+
+Using up to 25 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 15
+Number of features: 21
+Number of features: 12
+Number of features: 5
+Number of features: 7
+Number of features: 3
+Number of features: 16
+Number of features: 6
+Number of features: 5
+Number of features: 5
+Number of features: 8
+Number of features: 12
+Number of features: 18
+Number of features: 13
+Number of features: 16
+Number of features: 4
+Number of features: 23
+Number of features: 10
+Number of features: 16
+Number of features: 2
+Number of features: 17
+Number of features: 16
+Number of features: 20
+Number of features: 1
+Number of features: 23
+Number of features: 9
+Number of features: 8
+Number of features: 22
+Number of features: 18
+Number of features: 8
+Number of features: 6
+Number of features: 22
+Number of features: 10
+Number of features: 4
+Number of features: 22
+Number of features: 23
+Number of features: 22
+Number of features: 17
+Number of features: 23
+Number of features: 9
+Number of features: 23
+Number of features: 9
+Number of features: 19
+Number of features: 15
+Number of features: 23
+Number of features: 9
+Number of features: 19
+Number of features: 13
+Number of features: 17
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+
+Processing scenario ID: 20
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.0005
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.00025
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.000125
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 6.25e-05
+Features selected: 12
+Iterations without progress: 0
+
+alpha: 3.125e-05
+Features selected: 14
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 2.8125000000000003e-05
+Features selected: 19
+Iterations without progress: 0
+
+alpha: 2.5312500000000002e-05
+Features selected: 19
+Iterations without progress: 1
+
+alpha: 2.278125e-05
+Features selected: 19
+Iterations without progress: 2
+
+alpha: 2.0503125000000002e-05
+Features selected: 18
+Iterations without progress: 0
+
+alpha: 1.84528125e-05
+Features selected: 19
+Iterations without progress: 0
+
+alpha: 1.660753125e-05
+Features selected: 19
+Iterations without progress: 1
+
+alpha: 1.4946778125e-05
+Features selected: 19
+Iterations without progress: 2
+
+alpha: 1.34521003125e-05
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 1.210689028125e-05
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 1.0896201253125e-05
+Features selected: 21
+Iterations without progress: 1
+
+alpha: 9.806581127812501e-06
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 8.825923015031251e-06
+Features selected: 20
+Iterations without progress: 1
+
+alpha: 7.943330713528126e-06
+Features selected: 21
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 7.546164177851719e-06
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 7.168855968959133e-06
+Features selected: 23
+Iterations without progress: 1
+
+alpha: 6.810413170511176e-06
+Features selected: 23
+Iterations without progress: 2
+
+alpha: 6.469892511985617e-06
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 6.146397886386336e-06
+Features selected: 22
+Iterations without progress: 1
+
+alpha: 5.839077992067019e-06
+Features selected: 22
+Iterations without progress: 2
+
+alpha: 5.547124092463668e-06
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 5.2697678878404845e-06
+Features selected: 21
+Iterations without progress: 1
+
+alpha: 5.00627949344846e-06
+Features selected: 21
+Iterations without progress: 2
+
+alpha: 4.755965518776037e-06
+Features selected: 21
+Iterations without progress: 3
+
+alpha: 4.518167242837235e-06
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 4.292258880695373e-06
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 4.077645936660604e-06
+Features selected: 21
+Iterations without progress: 1
+
+alpha: 3.873763639827573e-06
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 3.6800754578361943e-06
+Features selected: 22
+Iterations without progress: 1
+
+alpha: 3.496071684944384e-06
+Features selected: 22
+Iterations without progress: 2
+
+alpha: 3.3212681006971646e-06
+Features selected: 22
+Iterations without progress: 3
+
+alpha: 3.155204695662306e-06
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 2.9974444608791908e-06
+Features selected: 21
+Iterations without progress: 1
+
+alpha: 2.8475722378352313e-06
+Features selected: 21
+Iterations without progress: 2
+
+alpha: 2.7051936259434698e-06
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 2.5699339446462964e-06
+Features selected: 20
+Iterations without progress: 1
+
+alpha: 2.4414372474139816e-06
+Features selected: 20
+Iterations without progress: 2
+
+alpha: 2.3193653850432824e-06
+Features selected: 20
+Iterations without progress: 3
+
+alpha: 2.2033971157911184e-06
+Features selected: 19
+Iterations without progress: 0
+
+alpha: 2.0932272600015623e-06
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 1.988565897001484e-06
+Features selected: 21
+Iterations without progress: 1
+
+Old "step_pct": 0.05
+New "step_pct": 0.025
+alpha: 1.938851749576447e-06
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 1.8903804558370357e-06
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 1.8431209444411097e-06
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 1.7970429208300819e-06
+Features selected: 23
+Iterations without progress: 1
+
+alpha: 1.7521168478093298e-06
+Features selected: 23
+Iterations without progress: 2
+
+alpha: 1.7083139266140965e-06
+Features selected: 23
+Iterations without progress: 3
+
+alpha: 1.665606078448744e-06
+Features selected: 23
+Iterations without progress: 4
+
+alpha: 1.6239659264875254e-06
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 1.5833667783253372e-06
+Features selected: 24
+Iterations without progress: 1
+
+alpha: 1.5437826088672037e-06
+Features selected: 24
+Iterations without progress: 2
+
+alpha: 1.5051880436455235e-06
+Features selected: 24
+Iterations without progress: 3
+
+alpha: 1.4675583425543854e-06
+Features selected: 24
+Iterations without progress: 4
+
+alpha: 1.4308693839905258e-06
+Features selected: 24
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 25 feature(s) (minimum alpha value to use).
+
+Using up to 24 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 22
+Number of features: 23
+Number of features: 20
+Number of features: 6
+Number of features: 7
+Number of features: 10
+Number of features: 16
+Number of features: 21
+Number of features: 2
+Number of features: 7
+Number of features: 18
+Number of features: 20
+Number of features: 19
+Number of features: 1
+Number of features: 21
+Number of features: 24
+Number of features: 3
+Number of features: 3
+Number of features: 12
+Number of features: 19
+Number of features: 17
+Number of features: 8
+Number of features: 21
+Number of features: 6
+Number of features: 11
+Number of features: 21
+Number of features: 9
+Number of features: 20
+Number of features: 22
+Number of features: 21
+Number of features: 12
+Number of features: 2
+Number of features: 21
+Number of features: 13
+Number of features: 4
+Number of features: 11
+Number of features: 18
+Number of features: 15
+Number of features: 23
+Number of features: 22
+Number of features: 14
+Number of features: 22
+Number of features: 13
+Number of features: 19
+Number of features: 5
+Number of features: 7
+Number of features: 9
+Number of features: 15
+Number of features: 14
+Number of features: 18
+Number of features: 20
+Number of features: 21
+Number of features: 19
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+
+Processing scenario ID: 20
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 25 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 5
+Number of features: 2
+Number of features: 14
+Number of features: 20
+Number of features: 19
+Number of features: 9
+Number of features: 7
+Number of features: 19
+Number of features: 17
+Number of features: 3
+Number of features: 4
+Number of features: 12
+Number of features: 22
+Number of features: 4
+Number of features: 16
+Number of features: 15
+Number of features: 1
+Number of features: 20
+Number of features: 11
+Number of features: 10
+Number of features: 21
+Number of features: 20
+Number of features: 18
+Number of features: 5
+Number of features: 8
+Number of features: 21
+Number of features: 6
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+
+Processing scenario ID: 20
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.0005
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 0.00025
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 0.000125
+Features selected: 16
+Iterations without progress: 0
+
+alpha: 6.25e-05
+Features selected: 19
+Iterations without progress: 0
+
+alpha: 3.125e-05
+Features selected: 19
+Iterations without progress: 1
+
+alpha: 1.5625e-05
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 7.8125e-06
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 3.90625e-06
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 1.953125e-06
+Features selected: 23
+Iterations without progress: 1
+
+alpha: 9.765625e-07
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 4.8828125e-07
+Features selected: 22
+Iterations without progress: 1
+
+alpha: 2.44140625e-07
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 1.220703125e-07
+Features selected: 23
+Iterations without progress: 1
+
+alpha: 6.103515625e-08
+Features selected: 23
+Iterations without progress: 2
+
+alpha: 3.0517578125e-08
+Features selected: 23
+Iterations without progress: 3
+
+alpha: 1.52587890625e-08
+Features selected: 23
+Iterations without progress: 4
+
+alpha: 7.62939453125e-09
+Features selected: 23
+Iterations without progress: 5
+
+alpha: 1.4495849609375e-08
+Features selected: 25
+Iterations without progress: 0
+
+Using up to 25 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 8
+Number of features: 13
+Number of features: 17
+Number of features: 1
+Number of features: 22
+Number of features: 7
+Number of features: 18
+Number of features: 23
+Number of features: 14
+Number of features: 10
+Number of features: 2
+Number of features: 18
+Number of features: 10
+Number of features: 19
+Number of features: 19
+Number of features: 3
+Number of features: 8
+Number of features: 4
+Number of features: 23
+Number of features: 6
+Number of features: 11
+Number of features: 20
+Number of features: 20
+Number of features: 9
+Number of features: 21
+Number of features: 22
+Number of features: 5
+Number of features: 11
+Number of features: 16
+Number of features: 24
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+
+Processing scenario ID: 20
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.0005
+Features selected: 1
+Iterations without progress: 0
+
+alpha: 0.00025
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.000125
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 6.25e-05
+Features selected: 3
+Iterations without progress: 1
+
+alpha: 3.125e-05
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 1.5625e-05
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 7.8125e-06
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 3.90625e-06
+Features selected: 13
+Iterations without progress: 0
+
+alpha: 1.953125e-06
+Features selected: 16
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 1.7578125000000002e-06
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 1.5820312500000001e-06
+Features selected: 19
+Iterations without progress: 0
+
+alpha: 1.423828125e-06
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 1.2814453125000001e-06
+Features selected: 20
+Iterations without progress: 1
+
+alpha: 1.15330078125e-06
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 1.037970703125e-06
+Features selected: 22
+Iterations without progress: 1
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 9.8607216796875e-07
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 9.367685595703124e-07
+Features selected: 24
+Iterations without progress: 1
+
+alpha: 8.899301315917968e-07
+Features selected: 24
+Iterations without progress: 2
+
+alpha: 8.454336250122069e-07
+Features selected: 24
+Iterations without progress: 3
+
+alpha: 8.031619437615966e-07
+Features selected: 24
+Iterations without progress: 4
+
+alpha: 7.630038465735167e-07
+Features selected: 24
+Iterations without progress: 5
+
+alpha: 7.991461340427886e-07
+Features selected: 25
+Iterations without progress: 0
+
+Using up to 25 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 16
+Number of features: 2
+Number of features: 2
+Number of features: 17
+Number of features: 15
+Number of features: 1
+Number of features: 20
+Number of features: 12
+Number of features: 18
+Number of features: 0
+Number of features: 16
+Number of features: 5
+Number of features: 14
+Number of features: 19
+Number of features: 12
+Number of features: 3
+Number of features: 20
+Number of features: 15
+Number of features: 3
+Number of features: 9
+Number of features: 12
+Number of features: 19
+Number of features: 11
+Number of features: 13
+Number of features: 22
+Number of features: 4
+Number of features: 8
+Number of features: 17
+Number of features: 18
+Number of features: 10
+Number of features: 7
+Number of features: 9
+Number of features: 13
+Number of features: 21
+Number of features: 10
+Number of features: 6
+Number of features: 17
+Number of features: 24
+Number of features: 13
+Number of features: 10
+Number of features: 13
+las_alpha
+pls_n_components
+pls_scale
+
+Processing scenario ID: 20
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+GLOBUS TRANSFER task_id: 8692cc0e-27de-11eb-b162-0ee0d5d9299f
+Waiting for transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f to complete...
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 3 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 4 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 5 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 6 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 7 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 8 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 9 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 10 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 11 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 12 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 13 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 14 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 15 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 16 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 17 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 18 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 19 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 20 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 21 minute(s) ago
+Transfer 8692cc0e-27de-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 22 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: be962724-27e1-11eb-8fbe-0a34088e79f9
+
+Processing scenario ID: 21
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': 50, 'mask_side': 'lower'}
+GLOBUS TRANSFER task_id: c4358e72-27e1-11eb-8fbe-0a34088e79f9
+Waiting for transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 to complete...
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 3 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 4 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 5 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 6 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 7 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 8 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 9 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 10 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 11 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 12 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 13 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 14 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 15 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 16 minute(s) ago
+Transfer c4358e72-27e1-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 17 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 4b9f1340-27e4-11eb-b539-02d9497ca481
+
+Processing scenario ID: 22
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': 50, 'mask_side': 'upper'}
+GLOBUS TRANSFER task_id: 4db56350-27e4-11eb-8fbe-0a34088e79f9
+Waiting for transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 to complete...
+Transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 3 minute(s) ago
+Transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 4 minute(s) ago
+Transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 5 minute(s) ago
+Transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 6 minute(s) ago
+Transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 7 minute(s) ago
+Transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 8 minute(s) ago
+Transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 9 minute(s) ago
+Transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 10 minute(s) ago
+Transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 11 minute(s) ago
+Transfer 4db56350-27e4-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 12 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 1307dc90-27e6-11eb-8fbe-0a34088e79f9
+
+Processing scenario ID: 23
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': 90, 'mask_side': 'lower'}
+GLOBUS TRANSFER task_id: 15658d20-27e6-11eb-8fbe-0a34088e79f9
+Waiting for transfer 15658d20-27e6-11eb-8fbe-0a34088e79f9 to complete...
+Transfer 15658d20-27e6-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 15658d20-27e6-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 15658d20-27e6-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 3 minute(s) ago
+Transfer 15658d20-27e6-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 4 minute(s) ago
+Transfer 15658d20-27e6-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 5 minute(s) ago
+Transfer 15658d20-27e6-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 6 minute(s) ago
+Transfer 15658d20-27e6-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 7 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 1968a604-27e7-11eb-8fbe-0a34088e79f9
+
+Processing scenario ID: 24
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_resample', 'bandwidth': 20}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}
+GLOBUS TRANSFER task_id: 1b65b87a-27e7-11eb-b162-0ee0d5d9299f
+Waiting for transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f to complete...
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 3 minute(s) ago
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 4 minute(s) ago
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 5 minute(s) ago
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 6 minute(s) ago
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 7 minute(s) ago
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 8 minute(s) ago
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 9 minute(s) ago
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 10 minute(s) ago
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 11 minute(s) ago
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 12 minute(s) ago
+Transfer 1b65b87a-27e7-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 13 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 129b192c-27e9-11eb-b539-02d9497ca481

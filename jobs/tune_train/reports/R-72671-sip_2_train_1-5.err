@@ -1,0 +1,303 @@
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 5037075.687233729, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 5081717.86616861, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 5379967.645461685, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 5252021.433267141, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 300090.70397285745, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 300090.70397285745, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 300090.70397285745, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 44786.51237105951, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+Traceback (most recent call last):
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 564, in _list_to_arrays
+    columns = _validate_or_indexify_columns(content, columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 688, in _validate_or_indexify_columns
+    raise AssertionError(
+AssertionError: 4 columns passed, passed data had 2 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 240, in <module>
+    df_params = summarize_tuning_results(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2464, in summarize_tuning_results
+    df_params = summarize_tuning_loop(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2444, in summarize_tuning_loop
+    df_temp = pd.DataFrame(data=[data], columns=df_params.columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/frame.py", line 509, in __init__
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 524, in to_arrays
+    return _list_to_arrays(data, columns, coerce_float=coerce_float, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 567, in _list_to_arrays
+    raise ValueError(e) from e
+ValueError: 4 columns passed, passed data had 2 columns
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 5445.324097974062, tolerance: 17.538496504468622
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 6114.083413441641, tolerance: 17.538496504468622
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 2914.2878505996414, tolerance: 17.538496504468622
+  model = cd_fast.enet_coordinate_descent(
+Traceback (most recent call last):
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 564, in _list_to_arrays
+    columns = _validate_or_indexify_columns(content, columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 688, in _validate_or_indexify_columns
+    raise AssertionError(
+AssertionError: 4 columns passed, passed data had 2 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 240, in <module>
+    df_params = summarize_tuning_results(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2464, in summarize_tuning_results
+    df_params = summarize_tuning_loop(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2444, in summarize_tuning_loop
+    df_temp = pd.DataFrame(data=[data], columns=df_params.columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/frame.py", line 509, in __init__
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 524, in to_arrays
+    return _list_to_arrays(data, columns, coerce_float=coerce_float, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 567, in _list_to_arrays
+    raise ValueError(e) from e
+ValueError: 4 columns passed, passed data had 2 columns
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 7.9997944666520695, tolerance: 0.011853163025327513
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 0.20988975484694095, tolerance: 0.011853163025327513
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+Traceback (most recent call last):
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 564, in _list_to_arrays
+    columns = _validate_or_indexify_columns(content, columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 688, in _validate_or_indexify_columns
+    raise AssertionError(
+AssertionError: 4 columns passed, passed data had 2 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 240, in <module>
+    df_params = summarize_tuning_results(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2464, in summarize_tuning_results
+    df_params = summarize_tuning_loop(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2444, in summarize_tuning_loop
+    df_temp = pd.DataFrame(data=[data], columns=df_params.columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/frame.py", line 509, in __init__
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 524, in to_arrays
+    return _list_to_arrays(data, columns, coerce_float=coerce_float, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 567, in _list_to_arrays
+    raise ValueError(e) from e
+ValueError: 4 columns passed, passed data had 2 columns
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 619304.8150278539, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 2012754.2831274797, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 3861772.9051981224, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+Traceback (most recent call last):
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 564, in _list_to_arrays
+    columns = _validate_or_indexify_columns(content, columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 688, in _validate_or_indexify_columns
+    raise AssertionError(
+AssertionError: 4 columns passed, passed data had 2 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 240, in <module>
+    df_params = summarize_tuning_results(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2464, in summarize_tuning_results
+    df_params = summarize_tuning_loop(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2444, in summarize_tuning_loop
+    df_temp = pd.DataFrame(data=[data], columns=df_params.columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/frame.py", line 509, in __init__
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 524, in to_arrays
+    return _list_to_arrays(data, columns, coerce_float=coerce_float, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 567, in _list_to_arrays
+    raise ValueError(e) from e
+ValueError: 4 columns passed, passed data had 2 columns
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 3334.516993003166, tolerance: 17.538496504468622
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 935.3440579838789, tolerance: 17.538496504468622
+  model = cd_fast.enet_coordinate_descent(
+Traceback (most recent call last):
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 564, in _list_to_arrays
+    columns = _validate_or_indexify_columns(content, columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 688, in _validate_or_indexify_columns
+    raise AssertionError(
+AssertionError: 4 columns passed, passed data had 2 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 240, in <module>
+    df_params = summarize_tuning_results(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2464, in summarize_tuning_results
+    df_params = summarize_tuning_loop(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2444, in summarize_tuning_loop
+    df_temp = pd.DataFrame(data=[data], columns=df_params.columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/frame.py", line 509, in __init__
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 524, in to_arrays
+    return _list_to_arrays(data, columns, coerce_float=coerce_float, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 567, in _list_to_arrays
+    raise ValueError(e) from e
+ValueError: 4 columns passed, passed data had 2 columns
+Traceback (most recent call last):
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 564, in _list_to_arrays
+    columns = _validate_or_indexify_columns(content, columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 688, in _validate_or_indexify_columns
+    raise AssertionError(
+AssertionError: 4 columns passed, passed data had 2 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 240, in <module>
+    df_params = summarize_tuning_results(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2464, in summarize_tuning_results
+    df_params = summarize_tuning_loop(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2444, in summarize_tuning_loop
+    df_temp = pd.DataFrame(data=[data], columns=df_params.columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/frame.py", line 509, in __init__
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 524, in to_arrays
+    return _list_to_arrays(data, columns, coerce_float=coerce_float, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 567, in _list_to_arrays
+    raise ValueError(e) from e
+ValueError: 4 columns passed, passed data had 2 columns
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 740924.7350239361, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 1531762.3693196787, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 99907.54694959521, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+Traceback (most recent call last):
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 564, in _list_to_arrays
+    columns = _validate_or_indexify_columns(content, columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 688, in _validate_or_indexify_columns
+    raise AssertionError(
+AssertionError: 4 columns passed, passed data had 2 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 240, in <module>
+    df_params = summarize_tuning_results(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2464, in summarize_tuning_results
+    df_params = summarize_tuning_loop(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2444, in summarize_tuning_loop
+    df_temp = pd.DataFrame(data=[data], columns=df_params.columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/frame.py", line 509, in __init__
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 524, in to_arrays
+    return _list_to_arrays(data, columns, coerce_float=coerce_float, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 567, in _list_to_arrays
+    raise ValueError(e) from e
+ValueError: 4 columns passed, passed data had 2 columns
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 2660.26772362463, tolerance: 17.538496504468622
+  model = cd_fast.enet_coordinate_descent(
+Traceback (most recent call last):
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 564, in _list_to_arrays
+    columns = _validate_or_indexify_columns(content, columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 688, in _validate_or_indexify_columns
+    raise AssertionError(
+AssertionError: 4 columns passed, passed data had 2 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 240, in <module>
+    df_params = summarize_tuning_results(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2464, in summarize_tuning_results
+    df_params = summarize_tuning_loop(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2444, in summarize_tuning_loop
+    df_temp = pd.DataFrame(data=[data], columns=df_params.columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/frame.py", line 509, in __init__
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 524, in to_arrays
+    return _list_to_arrays(data, columns, coerce_float=coerce_float, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 567, in _list_to_arrays
+    raise ValueError(e) from e
+ValueError: 4 columns passed, passed data had 2 columns
+Traceback (most recent call last):
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 564, in _list_to_arrays
+    columns = _validate_or_indexify_columns(content, columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 688, in _validate_or_indexify_columns
+    raise AssertionError(
+AssertionError: 4 columns passed, passed data had 2 columns
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 240, in <module>
+    df_params = summarize_tuning_results(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2464, in summarize_tuning_results
+    df_params = summarize_tuning_loop(
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 2444, in summarize_tuning_loop
+    df_temp = pd.DataFrame(data=[data], columns=df_params.columns)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/frame.py", line 509, in __init__
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 524, in to_arrays
+    return _list_to_arrays(data, columns, coerce_float=coerce_float, dtype=dtype)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/pandas/core/internals/construction.py", line 567, in _list_to_arrays
+    raise ValueError(e) from e
+ValueError: 4 columns passed, passed data had 2 columns

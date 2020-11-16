@@ -5,6 +5,7 @@ Created on Fri Mar 27 11:35:45 2020
 @author: nigo0024
 """
 from ast import literal_eval
+from copy import deepcopy
 import fnmatch
 import itertools as it
 import math
@@ -2296,22 +2297,25 @@ def execute_tuning(alpha_list, X, y, model_list, param_grid_dict, standardize, s
 
         print('Number of features: {0}'.format(len(feats)))
         temp_list = []
-        for idx1, (model, param_grid) in enumerate(zip(model_list, param_grid_dict)):
+        for idx1, (model, param_grid) in enumerate(zip(model_list, param_grid_dict.values())):
             cv_rep_strat = get_repeated_stratified_kfold(
                 df_train, n_splits, n_repeats, random_seed)
 
+            pg_deepcopy = deepcopy(param_grid)
             # will show a verbose warning if n_components exceeds n_feats
-            if 'regressor__n_components' in param_grid:
-                n_comp = param_grid['regressor__n_components']
-                print('check_key0: {0}'.format(n_comp))
-                n_comp_trim = [i for i in n_comp if i >= len(feats)]
-                param_grid['regressor__n_components'] = n_comp_trim
-                print('check_key1: {0}'.format(param_grid['regressor__n_components']))
-            else:
-                print('check_key2: {0}'.format(param_grid))
+            if 'regressor__n_components' in pg_deepcopy:
+                n_comp = pg_deepcopy['regressor__n_components']
+                # print('check_key0: {0}'.format(n_comp))
+                n_comp_trim = [i for i in n_comp if i <= len(feats)]
+                pg_deepcopy['regressor__n_components'] = n_comp_trim
+                # print('check_key1: {0}'.format(param_grid['regressor__n_components']))
+            # else:
+                # print('check_key3: {0}'.format(param_grid))
+            if (isinstance(model, PLSRegression)) and len(feats) <= 1:
+                continue
 
             df_tune_temp = tune_model(
-                X_select, y, model, param_grid_dict[param_grid],
+                X_select, y, model, pg_deepcopy,
                 standardize, scoring, scoring_refit, key, cv_rep_strat,
                 feats, feat_ranking, alpha, cols)
             if print_results is True:

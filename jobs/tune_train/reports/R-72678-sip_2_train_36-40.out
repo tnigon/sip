@@ -1,0 +1,1623 @@
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+
+Processing scenario ID: 35
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: nan
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 50.0
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 25.0
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 12.5
+Features selected: 12
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 11.25
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 10.125
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 9.1125
+Features selected: 22
+Iterations without progress: 1
+
+alpha: 8.201250000000002
+Features selected: 22
+Iterations without progress: 2
+
+alpha: 7.381125000000002
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 6.643012500000002
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 5.978711250000002
+Features selected: 26
+Iterations without progress: 1
+
+alpha: 5.3808401250000015
+Features selected: 26
+Iterations without progress: 2
+
+alpha: 5.918924137500001
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 20
+Number of features: 22
+Number of features: 26
+Number of features: 2
+Number of features: 10
+Number of features: 12
+Number of features: 22
+Number of features: 9
+Number of features: 5
+Number of features: 3
+Number of features: 8
+Number of features: 25
+Number of features: 15
+Number of features: 23
+Number of features: 11
+Number of features: 11
+Number of features: 23
+Number of features: 2
+Number of features: 22
+Number of features: 4
+Number of features: 18
+Number of features: 23
+Number of features: 15
+Number of features: 23
+Number of features: 14
+Number of features: 16
+Number of features: 4
+Number of features: 1
+Number of features: 10
+Number of features: 11
+Number of features: 6
+Number of features: 26
+Number of features: 12
+Number of features: 3
+Number of features: 11
+Number of features: 10
+Number of features: 17
+Number of features: 12
+Number of features: 3
+Number of features: 9
+Number of features: 10
+Number of features: 11
+Number of features: 22
+Number of features: 21
+Number of features: 14
+Number of features: 23
+Number of features: 24
+Number of features: 24
+Number of features: 17
+Number of features: 10
+Number of features: 27
+Number of features: 19
+Number of features: 7
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+
+Processing scenario ID: 35
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: nan
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.5
+Features selected: 13
+Iterations without progress: 0
+
+alpha: 0.25
+Features selected: 15
+Iterations without progress: 0
+
+alpha: 0.125
+Features selected: 19
+Iterations without progress: 0
+
+alpha: 0.0625
+Features selected: 19
+Iterations without progress: 1
+
+alpha: 0.11875
+Features selected: 32
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.1
+alpha: 0.106875
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 0.0961875
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 0.08656875
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 0.077911875
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.0857030625
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 7
+Number of features: 15
+Number of features: 15
+Number of features: 2
+Number of features: 18
+Number of features: 18
+Number of features: 14
+Number of features: 18
+Number of features: 15
+Number of features: 5
+Number of features: 18
+Number of features: 12
+Number of features: 14
+Number of features: 4
+Number of features: 18
+Number of features: 16
+Number of features: 3
+Number of features: 21
+Number of features: 19
+Number of features: 17
+Number of features: 3
+Number of features: 16
+Number of features: 10
+Number of features: 22
+Number of features: 10
+Number of features: 13
+Number of features: 25
+Number of features: 20
+Number of features: 5
+Number of features: 20
+Number of features: 11
+Number of features: 18
+Number of features: 20
+Number of features: 17
+Number of features: 17
+Number of features: 4
+Number of features: 15
+Number of features: 14
+Number of features: 24
+Number of features: 14
+Number of features: 17
+Number of features: 11
+Number of features: 20
+Number of features: 11
+Number of features: 19
+Number of features: 20
+Number of features: 19
+Number of features: 6
+Number of features: 1
+Number of features: 15
+Number of features: 6
+Number of features: 19
+Number of features: 2
+Number of features: 3
+Number of features: 19
+Number of features: 19
+Number of features: 14
+Number of features: 13
+Number of features: 15
+Number of features: 17
+Number of features: 17
+Number of features: 12
+Number of features: 23
+Number of features: 25
+Number of features: 8
+Number of features: 16
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+
+Processing scenario ID: 35
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: nan
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.05
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.025
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 0.0125
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 0.00625
+Features selected: 15
+Iterations without progress: 0
+
+alpha: 0.003125
+Features selected: 20
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.0028125000000000003
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.00309375
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.0030628125
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.003032184375
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 0.00300186253125
+Features selected: 28
+Iterations without progress: 2
+
+alpha: 0.0029718439059375
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.002942125466878125
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.0029688720620315626
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 10
+Number of features: 16
+Number of features: 17
+Number of features: 27
+Number of features: 26
+Number of features: 9
+Number of features: 3
+Number of features: 4
+Number of features: 18
+Number of features: 5
+Number of features: 19
+Number of features: 11
+Number of features: 15
+Number of features: 21
+Number of features: 11
+Number of features: 10
+Number of features: 18
+Number of features: 4
+Number of features: 13
+Number of features: 5
+Number of features: 18
+Number of features: 15
+Number of features: 5
+Number of features: 8
+Number of features: 9
+Number of features: 10
+Number of features: 6
+Number of features: 21
+Number of features: 15
+Number of features: 25
+Number of features: 17
+Number of features: 29
+Number of features: 25
+Number of features: 10
+Number of features: 12
+Number of features: 7
+Number of features: 17
+Number of features: 14
+Number of features: 18
+Number of features: 21
+Number of features: 26
+Number of features: 18
+Number of features: 16
+Number of features: 11
+Number of features: 1
+Number of features: 29
+Number of features: 12
+Number of features: 8
+Number of features: 15
+Number of features: 24
+Number of features: 28
+Number of features: 28
+Number of features: 16
+Number of features: 4
+Number of features: 22
+Number of features: 2
+Number of features: 10
+Number of features: 5
+Number of features: 6
+Number of features: 6
+Number of features: 4
+Number of features: 7
+Number of features: 16
+Number of features: 15
+Number of features: 4
+Number of features: 10
+Number of features: 7
+Number of features: 10
+Number of features: 19
+Number of features: 18
+Number of features: 5
+Number of features: 16
+Number of features: 8
+Number of features: 19
+Number of features: 9
+Number of features: 20
+Number of features: 16
+Number of features: 18
+Number of features: 14
+Number of features: 19
+Number of features: 23
+Number of features: 12
+Number of features: 24
+Number of features: 20
+Number of features: 23
+Number of features: 5
+Number of features: 27
+Number of features: 11
+Number of features: 17
+Number of features: 8
+Number of features: 9
+Number of features: 9
+Number of features: 29
+Number of features: 5
+Number of features: 10
+Number of features: 8
+Number of features: 11
+Number of features: 28
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+
+Processing scenario ID: 35
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: nan
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 5.0
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 2.5
+Features selected: 14
+Iterations without progress: 0
+
+alpha: 1.25
+Features selected: 18
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 1.125
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 1.0125
+Features selected: 27
+Iterations without progress: 1
+
+alpha: 0.91125
+Features selected: 27
+Iterations without progress: 2
+
+alpha: 1.002375
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 26
+Number of features: 9
+Number of features: 2
+Number of features: 18
+Number of features: 4
+Number of features: 4
+Number of features: 14
+Number of features: 21
+Number of features: 16
+Number of features: 1
+Number of features: 26
+Number of features: 25
+Number of features: 19
+Number of features: 10
+Number of features: 3
+Number of features: 9
+Number of features: 23
+Number of features: 5
+Number of features: 20
+Number of features: 12
+Number of features: 10
+Number of features: 11
+Number of features: 8
+Number of features: 15
+Number of features: 28
+Number of features: 27
+Number of features: 5
+Number of features: 8
+Number of features: 10
+Number of features: 14
+Number of features: 11
+Number of features: 27
+Number of features: 9
+Number of features: 13
+Number of features: 17
+Number of features: 22
+Number of features: 13
+Number of features: 27
+Number of features: 9
+Number of features: 28
+Number of features: 6
+Number of features: 7
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+
+Processing scenario ID: 35
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: nan
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.5
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.25
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.125
+Features selected: 13
+Iterations without progress: 0
+
+alpha: 0.0625
+Features selected: 14
+Iterations without progress: 0
+
+alpha: 0.03125
+Features selected: 19
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.028125
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.0253125
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.022781250000000003
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.025059375000000002
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 21
+Number of features: 13
+Number of features: 2
+Number of features: 19
+Number of features: 5
+Number of features: 20
+Number of features: 5
+Number of features: 11
+Number of features: 10
+Number of features: 4
+Number of features: 18
+Number of features: 12
+Number of features: 15
+Number of features: 24
+Number of features: 25
+Number of features: 28
+Number of features: 26
+Number of features: 6
+Number of features: 16
+Number of features: 15
+Number of features: 25
+Number of features: 19
+Number of features: 9
+Number of features: 29
+Number of features: 8
+Number of features: 21
+Number of features: 6
+Number of features: 17
+Number of features: 5
+Number of features: 8
+Number of features: 7
+Number of features: 20
+Number of features: 15
+Number of features: 20
+Number of features: 14
+Number of features: 3
+Number of features: 14
+Number of features: 19
+Number of features: 1
+Number of features: 14
+Number of features: 19
+Number of features: 24
+Number of features: 27
+Number of features: 13
+Number of features: 12
+Number of features: 14
+Number of features: 23
+Number of features: 13
+Number of features: 4
+Number of features: 22
+Number of features: 16
+Number of features: 15
+Number of features: 30
+Number of features: 14
+Number of features: 5
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+
+Processing scenario ID: 35
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: nan
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.005
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.0025
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 0.00125
+Features selected: 17
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.0011250000000000001
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.0010125000000000002
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.0009112500000000002
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 0.0008201250000000002
+Features selected: 25
+Iterations without progress: 1
+
+alpha: 0.0007381125000000002
+Features selected: 25
+Iterations without progress: 2
+
+alpha: 0.0008119237500000002
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 26
+Number of features: 11
+Number of features: 11
+Number of features: 25
+Number of features: 26
+Number of features: 25
+Number of features: 15
+Number of features: 19
+Number of features: 16
+Number of features: 11
+Number of features: 26
+Number of features: 20
+Number of features: 18
+Number of features: 10
+Number of features: 2
+Number of features: 21
+Number of features: 9
+Number of features: 1
+Number of features: 10
+Number of features: 5
+Number of features: 10
+Number of features: 25
+Number of features: 20
+Number of features: 12
+Number of features: 22
+Number of features: 17
+Number of features: 11
+Number of features: 6
+Number of features: 23
+Number of features: 26
+Number of features: 27
+Number of features: 10
+Number of features: 14
+Number of features: 3
+Number of features: 26
+Number of features: 25
+Number of features: 4
+Number of features: 19
+Number of features: 27
+Number of features: 8
+Number of features: 25
+Number of features: 9
+Number of features: 7
+Number of features: 12
+Number of features: 9
+Number of features: 25
+Number of features: 13
+Number of features: 26
+Number of features: 26
+Number of features: 25
+Number of features: 24
+Number of features: 10
+Number of features: 27
+Number of features: 26
+Number of features: 28
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+
+Processing scenario ID: 35
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: nan
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 5.0
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 2.5
+Features selected: 14
+Iterations without progress: 0
+
+alpha: 1.25
+Features selected: 19
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 1.125
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 1.0125
+Features selected: 26
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 0.9618749999999999
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.9137812499999999
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.9570656249999999
+Features selected: 32
+Iterations without progress: 0
+
+alpha: 0.9522802968749999
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.947518895390625
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.9427813009136718
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.9380673944091035
+Features selected: 29
+Iterations without progress: 3
+
+alpha: 0.9333770574370579
+Features selected: 29
+Iterations without progress: 4
+
+alpha: 0.9287101721498726
+Features selected: 29
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 30 feature(s) (minimum alpha value to use).
+
+Using up to 29 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 18
+Number of features: 1
+Number of features: 28
+Number of features: 10
+Number of features: 5
+Number of features: 26
+Number of features: 3
+Number of features: 23
+Number of features: 12
+Number of features: 15
+Number of features: 20
+Number of features: 9
+Number of features: 4
+Number of features: 24
+Number of features: 14
+Number of features: 19
+Number of features: 22
+Number of features: 19
+Number of features: 21
+Number of features: 2
+Number of features: 8
+Number of features: 6
+Number of features: 15
+Number of features: 10
+Number of features: 20
+Number of features: 12
+Number of features: 17
+Number of features: 25
+Number of features: 14
+Number of features: 29
+Number of features: 7
+Number of features: 11
+Number of features: 11
+Number of features: 14
+Number of features: 16
+Number of features: 13
+Number of features: 13
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+
+Processing scenario ID: 35
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: nan
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.5
+Features selected: 1
+Iterations without progress: 0
+
+alpha: 0.25
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.125
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.0625
+Features selected: 12
+Iterations without progress: 0
+
+alpha: 0.03125
+Features selected: 18
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.028125
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 0.0253125
+Features selected: 25
+Iterations without progress: 1
+
+alpha: 0.022781250000000003
+Features selected: 26
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 0.021642187500000003
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.020560078125000002
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.01953207421875
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.020457277734375
+Features selected: 33
+Iterations without progress: 0
+
+alpha: 0.020354991345703125
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.02025321638897461
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.020344813850030275
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.02035397359613584
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 5
+Number of features: 7
+Number of features: 10
+Number of features: 27
+Number of features: 19
+Number of features: 2
+Number of features: 15
+Number of features: 3
+Number of features: 1
+Number of features: 21
+Number of features: 9
+Number of features: 20
+Number of features: 4
+Number of features: 12
+Number of features: 9
+Number of features: 26
+Number of features: 26
+Number of features: 11
+Number of features: 24
+Number of features: 6
+Number of features: 16
+Number of features: 25
+Number of features: 8
+Number of features: 25
+Number of features: 14
+Number of features: 17
+Number of features: 26
+Number of features: 26
+Number of features: 10
+Number of features: 24
+Number of features: 18
+Number of features: 13
+Number of features: 29
+Number of features: 25
+Number of features: 23
+las_alpha
+pls_n_components
+pls_scale
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+
+Processing scenario ID: 35
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: nan
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.005
+Features selected: 1
+Iterations without progress: 0
+
+alpha: 0.0025
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.00125
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 0.000625
+Features selected: 16
+Iterations without progress: 0
+
+alpha: 0.0011875
+Features selected: 31
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.25
+alpha: 0.0008906249999999999
+Features selected: 17
+Iterations without progress: 0
+
+Old "step_pct": 0.25
+New "step_pct": 0.05
+alpha: 0.0008460937499999998
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 0.0008037890624999998
+Features selected: 24
+Iterations without progress: 1
+
+Old "step_pct": 0.05
+New "step_pct": 0.025
+alpha: 0.0007836943359374998
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.0007641019775390623
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0007449994281005857
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.000726374442398071
+Features selected: 27
+Iterations without progress: 1
+
+alpha: 0.0007082150813381192
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0007245585062920758
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Length of logspace_list: 300
+Number of chunks: 16
+Average length of each chunk: 18.8
+Number of cores: 8
+
+Hyperparameter tuning...
+
+Number of features: 22
+Number of features: 27
+Number of features: 4
+Number of features: 7
+Number of features: 8
+Number of features: 28
+Number of features: 25
+Number of features: 27
+Number of features: 1
+Number of features: 6
+Number of features: 12
+Number of features: 19
+Number of features: 24
+Number of features: 11
+Number of features: 18
+Number of features: 5
+Number of features: 9
+Number of features: 16
+Number of features: 13
+Number of features: 16
+Number of features: 17
+Number of features: 15
+Number of features: 18
+Number of features: 2
+Number of features: 17
+Number of features: 11
+Number of features: 28
+Number of features: 6
+Number of features: 22
+Number of features: 12
+Number of features: 26
+Number of features: 5
+Number of features: 18
+Number of features: 12
+Number of features: 24
+Number of features: 15
+Number of features: 11
+Number of features: 20
+Number of features: 3
+Number of features: 25
+Number of features: 10
+Number of features: 14
+las_alpha
+pls_n_components
+pls_scale
+
+Processing scenario ID: 35
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: nan
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+GLOBUS TRANSFER task_id: dc9b24e8-27ed-11eb-8fbe-0a34088e79f9
+Waiting for transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 to complete...
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 3 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 4 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 5 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 6 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 7 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 8 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 9 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 10 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 11 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 12 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 13 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 14 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 15 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 16 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 17 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 18 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 19 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 20 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 21 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 22 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 23 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 24 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 25 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 26 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 27 minute(s) ago
+Transfer dc9b24e8-27ed-11eb-8fbe-0a34088e79f9 has not yet finished; transfer submitted 28 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: f97ecb4c-27f1-11eb-b162-0ee0d5d9299f
+
+Processing scenario ID: 36
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: nan
+GLOBUS TRANSFER task_id: fba93146-27f1-11eb-b539-02d9497ca481
+Waiting for transfer fba93146-27f1-11eb-b539-02d9497ca481 to complete...
+Transfer fba93146-27f1-11eb-b539-02d9497ca481 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer fba93146-27f1-11eb-b539-02d9497ca481 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer fba93146-27f1-11eb-b539-02d9497ca481 has not yet finished; transfer submitted 3 minute(s) ago
+Transfer fba93146-27f1-11eb-b539-02d9497ca481 has not yet finished; transfer submitted 4 minute(s) ago
+Transfer fba93146-27f1-11eb-b539-02d9497ca481 has not yet finished; transfer submitted 5 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: bd0ee696-27f2-11eb-b539-02d9497ca481
+
+Processing scenario ID: 37
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+GLOBUS TRANSFER task_id: bf383774-27f2-11eb-b539-02d9497ca481
+Waiting for transfer bf383774-27f2-11eb-b539-02d9497ca481 to complete...
+Transfer bf383774-27f2-11eb-b539-02d9497ca481 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer bf383774-27f2-11eb-b539-02d9497ca481 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer bf383774-27f2-11eb-b539-02d9497ca481 has not yet finished; transfer submitted 3 minute(s) ago
+Transfer bf383774-27f2-11eb-b539-02d9497ca481 has not yet finished; transfer submitted 4 minute(s) ago
+Transfer bf383774-27f2-11eb-b539-02d9497ca481 has not yet finished; transfer submitted 5 minute(s) ago
+Transfer bf383774-27f2-11eb-b539-02d9497ca481 has not yet finished; transfer submitted 6 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 9ef9826e-27f3-11eb-b539-02d9497ca481
+
+Processing scenario ID: 38
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+GLOBUS TRANSFER task_id: a1382058-27f3-11eb-b162-0ee0d5d9299f
+Waiting for transfer a1382058-27f3-11eb-b162-0ee0d5d9299f to complete...
+Transfer a1382058-27f3-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+Transfer a1382058-27f3-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 2 minute(s) ago
+Transfer a1382058-27f3-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 3 minute(s) ago
+Transfer a1382058-27f3-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 4 minute(s) ago
+Transfer a1382058-27f3-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 5 minute(s) ago
+Transfer a1382058-27f3-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 6 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 9f7ae90c-27f4-11eb-b162-0ee0d5d9299f
+
+Processing scenario ID: 39
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': 50, 'mask_side': 'lower'}
+GLOBUS TRANSFER task_id: a1ad967a-27f4-11eb-b162-0ee0d5d9299f
+Waiting for transfer a1ad967a-27f4-11eb-b162-0ee0d5d9299f to complete...
+Transfer a1ad967a-27f4-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+Transfer a1ad967a-27f4-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 2 minute(s) ago
+Transfer a1ad967a-27f4-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 3 minute(s) ago
+Transfer a1ad967a-27f4-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 4 minute(s) ago
+Transfer a1ad967a-27f4-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 5 minute(s) ago
+Transfer a1ad967a-27f4-11eb-b162-0ee0d5d9299f has not yet finished; transfer submitted 6 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 87bcbee8-27f5-11eb-b162-0ee0d5d9299f
