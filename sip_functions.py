@@ -2303,8 +2303,12 @@ def execute_tuning(alpha_list, X, y, model_list, param_grid_dict, standardize, s
             # will show a verbose warning if n_components exceeds n_feats
             if 'regressor__n_components' in param_grid:
                 n_comp = param_grid['regressor__n_components']
+                print('check_key0: {0}'.format(n_comp))
                 n_comp_trim = [i for i in n_comp if i >= len(feats)]
                 param_grid['regressor__n_components'] = n_comp_trim
+                print('check_key1: {0}'.format(param_grid['regressor__n_components']))
+            else:
+                print('check_key2: {0}'.format(param_grid))
 
             df_tune_temp = tune_model(
                 X_select, y, model, param_grid_dict[param_grid],
