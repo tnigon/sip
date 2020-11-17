@@ -1,15 +1,15 @@
 #!/bin/bash -l
-#SBATCH --job-name=sip_2_procimg_1-54
+#SBATCH --job-name=sip_2_procimg_109-162
 #SBATCH --nodes=1
-#SBATCH --ntasks=12
+#SBATCH --ntasks=24
 #SBATCH --mem-per-cpu=2gb
-#SBATCH -t 8:00:00
+#SBATCH -t 6:00:00
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=nigo0024@umn.edu
 #SBATCH -o ./reports/R-%j-%x.out
 #SBATCH -e ./reports/R-%j-%x.err
 
-((start_n=1))
+((start_n=109))
 ((n=54))
 ((msi_run_id=2))
 start=$(($start_n-1))

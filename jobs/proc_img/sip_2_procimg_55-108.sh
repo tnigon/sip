@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --job-name=msi_2_procimg_55-108
+#SBATCH --job-name=sip_2_procimg_55-108
 #SBATCH --nodes=1
 #SBATCH --ntasks=24
 #SBATCH --mem-per-cpu=2gb
