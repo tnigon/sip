@@ -2407,7 +2407,6 @@ def summarize_tuning_loop(df_tune_list, model_list, idx, data_dict, df_params, k
                 las_alpha = las_params[f'{key}alpha']
             except TypeError:  # when cell is nan instead of dict
                 continue  # go to next index where there is actually data
-            # data.extend([las_alpha])
             data_dict['las_alpha'] = [las_alpha]
         elif isinstance(model_list[idx_df], SVR):
             svr_params = df.loc[idx]['tune_params']
@@ -2418,7 +2417,6 @@ def summarize_tuning_loop(df_tune_list, model_list, idx, data_dict, df_params, k
                 svr_gamma = np.nan
             svr_C = svr_params[f'{key}C']
             svr_epsilon = svr_params[f'{key}epsilon']
-            # data.extend([svr_kernel, svr_gamma, svr_C, svr_epsilon])
             data_dict['svr_kernel'] = [svr_kernel]
             data_dict['svr_gamma'] = [svr_gamma]
             data_dict['svr_C'] = [svr_C]
@@ -2427,7 +2425,6 @@ def summarize_tuning_loop(df_tune_list, model_list, idx, data_dict, df_params, k
             rf_params = df.loc[idx]['tune_params']
             rf_min_samples_split = rf_params[f'{key}min_samples_split']
             rf_max_feats = rf_params[f'{key}max_features']
-            # data.extend([rf_min_samples_split, rf_max_feats])
             data_dict['rf_min_samples_split'] = [rf_min_samples_split]
             data_dict['rf_max_feats'] = [rf_max_feats]
         elif isinstance(model_list[idx_df], PLSRegression):
@@ -2463,15 +2460,12 @@ def summarize_tuning_results(df_tune_list, model_list, param_grid_dict, key=''):
             # print(k1 + '_' + k2_short)
             cols_params.append(k1 + '_' + k2_short)
     df_params = pd.DataFrame(columns=cols_params)
-    num_rows = len(df_tune_list[0])  # all dfs should be same length
-    for idx in range(num_rows):
+    for idx in df_tune_list[0].index.tolist():  # all dfs should have same indexes
         # By setting data_dict values to nan by default, we don't have to worry
         # about an item in the list not existing in df_tune_list (e.g., when
         # n_components is 8 and n_feats is 4)
         data_dict = {i: np.nan for i in cols_params}
-        data_dict['feat_n'] = df_tune_list[0].loc[idx]['feat_n']  # should be the same for all dfs
-        # if len(df_tune_list) > 1:
-        #     break
+        data_dict['feat_n'] = df_tune_list[0].loc[idx, 'feat_n']  # should be the same for all dfs
         df_params = summarize_tuning_loop(
             df_tune_list, model_list, idx, data_dict, df_params, key)
     return df_params.reset_index(drop=True)
