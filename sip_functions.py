@@ -732,7 +732,7 @@ def seg_get_base_dir(dir_data, panel_type, crop_type, clip_type, smooth_type,
         base_dir = os.path.join(dir_data, panel_type, crop_type)
     elif bin_type == 'bin_none' and smooth_type == 'smooth_none' and clip_type != 'clip_none':
         base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type)
-    elif bin_type == 'bin_none' and smooth_type != 'smooth_none' and clip_type == 'clip_none':
+    elif bin_type == 'bin_none' and smooth_type != 'smooth_none':
         base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type, smooth_type)
     else:  # bin_type != 'bin_none'
         base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type, smooth_type, bin_type)
@@ -2395,60 +2395,8 @@ def filter_tuning_results(df_tune_all_list, score):
         df_tune_list += (df_filtered,)
     return df_tune_list
 
-# def summarize_tuning_loop(df_tune_list, model_list, idx, data, df_params, key):
-def summarize_tuning_loop(df_tune_list, model_list, idx, data_dict, df_params, key):
-    '''
-    Detailed loop getting hyperparameters for all the models
-    '''
-    for idx_df, df in enumerate(df_tune_list):
-        if isinstance(model_list[idx_df], Lasso):
-            las_params = df.loc[idx]['tune_params']
-            try:
-                las_alpha = las_params[f'{key}alpha']
-            except TypeError:  # when cell is nan instead of dict
-                continue  # go to next index where there is actually data
-            data_dict['las_alpha'] = [las_alpha]
-        elif isinstance(model_list[idx_df], SVR):
-            svr_params = df.loc[idx]['tune_params']
-            svr_kernel = svr_params[f'{key}kernel']
-            try:
-                svr_gamma = svr_params[f'{key}gamma']
-            except KeyError:
-                svr_gamma = np.nan
-            svr_C = svr_params[f'{key}C']
-            svr_epsilon = svr_params[f'{key}epsilon']
-            data_dict['svr_kernel'] = [svr_kernel]
-            data_dict['svr_gamma'] = [svr_gamma]
-            data_dict['svr_C'] = [svr_C]
-            data_dict['svr_epsilon'] = [svr_epsilon]
-        elif isinstance(model_list[idx_df], RandomForestRegressor):
-            rf_params = df.loc[idx]['tune_params']
-            rf_min_samples_split = rf_params[f'{key}min_samples_split']
-            rf_max_feats = rf_params[f'{key}max_features']
-            data_dict['rf_min_samples_split'] = [rf_min_samples_split]
-            data_dict['rf_max_feats'] = [rf_max_feats]
-        elif isinstance(model_list[idx_df], PLSRegression):
-            # The model shouldn't even be in model_list if there is no information for it.
-            # This was changed when the PLS component list was modified to cut out
-            # components that are greater than number of features (e.g., we can't
-            # tune on 8 components with 4 features).
-
-            # Thus, assume the "garbage" was filtered out already and we will only
-            # arrive here if 'tune_params' exists.
-            pls_params = df.loc[idx]['tune_params']
-            if pd.notnull(pls_params):
-                pls_n_components = pls_params[f'{key}n_components']
-                pls_scale = pls_params[f'{key}scale']
-            else:
-                pls_n_components = np.nan
-                pls_scale = np.nan
-            data_dict['pls_n_components'] = [pls_n_components]
-            data_dict['pls_scale'] = [pls_scale]
-    df_temp = pd.DataFrame.from_dict(data=data_dict)
-    df_params = df_params.append(df_temp)
-    return df_params
-
-def summarize_tuning_results(df_tune_list, model_list, param_grid_dict, key=''):
+def summarize_tuning_results(df_tune_list, model_list, param_grid_dict,
+                             key=''):
     '''
     Summarizes the hyperparameters from the tuning process into a single
     dataframe
@@ -2457,17 +2405,62 @@ def summarize_tuning_results(df_tune_list, model_list, param_grid_dict, key=''):
     for k1, v1 in param_grid_dict.items():
         for k2, v2 in param_grid_dict[k1].items():
             k2_short = k2.replace(key, '')
-            # print(k1 + '_' + k2_short)
             cols_params.append(k1 + '_' + k2_short)
+            
     df_params = pd.DataFrame(columns=cols_params)
-    for idx in df_tune_list[0].index.tolist():  # all dfs should have same indexes
-        # By setting data_dict values to nan by default, we don't have to worry
-        # about an item in the list not existing in df_tune_list (e.g., when
-        # n_components is 8 and n_feats is 4)
+    # for each feature (if missing just put nan)
+    feat_max = max([df['feat_n'].max() for df in df_tune_list])
+    for feat_n in range(1,feat_max+1):
         data_dict = {i: np.nan for i in cols_params}
-        data_dict['feat_n'] = df_tune_list[0].loc[idx, 'feat_n']  # should be the same for all dfs
-        df_params = summarize_tuning_loop(
-            df_tune_list, model_list, idx, data_dict, df_params, key)
+        data_dict['feat_n'] = [feat_n]
+        for idx_df, df_original in enumerate(df_tune_list):
+            df = df_original.copy()
+            df.set_index('feat_n', inplace=True)
+            if isinstance(model_list[idx_df], Lasso) and feat_n in df.index:
+                las_params = df.loc[feat_n]['tune_params']
+                try:
+                    las_alpha = las_params[f'{key}alpha']
+                except TypeError:  # when cell is nan instead of dict
+                    continue  # go to next index where there is actually data
+                data_dict['las_alpha'] = [las_alpha]
+            elif isinstance(model_list[idx_df], SVR) and feat_n in df.index:
+                svr_params = df.loc[feat_n]['tune_params']
+                svr_kernel = svr_params[f'{key}kernel']
+                try:
+                    svr_gamma = svr_params[f'{key}gamma']
+                except KeyError:
+                    svr_gamma = np.nan
+                svr_C = svr_params[f'{key}C']
+                svr_epsilon = svr_params[f'{key}epsilon']
+                data_dict['svr_kernel'] = [svr_kernel]
+                data_dict['svr_gamma'] = [svr_gamma]
+                data_dict['svr_C'] = [svr_C]
+                data_dict['svr_epsilon'] = [svr_epsilon]
+            elif isinstance(model_list[idx_df], RandomForestRegressor) and feat_n in df.index:
+                rf_params = df.loc[feat_n]['tune_params']
+                rf_min_samples_split = rf_params[f'{key}min_samples_split']
+                rf_max_feats = rf_params[f'{key}max_features']
+                data_dict['rf_min_samples_split'] = [rf_min_samples_split]
+                data_dict['rf_max_feats'] = [rf_max_feats]
+            elif isinstance(model_list[idx_df], PLSRegression) and feat_n in df.index:
+                # The model shouldn't even be in model_list if there is no information for it.
+                # This was changed when the PLS component list was modified to cut out
+                # components that are greater than number of features (e.g., we can't
+                # tune on 8 components with 4 features).
+    
+                # Thus, assume the "garbage" was filtered out already and we will only
+                # arrive here if 'tune_params' exists.
+                pls_params = df.loc[feat_n]['tune_params']
+                if pd.notnull(pls_params):
+                    pls_n_components = pls_params[f'{key}n_components']
+                    pls_scale = pls_params[f'{key}scale']
+                else:
+                    pls_n_components = np.nan
+                    pls_scale = np.nan
+                data_dict['pls_n_components'] = [pls_n_components]
+                data_dict['pls_scale'] = [pls_scale]
+        df_summary_row = pd.DataFrame.from_dict(data=data_dict)
+        df_params = df_params.append(df_summary_row)
     return df_params.reset_index(drop=True)
 
 def append_tuning_results(df_tune_all_list, df_tune_feat_list):

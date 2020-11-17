@@ -1,7 +1,7 @@
 #!/bin/bash -l
-#SBATCH --job-name=sip_2_train_101-104
+#SBATCH --job-name=sip_2_train_custom
 #SBATCH --nodes=1
-#SBATCH --ntasks=8
+#SBATCH --ntasks=12
 #SBATCH --mem-per-cpu=2gb
 #SBATCH -t 8:00:00
 #SBATCH --mail-type=FAIL
@@ -9,7 +9,7 @@
 #SBATCH -o ./reports/R-%j-%x.out
 #SBATCH -e ./reports/R-%j-%x.err
 
-((start_n=101))
+((start_n=1))
 ((n=4))
 ((msi_run_id=2))
 start=$(($start_n-1))

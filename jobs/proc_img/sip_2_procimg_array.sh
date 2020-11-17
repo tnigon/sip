@@ -1,16 +1,17 @@
 #!/bin/bash -l
-#SBATCH --job-name=sip_2_procimg_109-162
+#SBATCH --array=-1
+#SBATCH --job-name=sip_2_procimg_array
 #SBATCH --nodes=1
 #SBATCH --ntasks=24
 #SBATCH --mem-per-cpu=2gb
-#SBATCH -t 6:00:00
+#SBATCH -t 2:00:00
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=nigo0024@umn.edu
-#SBATCH -o ./reports/R-%j-%x.out
-#SBATCH -e ./reports/R-%j-%x.err
+#SBATCH -o ./reports/R-%A-%a-%x.out
+#SBATCH -e ./reports/R-%A-%a-%x.err
 
-((start_n=109))
-((n=54))
+((start_n=$SLURM_ARRAY_TASK_ID))
+((n=$SLURM_ARRAY_TASK_STEP))
 ((msi_run_id=2))
 start=$(($start_n-1))
 
