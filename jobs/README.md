@@ -26,7 +26,7 @@ script was further modified to run for both "smooth" scenarios, to allow a minim
 
 ## run the proc_img "setup"
 
-$ sbatch --array=1-648:54 sip_2_procimg_setup.sh
+`$ sbatch --array=1-648:54 sip_2_procimg_setup.sh`
 
 This command will process all "clip" and "smooth" scenarios ("dir_panels" and "crop" are already complete). Thus,
 the only scenarios left to process are "bin" and "segment", and the minimum step size for "tune_train" is 9.
@@ -39,7 +39,7 @@ WARNING: Be careful not to run too many scenarios, because HPS space will fill u
 
 The following will run 18 jobs (9 scenarios per array) for the first 162 scenarios:
 
-$ sbatch --array=1-162:9 sip_2_procimg_array.sh
+`$ sbatch --array=1-162:9 sip_2_procimg_array.sh`
 
 After each of these 18 jobs completed, there was 3.05 TB storage space used on the HPS (before running any
 tune_train scenarios). All 18 jobs were complete within 34 minutes (ntasks=24; nodes=1).
@@ -51,14 +51,14 @@ WARNING: Be sure all relevant images are processed before begining "tune_train".
 "msi_XX_time_imgproc.csv" and "msi_2_imgproc_n_files.csv" to be sure all files have been processed (these files are
 located in the ../results/msi_XX_results_meta/ directory.
 
-$ sbatch --array=1-162:3 sip_2_tune_train_array.sh
+`$ sbatch --array=1-162:3 sip_2_tune_train_array.sh`
 
 If you wish to submit the job(s) right away without waiting for the processing to complete, use the `--depend` or
 `--begin` parameter to delay when the job(s) will begin. Be sure to pass the appropriate job/task ID.
 
-$ sbatch --array=1-162:9 --depend=afterok:123456 sip_2_tune_train_array.sh
+`$ sbatch --array=1-162:9 --depend=afterok:123456 sip_2_tune_train_array.sh`
 
-$ sbatch --array=1-162:9 --begin=now+2hour sip_2_tune_train_array.sh
+`$ sbatch --array=1-162:9 --begin=now+2hour sip_2_tune_train_array.sh`
 
 NOTE: The `scontrol` command can be used to change the `--begin` time.
 
@@ -69,26 +69,26 @@ NOTE: The `scontrol` command can be used to change the `--begin` time.
 
 To see all the jobs under a particular task array:
 
-$ squeue --job=123456
+`$ squeue --job=123456`
 
 
 To cancel a single job under a task array:
 
-$ scancel 123456+1
+`$ scancel 123456+1`
 
 
 To cancel all jobs under a task array:
 
-$ scancel 123456
+`$ scancel 123456`
 
 
 To see the job accounting information and CPU allocations:
 
-$ sacct -j 123456 --allocations
+`$ sacct -j 123456 --allocations`
 
 
 ### Testing 
 
 To validate the script and return an estimate of when a job would be scheduled to run, pass `--test-only`:
 
-$ sbatch --array=1-162:9 sip_2_tune_train_array.sh
+`$ sbatch --array=1-162:9 sip_2_tune_train_array.sh`
