@@ -1,0 +1,72 @@
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2885, in spectra_to_df
+    self.io.read_spec(fname_list[0] + '.hdr')
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2885, in spectra_to_df
+    self.io.read_spec(fname_list[0] + '.hdr')
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2885, in spectra_to_df
+    self.io.read_spec(fname_list[0] + '.hdr')
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2885, in spectra_to_df
+    self.io.read_spec(fname_list[0] + '.hdr')
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2885, in spectra_to_df
+    self.io.read_spec(fname_list[0] + '.hdr')
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2885, in spectra_to_df
+    self.io.read_spec(fname_list[0] + '.hdr')
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2885, in spectra_to_df
+    self.io.read_spec(fname_list[0] + '.hdr')
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2885, in spectra_to_df
+    self.io.read_spec(fname_list[0] + '.hdr')
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2885, in spectra_to_df
+    self.io.read_spec(fname_list[0] + '.hdr')
+IndexError: list index out of range

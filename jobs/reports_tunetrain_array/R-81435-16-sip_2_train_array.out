@@ -1,0 +1,2533 @@
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+
+Processing scenario ID: 15
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: a13f18f8-29a2-11eb-b165-0ee0d5d9299f
+Waiting for transfer a13f18f8-29a2-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: a77b9be2-29a2-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 16
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [75, 95], 'mask_side': 'outside'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: c5f40208-29a2-11eb-b53b-02d9497ca481
+Waiting for transfer c5f40208-29a2-11eb-b53b-02d9497ca481 to complete...
+Transfer c5f40208-29a2-11eb-b53b-02d9497ca481 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer c5f40208-29a2-11eb-b53b-02d9497ca481 has not yet finished; transfer submitted 2 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 20cd297a-29a3-11eb-b53b-02d9497ca481
+
+Processing scenario ID: 17
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 45637abe-29a3-11eb-8fc0-0a34088e79f9
+Waiting for transfer 45637abe-29a3-11eb-8fc0-0a34088e79f9 to complete...
+Transfer 45637abe-29a3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 45637abe-29a3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 2 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 9a36aa48-29a3-11eb-8fc0-0a34088e79f9
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+
+Processing scenario ID: 15
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: b9169086-29a3-11eb-8fc0-0a34088e79f9
+Waiting for transfer b9169086-29a3-11eb-8fc0-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: dd74fe72-29a3-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 16
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [75, 95], 'mask_side': 'outside'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: fa49516a-29a3-11eb-b165-0ee0d5d9299f
+Waiting for transfer fa49516a-29a3-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 1ebee56e-29a4-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 17
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 1.25
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.625
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.3125
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.15625
+Features selected: 7
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.140625
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.1265625
+Features selected: 8
+Iterations without progress: 1
+
+alpha: 0.13921875
+Features selected: 9
+Iterations without progress: 0
+
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 3de55ca2-29a4-11eb-8fc0-0a34088e79f9
+Waiting for transfer 3de55ca2-29a4-11eb-8fc0-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 501146ca-29a4-11eb-8fc0-0a34088e79f9
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+
+Processing scenario ID: 15
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 6ef20ebc-29a4-11eb-b165-0ee0d5d9299f
+Waiting for transfer 6ef20ebc-29a4-11eb-b165-0ee0d5d9299f to complete...
+Transfer 6ef20ebc-29a4-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 6ef20ebc-29a4-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 2 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: ca17c340-29a4-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 16
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [75, 95], 'mask_side': 'outside'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.025
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.0125
+Features selected: 5
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.011250000000000001
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.010125000000000002
+Features selected: 7
+Iterations without progress: 1
+
+Old "step_pct": 0.1
+New "step_pct": 0.2
+alpha: 0.008100000000000001
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.006480000000000001
+Features selected: 7
+Iterations without progress: 0
+
+Old "step_pct": 0.2
+New "step_pct": 0.04
+alpha: 0.006220800000000001
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.005971968000000001
+Features selected: 8
+Iterations without progress: 1
+
+alpha: 0.005733089280000001
+Features selected: 8
+Iterations without progress: 2
+
+alpha: 0.0055037657088
+Features selected: 8
+Iterations without progress: 3
+
+alpha: 0.005283615080448
+Features selected: 8
+Iterations without progress: 4
+
+alpha: 0.0050722704772300795
+Features selected: 8
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 9 feature(s) (minimum alpha value to use).
+
+Using up to 8 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: df9b35ee-29a4-11eb-b165-0ee0d5d9299f
+Waiting for transfer df9b35ee-29a4-11eb-b165-0ee0d5d9299f to complete...
+Transfer df9b35ee-29a4-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 0a290516-29a5-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 17
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.04
+New "step_pct": 0.4
+alpha: 0.1521681143169024
+Features selected: 1
+Iterations without progress: 0
+
+Old "step_pct": 0.4
+New "step_pct": 0.8
+alpha: 0.030433622863380472
+Features selected: 3
+Iterations without progress: 0
+
+Old "step_pct": 0.8
+New "step_pct": 0.16
+alpha: 0.025564243205239597
+Features selected: 6
+Iterations without progress: 0
+
+Old "step_pct": 0.16
+New "step_pct": 0.32
+alpha: 0.017383685379562926
+Features selected: 6
+Iterations without progress: 1
+
+Old "step_pct": 0.32
+New "step_pct": 0.64
+alpha: 0.006258126736642653
+Features selected: 6
+Iterations without progress: 2
+
+Old "step_pct": 0.64
+New "step_pct": 0.128
+alpha: 0.005457086514352394
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.006178022714413627
+Features selected: 9
+Iterations without progress: 0
+
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 2241234a-29a5-11eb-b53b-02d9497ca481
+Waiting for transfer 2241234a-29a5-11eb-b53b-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 2e6e2870-29a5-11eb-b53b-02d9497ca481
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+
+Processing scenario ID: 15
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 53457716-29a5-11eb-b165-0ee0d5d9299f
+Waiting for transfer 53457716-29a5-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 6bb2b4da-29a5-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 16
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [75, 95], 'mask_side': 'outside'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+alpha: 0.0475
+Features selected: 8
+Iterations without progress: 1
+
+alpha: 0.045125
+Features selected: 8
+Iterations without progress: 2
+
+alpha: 0.04286875
+Features selected: 8
+Iterations without progress: 3
+
+alpha: 0.04072531249999999
+Features selected: 8
+Iterations without progress: 4
+
+alpha: 0.038689046874999994
+Features selected: 8
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 9 feature(s) (minimum alpha value to use).
+
+Using up to 8 selected features
+
+Hyperparameter tuning...
+
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 89fba776-29a5-11eb-b53b-02d9497ca481
+Waiting for transfer 89fba776-29a5-11eb-b53b-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 9027dba6-29a5-11eb-b53b-02d9497ca481
+
+Processing scenario ID: 17
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.25
+alpha: 1.4508392578124998
+Features selected: 5
+Iterations without progress: 1
+
+Old "step_pct": 0.25
+New "step_pct": 0.5
+alpha: 0.7254196289062499
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.36270981445312495
+Features selected: 6
+Iterations without progress: 1
+
+alpha: 0.18135490722656247
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.09067745361328124
+Features selected: 5
+Iterations without progress: 1
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.08160970825195311
+Features selected: 7
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.02
+alpha: 0.07997751408691404
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.07837796380517577
+Features selected: 8
+Iterations without progress: 1
+
+alpha: 0.07681040452907226
+Features selected: 8
+Iterations without progress: 2
+
+alpha: 0.07527419643849081
+Features selected: 8
+Iterations without progress: 3
+
+alpha: 0.073768712509721
+Features selected: 8
+Iterations without progress: 4
+
+alpha: 0.07229333825952658
+Features selected: 8
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 9 feature(s) (minimum alpha value to use).
+
+Using up to 8 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: b4c815de-29a5-11eb-b53b-02d9497ca481
+Waiting for transfer b4c815de-29a5-11eb-b53b-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: bafaf822-29a5-11eb-b53b-02d9497ca481
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+
+Processing scenario ID: 15
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+alpha: 0.00095
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.0009025
+Features selected: 7
+Iterations without progress: 1
+
+alpha: 0.000857375
+Features selected: 7
+Iterations without progress: 2
+
+Old "step_pct": 0.05
+New "step_pct": 0.01
+alpha: 0.0008488012499999999
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.0008403132374999999
+Features selected: 8
+Iterations without progress: 1
+
+alpha: 0.0008319101051249999
+Features selected: 8
+Iterations without progress: 2
+
+alpha: 0.00082359100407375
+Features selected: 8
+Iterations without progress: 3
+
+alpha: 0.0008153550940330124
+Features selected: 8
+Iterations without progress: 4
+
+alpha: 0.0008072015430926823
+Features selected: 8
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 9 feature(s) (minimum alpha value to use).
+
+Using up to 8 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: dc0e4ca8-29a5-11eb-8fc0-0a34088e79f9
+Waiting for transfer dc0e4ca8-29a5-11eb-8fc0-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: e233f178-29a5-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 16
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [75, 95], 'mask_side': 'outside'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.01
+New "step_pct": 0.1
+alpha: 0.0363240694391707
+Features selected: 3
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 0.01816203471958535
+Features selected: 3
+Iterations without progress: 1
+
+alpha: 0.009081017359792675
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.0045405086798963375
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.0022702543399481688
+Features selected: 6
+Iterations without progress: 1
+
+alpha: 0.0011351271699740844
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.0005675635849870422
+Features selected: 6
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.000510807226488338
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.0004597265038395042
+Features selected: 8
+Iterations without progress: 1
+
+alpha: 0.00041375385345555384
+Features selected: 8
+Iterations without progress: 2
+
+alpha: 0.00037237846810999844
+Features selected: 8
+Iterations without progress: 3
+
+alpha: 0.0003351406212989986
+Features selected: 8
+Iterations without progress: 4
+
+alpha: 0.00030162655916909876
+Features selected: 8
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 9 feature(s) (minimum alpha value to use).
+
+Using up to 8 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 02cf43a6-29a6-11eb-8fc0-0a34088e79f9
+Waiting for transfer 02cf43a6-29a6-11eb-8fc0-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 1b2bfb9c-29a6-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 17
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 0.0075406639792274695
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.0037703319896137347
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.0018851659948068674
+Features selected: 5
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.0016966493953261806
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.0015269844557935625
+Features selected: 7
+Iterations without progress: 1
+
+Old "step_pct": 0.1
+New "step_pct": 0.02
+alpha: 0.0014964447666776912
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.0014665158713441373
+Features selected: 8
+Iterations without progress: 1
+
+alpha: 0.0014371855539172546
+Features selected: 8
+Iterations without progress: 2
+
+alpha: 0.0014084418428389094
+Features selected: 8
+Iterations without progress: 3
+
+alpha: 0.0013802730059821312
+Features selected: 8
+Iterations without progress: 4
+
+alpha: 0.0013526675458624886
+Features selected: 8
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 9 feature(s) (minimum alpha value to use).
+
+Using up to 8 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 37db1f52-29a6-11eb-b165-0ee0d5d9299f
+Waiting for transfer 37db1f52-29a6-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 50400774-29a6-11eb-b165-0ee0d5d9299f
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+
+Processing scenario ID: 15
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.0005
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.00025
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.000125
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 6.25e-05
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 3.125e-05
+Features selected: 5
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 2.8125000000000003e-05
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 2.5312500000000002e-05
+Features selected: 8
+Iterations without progress: 1
+
+alpha: 2.278125e-05
+Features selected: 8
+Iterations without progress: 2
+
+alpha: 2.0503125000000002e-05
+Features selected: 8
+Iterations without progress: 3
+
+alpha: 1.84528125e-05
+Features selected: 8
+Iterations without progress: 4
+
+alpha: 1.660753125e-05
+Features selected: 8
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 9 feature(s) (minimum alpha value to use).
+
+Using up to 8 selected features
+
+Hyperparameter tuning...
+
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 69a36e22-29a6-11eb-b165-0ee0d5d9299f
+Waiting for transfer 69a36e22-29a6-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 6fd0fe9a-29a6-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 16
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [75, 95], 'mask_side': 'outside'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 0.00041518828125
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.000207594140625
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.0001037970703125
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 5.189853515625e-05
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 2.5949267578125e-05
+Features selected: 5
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 2.33543408203125e-05
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 2.101890673828125e-05
+Features selected: 8
+Iterations without progress: 1
+
+alpha: 1.8917016064453128e-05
+Features selected: 8
+Iterations without progress: 2
+
+alpha: 1.7025314458007817e-05
+Features selected: 8
+Iterations without progress: 3
+
+alpha: 1.5322783012207038e-05
+Features selected: 8
+Iterations without progress: 4
+
+alpha: 1.3790504710986334e-05
+Features selected: 8
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 9 feature(s) (minimum alpha value to use).
+
+Using up to 8 selected features
+
+Hyperparameter tuning...
+
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 85fb3794-29a6-11eb-b53b-02d9497ca481
+Waiting for transfer 85fb3794-29a6-11eb-b53b-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 8c2b151c-29a6-11eb-b53b-02d9497ca481
+
+Processing scenario ID: 17
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 0.00034476261777465834
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.00017238130888732917
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 8.619065444366458e-05
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 4.309532722183229e-05
+Features selected: 6
+Iterations without progress: 1
+
+alpha: 2.1547663610916146e-05
+Features selected: 6
+Iterations without progress: 2
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 1.939289724982453e-05
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 1.745360752484208e-05
+Features selected: 8
+Iterations without progress: 1
+
+alpha: 1.570824677235787e-05
+Features selected: 8
+Iterations without progress: 2
+
+alpha: 1.4137422095122084e-05
+Features selected: 8
+Iterations without progress: 3
+
+alpha: 1.2723679885609876e-05
+Features selected: 8
+Iterations without progress: 4
+
+alpha: 1.145131189704889e-05
+Features selected: 8
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 9 feature(s) (minimum alpha value to use).
+
+Using up to 8 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: a42682be-29a6-11eb-b53b-02d9497ca481
+Waiting for transfer a42682be-29a6-11eb-b53b-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: aa537e44-29a6-11eb-b53b-02d9497ca481
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+
+Processing scenario ID: 15
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 0
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: d220a848-29a6-11eb-8fc0-0a34088e79f9
+Waiting for transfer d220a848-29a6-11eb-8fc0-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: d84541d4-29a6-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 16
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [75, 95], 'mask_side': 'outside'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.025
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.0125
+Features selected: 4
+Iterations without progress: 1
+
+alpha: 0.00625
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.003125
+Features selected: 5
+Iterations without progress: 1
+
+alpha: 0.0015625
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.00296875
+Features selected: 9
+Iterations without progress: 0
+
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: f4d4cb62-29a6-11eb-8fc0-0a34088e79f9
+Waiting for transfer f4d4cb62-29a6-11eb-8fc0-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: fafb4c50-29a6-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 17
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.07421875
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.037109375
+Features selected: 4
+Iterations without progress: 1
+
+alpha: 0.0185546875
+Features selected: 4
+Iterations without progress: 2
+
+alpha: 0.00927734375
+Features selected: 4
+Iterations without progress: 3
+
+alpha: 0.004638671875
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.0023193359375
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.00115966796875
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.002203369140625
+Features selected: 9
+Iterations without progress: 0
+
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 1b1c1b86-29a7-11eb-b165-0ee0d5d9299f
+Waiting for transfer 1b1c1b86-29a7-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 337b3464-29a7-11eb-b165-0ee0d5d9299f
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+
+Processing scenario ID: 15
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.0005
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.00025
+Features selected: 4
+Iterations without progress: 1
+
+alpha: 0.000125
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 6.25e-05
+Features selected: 5
+Iterations without progress: 1
+
+alpha: 3.125e-05
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 1.5625e-05
+Features selected: 6
+Iterations without progress: 1
+
+alpha: 7.8125e-06
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 1.484375e-05
+Features selected: 9
+Iterations without progress: 0
+
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 58810b82-29a7-11eb-b53b-02d9497ca481
+Waiting for transfer 58810b82-29a7-11eb-b53b-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 5ed5509a-29a7-11eb-b53b-02d9497ca481
+
+Processing scenario ID: 16
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [75, 95], 'mask_side': 'outside'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.00037109375
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.000185546875
+Features selected: 4
+Iterations without progress: 1
+
+alpha: 9.27734375e-05
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 4.638671875e-05
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 2.3193359375e-05
+Features selected: 6
+Iterations without progress: 1
+
+alpha: 1.15966796875e-05
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 5.79833984375e-06
+Features selected: 7
+Iterations without progress: 1
+
+alpha: 2.899169921875e-06
+Features selected: 7
+Iterations without progress: 2
+
+alpha: 1.4495849609375e-06
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 7.2479248046875e-07
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 1.377105712890625e-06
+Features selected: 9
+Iterations without progress: 0
+
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 7e92ddd0-29a7-11eb-b53b-02d9497ca481
+Waiting for transfer 7e92ddd0-29a7-11eb-b53b-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 84c69d90-29a7-11eb-b53b-02d9497ca481
+
+Processing scenario ID: 17
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: a1094818-29a7-11eb-b165-0ee0d5d9299f
+Waiting for transfer a1094818-29a7-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: b984043c-29a7-11eb-b165-0ee0d5d9299f
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+
+Processing scenario ID: 15
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.0005
+Features selected: 1
+Iterations without progress: 0
+
+alpha: 0.00025
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.000125
+Features selected: 2
+Iterations without progress: 1
+
+alpha: 6.25e-05
+Features selected: 2
+Iterations without progress: 2
+
+alpha: 3.125e-05
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 1.5625e-05
+Features selected: 3
+Iterations without progress: 1
+
+alpha: 7.8125e-06
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 3.90625e-06
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 1.953125e-06
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 9.765625e-07
+Features selected: 5
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 8.789062500000001e-07
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 7.910156250000001e-07
+Features selected: 7
+Iterations without progress: 1
+
+alpha: 7.119140625e-07
+Features selected: 7
+Iterations without progress: 2
+
+alpha: 6.407226562500001e-07
+Features selected: 7
+Iterations without progress: 3
+
+Old "step_pct": 0.1
+New "step_pct": 0.02
+alpha: 6.279082031250001e-07
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 6.153500390625001e-07
+Features selected: 8
+Iterations without progress: 1
+
+alpha: 6.030430382812501e-07
+Features selected: 8
+Iterations without progress: 2
+
+alpha: 5.909821775156251e-07
+Features selected: 8
+Iterations without progress: 3
+
+alpha: 5.791625339653127e-07
+Features selected: 8
+Iterations without progress: 4
+
+alpha: 5.675792832860064e-07
+Features selected: 8
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 9 feature(s) (minimum alpha value to use).
+
+Using up to 8 selected features
+
+Hyperparameter tuning...
+
+Number of features: 0
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: d4ca633a-29a7-11eb-8fc0-0a34088e79f9
+Waiting for transfer d4ca633a-29a7-11eb-8fc0-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: ed2dac84-29a7-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 16
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [75, 95], 'mask_side': 'outside'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.02
+New "step_pct": 0.1
+alpha: 2.5541067747870287e-05
+Features selected: 5
+Iterations without progress: 1
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 1.2770533873935143e-05
+Features selected: 5
+Iterations without progress: 2
+
+alpha: 6.385266936967572e-06
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 3.192633468483786e-06
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 1.596316734241893e-06
+Features selected: 5
+Iterations without progress: 1
+
+alpha: 7.981583671209465e-07
+Features selected: 5
+Iterations without progress: 2
+
+alpha: 3.9907918356047323e-07
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 7.582504487648991e-07
+Features selected: 9
+Iterations without progress: 0
+
+Using up to 9 selected features
+
+Hyperparameter tuning...
+
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 0
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 040bdc6e-29a8-11eb-b165-0ee0d5d9299f
+Waiting for transfer 040bdc6e-29a8-11eb-b165-0ee0d5d9299f to complete...
+Transfer 040bdc6e-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 34bcbf40-29a8-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 17
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 1.8956261219122477e-05
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 9.478130609561238e-06
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 4.739065304780619e-06
+Features selected: 4
+Iterations without progress: 1
+
+alpha: 2.3695326523903096e-06
+Features selected: 5
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 2.132579387151279e-06
+Features selected: 7
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.02
+alpha: 2.089927799408253e-06
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 2.048129243420088e-06
+Features selected: 8
+Iterations without progress: 1
+
+alpha: 2.007166658551686e-06
+Features selected: 8
+Iterations without progress: 2
+
+alpha: 1.967023325380652e-06
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 1.927682858873039e-06
+Features selected: 7
+Iterations without progress: 1
+
+alpha: 1.8891292016955782e-06
+Features selected: 7
+Iterations without progress: 2
+
+alpha: 1.8513466176616665e-06
+Features selected: 7
+Iterations without progress: 3
+
+alpha: 1.8143196853084332e-06
+Features selected: 7
+Iterations without progress: 4
+
+alpha: 1.7780332916022645e-06
+Features selected: 7
+Iterations without progress: 5
+
+Leaving while loop before finding the alpha value that achieves selection of 9 feature(s) (minimum alpha value to use).
+
+Using up to 7 selected features
+
+Hyperparameter tuning...
+
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 0
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 4c4605cc-29a8-11eb-b53b-02d9497ca481
+Waiting for transfer 4c4605cc-29a8-11eb-b53b-02d9497ca481 to complete...
+Transfer 4c4605cc-29a8-11eb-b53b-02d9497ca481 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 4c4605cc-29a8-11eb-b53b-02d9497ca481 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 4c4605cc-29a8-11eb-b53b-02d9497ca481 has not yet finished; transfer submitted 3 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: c598c63a-29a8-11eb-b53b-02d9497ca481
+
+Processing scenario ID: 15
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}
+GLOBUS TRANSFER task_id: ca33b286-29a8-11eb-8fc0-0a34088e79f9
+Waiting for transfer ca33b286-29a8-11eb-8fc0-0a34088e79f9 to complete...
+Transfer ca33b286-29a8-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer ca33b286-29a8-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer ca33b286-29a8-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 3 minute(s) ago
+Transfer ca33b286-29a8-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 4 minute(s) ago
+Transfer ca33b286-29a8-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 5 minute(s) ago
+Transfer ca33b286-29a8-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 6 minute(s) ago
+Transfer ca33b286-29a8-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 7 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: cdd8aee2-29a9-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 16
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [75, 95], 'mask_side': 'outside'}
+GLOBUS TRANSFER task_id: d1aa486c-29a9-11eb-b53b-02d9497ca481
+Waiting for transfer d1aa486c-29a9-11eb-b53b-02d9497ca481 to complete...
+Transfer d1aa486c-29a9-11eb-b53b-02d9497ca481 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer d1aa486c-29a9-11eb-b53b-02d9497ca481 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer d1aa486c-29a9-11eb-b53b-02d9497ca481 has not yet finished; transfer submitted 3 minute(s) ago
+Transfer d1aa486c-29a9-11eb-b53b-02d9497ca481 has not yet finished; transfer submitted 4 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 7b5f30b6-29aa-11eb-b53b-02d9497ca481
+
+Processing scenario ID: 17
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: nan
+Smooth type: nan
+Bin type: {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+GLOBUS TRANSFER task_id: 7edae230-29aa-11eb-b165-0ee0d5d9299f
+Waiting for transfer 7edae230-29aa-11eb-b165-0ee0d5d9299f to complete...
+Transfer 7edae230-29aa-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 7edae230-29aa-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 7edae230-29aa-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 3 minute(s) ago
+Transfer 7edae230-29aa-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 4 minute(s) ago
+Transfer 7edae230-29aa-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 5 minute(s) ago
+Transfer 7edae230-29aa-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 6 minute(s) ago
+Transfer 7edae230-29aa-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 7 minute(s) ago
+Transfer 7edae230-29aa-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 8 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: b41c3a92-29ab-11eb-b165-0ee0d5d9299f

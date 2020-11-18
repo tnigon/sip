@@ -1,0 +1,353 @@
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2853, in spectra_to_df
+    fname_list = self._recurs_dir(base_dir, search_ext, dir_level)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 1516, in _recurs_dir
+    d_str = os.listdir(base_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/panfs/roc/groups/5/yangc1/public/hs_process/data/ref_closest_panel/crop_plot/clip_ends/smooth_window_11/bin_mimic_sentinel_2a/seg_ndi_50_upper/reflectance'
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2853, in spectra_to_df
+    fname_list = self._recurs_dir(base_dir, search_ext, dir_level)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 1516, in _recurs_dir
+    d_str = os.listdir(base_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/panfs/roc/groups/5/yangc1/public/hs_process/data/ref_closest_panel/crop_plot/clip_ends/smooth_window_11/bin_mimic_sentinel_2a/seg_ndi_50_upper/reflectance'
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2853, in spectra_to_df
+    fname_list = self._recurs_dir(base_dir, search_ext, dir_level)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 1516, in _recurs_dir
+    d_str = os.listdir(base_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/panfs/roc/groups/5/yangc1/public/hs_process/data/ref_closest_panel/crop_plot/clip_ends/smooth_window_11/bin_mimic_sentinel_2a/seg_ndi_50_upper/reflectance'
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 292441.0538870394, tolerance: 29878.114385653145
+  model = cd_fast.enet_coordinate_descent(
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2853, in spectra_to_df
+    fname_list = self._recurs_dir(base_dir, search_ext, dir_level)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 1516, in _recurs_dir
+    d_str = os.listdir(base_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/panfs/roc/groups/5/yangc1/public/hs_process/data/ref_closest_panel/crop_plot/clip_ends/smooth_window_11/bin_mimic_sentinel_2a/seg_ndi_50_upper/derivative_1'
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/linear_model/_coordinate_descent.py:529: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations. Duality gap: 8062.568417710807, tolerance: 17.538496504468622
+  model = cd_fast.enet_coordinate_descent(
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2853, in spectra_to_df
+    fname_list = self._recurs_dir(base_dir, search_ext, dir_level)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 1516, in _recurs_dir
+    d_str = os.listdir(base_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/panfs/roc/groups/5/yangc1/public/hs_process/data/ref_closest_panel/crop_plot/clip_ends/smooth_window_11/bin_mimic_sentinel_2a/seg_ndi_50_upper/derivative_1'
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2853, in spectra_to_df
+    fname_list = self._recurs_dir(base_dir, search_ext, dir_level)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 1516, in _recurs_dir
+    d_str = os.listdir(base_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/panfs/roc/groups/5/yangc1/public/hs_process/data/ref_closest_panel/crop_plot/clip_ends/smooth_window_11/bin_mimic_sentinel_2a/seg_ndi_50_upper/derivative_1'
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2853, in spectra_to_df
+    fname_list = self._recurs_dir(base_dir, search_ext, dir_level)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 1516, in _recurs_dir
+    d_str = os.listdir(base_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/panfs/roc/groups/5/yangc1/public/hs_process/data/ref_closest_panel/crop_plot/clip_ends/smooth_window_11/bin_mimic_sentinel_2a/seg_ndi_50_upper/derivative_2'
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2853, in spectra_to_df
+    fname_list = self._recurs_dir(base_dir, search_ext, dir_level)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 1516, in _recurs_dir
+    d_str = os.listdir(base_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/panfs/roc/groups/5/yangc1/public/hs_process/data/ref_closest_panel/crop_plot/clip_ends/smooth_window_11/bin_mimic_sentinel_2a/seg_ndi_50_upper/derivative_2'
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/feature_selection/_base.py:79: UserWarning: No features were selected: either the data is too noisy or the selection test too strict.
+  warn("No features were selected: either the data is"
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 7
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/sklearn/cross_decomposition/_pls.py:353: UserWarning: X scores are null at iteration 6
+  warnings.warn('X scores are null at iteration %s' % k)
+Traceback (most recent call last):
+  File "sip/tune_train.py", line 205, in <module>
+    df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 1495, in load_spec_data
+    df_spec = hsbatch.spectra_to_df(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 2853, in spectra_to_df
+    fname_list = self._recurs_dir(base_dir, search_ext, dir_level)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 1516, in _recurs_dir
+    d_str = os.listdir(base_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/panfs/roc/groups/5/yangc1/public/hs_process/data/ref_closest_panel/crop_plot/clip_ends/smooth_window_11/bin_mimic_sentinel_2a/seg_ndi_50_upper/derivative_2'
+slurmstepd: error: *** JOB 82178 ON cn1025 CANCELLED AT 2020-11-18T15:39:03 ***

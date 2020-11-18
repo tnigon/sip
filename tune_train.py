@@ -204,8 +204,9 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
 
         df_spec, meta_bands, bands = load_spec_data(dir_data, row, feat)
         time_dict, time_last = time_step(time_dict, 'load_spec', time_last)
-        df_bm_stats = load_preseg_stats(dir_data, row, bm_folder_name='bm_mcari2')
-        df_join_base = join_ground_bm_spec(df_ground, df_bm_stats, df_spec)
+        # df_bm_stats = load_preseg_stats(dir_data, row, bm_folder_name='bm_mcari2')
+        # df_join_base = join_ground_bm_spec(df_ground, df_bm_stats, df_spec)
+        df_join_base = join_ground_spec(df_ground, df_spec)
         df_join = df_join_base.dropna(subset=[y_label], how='all')
         save_n_obs(dir_results_meta, df_join, msi_run_id, row.name, y_label, feat)
         save_joined_df(dir_results_msi, df_join, msi_run_id, row.name, y_label)

@@ -1559,6 +1559,18 @@ def join_ground_bm_spec(df_ground, df_bm_stats, df_spec, on=['study', 'date', 'p
     df_join = df_join.merge(df_spec, on=on)
     return df_join
 
+def join_ground_spec(df_ground, df_spec, on=['study', 'date', 'plot_id']):
+    '''
+    Joins data so it is available in a single dataframe. Before joining, each
+    unique dataset will be given an "dataset_id" to help with stratified
+    sampling later on
+    '''
+    df_ground_copy = df_ground.copy()
+    df_ground_copy.insert(0, 'dataset_id', None)
+    df_ground_copy['dataset_id'] = df_ground_copy.groupby(['study','date']).ngroup()
+    df_join = df_ground_copy.merge(df_spec, on=on)
+    return df_join
+
 def save_joined_df(dir_results, df_join, msi_run_id, grid_idx, y_label):
     '''
     Saves the joined dataframe to a new folder in ``dir_results`` with another

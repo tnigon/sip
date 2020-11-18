@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "sip/process_img.py", line 132, in <module>
+    clip_pp(dir_data, row, n_jobs, out_force=False, n_files=n_files)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 899, in clip_pp
+    check_missed_files(fname_list, dir_out_clip, ext_out, clip_f_pp, row,
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 819, in check_missed_files
+    f_pp(fname_list_missed, row, base_dir_f, out_force, lock)
+  File "/panfs/roc/groups/5/yangc1/public/hs_process/sip/sip_functions.py", line 860, in clip_f_pp
+    hsbatch.spectral_clip(fname_list=fname_list_clip, folder_name=folder_name,
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 3034, in spectral_clip
+    self._execute_spec_clip(fname_list, base_dir_out, folder_name,
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/batch.py", line 1143, in _execute_spec_clip
+    array_clip, metadata = self.my_spectral_mod.spectral_clip(
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/spec_mod.py", line 456, in spectral_clip
+    spec_clip = self.tools.get_band_range(wl_bands, index=True)
+  File "/home/yangc1/nigo0024/anaconda3/envs/sip_run_2/lib/python3.8/site-packages/hs_process/utilities.py", line 2202, in get_band_range
+    assert isinstance(range_wl, list) or isinstance(range_wl, tuple), msg
+AssertionError: "range_wl" must be a `list` or `tuple`.

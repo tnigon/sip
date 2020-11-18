@@ -1,0 +1,769 @@
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+Skipping past idx_grix 35...
+Skipping past idx_grix 36...
+Skipping past idx_grix 37...
+Skipping past idx_grix 38...
+Skipping past idx_grix 39...
+Skipping past idx_grix 40...
+Skipping past idx_grix 41...
+Skipping past idx_grix 42...
+Skipping past idx_grix 43...
+Skipping past idx_grix 44...
+Skipping past idx_grix 45...
+Skipping past idx_grix 46...
+Skipping past idx_grix 47...
+Skipping past idx_grix 48...
+Skipping past idx_grix 49...
+Skipping past idx_grix 50...
+Skipping past idx_grix 51...
+Skipping past idx_grix 52...
+Skipping past idx_grix 53...
+Skipping past idx_grix 54...
+Skipping past idx_grix 55...
+Skipping past idx_grix 56...
+Skipping past idx_grix 57...
+Skipping past idx_grix 58...
+Skipping past idx_grix 59...
+Skipping past idx_grix 60...
+Skipping past idx_grix 61...
+Skipping past idx_grix 62...
+Skipping past idx_grix 63...
+Skipping past idx_grix 64...
+Skipping past idx_grix 65...
+Skipping past idx_grix 66...
+Skipping past idx_grix 67...
+Skipping past idx_grix 68...
+Skipping past idx_grix 69...
+Skipping past idx_grix 70...
+Skipping past idx_grix 71...
+Skipping past idx_grix 72...
+Skipping past idx_grix 73...
+Skipping past idx_grix 74...
+Skipping past idx_grix 75...
+Skipping past idx_grix 76...
+Skipping past idx_grix 77...
+Skipping past idx_grix 78...
+Skipping past idx_grix 79...
+Skipping past idx_grix 80...
+Skipping past idx_grix 81...
+Skipping past idx_grix 82...
+Skipping past idx_grix 83...
+Skipping past idx_grix 84...
+Skipping past idx_grix 85...
+Skipping past idx_grix 86...
+Skipping past idx_grix 87...
+Skipping past idx_grix 88...
+Skipping past idx_grix 89...
+Skipping past idx_grix 90...
+Skipping past idx_grix 91...
+Skipping past idx_grix 92...
+Skipping past idx_grix 93...
+Skipping past idx_grix 94...
+Skipping past idx_grix 95...
+Skipping past idx_grix 96...
+Skipping past idx_grix 97...
+Skipping past idx_grix 98...
+Skipping past idx_grix 99...
+Skipping past idx_grix 100...
+Skipping past idx_grix 101...
+Skipping past idx_grix 102...
+Skipping past idx_grix 103...
+Skipping past idx_grix 104...
+Skipping past idx_grix 105...
+Skipping past idx_grix 106...
+Skipping past idx_grix 107...
+Skipping past idx_grix 108...
+Skipping past idx_grix 109...
+Skipping past idx_grix 110...
+Skipping past idx_grix 111...
+Skipping past idx_grix 112...
+Skipping past idx_grix 113...
+Skipping past idx_grix 114...
+Skipping past idx_grix 115...
+Skipping past idx_grix 116...
+Skipping past idx_grix 117...
+Skipping past idx_grix 118...
+Skipping past idx_grix 119...
+Skipping past idx_grix 120...
+Skipping past idx_grix 121...
+Skipping past idx_grix 122...
+Skipping past idx_grix 123...
+Skipping past idx_grix 124...
+Skipping past idx_grix 125...
+Skipping past idx_grix 126...
+Skipping past idx_grix 127...
+Skipping past idx_grix 128...
+Skipping past idx_grix 129...
+Skipping past idx_grix 130...
+Skipping past idx_grix 131...
+Skipping past idx_grix 132...
+Skipping past idx_grix 133...
+Skipping past idx_grix 134...
+
+Processing scenario ID: 135
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: None
+Segment type: None
+Clipping..
+Clip: ``clip_type`` is either None and there is nothing to process, or all the images are already processed.
+Smoothing..
+Smooth: ``smooth_type`` is either None and there is nothing to process, or all the images are already processed.
+Binning..
+Bin: ``bin_type`` is either None and there is nothing to process, or all the images are already processed.
+Segmenting..
+Segment: ``segment_type`` is None, so there will not be any segmentation/masking performed. Mean spectra and derivative spectra are being extracted...
+
+Processing scenario ID: 136
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: None
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+Clipping..
+Clip: ``clip_type`` is either None and there is nothing to process, or all the images are already processed.
+Smoothing..
+Smooth: ``smooth_type`` is either None and there is nothing to process, or all the images are already processed.
+Binning..
+Bin: ``bin_type`` is either None and there is nothing to process, or all the images are already processed.
+Segmenting..
+
+Processing scenario ID: 137
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: None
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+Clipping..
+Clip: ``clip_type`` is either None and there is nothing to process, or all the images are already processed.
+Smoothing..
+Smooth: ``smooth_type`` is either None and there is nothing to process, or all the images are already processed.
+Binning..
+Bin: ``bin_type`` is either None and there is nothing to process, or all the images are already processed.
+Segmenting..
+
+Processing scenario ID: 138
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: None
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': 50, 'mask_side': 'lower'}
+Clipping..
+Clip: ``clip_type`` is either None and there is nothing to process, or all the images are already processed.
+Smoothing..
+Smooth: ``smooth_type`` is either None and there is nothing to process, or all the images are already processed.
+Binning..
+Bin: ``bin_type`` is either None and there is nothing to process, or all the images are already processed.
+Segmenting..
+
+Processing scenario ID: 139
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: None
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': 50, 'mask_side': 'upper'}
+Clipping..
+Clip: ``clip_type`` is either None and there is nothing to process, or all the images are already processed.
+Smoothing..
+Smooth: ``smooth_type`` is either None and there is nothing to process, or all the images are already processed.
+Binning..
+Bin: ``bin_type`` is either None and there is nothing to process, or all the images are already processed.
+Segmenting..
+
+Processing scenario ID: 140
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: None
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': 90, 'mask_side': 'lower'}
+Clipping..
+Clip: ``clip_type`` is either None and there is nothing to process, or all the images are already processed.
+Smoothing..
+Smooth: ``smooth_type`` is either None and there is nothing to process, or all the images are already processed.
+Binning..
+Bin: ``bin_type`` is either None and there is nothing to process, or all the images are already processed.
+Segmenting..
+
+Processing scenario ID: 141
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: None
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}
+Clipping..
+Clip: ``clip_type`` is either None and there is nothing to process, or all the images are already processed.
+Smoothing..
+Smooth: ``smooth_type`` is either None and there is nothing to process, or all the images are already processed.
+Binning..
+Bin: ``bin_type`` is either None and there is nothing to process, or all the images are already processed.
+Segmenting..
+
+Processing scenario ID: 142
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: None
+Segment type: {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [75, 95], 'mask_side': 'outside'}
+Clipping..
+Clip: ``clip_type`` is either None and there is nothing to process, or all the images are already processed.
+Smoothing..
+Smooth: ``smooth_type`` is either None and there is nothing to process, or all the images are already processed.
+Binning..
+Bin: ``bin_type`` is either None and there is nothing to process, or all the images are already processed.
+Segmenting..
+
+Processing scenario ID: 143
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: {'window_size': 11, 'order': 2}
+Bin type: None
+Segment type: {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}
+Clipping..
+Clip: ``clip_type`` is either None and there is nothing to process, or all the images are already processed.
+Smoothing..
+Smooth: ``smooth_type`` is either None and there is nothing to process, or all the images are already processed.
+Binning..
+Bin: ``bin_type`` is either None and there is nothing to process, or all the images are already processed.
+Segmenting..
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 18 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 17 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+There were 144 images that slipped through the cracks. Processing them manually now...
+
+Directory: /panfs/roc/groups/5/yangc1/public/hs_process/data/ref_closest_panel/crop_plot/clip_all/smooth_window_11
+Here are the missed images:
+['study_aerfsmall_date_20190709_plot_301', 'study_wells_date_20180628_plot_1603', 'study_wells_date_20190708_plot_1208', 'study_aerfsmall_date_20190619_plot_601', 'study_wells_date_20190708_plot_1923', 'study_wells_date_20190708_plot_1824', 'study_wells_date_20180628_plot_724', 'study_wells_date_20180628_plot_1324', 'study_wells_date_20180628_plot_1124', 'study_wells_date_20190708_plot_1430', 'study_aerfsmall_date_20190629_plot_101', 'study_wells_date_20190708_plot_1818', 'study_wells_date_20180628_plot_208', 'study_wells_date_20190708_plot_434', 'study_wells_date_20190708_plot_1810', 'study_wells_date_20190708_plot_2014', 'study_wells_date_20180628_plot_508', 'study_wells_date_20190708_plot_416', 'study_wells_date_20190708_plot_128', 'study_wells_date_20190708_plot_1617', 'study_wells_date_20180628_plot_920', 'study_wells_date_20180628_plot_1410', 'study_wells_date_20180628_plot_616', 'study_aerfsmall_date_20190629_plot_703', 'study_wells_date_20180628_plot_1522', 'study_wells_date_20180628_plot_1514', 'study_wells_date_20190708_plot_1718', 'study_wells_date_20190708_plot_2022', 'study_wells_date_20180628_plot_1123', 'study_wells_date_20180628_plot_1523', 'study_wells_date_20180628_plot_305', 'study_wells_date_20180628_plot_324', 'study_wells_date_20190708_plot_417', 'study_wells_date_20190708_plot_936', 'study_wells_date_20180628_plot_913', 'study_wells_date_20190708_plot_115', 'study_wells_date_20180628_plot_219', 'study_wells_date_20190708_plot_515', 'study_wells_date_20190708_plot_1404', 'study_wells_date_20190708_plot_436', 'study_wells_date_20190708_plot_312', 'study_wells_date_20190708_plot_418', 'study_wells_date_20190708_plot_1209', 'study_wells_date_20190708_plot_629', 'study_aerfsmall_date_20190709_plot_103', 'study_wells_date_20180628_plot_1226', 'study_wells_date_20180628_plot_912', 'study_wells_date_20180628_plot_1021', 'study_wells_date_20180628_plot_721', 'study_wells_date_20180628_plot_1112', 'study_wells_date_20180628_plot_519', 'study_wells_date_20190708_plot_633', 'study_aerfsmall_date_20190619_plot_303', 'study_wells_date_20180628_plot_1524', 'study_wells_date_20180628_plot_126', 'study_wells_date_20180628_plot_225', 'study_aerfsmall_date_20190619_plot_402', 'study_wells_date_20190708_plot_706', 'study_wells_date_20190708_plot_1434', 'study_wells_date_20190708_plot_1109', 'study_aerfsmall_date_20190709_plot_801', 'study_wells_date_20180628_plot_523', 'study_wells_date_20180628_plot_1024', 'study_wells_date_20190708_plot_429', 'study_wells_date_20180628_plot_121', 'study_wells_date_20180628_plot_503', 'study_wells_date_20180628_plot_1315', 'study_aerffield_date_20190629_plot_6140', 'study_aerfsmall_date_20190629_plot_403', 'study_wells_date_20180628_plot_402', 'study_wells_date_20180628_plot_101', 'study_aerfsmall_date_20190629_plot_802', 'study_wells_date_20190708_plot_1504', 'study_wells_date_20190708_plot_1721', 'study_wells_date_20190708_plot_1334', 'study_wells_date_20180628_plot_810', 'study_wells_date_20180628_plot_610', 'study_wells_date_20190708_plot_229', 'study_wells_date_20180628_plot_1425', 'study_wells_date_20190708_plot_808', 'study_aerfsmall_date_20190709_plot_802', 'study_wells_date_20180628_plot_621', 'study_wells_date_20180628_plot_1604', 'study_aerffield_date_20190708_plot_1131', 'study_wells_date_20180628_plot_506', 'study_wells_date_20190708_plot_311', 'study_wells_date_20180628_plot_2034', 'study_wells_date_20180628_plot_106', 'study_wells_date_20190708_plot_1304', 'study_wells_date_20180628_plot_1808', 'study_wells_date_20180628_plot_209', 'study_wells_date_20180628_plot_711', 'study_wells_date_20180628_plot_1631', 'study_aerfsmall_date_20190709_plot_403', 'study_wells_date_20180628_plot_105', 'study_wells_date_20190708_plot_514', 'study_wells_date_20190708_plot_1723', 'study_wells_date_20190708_plot_1028', 'study_wells_date_20180628_plot_1907', 'study_aerfsmall_date_20190619_plot_202', 'study_wells_date_20180628_plot_521', 'study_wells_date_20190708_plot_1105', 'study_wells_date_20190708_plot_212', 'study_wells_date_20190708_plot_828', 'study_wells_date_20190708_plot_636', 'study_wells_date_20190708_plot_929', 'study_wells_date_20190708_plot_804', 'study_wells_date_20190708_plot_1129', 'study_wells_date_20180628_plot_1214', 'study_wells_date_20190708_plot_1101', 'study_wells_date_20190708_plot_1136', 'study_wells_date_20180628_plot_1513', 'study_aerffield_date_20190708_plot_8149', 'study_aerffield_date_20190723_plot_5110', 'study_wells_date_20180628_plot_326', 'study_wells_date_20190708_plot_431', 'study_wells_date_20190708_plot_1717', 'study_wells_date_20190708_plot_1132', 'study_wells_date_20190708_plot_1623', 'study_wells_date_20190708_plot_909', 'study_wells_date_20180628_plot_224', 'study_wells_date_20190708_plot_310', 'study_wells_date_20190708_plot_1724', 'study_wells_date_20190708_plot_1232', 'study_wells_date_20190708_plot_807', 'study_wells_date_20180628_plot_715', 'study_aerffield_date_20190629_plot_1131', 'study_wells_date_20190708_plot_510', 'study_wells_date_20190708_plot_214', 'study_wells_date_20190708_plot_802', 'study_aerffield_date_20190629_plot_9157', 'study_wells_date_20180628_plot_306', 'study_wells_date_20190708_plot_2016', 'study_wells_date_20180628_plot_1118', 'study_wells_date_20190708_plot_1817', 'study_wells_date_20180628_plot_811', 'study_wells_date_20180628_plot_818', 'study_wells_date_20180628_plot_1318', 'study_wells_date_20180628_plot_127', 'study_wells_date_20180628_plot_526', 'study_wells_date_20190708_plot_901', 'study_wells_date_20180628_plot_814', 'study_wells_date_20180628_plot_1521', 'study_wells_date_20180628_plot_1224']
+
+Processing 144 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 144 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 144 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 144 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 144 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+
+Processing 144 files. If existing files should be overwritten, be sure to set the ``out_force`` parameter.
+

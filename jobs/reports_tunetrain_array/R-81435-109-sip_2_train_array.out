@@ -1,0 +1,4891 @@
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+Skipping past idx_grix 35...
+Skipping past idx_grix 36...
+Skipping past idx_grix 37...
+Skipping past idx_grix 38...
+Skipping past idx_grix 39...
+Skipping past idx_grix 40...
+Skipping past idx_grix 41...
+Skipping past idx_grix 42...
+Skipping past idx_grix 43...
+Skipping past idx_grix 44...
+Skipping past idx_grix 45...
+Skipping past idx_grix 46...
+Skipping past idx_grix 47...
+Skipping past idx_grix 48...
+Skipping past idx_grix 49...
+Skipping past idx_grix 50...
+Skipping past idx_grix 51...
+Skipping past idx_grix 52...
+Skipping past idx_grix 53...
+Skipping past idx_grix 54...
+Skipping past idx_grix 55...
+Skipping past idx_grix 56...
+Skipping past idx_grix 57...
+Skipping past idx_grix 58...
+Skipping past idx_grix 59...
+Skipping past idx_grix 60...
+Skipping past idx_grix 61...
+Skipping past idx_grix 62...
+Skipping past idx_grix 63...
+Skipping past idx_grix 64...
+Skipping past idx_grix 65...
+Skipping past idx_grix 66...
+Skipping past idx_grix 67...
+Skipping past idx_grix 68...
+Skipping past idx_grix 69...
+Skipping past idx_grix 70...
+Skipping past idx_grix 71...
+Skipping past idx_grix 72...
+Skipping past idx_grix 73...
+Skipping past idx_grix 74...
+Skipping past idx_grix 75...
+Skipping past idx_grix 76...
+Skipping past idx_grix 77...
+Skipping past idx_grix 78...
+Skipping past idx_grix 79...
+Skipping past idx_grix 80...
+Skipping past idx_grix 81...
+Skipping past idx_grix 82...
+Skipping past idx_grix 83...
+Skipping past idx_grix 84...
+Skipping past idx_grix 85...
+Skipping past idx_grix 86...
+Skipping past idx_grix 87...
+Skipping past idx_grix 88...
+Skipping past idx_grix 89...
+Skipping past idx_grix 90...
+Skipping past idx_grix 91...
+Skipping past idx_grix 92...
+Skipping past idx_grix 93...
+Skipping past idx_grix 94...
+Skipping past idx_grix 95...
+Skipping past idx_grix 96...
+Skipping past idx_grix 97...
+Skipping past idx_grix 98...
+Skipping past idx_grix 99...
+Skipping past idx_grix 100...
+Skipping past idx_grix 101...
+Skipping past idx_grix 102...
+Skipping past idx_grix 103...
+Skipping past idx_grix 104...
+Skipping past idx_grix 105...
+Skipping past idx_grix 106...
+Skipping past idx_grix 107...
+
+Processing scenario ID: 108
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 50.0
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 25.0
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 12.5
+Features selected: 16
+Iterations without progress: 0
+
+alpha: 6.25
+Features selected: 21
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 5.625
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 5.0625
+Features selected: 27
+Iterations without progress: 1
+
+alpha: 4.55625
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 4.100625000000001
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 3.690562500000001
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 3.321506250000001
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 3.6536568750000007
+Features selected: 33
+Iterations without progress: 0
+
+alpha: 3.617120306250001
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 3.6500032181250006
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 29
+Number of features: 26
+Number of features: 10
+Number of features: 20
+Number of features: 17
+Number of features: 18
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 20
+Number of features: 15
+Number of features: 19
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 20
+Number of features: 19
+Number of features: 29
+Number of features: 24
+Number of features: 18
+Number of features: 20
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 27
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 29
+Number of features: 23
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 21
+Number of features: 19
+Number of features: 11
+Number of features: 21
+Number of features: 29
+Number of features: 16
+Number of features: 28
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 15
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 28
+Number of features: 18
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 19
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 14
+Number of features: 12
+Number of features: 21
+Number of features: 19
+Number of features: 29
+Number of features: 16
+Number of features: 28
+Number of features: 16
+Number of features: 25
+Number of features: 22
+Testing...
+
+GLOBUS TRANSFER task_id: 6af58196-29a3-11eb-8fc0-0a34088e79f9
+Waiting for transfer 6af58196-29a3-11eb-8fc0-0a34088e79f9 to complete...
+Transfer 6af58196-29a3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 6af58196-29a3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 6af58196-29a3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 3 minute(s) ago
+Transfer 6af58196-29a3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 4 minute(s) ago
+Transfer 6af58196-29a3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 5 minute(s) ago
+Transfer 6af58196-29a3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 6 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 69269f84-29a4-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 109
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.001
+New "step_pct": 0.01
+alpha: 180.67515929718752
+Features selected: 6
+Iterations without progress: 0
+
+Old "step_pct": 0.01
+New "step_pct": 0.1
+alpha: 162.60764336746877
+Features selected: 6
+Iterations without progress: 1
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 81.30382168373438
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 40.65191084186719
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 20.325955420933596
+Features selected: 13
+Iterations without progress: 0
+
+alpha: 10.162977710466798
+Features selected: 19
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 9.14667993942012
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 8.232011945478108
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 7.408810750930297
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 6.667929675837268
+Features selected: 26
+Iterations without progress: 1
+
+alpha: 6.001136708253541
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 5.401023037428187
+Features selected: 26
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 5.130971885556778
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 5.3740179222410465
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 12
+Number of features: 14
+Number of features: 17
+Number of features: 13
+Number of features: 22
+Number of features: 17
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 16
+Number of features: 21
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 27
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 25
+Number of features: 27
+Number of features: 21
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 25
+Number of features: 23
+Number of features: 28
+Number of features: 22
+Number of features: 11
+Number of features: 22
+Number of features: 26
+Number of features: 18
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 16
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 19
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 12
+Testing...
+
+GLOBUS TRANSFER task_id: 20fd74d4-29a5-11eb-b165-0ee0d5d9299f
+Waiting for transfer 20fd74d4-29a5-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 2d31505e-29a5-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 110
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 255.2658513064497
+Features selected: 3
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 127.63292565322485
+Features selected: 3
+Iterations without progress: 1
+
+alpha: 63.81646282661242
+Features selected: 3
+Iterations without progress: 2
+
+alpha: 31.90823141330621
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 15.954115706653106
+Features selected: 10
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 14.358704135987795
+Features selected: 19
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.2
+alpha: 11.486963308790237
+Features selected: 19
+Iterations without progress: 1
+
+alpha: 9.18957064703219
+Features selected: 21
+Iterations without progress: 0
+
+Old "step_pct": 0.2
+New "step_pct": 0.4
+alpha: 5.513742388219313
+Features selected: 20
+Iterations without progress: 0
+
+Old "step_pct": 0.4
+New "step_pct": 0.08
+alpha: 5.072642997161768
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 4.666831557388827
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 4.2934850327977205
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 3.950006230173903
+Features selected: 27
+Iterations without progress: 1
+
+alpha: 4.259137152535339
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 4.225064055315056
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 4.1912635428725356
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 4.157733434529555
+Features selected: 28
+Iterations without progress: 2
+
+alpha: 4.124471567053319
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 4.091475794516892
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 4.121171989799676
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 21
+Number of features: 22
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 24
+Number of features: 22
+Number of features: 22
+Number of features: 16
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 27
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 12
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 14
+Number of features: 21
+Number of features: 25
+Number of features: 26
+Number of features: 19
+Number of features: 19
+Number of features: 21
+Number of features: 29
+Number of features: 23
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 22
+Number of features: 21
+Number of features: 10
+Number of features: 18
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 20
+Number of features: 23
+Number of features: 15
+Number of features: 21
+Number of features: 20
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 11
+Number of features: 21
+Number of features: 28
+Testing...
+
+GLOBUS TRANSFER task_id: 046b73c4-29a6-11eb-8fc0-0a34088e79f9
+Waiting for transfer 046b73c4-29a6-11eb-8fc0-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 1cdbb04a-29a6-11eb-8fc0-0a34088e79f9
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+Skipping past idx_grix 35...
+Skipping past idx_grix 36...
+Skipping past idx_grix 37...
+Skipping past idx_grix 38...
+Skipping past idx_grix 39...
+Skipping past idx_grix 40...
+Skipping past idx_grix 41...
+Skipping past idx_grix 42...
+Skipping past idx_grix 43...
+Skipping past idx_grix 44...
+Skipping past idx_grix 45...
+Skipping past idx_grix 46...
+Skipping past idx_grix 47...
+Skipping past idx_grix 48...
+Skipping past idx_grix 49...
+Skipping past idx_grix 50...
+Skipping past idx_grix 51...
+Skipping past idx_grix 52...
+Skipping past idx_grix 53...
+Skipping past idx_grix 54...
+Skipping past idx_grix 55...
+Skipping past idx_grix 56...
+Skipping past idx_grix 57...
+Skipping past idx_grix 58...
+Skipping past idx_grix 59...
+Skipping past idx_grix 60...
+Skipping past idx_grix 61...
+Skipping past idx_grix 62...
+Skipping past idx_grix 63...
+Skipping past idx_grix 64...
+Skipping past idx_grix 65...
+Skipping past idx_grix 66...
+Skipping past idx_grix 67...
+Skipping past idx_grix 68...
+Skipping past idx_grix 69...
+Skipping past idx_grix 70...
+Skipping past idx_grix 71...
+Skipping past idx_grix 72...
+Skipping past idx_grix 73...
+Skipping past idx_grix 74...
+Skipping past idx_grix 75...
+Skipping past idx_grix 76...
+Skipping past idx_grix 77...
+Skipping past idx_grix 78...
+Skipping past idx_grix 79...
+Skipping past idx_grix 80...
+Skipping past idx_grix 81...
+Skipping past idx_grix 82...
+Skipping past idx_grix 83...
+Skipping past idx_grix 84...
+Skipping past idx_grix 85...
+Skipping past idx_grix 86...
+Skipping past idx_grix 87...
+Skipping past idx_grix 88...
+Skipping past idx_grix 89...
+Skipping past idx_grix 90...
+Skipping past idx_grix 91...
+Skipping past idx_grix 92...
+Skipping past idx_grix 93...
+Skipping past idx_grix 94...
+Skipping past idx_grix 95...
+Skipping past idx_grix 96...
+Skipping past idx_grix 97...
+Skipping past idx_grix 98...
+Skipping past idx_grix 99...
+Skipping past idx_grix 100...
+Skipping past idx_grix 101...
+Skipping past idx_grix 102...
+Skipping past idx_grix 103...
+Skipping past idx_grix 104...
+Skipping past idx_grix 105...
+Skipping past idx_grix 106...
+Skipping past idx_grix 107...
+
+Processing scenario ID: 108
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 5.0
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 2.5
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 1.25
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.625
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.3125
+Features selected: 16
+Iterations without progress: 0
+
+alpha: 0.15625
+Features selected: 17
+Iterations without progress: 0
+
+alpha: 0.078125
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 0.1484375
+Features selected: 34
+Iterations without progress: 0
+
+alpha: 0.141015625
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.13396484375
+Features selected: 26
+Iterations without progress: 1
+
+alpha: 0.1272666015625
+Features selected: 26
+Iterations without progress: 2
+
+alpha: 0.12090327148437499
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.11485810791015624
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.10911520251464843
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 0.11428381737060546
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 15
+Number of features: 17
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 20
+Number of features: 16
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 25
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 21
+Number of features: 18
+Number of features: 20
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 14
+Number of features: 13
+Number of features: 26
+Number of features: 16
+Number of features: 12
+Number of features: 21
+Number of features: 15
+Number of features: 17
+Number of features: 17
+Number of features: 19
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 20
+Number of features: 15
+Number of features: 19
+Number of features: 16
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 16
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 20
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 25
+Number of features: 26
+Number of features: 16
+Number of features: 17
+Number of features: 15
+Number of features: 22
+Number of features: 21
+Number of features: 16
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 27
+Testing...
+
+GLOBUS TRANSFER task_id: acf78bea-29a6-11eb-8fc0-0a34088e79f9
+Waiting for transfer acf78bea-29a6-11eb-8fc0-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: b323e266-29a6-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 109
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 5.42848132510376
+Features selected: 5
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 2.71424066255188
+Features selected: 5
+Iterations without progress: 1
+
+alpha: 1.35712033127594
+Features selected: 5
+Iterations without progress: 2
+
+alpha: 0.67856016563797
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.339280082818985
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 0.1696400414094925
+Features selected: 19
+Iterations without progress: 0
+
+alpha: 0.08482002070474624
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 0.16115803933901784
+Features selected: 35
+Iterations without progress: 0
+
+alpha: 0.15310013737206696
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 0.1454451305034636
+Features selected: 23
+Iterations without progress: 1
+
+alpha: 0.13817287397829042
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 0.1312642302793759
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.1247010187654071
+Features selected: 27
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.025
+alpha: 0.12158349329627191
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.1185439059638651
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.11558030831476847
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.11269080060689925
+Features selected: 29
+Iterations without progress: 3
+
+alpha: 0.10987353059172676
+Features selected: 29
+Iterations without progress: 4
+
+alpha: 0.10712669232693359
+Features selected: 29
+Iterations without progress: 5
+
+alpha: 0.10959884676524745
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 23
+Number of features: 13
+Number of features: 16
+Number of features: 12
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 19
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 20
+Number of features: 25
+Number of features: 10
+Number of features: 14
+Number of features: 17
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 28
+Number of features: 19
+Number of features: 19
+Number of features: 24
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 25
+Number of features: 12
+Number of features: 23
+Number of features: 17
+Number of features: 18
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 18
+Number of features: 11
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 10
+Number of features: 24
+Number of features: 23
+Number of features: 27
+Number of features: 26
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 19
+Number of features: 29
+Testing...
+
+GLOBUS TRANSFER task_id: 4e964086-29a7-11eb-b53b-02d9497ca481
+Waiting for transfer 4e964086-29a7-11eb-b53b-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: 54cbdb50-29a7-11eb-b53b-02d9497ca481
+
+Processing scenario ID: 110
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.0025
+New "step_pct": 0.025
+alpha: 5.342943779805813
+Features selected: 3
+Iterations without progress: 0
+
+Old "step_pct": 0.025
+New "step_pct": 0.25
+alpha: 4.007207834854359
+Features selected: 3
+Iterations without progress: 1
+
+Old "step_pct": 0.25
+New "step_pct": 0.5
+alpha: 2.0036039174271796
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 1.0018019587135898
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.5009009793567949
+Features selected: 13
+Iterations without progress: 0
+
+alpha: 0.25045048967839745
+Features selected: 18
+Iterations without progress: 0
+
+alpha: 0.12522524483919872
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 0.23792796519447756
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 19
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 19
+Number of features: 16
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 19
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 13
+Number of features: 18
+Number of features: 23
+Number of features: 18
+Number of features: 17
+Number of features: 12
+Number of features: 15
+Number of features: 16
+Number of features: 10
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 23
+Number of features: 21
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 24
+Number of features: 20
+Number of features: 14
+Number of features: 13
+Number of features: 12
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 22
+Testing...
+
+GLOBUS TRANSFER task_id: c7624a46-29a7-11eb-b53b-02d9497ca481
+Waiting for transfer c7624a46-29a7-11eb-b53b-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: cd8d28c8-29a7-11eb-b53b-02d9497ca481
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+Skipping past idx_grix 35...
+Skipping past idx_grix 36...
+Skipping past idx_grix 37...
+Skipping past idx_grix 38...
+Skipping past idx_grix 39...
+Skipping past idx_grix 40...
+Skipping past idx_grix 41...
+Skipping past idx_grix 42...
+Skipping past idx_grix 43...
+Skipping past idx_grix 44...
+Skipping past idx_grix 45...
+Skipping past idx_grix 46...
+Skipping past idx_grix 47...
+Skipping past idx_grix 48...
+Skipping past idx_grix 49...
+Skipping past idx_grix 50...
+Skipping past idx_grix 51...
+Skipping past idx_grix 52...
+Skipping past idx_grix 53...
+Skipping past idx_grix 54...
+Skipping past idx_grix 55...
+Skipping past idx_grix 56...
+Skipping past idx_grix 57...
+Skipping past idx_grix 58...
+Skipping past idx_grix 59...
+Skipping past idx_grix 60...
+Skipping past idx_grix 61...
+Skipping past idx_grix 62...
+Skipping past idx_grix 63...
+Skipping past idx_grix 64...
+Skipping past idx_grix 65...
+Skipping past idx_grix 66...
+Skipping past idx_grix 67...
+Skipping past idx_grix 68...
+Skipping past idx_grix 69...
+Skipping past idx_grix 70...
+Skipping past idx_grix 71...
+Skipping past idx_grix 72...
+Skipping past idx_grix 73...
+Skipping past idx_grix 74...
+Skipping past idx_grix 75...
+Skipping past idx_grix 76...
+Skipping past idx_grix 77...
+Skipping past idx_grix 78...
+Skipping past idx_grix 79...
+Skipping past idx_grix 80...
+Skipping past idx_grix 81...
+Skipping past idx_grix 82...
+Skipping past idx_grix 83...
+Skipping past idx_grix 84...
+Skipping past idx_grix 85...
+Skipping past idx_grix 86...
+Skipping past idx_grix 87...
+Skipping past idx_grix 88...
+Skipping past idx_grix 89...
+Skipping past idx_grix 90...
+Skipping past idx_grix 91...
+Skipping past idx_grix 92...
+Skipping past idx_grix 93...
+Skipping past idx_grix 94...
+Skipping past idx_grix 95...
+Skipping past idx_grix 96...
+Skipping past idx_grix 97...
+Skipping past idx_grix 98...
+Skipping past idx_grix 99...
+Skipping past idx_grix 100...
+Skipping past idx_grix 101...
+Skipping past idx_grix 102...
+Skipping past idx_grix 103...
+Skipping past idx_grix 104...
+Skipping past idx_grix 105...
+Skipping past idx_grix 106...
+Skipping past idx_grix 107...
+
+Processing scenario ID: 108
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.05
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.025
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.0125
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 0.00625
+Features selected: 14
+Iterations without progress: 0
+
+alpha: 0.003125
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 0.0059375
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 17
+Number of features: 16
+Number of features: 11
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 16
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 12
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 14
+Number of features: 17
+Number of features: 20
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 18
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: 1b7efc96-29a8-11eb-b165-0ee0d5d9299f
+Waiting for transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f to complete...
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 3 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 4 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 5 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 6 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 7 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 8 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 9 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 10 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 11 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 12 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 13 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 14 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 15 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 16 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 17 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 18 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 19 minute(s) ago
+Transfer 1b7efc96-29a8-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 20 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 06078fa6-29ab-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 109
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.1484375
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.07421875
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.037109375
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.0185546875
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 0.00927734375
+Features selected: 13
+Iterations without progress: 0
+
+alpha: 0.004638671875
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 0.0088134765625
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 20
+Number of features: 12
+Number of features: 19
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 17
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 14
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 23
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 16
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 22
+Testing...
+
+GLOBUS TRANSFER task_id: 554cb410-29ab-11eb-b165-0ee0d5d9299f
+Waiting for transfer 554cb410-29ab-11eb-b165-0ee0d5d9299f to complete...
+Transfer 554cb410-29ab-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 554cb410-29ab-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 554cb410-29ab-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 3 minute(s) ago
+Transfer 554cb410-29ab-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 4 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: ed2471d8-29ab-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 110
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: reflectance
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.2203369140625
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.11016845703125
+Features selected: 2
+Iterations without progress: 1
+
+alpha: 0.055084228515625
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.0275421142578125
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.01377105712890625
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.006885528564453125
+Features selected: 15
+Iterations without progress: 0
+
+alpha: 0.0034427642822265625
+Features selected: 19
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.0030984878540039062
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.0027886390686035155
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.003067502975463867
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.003036827945709228
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.003006459666252136
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0029763950695896146
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.0029466311188937186
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.0029171648077047814
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.0028879931596277335
+Features selected: 29
+Iterations without progress: 3
+
+alpha: 0.002859113228031456
+Features selected: 29
+Iterations without progress: 4
+
+alpha: 0.0028305220957511416
+Features selected: 29
+Iterations without progress: 5
+
+alpha: 0.0028562541148034245
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.002853397860688621
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.0028505444628279327
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.0028476939183651045
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.0028448462244467392
+Features selected: 29
+Iterations without progress: 3
+
+alpha: 0.002847409148973268
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 18
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 16
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 24
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 26
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 10
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 19
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 21
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 15
+Number of features: 16
+Number of features: 19
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 29
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 14
+Number of features: 17
+Number of features: 19
+Number of features: 12
+Number of features: 27
+Number of features: 18
+Number of features: 23
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 15
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 25
+Number of features: 20
+Testing...
+
+GLOBUS TRANSFER task_id: 74c293cc-29ac-11eb-8fc0-0a34088e79f9
+Waiting for transfer 74c293cc-29ac-11eb-8fc0-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 932ab3da-29ac-11eb-8fc0-0a34088e79f9
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+Skipping past idx_grix 35...
+Skipping past idx_grix 36...
+Skipping past idx_grix 37...
+Skipping past idx_grix 38...
+Skipping past idx_grix 39...
+Skipping past idx_grix 40...
+Skipping past idx_grix 41...
+Skipping past idx_grix 42...
+Skipping past idx_grix 43...
+Skipping past idx_grix 44...
+Skipping past idx_grix 45...
+Skipping past idx_grix 46...
+Skipping past idx_grix 47...
+Skipping past idx_grix 48...
+Skipping past idx_grix 49...
+Skipping past idx_grix 50...
+Skipping past idx_grix 51...
+Skipping past idx_grix 52...
+Skipping past idx_grix 53...
+Skipping past idx_grix 54...
+Skipping past idx_grix 55...
+Skipping past idx_grix 56...
+Skipping past idx_grix 57...
+Skipping past idx_grix 58...
+Skipping past idx_grix 59...
+Skipping past idx_grix 60...
+Skipping past idx_grix 61...
+Skipping past idx_grix 62...
+Skipping past idx_grix 63...
+Skipping past idx_grix 64...
+Skipping past idx_grix 65...
+Skipping past idx_grix 66...
+Skipping past idx_grix 67...
+Skipping past idx_grix 68...
+Skipping past idx_grix 69...
+Skipping past idx_grix 70...
+Skipping past idx_grix 71...
+Skipping past idx_grix 72...
+Skipping past idx_grix 73...
+Skipping past idx_grix 74...
+Skipping past idx_grix 75...
+Skipping past idx_grix 76...
+Skipping past idx_grix 77...
+Skipping past idx_grix 78...
+Skipping past idx_grix 79...
+Skipping past idx_grix 80...
+Skipping past idx_grix 81...
+Skipping past idx_grix 82...
+Skipping past idx_grix 83...
+Skipping past idx_grix 84...
+Skipping past idx_grix 85...
+Skipping past idx_grix 86...
+Skipping past idx_grix 87...
+Skipping past idx_grix 88...
+Skipping past idx_grix 89...
+Skipping past idx_grix 90...
+Skipping past idx_grix 91...
+Skipping past idx_grix 92...
+Skipping past idx_grix 93...
+Skipping past idx_grix 94...
+Skipping past idx_grix 95...
+Skipping past idx_grix 96...
+Skipping past idx_grix 97...
+Skipping past idx_grix 98...
+Skipping past idx_grix 99...
+Skipping past idx_grix 100...
+Skipping past idx_grix 101...
+Skipping past idx_grix 102...
+Skipping past idx_grix 103...
+Skipping past idx_grix 104...
+Skipping past idx_grix 105...
+Skipping past idx_grix 106...
+Skipping past idx_grix 107...
+
+Processing scenario ID: 108
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 50.0
+Features selected: 1
+Iterations without progress: 0
+
+alpha: 25.0
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 12.5
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 6.25
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 3.125
+Features selected: 15
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 2.8125
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 2.53125
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 2.278125
+Features selected: 25
+Iterations without progress: 1
+
+alpha: 2.0503125000000004
+Features selected: 25
+Iterations without progress: 2
+
+alpha: 1.8452812500000004
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 1.6607531250000005
+Features selected: 24
+Iterations without progress: 1
+
+alpha: 1.4946778125000004
+Features selected: 24
+Iterations without progress: 2
+
+alpha: 1.3452100312500004
+Features selected: 26
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 1.2779495296875003
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 1.2140520532031251
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 1.153349450542969
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 1.0956819780158205
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 1.1475827032902541
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 15
+Number of features: 16
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 25
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 23
+Number of features: 20
+Number of features: 25
+Number of features: 24
+Number of features: 13
+Number of features: 26
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 24
+Number of features: 10
+Number of features: 22
+Number of features: 21
+Number of features: 29
+Number of features: 17
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 14
+Number of features: 25
+Number of features: 28
+Testing...
+
+GLOBUS TRANSFER task_id: dd7d5974-29ac-11eb-b165-0ee0d5d9299f
+Waiting for transfer dd7d5974-29ac-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: e9b4dbcc-29ac-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 109
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 54.510178406287075
+Features selected: 3
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 27.255089203143537
+Features selected: 3
+Iterations without progress: 1
+
+alpha: 13.627544601571769
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 6.813772300785884
+Features selected: 13
+Iterations without progress: 0
+
+alpha: 3.406886150392942
+Features selected: 18
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 3.066197535353648
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 2.759577781818283
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 2.483620003636455
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 2.2352580032728095
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 2.0117322029455287
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 2.2129054232400813
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 25
+Number of features: 22
+Number of features: 27
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 10
+Number of features: 18
+Number of features: 21
+Number of features: 19
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 24
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 26
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 24
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 14
+Number of features: 20
+Number of features: 10
+Number of features: 12
+Number of features: 28
+Number of features: 25
+Number of features: 23
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 16
+Number of features: 27
+Testing...
+
+GLOBUS TRANSFER task_id: 32736de2-29ad-11eb-b165-0ee0d5d9299f
+Waiting for transfer 32736de2-29ad-11eb-b165-0ee0d5d9299f to complete...
+Transfer 32736de2-29ad-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 5d2794aa-29ad-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 110
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.01
+New "step_pct": 0.1
+alpha: 99.58074404580366
+Features selected: 3
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.5
+alpha: 49.79037202290183
+Features selected: 3
+Iterations without progress: 1
+
+alpha: 24.895186011450914
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 12.447593005725457
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 6.2237965028627285
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 3.1118982514313642
+Features selected: 15
+Iterations without progress: 0
+
+alpha: 1.5559491257156821
+Features selected: 17
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 1.400354213144114
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 1.2603187918297027
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 1.3863506710126732
+Features selected: 32
+Iterations without progress: 0
+
+alpha: 1.3724871643025465
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 1.3849643203416604
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 20
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 17
+Number of features: 16
+Number of features: 10
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 11
+Number of features: 28
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 27
+Number of features: 25
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 24
+Number of features: 24
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 14
+Number of features: 26
+Number of features: 15
+Number of features: 21
+Number of features: 23
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 22
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 16
+Number of features: 25
+Number of features: 14
+Number of features: 15
+Number of features: 13
+Testing...
+
+GLOBUS TRANSFER task_id: a2124c04-29ad-11eb-b165-0ee0d5d9299f
+Waiting for transfer a2124c04-29ad-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: c06d28ea-29ad-11eb-b165-0ee0d5d9299f
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+Skipping past idx_grix 35...
+Skipping past idx_grix 36...
+Skipping past idx_grix 37...
+Skipping past idx_grix 38...
+Skipping past idx_grix 39...
+Skipping past idx_grix 40...
+Skipping past idx_grix 41...
+Skipping past idx_grix 42...
+Skipping past idx_grix 43...
+Skipping past idx_grix 44...
+Skipping past idx_grix 45...
+Skipping past idx_grix 46...
+Skipping past idx_grix 47...
+Skipping past idx_grix 48...
+Skipping past idx_grix 49...
+Skipping past idx_grix 50...
+Skipping past idx_grix 51...
+Skipping past idx_grix 52...
+Skipping past idx_grix 53...
+Skipping past idx_grix 54...
+Skipping past idx_grix 55...
+Skipping past idx_grix 56...
+Skipping past idx_grix 57...
+Skipping past idx_grix 58...
+Skipping past idx_grix 59...
+Skipping past idx_grix 60...
+Skipping past idx_grix 61...
+Skipping past idx_grix 62...
+Skipping past idx_grix 63...
+Skipping past idx_grix 64...
+Skipping past idx_grix 65...
+Skipping past idx_grix 66...
+Skipping past idx_grix 67...
+Skipping past idx_grix 68...
+Skipping past idx_grix 69...
+Skipping past idx_grix 70...
+Skipping past idx_grix 71...
+Skipping past idx_grix 72...
+Skipping past idx_grix 73...
+Skipping past idx_grix 74...
+Skipping past idx_grix 75...
+Skipping past idx_grix 76...
+Skipping past idx_grix 77...
+Skipping past idx_grix 78...
+Skipping past idx_grix 79...
+Skipping past idx_grix 80...
+Skipping past idx_grix 81...
+Skipping past idx_grix 82...
+Skipping past idx_grix 83...
+Skipping past idx_grix 84...
+Skipping past idx_grix 85...
+Skipping past idx_grix 86...
+Skipping past idx_grix 87...
+Skipping past idx_grix 88...
+Skipping past idx_grix 89...
+Skipping past idx_grix 90...
+Skipping past idx_grix 91...
+Skipping past idx_grix 92...
+Skipping past idx_grix 93...
+Skipping past idx_grix 94...
+Skipping past idx_grix 95...
+Skipping past idx_grix 96...
+Skipping past idx_grix 97...
+Skipping past idx_grix 98...
+Skipping past idx_grix 99...
+Skipping past idx_grix 100...
+Skipping past idx_grix 101...
+Skipping past idx_grix 102...
+Skipping past idx_grix 103...
+Skipping past idx_grix 104...
+Skipping past idx_grix 105...
+Skipping past idx_grix 106...
+Skipping past idx_grix 107...
+
+Processing scenario ID: 108
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.5
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 0.25
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 0.125
+Features selected: 10
+Iterations without progress: 0
+
+alpha: 0.0625
+Features selected: 15
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.05625
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 0.050625
+Features selected: 24
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 0.04809375
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.045689062499999995
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.04340460937499999
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.041234378906249994
+Features selected: 27
+Iterations without progress: 1
+
+alpha: 0.039172659960937495
+Features selected: 27
+Iterations without progress: 2
+
+alpha: 0.03721402696289062
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.03897679666113281
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 24
+Number of features: 26
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 25
+Number of features: 17
+Number of features: 27
+Number of features: 18
+Number of features: 13
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 20
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 27
+Number of features: 28
+Number of features: 14
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 23
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 16
+Number of features: 13
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 19
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 21
+Number of features: 28
+Number of features: 11
+Number of features: 14
+Number of features: 27
+Testing...
+
+GLOBUS TRANSFER task_id: 08c3c964-29ae-11eb-8fc0-0a34088e79f9
+Waiting for transfer 08c3c964-29ae-11eb-8fc0-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 213aa558-29ae-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 109
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 1.8513978414038081
+Features selected: 4
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.9256989207019041
+Features selected: 4
+Iterations without progress: 1
+
+alpha: 0.46284946035095204
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 0.23142473017547602
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 0.11571236508773801
+Features selected: 16
+Iterations without progress: 0
+
+alpha: 0.057856182543869004
+Features selected: 17
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.052070564289482105
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.04686350786053389
+Features selected: 27
+Iterations without progress: 1
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 0.044520332467507195
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.04229431584413183
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.04017960005192524
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 0.038170620049328974
+Features selected: 28
+Iterations without progress: 2
+
+alpha: 0.036262089046862525
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.034448984594519394
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.032726535364793426
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.0342767396715468
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 23
+Number of features: 29
+Number of features: 27
+Number of features: 29
+Number of features: 12
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 16
+Number of features: 18
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 25
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 19
+Number of features: 22
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 22
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 28
+Number of features: 28
+Number of features: 11
+Number of features: 26
+Number of features: 28
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 27
+Number of features: 21
+Number of features: 15
+Number of features: 25
+Number of features: 16
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 27
+Number of features: 20
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 14
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 24
+Number of features: 23
+Number of features: 30
+Number of features: 18
+Testing...
+
+GLOBUS TRANSFER task_id: 6c414908-29ae-11eb-8fc0-0a34088e79f9
+Waiting for transfer 6c414908-29ae-11eb-8fc0-0a34088e79f9 to complete...
+DONE.
+GLOBUS DELETE task_id: 7268b5d2-29ae-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 110
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 1.6281451343984727
+Features selected: 3
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.8140725671992364
+Features selected: 3
+Iterations without progress: 1
+
+alpha: 0.4070362835996182
+Features selected: 4
+Iterations without progress: 0
+
+alpha: 0.2035181417998091
+Features selected: 12
+Iterations without progress: 0
+
+alpha: 0.10175907089990455
+Features selected: 12
+Iterations without progress: 1
+
+alpha: 0.05087953544995227
+Features selected: 18
+Iterations without progress: 0
+
+alpha: 0.025439767724976137
+Features selected: 23
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.022895790952478522
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.02060621185723067
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.02266683304295374
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.022872895161526043
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 23
+Number of features: 21
+Number of features: 14
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 16
+Number of features: 18
+Number of features: 13
+Number of features: 12
+Number of features: 19
+Number of features: 12
+Number of features: 20
+Number of features: 28
+Number of features: 16
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 29
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 21
+Number of features: 22
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 21
+Number of features: 18
+Number of features: 26
+Number of features: 27
+Number of features: 15
+Number of features: 0
+Trimming excess components in <param_grid>...
+Number of features: 23
+Number of features: 10
+Number of features: 25
+Number of features: 20
+Number of features: 27
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 24
+Number of features: 22
+Number of features: 30
+Number of features: 12
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 29
+Number of features: 26
+Number of features: 24
+Number of features: 24
+Number of features: 26
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 15
+Number of features: 11
+Number of features: 23
+Number of features: 4
+Trimming excess components in <param_grid>...
+Testing...
+
+GLOBUS TRANSFER task_id: c342bb92-29ae-11eb-b53b-02d9497ca481
+Waiting for transfer c342bb92-29ae-11eb-b53b-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: e198ed00-29ae-11eb-b53b-02d9497ca481
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+Skipping past idx_grix 35...
+Skipping past idx_grix 36...
+Skipping past idx_grix 37...
+Skipping past idx_grix 38...
+Skipping past idx_grix 39...
+Skipping past idx_grix 40...
+Skipping past idx_grix 41...
+Skipping past idx_grix 42...
+Skipping past idx_grix 43...
+Skipping past idx_grix 44...
+Skipping past idx_grix 45...
+Skipping past idx_grix 46...
+Skipping past idx_grix 47...
+Skipping past idx_grix 48...
+Skipping past idx_grix 49...
+Skipping past idx_grix 50...
+Skipping past idx_grix 51...
+Skipping past idx_grix 52...
+Skipping past idx_grix 53...
+Skipping past idx_grix 54...
+Skipping past idx_grix 55...
+Skipping past idx_grix 56...
+Skipping past idx_grix 57...
+Skipping past idx_grix 58...
+Skipping past idx_grix 59...
+Skipping past idx_grix 60...
+Skipping past idx_grix 61...
+Skipping past idx_grix 62...
+Skipping past idx_grix 63...
+Skipping past idx_grix 64...
+Skipping past idx_grix 65...
+Skipping past idx_grix 66...
+Skipping past idx_grix 67...
+Skipping past idx_grix 68...
+Skipping past idx_grix 69...
+Skipping past idx_grix 70...
+Skipping past idx_grix 71...
+Skipping past idx_grix 72...
+Skipping past idx_grix 73...
+Skipping past idx_grix 74...
+Skipping past idx_grix 75...
+Skipping past idx_grix 76...
+Skipping past idx_grix 77...
+Skipping past idx_grix 78...
+Skipping past idx_grix 79...
+Skipping past idx_grix 80...
+Skipping past idx_grix 81...
+Skipping past idx_grix 82...
+Skipping past idx_grix 83...
+Skipping past idx_grix 84...
+Skipping past idx_grix 85...
+Skipping past idx_grix 86...
+Skipping past idx_grix 87...
+Skipping past idx_grix 88...
+Skipping past idx_grix 89...
+Skipping past idx_grix 90...
+Skipping past idx_grix 91...
+Skipping past idx_grix 92...
+Skipping past idx_grix 93...
+Skipping past idx_grix 94...
+Skipping past idx_grix 95...
+Skipping past idx_grix 96...
+Skipping past idx_grix 97...
+Skipping past idx_grix 98...
+Skipping past idx_grix 99...
+Skipping past idx_grix 100...
+Skipping past idx_grix 101...
+Skipping past idx_grix 102...
+Skipping past idx_grix 103...
+Skipping past idx_grix 104...
+Skipping past idx_grix 105...
+Skipping past idx_grix 106...
+Skipping past idx_grix 107...
+
+Processing scenario ID: 108
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.05
+Features selected: 0
+Iterations without progress: 0
+
+alpha: 0.025
+Features selected: 1
+Iterations without progress: 0
+
+alpha: 0.0125
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.00625
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.003125
+Features selected: 14
+Iterations without progress: 0
+
+alpha: 0.0015625
+Features selected: 14
+Iterations without progress: 1
+
+alpha: 0.00296875
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 14
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 13
+Number of features: 14
+Number of features: 15
+Number of features: 16
+Number of features: 14
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 12
+Number of features: 14
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 13
+Testing...
+
+GLOBUS TRANSFER task_id: 10311ad4-29af-11eb-b165-0ee0d5d9299f
+Waiting for transfer 10311ad4-29af-11eb-b165-0ee0d5d9299f to complete...
+Transfer 10311ad4-29af-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 590cd630-29af-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 109
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.07421875
+Features selected: 0
+Iterations without progress: 0
+
+alpha: 0.037109375
+Features selected: 0
+Iterations without progress: 1
+
+alpha: 0.0185546875
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.00927734375
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.004638671875
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.0023193359375
+Features selected: 16
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.00208740234375
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 0.0018786621093750003
+Features selected: 25
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 0.0017847290039062502
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0016954925537109376
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.0016107179260253907
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.001530182029724121
+Features selected: 27
+Iterations without progress: 1
+
+alpha: 0.001453672928237915
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0013809892818260191
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 0.0014464045635967254
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 12
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 11
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 19
+Number of features: 12
+Number of features: 16
+Number of features: 28
+Number of features: 13
+Number of features: 27
+Number of features: 17
+Number of features: 26
+Number of features: 25
+Number of features: 23
+Number of features: 18
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 14
+Number of features: 22
+Number of features: 23
+Number of features: 23
+Number of features: 27
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 24
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 28
+Number of features: 27
+Number of features: 20
+Number of features: 24
+Number of features: 15
+Number of features: 16
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 26
+Number of features: 24
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 25
+Number of features: 21
+Testing...
+
+GLOBUS TRANSFER task_id: 96713714-29af-11eb-8fc0-0a34088e79f9
+Waiting for transfer 96713714-29af-11eb-8fc0-0a34088e79f9 to complete...
+Transfer 96713714-29af-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: c0c4297c-29af-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 110
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_1
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 0.06870421677084446
+Features selected: 0
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.03435210838542223
+Features selected: 0
+Iterations without progress: 1
+
+alpha: 0.017176054192711114
+Features selected: 1
+Iterations without progress: 0
+
+alpha: 0.008588027096355557
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.0042940135481777785
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.0021470067740888893
+Features selected: 16
+Iterations without progress: 0
+
+alpha: 0.0010735033870444446
+Features selected: 20
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.0009661530483400002
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.0010627683531740002
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.0010521406696422603
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.0010617055848208261
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 17
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 28
+Number of features: 22
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 15
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 19
+Number of features: 26
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 29
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 27
+Number of features: 23
+Number of features: 21
+Number of features: 22
+Number of features: 20
+Number of features: 25
+Number of features: 25
+Number of features: 11
+Number of features: 20
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 19
+Number of features: 16
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 24
+Number of features: 14
+Number of features: 10
+Number of features: 18
+Number of features: 16
+Number of features: 24
+Number of features: 15
+Number of features: 16
+Number of features: 20
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 21
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 16
+Number of features: 24
+Testing...
+
+GLOBUS TRANSFER task_id: 021fb47c-29b0-11eb-b165-0ee0d5d9299f
+Waiting for transfer 021fb47c-29b0-11eb-b165-0ee0d5d9299f to complete...
+Transfer 021fb47c-29b0-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 021fb47c-29b0-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 021fb47c-29b0-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 3 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 87b13318-29b0-11eb-b165-0ee0d5d9299f
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+Skipping past idx_grix 35...
+Skipping past idx_grix 36...
+Skipping past idx_grix 37...
+Skipping past idx_grix 38...
+Skipping past idx_grix 39...
+Skipping past idx_grix 40...
+Skipping past idx_grix 41...
+Skipping past idx_grix 42...
+Skipping past idx_grix 43...
+Skipping past idx_grix 44...
+Skipping past idx_grix 45...
+Skipping past idx_grix 46...
+Skipping past idx_grix 47...
+Skipping past idx_grix 48...
+Skipping past idx_grix 49...
+Skipping past idx_grix 50...
+Skipping past idx_grix 51...
+Skipping past idx_grix 52...
+Skipping past idx_grix 53...
+Skipping past idx_grix 54...
+Skipping past idx_grix 55...
+Skipping past idx_grix 56...
+Skipping past idx_grix 57...
+Skipping past idx_grix 58...
+Skipping past idx_grix 59...
+Skipping past idx_grix 60...
+Skipping past idx_grix 61...
+Skipping past idx_grix 62...
+Skipping past idx_grix 63...
+Skipping past idx_grix 64...
+Skipping past idx_grix 65...
+Skipping past idx_grix 66...
+Skipping past idx_grix 67...
+Skipping past idx_grix 68...
+Skipping past idx_grix 69...
+Skipping past idx_grix 70...
+Skipping past idx_grix 71...
+Skipping past idx_grix 72...
+Skipping past idx_grix 73...
+Skipping past idx_grix 74...
+Skipping past idx_grix 75...
+Skipping past idx_grix 76...
+Skipping past idx_grix 77...
+Skipping past idx_grix 78...
+Skipping past idx_grix 79...
+Skipping past idx_grix 80...
+Skipping past idx_grix 81...
+Skipping past idx_grix 82...
+Skipping past idx_grix 83...
+Skipping past idx_grix 84...
+Skipping past idx_grix 85...
+Skipping past idx_grix 86...
+Skipping past idx_grix 87...
+Skipping past idx_grix 88...
+Skipping past idx_grix 89...
+Skipping past idx_grix 90...
+Skipping past idx_grix 91...
+Skipping past idx_grix 92...
+Skipping past idx_grix 93...
+Skipping past idx_grix 94...
+Skipping past idx_grix 95...
+Skipping past idx_grix 96...
+Skipping past idx_grix 97...
+Skipping past idx_grix 98...
+Skipping past idx_grix 99...
+Skipping past idx_grix 100...
+Skipping past idx_grix 101...
+Skipping past idx_grix 102...
+Skipping past idx_grix 103...
+Skipping past idx_grix 104...
+Skipping past idx_grix 105...
+Skipping past idx_grix 106...
+Skipping past idx_grix 107...
+
+Processing scenario ID: 108
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 50.0
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 25.0
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 12.5
+Features selected: 9
+Iterations without progress: 0
+
+alpha: 6.25
+Features selected: 17
+Iterations without progress: 0
+
+alpha: 3.125
+Features selected: 22
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 2.8125
+Features selected: 27
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 2.671875
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 2.53828125
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 2.658515625
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 17
+Number of features: 26
+Number of features: 20
+Number of features: 27
+Number of features: 25
+Number of features: 25
+Number of features: 21
+Number of features: 14
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 20
+Number of features: 17
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 24
+Number of features: 25
+Number of features: 14
+Number of features: 13
+Number of features: 18
+Number of features: 13
+Number of features: 19
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 20
+Number of features: 24
+Number of features: 27
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 16
+Number of features: 28
+Number of features: 18
+Number of features: 29
+Number of features: 21
+Number of features: 26
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 11
+Testing...
+
+GLOBUS TRANSFER task_id: e4b9b3b4-29b0-11eb-b165-0ee0d5d9299f
+Waiting for transfer e4b9b3b4-29b0-11eb-b165-0ee0d5d9299f to complete...
+Transfer e4b9b3b4-29b0-11eb-b165-0ee0d5d9299f has not yet finished; transfer submitted 1 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 157ce7aa-29b1-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 109
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 126.2794921875
+Features selected: 2
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 63.13974609375
+Features selected: 2
+Iterations without progress: 1
+
+alpha: 31.569873046875
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 15.7849365234375
+Features selected: 7
+Iterations without progress: 0
+
+alpha: 7.89246826171875
+Features selected: 13
+Iterations without progress: 0
+
+alpha: 3.946234130859375
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 7.497844848632812
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 12
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 20
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 14
+Number of features: 11
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 12
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 13
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 19
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 19
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 16
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 10
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 17
+Testing...
+
+GLOBUS TRANSFER task_id: 5c87d060-29b1-11eb-b53b-02d9497ca481
+Waiting for transfer 5c87d060-29b1-11eb-b53b-02d9497ca481 to complete...
+Transfer 5c87d060-29b1-11eb-b53b-02d9497ca481 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 5c87d060-29b1-11eb-b53b-02d9497ca481 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer 5c87d060-29b1-11eb-b53b-02d9497ca481 has not yet finished; transfer submitted 3 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: cf820086-29b1-11eb-b53b-02d9497ca481
+
+Processing scenario ID: 110
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: biomass_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 187.4461212158203
+Features selected: 0
+Iterations without progress: 0
+
+alpha: 93.72306060791016
+Features selected: 0
+Iterations without progress: 1
+
+alpha: 46.86153030395508
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 23.43076515197754
+Features selected: 5
+Iterations without progress: 0
+
+alpha: 11.71538257598877
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 5.857691287994385
+Features selected: 14
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 5.271922159194946
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 4.744729943275452
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 4.270256948947907
+Features selected: 22
+Iterations without progress: 1
+
+alpha: 3.843231254053116
+Features selected: 22
+Iterations without progress: 2
+
+alpha: 3.4589081286478045
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 3.1130173157830243
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 2.801715584204722
+Features selected: 25
+Iterations without progress: 0
+
+alpha: 2.52154402578425
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 2.269389623205825
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 2.0424506608852426
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 1.8382055947967184
+Features selected: 27
+Iterations without progress: 1
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 1.7462953150568825
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 1.8290145668227349
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 1.8198694939886213
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 1.8107701465186783
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 1.8017162957860848
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 1.809864761445419
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 1.8089598290646964
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 1.808055349150164
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 1.807151321475589
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 1.8062477458148514
+Features selected: 29
+Iterations without progress: 3
+
+alpha: 1.8070609639095152
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 21
+Number of features: 16
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 28
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 25
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 21
+Number of features: 10
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 27
+Number of features: 15
+Number of features: 19
+Number of features: 17
+Number of features: 13
+Number of features: 14
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 14
+Number of features: 19
+Number of features: 21
+Number of features: 15
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 20
+Number of features: 22
+Number of features: 24
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 19
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 29
+Number of features: 26
+Number of features: 14
+Number of features: 27
+Number of features: 25
+Number of features: 20
+Number of features: 18
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 23
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 24
+Number of features: 19
+Number of features: 20
+Testing...
+
+GLOBUS TRANSFER task_id: 28125ee4-29b2-11eb-b165-0ee0d5d9299f
+Waiting for transfer 28125ee4-29b2-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 2e7b4034-29b2-11eb-b165-0ee0d5d9299f
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+Skipping past idx_grix 35...
+Skipping past idx_grix 36...
+Skipping past idx_grix 37...
+Skipping past idx_grix 38...
+Skipping past idx_grix 39...
+Skipping past idx_grix 40...
+Skipping past idx_grix 41...
+Skipping past idx_grix 42...
+Skipping past idx_grix 43...
+Skipping past idx_grix 44...
+Skipping past idx_grix 45...
+Skipping past idx_grix 46...
+Skipping past idx_grix 47...
+Skipping past idx_grix 48...
+Skipping past idx_grix 49...
+Skipping past idx_grix 50...
+Skipping past idx_grix 51...
+Skipping past idx_grix 52...
+Skipping past idx_grix 53...
+Skipping past idx_grix 54...
+Skipping past idx_grix 55...
+Skipping past idx_grix 56...
+Skipping past idx_grix 57...
+Skipping past idx_grix 58...
+Skipping past idx_grix 59...
+Skipping past idx_grix 60...
+Skipping past idx_grix 61...
+Skipping past idx_grix 62...
+Skipping past idx_grix 63...
+Skipping past idx_grix 64...
+Skipping past idx_grix 65...
+Skipping past idx_grix 66...
+Skipping past idx_grix 67...
+Skipping past idx_grix 68...
+Skipping past idx_grix 69...
+Skipping past idx_grix 70...
+Skipping past idx_grix 71...
+Skipping past idx_grix 72...
+Skipping past idx_grix 73...
+Skipping past idx_grix 74...
+Skipping past idx_grix 75...
+Skipping past idx_grix 76...
+Skipping past idx_grix 77...
+Skipping past idx_grix 78...
+Skipping past idx_grix 79...
+Skipping past idx_grix 80...
+Skipping past idx_grix 81...
+Skipping past idx_grix 82...
+Skipping past idx_grix 83...
+Skipping past idx_grix 84...
+Skipping past idx_grix 85...
+Skipping past idx_grix 86...
+Skipping past idx_grix 87...
+Skipping past idx_grix 88...
+Skipping past idx_grix 89...
+Skipping past idx_grix 90...
+Skipping past idx_grix 91...
+Skipping past idx_grix 92...
+Skipping past idx_grix 93...
+Skipping past idx_grix 94...
+Skipping past idx_grix 95...
+Skipping past idx_grix 96...
+Skipping past idx_grix 97...
+Skipping past idx_grix 98...
+Skipping past idx_grix 99...
+Skipping past idx_grix 100...
+Skipping past idx_grix 101...
+Skipping past idx_grix 102...
+Skipping past idx_grix 103...
+Skipping past idx_grix 104...
+Skipping past idx_grix 105...
+Skipping past idx_grix 106...
+Skipping past idx_grix 107...
+
+Processing scenario ID: 108
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.5
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.25
+Features selected: 8
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.225
+Features selected: 18
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.2
+alpha: 0.18000000000000002
+Features selected: 18
+Iterations without progress: 1
+
+Old "step_pct": 0.2
+New "step_pct": 0.4
+alpha: 0.10800000000000001
+Features selected: 19
+Iterations without progress: 0
+
+alpha: 0.06480000000000001
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 0.038880000000000005
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 0.062208000000000006
+Features selected: 34
+Iterations without progress: 0
+
+alpha: 0.059719680000000004
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 0.057330892800000005
+Features selected: 24
+Iterations without progress: 1
+
+alpha: 0.055037657088
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.052836150804479995
+Features selected: 26
+Iterations without progress: 1
+
+Old "step_pct": 0.04
+New "step_pct": 0.02
+alpha: 0.0517794277883904
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.05074383923262259
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.049728962447970135
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.04873438319901073
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.04775969553503052
+Features selected: 29
+Iterations without progress: 3
+
+alpha: 0.046804501624329906
+Features selected: 29
+Iterations without progress: 4
+
+alpha: 0.04586841159184331
+Features selected: 29
+Iterations without progress: 5
+
+alpha: 0.046710892621081246
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 11
+Number of features: 27
+Number of features: 19
+Number of features: 24
+Number of features: 14
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 22
+Number of features: 22
+Number of features: 26
+Number of features: 24
+Number of features: 18
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 27
+Number of features: 23
+Number of features: 22
+Number of features: 25
+Number of features: 25
+Number of features: 20
+Number of features: 28
+Number of features: 18
+Number of features: 29
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 21
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 23
+Number of features: 16
+Number of features: 19
+Number of features: 13
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 25
+Number of features: 26
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 10
+Number of features: 23
+Number of features: 23
+Testing...
+
+GLOBUS TRANSFER task_id: 77b4c2e8-29b2-11eb-b165-0ee0d5d9299f
+Waiting for transfer 77b4c2e8-29b2-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 83eb41a4-29b2-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 109
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.002
+New "step_pct": 0.02
+alpha: 2.2888337384329813
+Features selected: 2
+Iterations without progress: 0
+
+Old "step_pct": 0.02
+New "step_pct": 0.2
+alpha: 1.8310669907463852
+Features selected: 2
+Iterations without progress: 1
+
+Old "step_pct": 0.2
+New "step_pct": 0.4
+alpha: 1.098640194447831
+Features selected: 4
+Iterations without progress: 0
+
+Old "step_pct": 0.4
+New "step_pct": 0.8
+alpha: 0.21972803888956616
+Features selected: 6
+Iterations without progress: 0
+
+Old "step_pct": 0.8
+New "step_pct": 0.16
+alpha: 0.18457155266723557
+Features selected: 19
+Iterations without progress: 0
+
+alpha: 0.15504010424047787
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 0.1302336875620014
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 0.10939629755208118
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.09189288994374818
+Features selected: 27
+Iterations without progress: 0
+
+alpha: 0.07719002755274847
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0648396231443087
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.07595498711190447
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.074739707318114
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.07583345913252543
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 24
+Number of features: 20
+Number of features: 12
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 23
+Number of features: 14
+Number of features: 18
+Number of features: 26
+Number of features: 28
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 24
+Number of features: 17
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 25
+Number of features: 10
+Number of features: 15
+Number of features: 29
+Number of features: 27
+Number of features: 21
+Number of features: 14
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 25
+Number of features: 21
+Number of features: 22
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 19
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 27
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 16
+Testing...
+
+GLOBUS TRANSFER task_id: cc12fbe8-29b2-11eb-b53b-02d9497ca481
+Waiting for transfer cc12fbe8-29b2-11eb-b53b-02d9497ca481 to complete...
+DONE.
+GLOBUS DELETE task_id: f06be5d6-29b2-11eb-b53b-02d9497ca481
+
+Processing scenario ID: 110
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: nup_kgha
+Number of observations: 407
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.0016
+New "step_pct": 0.016
+alpha: 3.731006189320251
+Features selected: 0
+Iterations without progress: 0
+
+Old "step_pct": 0.016
+New "step_pct": 0.16
+alpha: 3.1340451990290106
+Features selected: 0
+Iterations without progress: 1
+
+Old "step_pct": 0.16
+New "step_pct": 0.8
+alpha: 0.6268090398058019
+Features selected: 1
+Iterations without progress: 0
+
+alpha: 0.12536180796116037
+Features selected: 6
+Iterations without progress: 0
+
+Old "step_pct": 0.8
+New "step_pct": 0.16
+alpha: 0.10530391868737471
+Features selected: 20
+Iterations without progress: 0
+
+alpha: 0.08845529169739476
+Features selected: 22
+Iterations without progress: 0
+
+alpha: 0.0743024450258116
+Features selected: 21
+Iterations without progress: 0
+
+alpha: 0.06241405382168174
+Features selected: 24
+Iterations without progress: 0
+
+alpha: 0.05242780521021266
+Features selected: 26
+Iterations without progress: 0
+
+alpha: 0.06141542896053483
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 20
+Number of features: 16
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 12
+Number of features: 21
+Number of features: 22
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 20
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 21
+Number of features: 18
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 15
+Number of features: 26
+Number of features: 23
+Number of features: 25
+Number of features: 21
+Number of features: 13
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 24
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 23
+Number of features: 21
+Number of features: 14
+Number of features: 20
+Number of features: 19
+Number of features: 22
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 20
+Number of features: 21
+Number of features: 11
+Testing...
+
+GLOBUS TRANSFER task_id: 353fa67a-29b3-11eb-8fc0-0a34088e79f9
+Waiting for transfer 353fa67a-29b3-11eb-8fc0-0a34088e79f9 to complete...
+Transfer 353fa67a-29b3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 5fe6d970-29b3-11eb-8fc0-0a34088e79f9
+Skipping past idx_grix 0...
+Skipping past idx_grix 1...
+Skipping past idx_grix 2...
+Skipping past idx_grix 3...
+Skipping past idx_grix 4...
+Skipping past idx_grix 5...
+Skipping past idx_grix 6...
+Skipping past idx_grix 7...
+Skipping past idx_grix 8...
+Skipping past idx_grix 9...
+Skipping past idx_grix 10...
+Skipping past idx_grix 11...
+Skipping past idx_grix 12...
+Skipping past idx_grix 13...
+Skipping past idx_grix 14...
+Skipping past idx_grix 15...
+Skipping past idx_grix 16...
+Skipping past idx_grix 17...
+Skipping past idx_grix 18...
+Skipping past idx_grix 19...
+Skipping past idx_grix 20...
+Skipping past idx_grix 21...
+Skipping past idx_grix 22...
+Skipping past idx_grix 23...
+Skipping past idx_grix 24...
+Skipping past idx_grix 25...
+Skipping past idx_grix 26...
+Skipping past idx_grix 27...
+Skipping past idx_grix 28...
+Skipping past idx_grix 29...
+Skipping past idx_grix 30...
+Skipping past idx_grix 31...
+Skipping past idx_grix 32...
+Skipping past idx_grix 33...
+Skipping past idx_grix 34...
+Skipping past idx_grix 35...
+Skipping past idx_grix 36...
+Skipping past idx_grix 37...
+Skipping past idx_grix 38...
+Skipping past idx_grix 39...
+Skipping past idx_grix 40...
+Skipping past idx_grix 41...
+Skipping past idx_grix 42...
+Skipping past idx_grix 43...
+Skipping past idx_grix 44...
+Skipping past idx_grix 45...
+Skipping past idx_grix 46...
+Skipping past idx_grix 47...
+Skipping past idx_grix 48...
+Skipping past idx_grix 49...
+Skipping past idx_grix 50...
+Skipping past idx_grix 51...
+Skipping past idx_grix 52...
+Skipping past idx_grix 53...
+Skipping past idx_grix 54...
+Skipping past idx_grix 55...
+Skipping past idx_grix 56...
+Skipping past idx_grix 57...
+Skipping past idx_grix 58...
+Skipping past idx_grix 59...
+Skipping past idx_grix 60...
+Skipping past idx_grix 61...
+Skipping past idx_grix 62...
+Skipping past idx_grix 63...
+Skipping past idx_grix 64...
+Skipping past idx_grix 65...
+Skipping past idx_grix 66...
+Skipping past idx_grix 67...
+Skipping past idx_grix 68...
+Skipping past idx_grix 69...
+Skipping past idx_grix 70...
+Skipping past idx_grix 71...
+Skipping past idx_grix 72...
+Skipping past idx_grix 73...
+Skipping past idx_grix 74...
+Skipping past idx_grix 75...
+Skipping past idx_grix 76...
+Skipping past idx_grix 77...
+Skipping past idx_grix 78...
+Skipping past idx_grix 79...
+Skipping past idx_grix 80...
+Skipping past idx_grix 81...
+Skipping past idx_grix 82...
+Skipping past idx_grix 83...
+Skipping past idx_grix 84...
+Skipping past idx_grix 85...
+Skipping past idx_grix 86...
+Skipping past idx_grix 87...
+Skipping past idx_grix 88...
+Skipping past idx_grix 89...
+Skipping past idx_grix 90...
+Skipping past idx_grix 91...
+Skipping past idx_grix 92...
+Skipping past idx_grix 93...
+Skipping past idx_grix 94...
+Skipping past idx_grix 95...
+Skipping past idx_grix 96...
+Skipping past idx_grix 97...
+Skipping past idx_grix 98...
+Skipping past idx_grix 99...
+Skipping past idx_grix 100...
+Skipping past idx_grix 101...
+Skipping past idx_grix 102...
+Skipping past idx_grix 103...
+Skipping past idx_grix 104...
+Skipping past idx_grix 105...
+Skipping past idx_grix 106...
+Skipping past idx_grix 107...
+
+Processing scenario ID: 108
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.05
+Features selected: 0
+Iterations without progress: 0
+
+alpha: 0.025
+Features selected: 0
+Iterations without progress: 1
+
+alpha: 0.0125
+Features selected: 2
+Iterations without progress: 0
+
+alpha: 0.00625
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.003125
+Features selected: 12
+Iterations without progress: 0
+
+alpha: 0.0015625
+Features selected: 14
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.0014062500000000002
+Features selected: 26
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 0.0013359375
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.001269140625
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 0.00120568359375
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.0011453994140625
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.00119965517578125
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 16
+Number of features: 23
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 19
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 13
+Number of features: 27
+Number of features: 20
+Number of features: 14
+Number of features: 16
+Number of features: 30
+Number of features: 10
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 17
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 26
+Number of features: 19
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 27
+Number of features: 25
+Number of features: 26
+Number of features: 14
+Number of features: 18
+Number of features: 17
+Number of features: 14
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 28
+Number of features: 25
+Number of features: 20
+Number of features: 12
+Number of features: 22
+Number of features: 13
+Number of features: 29
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 28
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 29
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 24
+Number of features: 21
+Testing...
+
+GLOBUS TRANSFER task_id: a4b60fb2-29b3-11eb-8fc0-0a34088e79f9
+Waiting for transfer a4b60fb2-29b3-11eb-8fc0-0a34088e79f9 to complete...
+Transfer a4b60fb2-29b3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer a4b60fb2-29b3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 2 minute(s) ago
+Transfer a4b60fb2-29b3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 3 minute(s) ago
+Transfer a4b60fb2-29b3-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 4 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 3c412358-29b4-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 109
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 0.056983620849609375
+Features selected: 0
+Iterations without progress: 0
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.028491810424804687
+Features selected: 0
+Iterations without progress: 1
+
+alpha: 0.014245905212402344
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.007122952606201172
+Features selected: 8
+Iterations without progress: 0
+
+alpha: 0.003561476303100586
+Features selected: 11
+Iterations without progress: 0
+
+alpha: 0.001780738151550293
+Features selected: 16
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.0016026643363952636
+Features selected: 26
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.05
+alpha: 0.0015225311195755003
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0014464045635967252
+Features selected: 28
+Iterations without progress: 1
+
+alpha: 0.0015149184639776227
+Features selected: 31
+Iterations without progress: 0
+
+alpha: 0.0015073438716577345
+Features selected: 28
+Iterations without progress: 0
+
+alpha: 0.0014998071522994458
+Features selected: 29
+Iterations without progress: 0
+
+alpha: 0.0014923081165379485
+Features selected: 29
+Iterations without progress: 1
+
+alpha: 0.0014848465759552587
+Features selected: 29
+Iterations without progress: 2
+
+alpha: 0.0014774223430754825
+Features selected: 29
+Iterations without progress: 3
+
+alpha: 0.001470035231360105
+Features selected: 29
+Iterations without progress: 4
+
+alpha: 0.0014766836319039449
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 25
+Number of features: 0
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 20
+Number of features: 25
+Number of features: 14
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 19
+Number of features: 22
+Number of features: 14
+Number of features: 18
+Number of features: 26
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 24
+Number of features: 23
+Number of features: 14
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 16
+Number of features: 15
+Number of features: 18
+Number of features: 15
+Number of features: 15
+Number of features: 28
+Number of features: 8
+Trimming excess components in <param_grid>...
+Number of features: 22
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 16
+Number of features: 19
+Number of features: 29
+Number of features: 11
+Number of features: 20
+Number of features: 19
+Number of features: 13
+Number of features: 10
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 24
+Number of features: 12
+Number of features: 21
+Number of features: 11
+Testing...
+
+GLOBUS TRANSFER task_id: 7cbb9f08-29b4-11eb-8fc0-0a34088e79f9
+Waiting for transfer 7cbb9f08-29b4-11eb-8fc0-0a34088e79f9 to complete...
+Transfer 7cbb9f08-29b4-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: c5846c1a-29b4-11eb-8fc0-0a34088e79f9
+
+Processing scenario ID: 110
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}
+
+Response variable: tissue_n_pct
+Number of observations: 408
+
+Feature set: derivative_2
+
+Writing mean spectra to a ``pandas.DataFrame``.
+Number of input datacubes/spectra: 835
+Old "step_pct": 0.0005
+New "step_pct": 0.005
+alpha: 0.07346501068722126
+Features selected: 0
+Iterations without progress: 0
+
+Old "step_pct": 0.005
+New "step_pct": 0.05
+alpha: 0.06979176015286019
+Features selected: 0
+Iterations without progress: 1
+
+Old "step_pct": 0.05
+New "step_pct": 0.5
+alpha: 0.034895880076430096
+Features selected: 0
+Iterations without progress: 2
+
+alpha: 0.017447940038215048
+Features selected: 1
+Iterations without progress: 0
+
+alpha: 0.008723970019107524
+Features selected: 3
+Iterations without progress: 0
+
+alpha: 0.004361985009553762
+Features selected: 6
+Iterations without progress: 0
+
+alpha: 0.002180992504776881
+Features selected: 11
+Iterations without progress: 0
+
+Old "step_pct": 0.5
+New "step_pct": 0.1
+alpha: 0.001962893254299193
+Features selected: 20
+Iterations without progress: 0
+
+Old "step_pct": 0.1
+New "step_pct": 0.2
+alpha: 0.0015703146034393546
+Features selected: 20
+Iterations without progress: 1
+
+alpha: 0.0012562516827514837
+Features selected: 23
+Iterations without progress: 0
+
+alpha: 0.0015389083113705674
+Features selected: 30
+Iterations without progress: 0
+
+Using up to 30 selected features
+
+Hyperparameter tuning...
+
+Number of features: 15
+Number of features: 3
+Trimming excess components in <param_grid>...
+Number of features: 12
+Number of features: 5
+Trimming excess components in <param_grid>...
+Number of features: 1
+Trimming excess components in <param_grid>...
+Number of features: 10
+Number of features: 19
+Number of features: 11
+Number of features: 22
+Number of features: 20
+Number of features: 19
+Number of features: 4
+Trimming excess components in <param_grid>...
+Number of features: 13
+Number of features: 9
+Trimming excess components in <param_grid>...
+Number of features: 18
+Number of features: 18
+Number of features: 16
+Number of features: 14
+Number of features: 23
+Number of features: 17
+Number of features: 2
+Trimming excess components in <param_grid>...
+Number of features: 6
+Trimming excess components in <param_grid>...
+Number of features: 14
+Number of features: 12
+Number of features: 11
+Number of features: 7
+Trimming excess components in <param_grid>...
+Number of features: 15
+Testing...
+
+GLOBUS TRANSFER task_id: fa228a74-29b4-11eb-b165-0ee0d5d9299f
+Waiting for transfer fa228a74-29b4-11eb-b165-0ee0d5d9299f to complete...
+DONE.
+GLOBUS DELETE task_id: 005361ac-29b5-11eb-b165-0ee0d5d9299f
+
+Processing scenario ID: 108
+Panels type: ref_closest_panel
+Crop type: crop_plot
+Clip type: {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}
+Smooth type: nan
+Bin type: nan
+Segment type: nan
+GLOBUS TRANSFER task_id: 028c0f32-29b5-11eb-8fc0-0a34088e79f9
+Waiting for transfer 028c0f32-29b5-11eb-8fc0-0a34088e79f9 to complete...
+Transfer 028c0f32-29b5-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 1 minute(s) ago
+Transfer 028c0f32-29b5-11eb-8fc0-0a34088e79f9 has not yet finished; transfer submitted 2 minute(s) ago
+DONE.
+GLOBUS DELETE task_id: 6fcff22a-29b5-11eb-8fc0-0a34088e79f9
