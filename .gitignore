@@ -129,11 +129,12 @@ dmypy.json
 .pyre/
 
 # MSI job reports
-jobs/tune_train/reports/*
-jobs/proc_img/reports/*
+jobs/reports_procimg_array/*
+jobs/reports_procimg_setup/*
+jobs/reports_tunetrain_array/*
 
-!jobs/tune_train/reports/.gitkeep
-!jobs/proc_img/reports/.gitkeep
-
+!jobs/reports_procimg_array/.gitkeep
+!jobs/reports_procimg_setup/.gitkeep
+!jobs/reports_tunetrain_array/.gitkeep
 
 
