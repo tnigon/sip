@@ -311,6 +311,7 @@ def tier2_results_transfer(msi_result_dir, globus_client_id='684eb60a-9c5e-48af-
     subprocess.call(['s3cmd', 'put', '-r', dir_base + msi_result_dir, tier2_dir])
     subprocess.call(['rm', '-r', dir_base + msi_result_dir])
 
+
 def get_globus_data_dir(dir_base, msi_run_id, row,
                         msi_base='/home/yangc1/public',
                         level='segment'):
@@ -322,20 +323,21 @@ def get_globus_data_dir(dir_base, msi_run_id, row,
             be one of ['segment', 'bin', 'smooth', 'clip', 'crop'].
     '''
     msi_seg_dir = get_msi_segment_dir(row, level=level)
-    label_base = 'msi_' + str(msi_run_id) + '_' + str(row.name).zfill(3)
+    dest_base_dir = os.path.basename(dir_base) + '_msi_run_' + str(msi_run_id)
     dir_source_data = '/'.join(
         (msi_base, os.path.basename(dir_base), 'data', msi_seg_dir + '/'))
     dir_dest_data = '/'.join(
-        ('/' + os.path.basename(dir_base), 'data', msi_seg_dir + '/'))
+        ('/' + dest_base_dir, 'data', msi_seg_dir + '/'))
     return dir_source_data, dir_dest_data
 
 def get_globus_results_dir(dir_base, msi_run_id, row, msi_base='/home/yangc1/public'):
     label_base = 'msi_' + str(msi_run_id) + '_' + str(row.name).zfill(3)
+    dest_base_dir = os.path.basename(dir_base) + '_msi_run_' + str(msi_run_id)
     dir_source_results = '/'.join(
         (msi_base,  os.path.basename(dir_base), 'results',
          'msi_' + str(msi_run_id) + '_results', label_base + '/'))
     dir_dest_results = '/'.join(
-        ('/' + os.path.basename(dir_base), 'results',
+        ('/' + dest_base_dir, 'results',
          'msi_' + str(msi_run_id) + '_results', label_base + '/'))
     return dir_source_results, dir_dest_results
 
@@ -346,7 +348,7 @@ def globus_autoactivate(tc, endpoint, if_expires_in=7200):
               "the following URL in a browser to activate the "
               "endpoint:")
         print("https://app.globus.org/file-manager?origin_id=%s"
-              % msi_endpoint)
+              % endpoint)
 
 def globus_transfer(dir_source_data, dir_dest_data, TRANSFER_REFRESH_TOKEN, client,
                     TRANSFER_TOKEN, label=None, delete=True,

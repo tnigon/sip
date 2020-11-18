@@ -63,6 +63,18 @@ If you wish to submit the job(s) right away without waiting for the processing t
 NOTE: The `scontrol` command can be used to change the `--begin` time.
 
 
+## Setup, proc_img, and tune_train
+
+The following three commands can be used right in a row to process 1/4 of all scenarios, as well as tune/train upon
+completion of image processing.
+
+```
+$ sbatch --array=1-648:54 sip_2_procimg_setup.sh
+$ sbatch --array=1-162:9 --depend=afterok:1234 sip_2_procimg_array.sh
+$ sbatch --array=1-162:9 --depend=afterok:5678 sip_2_tune_train_array.sh`
+```
+
+
 ## Other helpful commands
 
 ### Job status and cancelling
