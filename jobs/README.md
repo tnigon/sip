@@ -56,9 +56,9 @@ located in the ../results/msi_XX_results_meta/ directory.
 If you wish to submit the job(s) right away without waiting for the processing to complete, use the `--depend` or
 `--begin` parameter to delay when the job(s) will begin. Be sure to pass the appropriate job/task ID.
 
-`$ sbatch --array=1-162:9 --depend=afterok:123456 sip_2_tune_train_array.sh`
+`$ sbatch --array=1-162:3 --depend=afterok:123456 sip_2_tune_train_array.sh`
 
-`$ sbatch --array=1-162:9 --begin=now+2hour sip_2_tune_train_array.sh`
+`$ sbatch --array=1-162:3 --begin=now+2hour sip_2_tune_train_array.sh`
 
 NOTE: The `scontrol` command can be used to change the `--begin` time.
 
@@ -71,7 +71,7 @@ completion of image processing.
 ```
 $ sbatch --array=1-648:54 sip_2_procimg_setup.sh
 $ sbatch --array=1-162:9 --depend=afterok:1234 sip_2_procimg_array.sh
-$ sbatch --array=1-162:9 --depend=afterok:5678 sip_2_tune_train_array.sh`
+$ sbatch --array=1-162:3 --depend=afterok:5678 sip_2_tune_train_array.sh
 ```
 
 
