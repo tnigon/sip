@@ -131,9 +131,10 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         dir_base = '/panfs/roc/groups/5/yangc1/public/hs_process'
     else:
         msi_run_id = 0
-        idx_min = 4
+        idx_min = 140
         idx_max = idx_min + 1
-        feat = 'reflectance'
+        y_label = 'tissue_n_pct'
+        feat = 'derivative_2'
         n_jobs = 4
         dir_base = r'G:\BBE\AGROBOT\Shared Work\hs_process_results'
 
