@@ -9,4 +9,5 @@ dependencies:
     - tqdm=4.51.*
     - boto3=1.16.*
     - git=2.23.*
+    - salib
     - pip=20.2.*

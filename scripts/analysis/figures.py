@@ -14,7 +14,7 @@ df_grid = pd.read_csv(os.path.join(base_dir_results, 'msi_2_hs_settings.csv'))
 df_grid_readable = sip_f.rename_scenarios(df_grid)
 df_grid_readable.to_csv(os.path.join(base_dir_results, 'msi_2_hs_settings_short.csv'), index=False)
 
-# %% Violin plots
+# %% Violin plots1
 import os
 import pandas as pd
 from scripts.analysis import sip_functs_analysis as sip_f
@@ -74,6 +74,31 @@ for response in ['biomass_kgha', 'nup_kgha', 'tissue_n_pct']:
         else:
             df_out = df_out.append(df_out_temp)
 df_out.sort_values(by=sort_order, inplace=True)
-
 df_out.to_csv(os.path.join(base_dir_results, 'msi_2_n_feats_opt.csv'), index=False)
+
+# %% Violin plots Opt
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from scripts.analysis import sip_functs_analysis as sip_f
+
+base_dir_results = r'G:\BBE\AGROBOT\Shared Work\hs_process_results\results\msi_2_results_meta'
+base_dir_out = r'G:\BBE\AGROBOT\Shared Work\hs_process_results\results\msi_2_results_metafigures'
+
+df_opt = pd.read_csv(os.path.join(base_dir_results, 'msi_2_n_feats_opt.csv'))
+for response in ['biomass_kgha', 'nup_kgha', 'tissue_n_pct']:
+    for feature_set in ['reflectance', 'derivative_1', 'derivative_2']:
+        # for model in ['Lasso', 'PLSRegression']:
+        for objective_f in ['R2', 'MAE', 'RMSE']:
+            df_opt_filter = sip_f.sip_n_feats_obj_filter(
+                df_opt, response, feature_set, objective_f)
+            name = 'msi_2_{0}_{1}_{2}'.format(response, feature_set, objective_f)
+            fig1 = sip_f.plot_violin_by_scenario_opt(df_opt_filter, name + '-val', y='value')
+            fig2 = sip_f.plot_violin_by_scenario_opt(df_opt_filter, name + '-feats-opt', y='n_feats_opt')
+            fig1.savefig(os.path.join(base_dir_out, response, 'values', '{0}-val.png'.format(name)), dpi=300)
+            fig2.savefig(os.path.join(base_dir_out, response, 'feats_opt', '{0}-feats-opt.png'.format(name)), dpi=300)
+            plt.close(fig1)
+            plt.close(fig2)
+
 
