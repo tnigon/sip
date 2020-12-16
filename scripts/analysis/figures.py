@@ -4,98 +4,76 @@ Created on Wed Oct 28 08:23:04 2020
 
 @author: nigo0024
 """
+# %% Export Readable hs_settings/df_grid
 import os
 import pandas as pd
+from scripts.analysis import sip_functs_analysis as sip_f
 
-def read_results_and_filter(fname, df_grid, model='Lasso'):
-    '''
-    Reads in SIP results from fname and filters by
-    '''
-    df = pd.read_csv(fname)
+base_dir_results = r'G:\BBE\AGROBOT\Shared Work\hs_process_results\results\msi_2_results_meta'
+df_grid = pd.read_csv(os.path.join(base_dir_results, 'msi_2_hs_settings.csv'))
+df_grid_readable = sip_f.rename_scenarios(df_grid)
+df_grid_readable.to_csv(os.path.join(base_dir_results, 'msi_2_hs_settings_short.csv'), index=False)
 
-    df_filter = df[(pd.notnull(df['extra_feats'])) &
-                   (df['model_name'] == model)]
-    df_filter = df_grid.merge(df_filter, left_index=True, right_on='grid_idx')
-
-    df_filter.loc[:,'clip'] = df_filter.loc[:,'clip'].astype('str')
-    df_filter.loc[:,'smooth'] = df_filter.loc[:,'smooth'].astype('str')
-    df_filter.loc[:,'bin'] = df_filter.loc[:,'bin'].astype('str')
-    df_filter.loc[:,'segment'] = df_filter.loc[:,'segment'].astype('str')
-
-    # df_filter['clip'].unique()
-    df_filter['clip'].replace({'nan': 'None',
-                               "{'wl_bands': [[0, 420], [880, 1000]]}": 'Ends',
-                               "{'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}": 'All'}, inplace=True)
-    df_filter['smooth'].unique()
-    df_filter['smooth'].replace({'nan': 'None',
-                                 # "{'window_size': 5, 'order': 2}": 'SG-5',
-                                 "{'window_size': 11, 'order': 2}": 'SG-11'}, inplace=True)
-    df_filter['bin'].unique()
-    df_filter['bin'].replace({
-        'nan': 'None',
-        "{'method': 'spectral_mimic', 'sensor': 'sentinel-2a'}": 'Sentinel-2A_mimic',
-        "{'method': 'spectral_resample', 'bandwidth': 20}": 'Bin_20nm',
-        }, inplace=True)
-
-    df_filter['segment'].unique()
-    df_filter['segment'].replace({
-        'nan': 'None',
-        "{'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'lower'}": 'NDI_upper_50',
-        "{'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680], 'mask_percentile': 50, 'mask_side': 'upper'}": 'NDI_lower_50',
-        "{'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': 50, 'mask_side': 'lower'}": 'MCARI2_upper_50',
-        "{'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': 50, 'mask_side': 'upper'}": 'MCARI2_lower_50',
-        "{'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': 90, 'mask_side': 'lower'}": 'MCARI2_upper_90',
-        "{'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [50, 75], 'mask_side': 'outside'}": 'MCARI2_in_50-75',
-        "{'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [75, 95], 'mask_side': 'outside'}": 'MCARI2_in_75-95',
-        # "{'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550], 'mask_percentile': [95, 98], 'mask_side': 'outside'}": 'MCARI2_in_95-98',
-        "{'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}": 'MCARI2_upper_90_green_upper_75'
-        # "{'method': ['mcari2', [800, 820]], 'wl1': [[800], [None]], 'wl2': [[670], [None]], 'wl3': [[550], [None]], 'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']}": 'MCARI2_upper_90_nir_upper_75'},
-        }, inplace=True)
-
-    return df_filter
-# In[Boxplot]
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-def plot_violin_each_processing_step(df_filter, y='2'):
-    '''
-    Makes violin plot for msi results
-    '''
-    fig, axes = plt.subplots(ncols=6, sharey=True, figsize=(14, 8),
-                             gridspec_kw={'width_ratios': [2, 2, 3, 2, 3, 9]})
-
-    axes[0] = sns.violinplot(x='dir_panels', y=y, data=df_filter, ax=axes[0])
-    axes[1] = sns.violinplot(x='crop', y=y, data=df_filter, ax=axes[1])
-    axes[2] = sns.violinplot(x='clip', y=y, data=df_filter, ax=axes[2])
-    axes[3] = sns.violinplot(x='smooth', y=y, data=df_filter, ax=axes[3])
-    axes[3] = sns.violinplot(x='bin', y=y, data=df_filter, ax=axes[4])
-    axes[4] = sns.violinplot(x='segment', y=y, data=df_filter, ax=axes[5])
-
-    [ax.set_xticklabels(ax.get_xticklabels(), rotation=60) for ax in axes]
-    fig.suptitle('{0} - {1} feature(s)'.format(os.path.splitext(os.path.split(f)[-1])[0], y), fontsize=16)
-    fig.tight_layout()
-    fig.tight_layout()
-    return fig
-
-# In[Make plots]
-# base_dir_results = r'G:\BBE\AGROBOT\Tyler Nigon\subjective_image_proc_msi'
-# base_dir_out = r'G:\BBE\AGROBOT\Tyler Nigon\subjective_image_proc_msi\figures'
-# fnames = ['msi_1_biomass_kgha_R2.csv', 'msi_1_nup_kgha_R2.csv', 'msi_1_tissue_n_pct_R2.csv']
-# df_grid = pd.read_csv(os.path.join(base_dir_results, 'msi_1_hs_settings.csv'))
+# %% Violin plots
+import os
+import pandas as pd
+from scripts.analysis import sip_functs_analysis as sip_f
 
 base_dir_results = r'G:\BBE\AGROBOT\Shared Work\hs_process_results\results\msi_2_results_meta'
 base_dir_out = r'G:\BBE\AGROBOT\Shared Work\hs_process_results\results\msi_2_results_metafigures'
 fnames = ['msi_2_biomass_kgha_R2.csv', 'msi_2_nup_kgha_R2.csv', 'msi_2_tissue_n_pct_R2.csv']
+
 df_grid = pd.read_csv(os.path.join(base_dir_results, 'msi_2_hs_settings.csv'))
+df_grid = sip_f.rename_scenarios(df_grid)
 f_full = [os.path.join(base_dir_results, f) for f in fnames]
 for f in f_full:
-    df_filter = read_results_and_filter(f, df_grid)
+    df = pd.read_csv(f)
+    df = df_grid.merge(df, left_index=True, right_on='grid_idx')
+    df_filter = sip_f.sip_results_filter(df, model='Lasso')
     for n_feats in range(1, 20, 3):
-        fig = plot_violin_each_processing_step(df_filter, y=str(n_feats))
+        base_name = os.path.splitext(os.path.split(f)[-1])[0]
+        fig = sip_f.plot_violin_by_scenario(df_filter, base_name, y=str(n_feats))
         fig.savefig(os.path.join(base_dir_out, '{0}_{1}.png'.format(os.path.splitext(os.path.split(f)[-1])[0], n_feats)), dpi=300)
 
+# %% Find optimum accuracy
+import os
+import pandas as pd
+from scripts.analysis import sip_functs_analysis as sip_f
 
-# In[Get keys]
-df_filter['clip'].unique()
-df_filter['smooth'].unique()
-df_filter['segment'].unique()
+base_dir_results = r'G:\BBE\AGROBOT\Shared Work\hs_process_results\results\msi_2_results_meta'
+base_dir_out = r'G:\BBE\AGROBOT\Shared Work\hs_process_results\results\msi_2_results_metafigures'
+fnames = ['msi_2_biomass_kgha_R2.csv', 'msi_2_nup_kgha_R2.csv', 'msi_2_tissue_n_pct_R2.csv']
+
+df_grid = pd.read_csv(os.path.join(base_dir_results, 'msi_2_hs_settings.csv'))
+df_grid = sip_f.rename_scenarios(df_grid)
+f_full = [os.path.join(base_dir_results, f) for f in fnames]
+
+
+subset = ['msi_run_id', 'grid_idx', 'response_label', 'feature_set',
+          'model_name', 'objective_f', 'n_feats_opt', 'value']
+sort_order = ['response_label', 'feature_set', 'model_name', 'objective_f',
+              'grid_idx']
+df_out = None
+for response in ['biomass_kgha', 'nup_kgha', 'tissue_n_pct']:
+    for objective_f in ['R2', 'MAE', 'RMSE']:
+        f = os.path.join(base_dir_results, 'msi_2_{0}_{1}.csv'.format(response, objective_f))
+        df = pd.read_csv(f)
+        df.rename(columns={'extra_feats': 'feature_set'}, inplace=True)
+        df['objective_f'] = objective_f
+        if objective_f in ['MAE', 'RMSE']:
+            df['n_feats_opt'] = df[map(str, range(1, 51))].idxmin(axis=1)
+            df['value'] = df[map(str, range(1, 51))].min(axis=1)
+        else:
+            df['n_feats_opt'] = df[map(str, range(1, 51))].idxmax(axis=1)
+            df['value'] = df[map(str, range(1, 51))].max(axis=1)
+        df = df.astype({'n_feats_opt': 'int'})
+
+        df_out_temp = df_grid.merge(df[subset], left_index=True, on='grid_idx')
+        if df_out is None:
+            df_out = df_out_temp.copy()
+        else:
+            df_out = df_out.append(df_out_temp)
+df_out.sort_values(by=sort_order, inplace=True)
+
+df_out.to_csv(os.path.join(base_dir_results, 'msi_2_n_feats_opt.csv'), index=False)
+
