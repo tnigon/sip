@@ -14,6 +14,7 @@ TRANSFER_TOKEN = ''
 TRANSFER_REFRESH_TOKEN = ''
 msi_run_id = None
 idx_grid = None
+delete_only = False  # can be True, False, or None (None will not delete at all and will only transfer)
 level = 'segment'
 
 # In[Get arguments]
@@ -30,6 +31,8 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
                         help='The MSI run ID; use 0 to run on local machine.')
     parser.add_argument('-i', '--idx_grid',
                         help='Row index from df_grid to transfer image data for.')
+    parser.add_argument('-d', '--delete_only',
+                        help='Does not transfer data; only deletes it.')
     parser.add_argument('-l', '--level',
                         help='Directory level to transfer data for; must be one '
                         'of ["segment", "smooth", "clip", "crop"].')
@@ -54,6 +57,10 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         idx_grid = eval(args.idx_grid)
     else:
         idx_grid = None
+    if args.delete_only is not None:
+        delete_only = eval(args.delete_only)
+    else:
+        delete_only = False
     if args.level is not None:
         level = args.level.lower()
 
@@ -81,4 +88,4 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         dir_base, msi_run_id, row, level=level)
     transfer_result, delete_result = globus_transfer(
         dir_source_data, dir_dest_data, TRANSFER_REFRESH_TOKEN, client, TRANSFER_TOKEN,
-        label=label_base + '-data', delete=True)
+        delete_only, label=label_base + '-data')

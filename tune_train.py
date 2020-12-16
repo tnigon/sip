@@ -334,4 +334,4 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
             dir_base, msi_run_id, row)
         transfer_result, delete_result = globus_transfer(
             dir_source_results, dir_dest_results, TRANSFER_REFRESH_TOKEN, client,
-            TRANSFER_TOKEN, label=label_base + '-results', delete=True)
+            TRANSFER_TOKEN, delete_only=False, label=label_base + '-results')

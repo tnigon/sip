@@ -351,7 +351,7 @@ def globus_autoactivate(tc, endpoint, if_expires_in=7200):
               % endpoint)
 
 def globus_transfer(dir_source_data, dir_dest_data, TRANSFER_REFRESH_TOKEN, client,
-                    TRANSFER_TOKEN, label=None, delete=True,
+                    TRANSFER_TOKEN, delete_only=None, label=None,
                     source_endpoint='d865fc6a-2db3-11e6-8070-22000b1701d1',
                     dest_endpoint='fb6f1c6b-86b1-11e8-9571-0a6d4e044368'):
     '''
@@ -363,12 +363,12 @@ def globus_transfer(dir_source_data, dir_dest_data, TRANSFER_REFRESH_TOKEN, clie
     dir_source_data = '/home/yangc1/public/hs_process/results/msi_1_results/'
     dir_dest_data = 'hs_process/results/msi_1_results'
     '''
-    if source_endpoint is None:
-        source_endpoint = tc.endpoint_search(filter_fulltext='umnmsi#home')
-    if dest_endpoint is None:
-        # dest_endpoint = tc.endpoint_search(filter_fulltext='umnmsi#tier2')
-        tier2_id = 'fb6f1c6b-86b1-11e8-9571-0a6d4e044368'
-        dest_endpoint = tc.get_endpoint(tier2_id)
+    # if source_endpoint is None:
+    #     source_endpoint = tc.endpoint_search(filter_fulltext='umnmsi#home')
+    # if dest_endpoint is None:
+    #     # dest_endpoint = tc.endpoint_search(filter_fulltext='umnmsi#tier2')
+    #     tier2_id = 'fb6f1c6b-86b1-11e8-9571-0a6d4e044368'
+    #     dest_endpoint = tc.get_endpoint(tier2_id)
 
     # First, get the transfer client using access tokens
     authorizer = globus_sdk.RefreshTokenAuthorizer(
@@ -386,23 +386,31 @@ def globus_transfer(dir_source_data, dir_dest_data, TRANSFER_REFRESH_TOKEN, clie
         encrypt_data=False, deadline=None, recursive_symlinks='ignore')
 
     tdata.add_item(dir_source_data, dir_dest_data, recursive=True)  # add directory
-    transfer_result = tc.submit_transfer(tdata)
-    print("GLOBUS TRANSFER task_id:", transfer_result["task_id"])
 
-    if delete is True:
+    transfer_result, delete_result = None, None
+    if delete_only == False or delete_only is None:  # transfer
+        transfer_result = tc.submit_transfer(tdata)
+        print("GLOBUS TRANSFER task_id:", transfer_result["task_id"])
         print('Waiting for transfer {0} to complete...'
               ''.format(transfer_result['task_id']))
         c = it.count(1)
         while not tc.task_wait(transfer_result['task_id'], timeout=60):
+            count = next(c)
             print('Transfer {0} has not yet finished; transfer submitted {1} '
-                  'minute(s) ago'.format(transfer_result['task_id'], next(c)))
+                  'minute(s) ago'.format(transfer_result['task_id'], count))
+            if count >= 6:
+                print('Cancelling task after {0} minutes.'.format(count))
+                tc.cancel_task(transfer_result['task_id'])
+            if count >= 8:
+                print('Looks like I have to break out of the while loop.')
+                break
         print('DONE.')
+    if delete_only == False or delete_only == True:  # delete
         ddata = globus_sdk.DeleteData(tc, source_endpoint, recursive=True)
         ddata.add_item(dir_source_data)
         delete_result = tc.submit_delete(ddata)
         print("GLOBUS DELETE task_id:", delete_result['task_id'])
-        return transfer_result, delete_result
-    return transfer_result
+    return transfer_result, delete_result
 
 def restart_script():
     print("argv was", sys.argv)
