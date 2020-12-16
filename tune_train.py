@@ -330,8 +330,8 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         label_base = 'idx_grid_' + str(idx_grid).zfill(3)
         client = globus_sdk.NativeAppAuthClient(CLIENT_ID)
 
-        dir_source_results, dir_dest_results = get_globus_results_dir(
-            dir_base, msi_run_id, row)
-        transfer_result, delete_result = globus_transfer(
-            dir_source_results, dir_dest_results, TRANSFER_REFRESH_TOKEN, client,
-            TRANSFER_TOKEN, delete_only=False, label=label_base + '-results')
+        # dir_source_results, dir_dest_results = get_globus_results_dir(
+        #     dir_base, msi_run_id, row)
+        # transfer_result, delete_result = globus_transfer(
+        #     dir_source_results, dir_dest_results, TRANSFER_REFRESH_TOKEN, client,
+        #     TRANSFER_TOKEN, delete_only=False, label=label_base + '-results')
