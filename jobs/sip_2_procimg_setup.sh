@@ -4,7 +4,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=24
 #SBATCH --mem-per-cpu=2gb
-#SBATCH -t 0:30:00
+#SBATCH -t 0:40:00
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=nigo0024@umn.edu
 #SBATCH -o ./reports_procimg_setup/R-%A-%a-%x.out
