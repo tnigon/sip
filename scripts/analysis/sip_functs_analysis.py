@@ -100,13 +100,13 @@ def plot_violin_by_scenario(df_filter, base_name, y='2'):
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-def sip_n_feats_obj_filter(df_obj, response, feature_set, objective_f):
+def sip_n_feats_opt_filter(df_opt, response, feature_set, objective_f):
     '''
     Filters SIP results by response, feature_set, model, and objective_f.
     '''
-    df_filter = df_obj[(df_obj['response_label'] == response) &
-                       (df_obj['feature_set'] == feature_set) &
-                       (df_obj['objective_f'] == objective_f)]
+    df_filter = df_opt[(df_opt['response_label'] == response) &
+                       (df_opt['feature_set'] == feature_set) &
+                       (df_opt['objective_f'] == objective_f)]
     return df_filter
 
 
@@ -132,6 +132,8 @@ def plot_violin_by_scenario_opt(df_opt, name, y='value'):
 
 
 # %% Sensitivity analysis using SALib
+import os
+import pandas as pd
 import numpy as np
 from SALib.analyze import sobol
 from SALib.sample import saltelli
@@ -146,52 +148,48 @@ problem = {
                [0, 2],
                [0, 8]]}
 
-param_values = saltelli.sample(problem, 1000)
+param_values = saltelli.sample(problem, 1)
 
 
-import os
-import pandas as pd
-import matplotlib.pyplot as plt
-
-from scripts.analysis import sip_functs_analysis as sip_f
 
 base_dir_results = r'G:\BBE\AGROBOT\Shared Work\hs_process_results\results\msi_2_results_meta'
 base_dir_out = r'G:\BBE\AGROBOT\Shared Work\hs_process_results\results\msi_2_results_metafigures'
 
 df_opt = pd.read_csv(os.path.join(base_dir_results, 'msi_2_n_feats_opt.csv'))
+
 for response in ['biomass_kgha', 'nup_kgha', 'tissue_n_pct']:
     for feature_set in ['reflectance', 'derivative_1', 'derivative_2']:
         # for model in ['Lasso', 'PLSRegression']:
         for objective_f in ['R2', 'MAE', 'RMSE']:
-            df_opt_filter = sip_f.sip_n_feats_obj_filter(
+            df_opt_filter = sip_f.sip_n_feats_opt_filter(
                 df_opt, response, feature_set, objective_f)
             break
         break
     break
 
 
+
+df_opt = pd.read_csv(os.path.join(base_dir_results, 'msi_2_n_feats_opt.csv'))
+data = [333, 'all', 'plot_bounds', 'none', 'none', 'senitnel-2a_mimic', 'none',
+        2, 'nup_kgha', 'reflectance', 'Lasso', 'R2', 8, 0.744304]
+df_opt_row = pd.DataFrame(data=[data], columns=df_opt.columns)
+df_opt = df_opt.append(df_opt_row)
+
 response = 'nup_kgha'
 feature_set = 'reflectance'
 objective_f = 'R2'
 model = 'Lasso'
 
-df_opt_filter = sip_n_feats_obj_filter(df_opt, response, feature_set, objective_f)
+df_opt_filter = sip_n_feats_opt_filter(df_opt, response, feature_set, objective_f)
+
+    df_opt_filter.sort_values(by=['model_name', 'segment', 'bin', 'smooth', 'clip', 'crop', 'dir_panels'], axis=0, inplace=True)
 df_opt_filter = df_opt_filter[df_opt_filter['model_name'] == model]
 
-['grid_idx', 'dir_panels', 'crop', 'clip', 'smooth', 'bin', 'segment',
-       'msi_run_id', 'response_label', 'feature_set', 'model_name',
-       'objective_f', 'n_feats_opt', 'value']
-
-all
-plot_bounds
-none
-none
-none
-'sentinel-2a_mimic'
-
-len(df_opt_filter[df_opt_filter['segment'] == 'ndi_upper_50'])
 
 Y = df_opt_filter['value'].array
+
+from SALib.sample import saltelli
+param_values = saltelli.sample(problem, 46)
 
 Si = sobol.analyze(problem, Y)
 
@@ -204,3 +202,49 @@ for i, X in enumerate(param_values):
 # base_dir_out = r'G:\BBE\AGROBOT\Shared Work\hs_process_results\results\msi_2_results_meta\optimum_features'
 
 # os.path.join(base_dir_results, 'msi_2_nup_kgha_RMSE.csv')
+
+from SALib.sample import saltelli
+from SALib.test_functions import Ishigami
+from SALib.analyze import sobol
+problem = {
+    'num_vars': 3,
+    'names': ['x1', 'x2', 'x3'],
+    'bounds': [[-3.14159265359, 3.14159265359],
+               [-3.14159265359, 3.14159265359],
+               [-3.14159265359, 3.14159265359]]
+}
+param_values = saltelli.sample(problem, 1000)
+Y = Ishigami.evaluate(param_values)
+
+Si = sobol.analyze(problem, Y)
+
+>>> X = saltelli.sample(problem, 1000)
+>>> Y = Ishigami.evaluate(X)
+>>> Si = sobol.analyze(problem, Y, print_to_console=True)
+
+import SALib
+from SALib.test_functions import Ishigami
+from SALib.analyze import sobol
+problem = {
+    'num_vars': 3,
+    'names': ['x1', 'x2', 'x3'],
+    'bounds': [[-3.14159265359, 3.14159265359],
+               [-3.14159265359, 3.14159265359],
+               [-3.14159265359, 3.14159265359]]
+}
+problem = {
+    'num_vars': 6,
+    'names': ['dir_panels', 'crop', 'clip', 'smooth', 'bin', 'segment'],
+    'bounds': [[0, 1],
+               [0, 1],
+               [0, 2],
+               [0, 1],
+               [0, 2],
+               [0, 8]]}
+
+N = 1
+seed=998
+M=4
+X = SALib.sample.saltelli.sample(problem, N, seed=seed)
+Y = Ishigami.evaluate(X)
+Si = sobol.analyze(problem, Y, print_to_console=True)
