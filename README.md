@@ -1,7 +1,7 @@
 # Subjective Image Processing
-The main goal of this project is to quantify the influence of various hyperspectral image processing steps on final model accuracy for predicting crop nitrogen uptake in maize.
+The main goal of this project was to quantify the influence of various hyperspectral image processing steps on final model accuracy for predicting crop nitrogen uptake in maize.
 
-This repository aims to track project scripts, methodology, and data over time by leveraging git version control tools. Anytime a "run" is processed on the Minnesota Supercomputer, there will be a "release" published in the repository indicating a particular version of the code used to generate that particular data.
+This repository aims to track project scripts, methodology, and data over time by leveraging git version control tools. Anytime a "run" is processed on the Minnesota Supercomputer, a "release" is published in the repository indicating a particular version of the code used to generate that particular data.
 
 The results from this analysis are organized such that the meta results files have "msi_X" in there filename, indicating the MSI run number. For example, msi_1_hs_settings.csv is a table of the image processing settings evaluated in MSI run #1. There is also a folder titled "msi_X_results" (e.g., msi_1_results) that contains a directory for each image processing scenario (e.g., "mis_1_results/msi_1_005" contains the results for MSI run #1, image processing scenario #5).
 
@@ -12,24 +12,8 @@ Pip dependencies should be installed separately.
 ```
 conda env create -n sip_run_2 -f sip/environment.yml
 pip install git+git://github.com/maroba/findiff.git@master
-pip install git+git://github.com/tnigon/hs_process.git@dev
 ```
 
-
-```
-conda create -n msi_sip python=3.7 -y
-conda config --env --add channels conda-forge
-conda config --env --set channel_priority strict
-conda install python=3 geopandas -y
-
-conda install -c conda-forge hs-process
-conda install -c conda-forge scikit-learn
-conda install -c conda-forge globus-sdk
-conda install -c conda-forge tqdm
-conda install -c conda-forge boto3
-pip install git+https://github.com/maroba/findiff.git
-pip install git+https://github.com/tnigon/hs_process.git@2927346f4c513a217ac8ad076e494dd1adbf70e1 --upgrade
-```
 
 ## Minnesota Supercomputer Institute (MSI)
 [The Minnnesota Supercoputer Institute](https://www.msi.umn.edu/) high performance computing (HPC) and data storage resources were used to complete this project. Without access to resources like this, this project would not be feasible.
@@ -46,7 +30,6 @@ qsub <job_file.pbs>
 More information at [MSI Job Submission and Scheduling (PBS Scripts)](https://www.msi.umn.edu/content/job-submission-and-scheduling-pbs-scripts)
 
 ### MSI notes
-
 - Total disk space required for the naive approach (process all files without deleting/transferring any of the data/results) is 12.1 TB. Thus, I try to split the processing into smaller chunks (say, 72 scenarios at a time), then allow all transfer to 2nd tier to complete before starting the next chunk.
 - The bulk of image/spec data files can be transferred automatically using `transfer_data_level.py` at the end of tune_train.py jobs. It is important to be sure data files are not transferred to 2nd tier until all tuning/training is completely finished for those processing scenarios.
 - After all MSI batch jobs of `tune_train.py` finish for a "chunk", `transfer_data_level.py` can be run at the "clip" level (for each "clip" scenario) to transfer and delete the spent data without doing so manually.
@@ -82,52 +65,8 @@ At the highest level, there are two directories:
 1. data: contains the ground truth data, as well as all the image/spectral data before and after MSI processing.
 2. results: contains all the tuning, training, and testing results of the supervised regression models (Lasso and partial least squares regression were used).
 
-- \hs_process
-  - \data
-  - ...
-    - \ref_all_panels {images where the average of all panels used to convert to reflectance}
-    - \ref_closest_panel {images where the radiance from the closest panel in time was used to covert to reflectance}
-      - ...
-      - \crop_buf {cropped images with a negative buffer so the sampling extent roughly matches the imaging extent}
-      - \crop_plot {cropped images by the extent of the plot boundary}
-        - ...
-        - \clip_all {images with O2 absorption, H2O absorption, and end bands clipped from the spectra}
-        - \clip_ends {end bands clipped from spectra}
-        - \clip_none {no bands clipped from spectra}
-          - ...
-          - \smooth_none {images without any pixel-wise smoothing across the spectral domain}
-          - \smooth_window_5 {pixels smoothed across the spectral domain using Sovitzky-Golay smoothing with window size of 5}
-          - \smooth_window_11 {Sovitzky-Golay smoothing with window size of 5}
-            - ...
-            - \bm_green {green band math images (green reflectance used as an indicator for segmentation)}
-            - \bm_mcari2 {MCARI2 band math images}
-            - \bm_nir {NIR band math images}
-            - \seg_mcari2_50_75_between {segmentation results with pixels below 50th pctl and above 75th pctl MCARI2 masked out}
-            - \seg_mcari2_50_upper {segmentation results with pixels below 50th pctl MCARI2 masked out}
-            - \seg_mcari2_75_95_between {segmentation results with pixels below 75th pctl and above 95th pctl MCARI2 masked out}
-            - \seg_mcari2_90_upper {segmentation results with pixels below 90th pctl MCARI2 masked out}
-            - \seg_mcari2_90_upper_green_75_upper {segmentation results with pixels below 90th pctl MCARI2 and below 75th pctl green masked out}
-            - \seg_mcari2_90_upper_nir_75_upper {segmentation results with pixels below 90th pctl MCARI2 and below 75th pctl NIR masked out}
-            - \seg_mcari2_95_98_between {segmentation results with pixels below 95th pctl and above 98th pctl MCARI2 masked out}
-            - \seg_none {results with no pixels masked out}
-            - ...
-- \results
-  - \msi_0_results {where "0" represents the MSI run ID}
-    - \msi_0_000 {where "000" represents the processing scenario}
-    - \msi_0_001
-    - ...
-    - \msi_0_288
-      - \biomass_kgha {for each ground truth measure we are trying to predict}
-      - \nup_kgha
-      - \tissue_n_pct
-        - \aux_mcari2_pctl_10th {spectral features plus the 10th percentile MCARI2 feature}
-        - \spectral {spectral features only}
-          - \testing {test results}
-            - \figures {figures plotting measured vs. predicted, as well as train/test error as a function of feature number}
-          - \tuning {tuning results}
-
 ## Hyperparameter tuning loop
-Tuning and all subsequent steps are carried out separately for each ground truth measurement (biomass, tissue nitrogen concentration, and nitrogen uptake), as well as each set of available features to be evaluated.
+Tuning and all subsequent steps were carried out separately for each ground truth measurement (biomass, tissue nitrogen concentration, and nitrogen uptake), as well as each set of available features to be evaluated.
 
 Ground truth measurements:
 - above-ground biomass (kg ha-1)
@@ -143,7 +82,7 @@ Supervised regression models evaluated:
 - Lasso regression
 - Partial least squares regression
 
-Hyperparameter tuning is carried out by splitting the training dataset (60% of samples) using a repeated stratified k-fold cross validation (4 splits and 3 replications). Thus, each tuning fold uses 75% of the training samples, which use 60% of the total samples.
+Hyperparameter tuning was carried out by splitting the training dataset (60% of samples) using a repeated stratified k-fold cross validation (4 splits and 3 replications). Thus, each tuning fold uses 75% of the training samples, which use 60% of the total samples.
 The results of hyperparameter tuning are saved to the "tuning" folder in the appropriate directory
 
 ## Model training and testing
