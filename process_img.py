@@ -11,7 +11,7 @@ from sip_functions import *
 import os
 
 # In[Set defaults]
-n_jobs = 4
+n_jobs = 1
 msi_run_id = None
 idx_min = 0
 idx_max = 1
@@ -52,13 +52,19 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         dir_base = '/panfs/roc/groups/5/yangc1/public/hs_process'
     else:
         msi_run_id = 0
+        n_jobs = 4
+        idx_min = 12
+        idx_max = idx_min + 1
         dir_base = r'G:\BBE\AGROBOT\Shared Work\hs_process_results'
 
     dir_data = os.path.join(dir_base, 'data')
     dir_results = os.path.join(dir_base, 'results')
     dir_results_msi = os.path.join(dir_results, 'msi_' + str(msi_run_id) + '_results')
+    dir_results_meta = os.path.join(dir_results, 'msi_' + str(msi_run_id) + '_results_meta')
     if not os.path.isdir(dir_results_msi):
         os.mkdir(dir_results_msi)
+    if not os.path.isdir(dir_results_meta):
+        os.mkdir(dir_results_meta)
 
     # In[Grid search settings]
     hs_settings = {
@@ -68,39 +74,45 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
                  {'wl_bands': [[0, 420], [880, 1000]]},
                  {'wl_bands': [[0, 420], [760, 776], [813, 827], [880, 1000]]}],
         'smooth': [None,
-                   {'window_size': 5, 'order': 2},
+                   # {'window_size': 5, 'order': 2},
                    {'window_size': 11, 'order': 2}],
+        'bin': [None,
+                {'method': 'spectral_mimic', 'sensor': 'sentinel-2a'},
+                {'method': 'spectral_resample', 'bandwidth': 20}],
         'segment': [None,
+                   {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680],
+                    'mask_percentile': 50, 'mask_side': 'lower'},
+                   {'method': 'ndi', 'wl1': [770, 800], 'wl2': [650, 680],
+                    'mask_percentile': 50, 'mask_side': 'upper'},
                    {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550],
                     'mask_percentile': 50, 'mask_side': 'lower'},
+                   {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550],
+                    'mask_percentile': 50, 'mask_side': 'upper'},
                    {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550],
                     'mask_percentile': 90, 'mask_side': 'lower'},
                    {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550],
                     'mask_percentile': [50, 75], 'mask_side': 'outside'},
                    {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550],
                     'mask_percentile': [75, 95], 'mask_side': 'outside'},
-                   {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550],
-                    'mask_percentile': [95, 98], 'mask_side': 'outside'},
+                   # {'method': 'mcari2', 'wl1': [800], 'wl2': [670], 'wl3': [550],
+                   #  'mask_percentile': [95, 98], 'mask_side': 'outside'},
                    {'method': ['mcari2', [545, 565]], 'wl1': [[800], [None]],
                     'wl2': [[670], [None]], 'wl3': [[550], [None]],
                     'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']},
-                   {'method': ['mcari2', [800, 820]], 'wl1': [[800], [None]],
-                    'wl2': [[670], [None]], 'wl3': [[550], [None]],
-                    'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']},
-                    ]
-        # 'bin': [None,
-        #         {'bandwidth': 5},
-        #         {'bandwidth': 10},
-        #         {'bandwidth': 20},
-        #         {'bandwidth': 50}]
+                   # {'method': ['mcari2', [800, 820]], 'wl1': [[800], [None]],
+                   #  'wl2': [[670], [None]], 'wl3': [[550], [None]],
+                   #  'mask_percentile': [90, 75], 'mask_side': ['lower', 'lower']},
+                    ],
+        # 'features': ['reflectance', 'derivative']  # whether to use reflectance or derivative for model training
         }
-    df_grid = hs_grid_search(hs_settings, msi_run_id, dir_out=dir_results)
-    time_dict = time_setup_img(dir_results, msi_run_id)
-    proc_dict = proc_files_count_setup(dir_results, msi_run_id)
+    df_grid = hs_grid_search(hs_settings, msi_run_id, dir_out=dir_results_meta)
+    time_dict = time_setup_img(dir_results_meta, msi_run_id)
+    proc_dict = proc_files_count_setup(dir_results_meta, msi_run_id)
+    # print('n_jobs: {0}'.format(n_jobs))
 
     # In[Process images]
     for idx_grid, row in df_grid.iterrows():
-        # if idx_grid >= 1:
+        # if idx_grid >= 54:
         #     break
         if idx_grid < idx_min:
             print('Skipping past idx_grix {0}...'.format(idx_grid))
@@ -111,7 +123,7 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
 
         time_dict, time_last = time_loop_init(time_dict, msi_run_id, row.name, n_jobs)
         if row['dir_panels'] == 'ref_closest_panel':
-            n_files = 835
+            n_files = 835  # ref_closest_panel has 24 less images because aerfsmall-20190723 did not have any reference panels in its images
         else:
             n_files = 859
         time_dict, time_last = time_step(time_dict, 'crop', time_last)
@@ -122,11 +134,17 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
         print('Smoothing..')  # smoothes spectra for every pixel
         smooth_pp(dir_data, row, n_jobs, out_force=False, n_files=n_files)
         time_dict, time_last = time_step(time_dict, 'smooth', time_last)
-        print('Segmenting..\n')  # each image has thousands of pixels; segmentation removes unwanted pixels before taking the mean spectra
+        print('Binning..')  # resamples spectra (or mimics a MS sensor) for every pixel
+        bin_pp(dir_data, row, n_jobs, out_force=False, n_files=n_files)
+        time_dict, time_last = time_step(time_dict, 'bin', time_last)
+        print('Segmenting..')  # each image has thousands of pixels; segmentation removes unwanted pixels before taking the mean spectra
         seg_pp(dir_data, row, n_jobs, out_force=False, n_files=n_files)
         time_dict, time_last = time_step(time_dict, 'segment', time_last)
+        # print('Derivative..')
+        # feats_pp(dir_data, row, n_jobs, out_force=False, n_files=n_files)
+        # time_dict, time_last = time_step(time_dict, 'derivative', time_last)
 
-        time_dict = append_times(dir_results, time_dict, msi_run_id)  # Saves timing
+        time_dict = append_times(dir_results_meta, time_dict, msi_run_id)  # Saves timing
 
         # Count and save results
         proc_dict['grid_idx'] = [idx_grid]
@@ -137,4 +155,4 @@ if __name__ == "__main__":  # required on Windows, so just do on all..
                            'expected.\nProcessed: {1}\nExpected: {2}\n'
                            ''.format(idx_grid, n_files_proc, n_files))
             warnings.warn(msg_n_files, RuntimeWarning)
-        proc_dict = proc_files_append(dir_results, proc_dict, msi_run_id)  # Saves file count
+        proc_dict = proc_files_append(dir_results_meta, proc_dict, msi_run_id)  # Saves file count

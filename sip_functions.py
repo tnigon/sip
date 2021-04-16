@@ -5,6 +5,7 @@ Created on Fri Mar 27 11:35:45 2020
 @author: nigo0024
 """
 from ast import literal_eval
+from copy import deepcopy
 import fnmatch
 import itertools as it
 import math
@@ -38,7 +39,7 @@ from sklearn.metrics import r2_score
 
 from scipy.stats import rankdata
 import warnings
-# from sklearn.utils.testing import ignore_warnings
+from sklearn.utils._testing import ignore_warnings
 from sklearn.exceptions import ConvergenceWarning
 
 # Plotting
@@ -128,24 +129,35 @@ def get_idx_grid(dir_results_msi, msi_run_id, idx_min=0):
 def grid_n_levels(df_grid):
     n_clip = len(df_grid['clip'].unique())
     n_smooth = len(df_grid['smooth'].unique())
+    n_bin = len(df_grid['bin'].unique())
     n_segment = len(df_grid['segment'].unique())
-    return n_clip, n_smooth, n_segment
+    return n_clip, n_smooth, n_bin, n_segment
 
 def clean_df_grid(df_grid):
-    for idx, row_n in df_grid.iterrows():
+    # [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+    # for proc_step,  in ['clip', 'smooth', 'bin', 'segment', 'feature'] and i in range(10):
+    #     print(proc_step, i)
+
+    scenarios = [(idx, row_n, proc_step) for idx, row_n in df_grid.iterrows()
+                 for proc_step in ['clip', 'smooth', 'bin', 'segment']]
+    for idx, row_n, proc_step in scenarios:
         try:
-            df_grid.loc[idx]['clip'] = literal_eval(row_n['clip'])
-        except ValueError:
-            pass
-        try:
-            df_grid.loc[idx]['smooth'] = literal_eval(row_n['smooth'])
-        except ValueError:
-            pass
-        try:
-            df_grid.loc[idx]['segment'] = literal_eval(row_n['segment'])
+            df_grid.loc[idx][proc_step] = literal_eval(row_n[proc_step])
         except ValueError:
             pass
     return df_grid
+        # try:
+        #     df_grid.loc[idx]['smooth'] = literal_eval(row_n['smooth'])
+        # except ValueError:
+        #     pass
+        # try:
+        #     df_grid.loc[idx]['bin'] = literal_eval(row_n['smooth'])
+        # except ValueError:
+        #     pass
+        # try:
+        #     df_grid.loc[idx]['segment'] = literal_eval(row_n['segment'])
+        # except ValueError:
+        #     pass
 
 def recurs_dir(base_dir, search_ext='.bip', level=None):
     '''
@@ -258,11 +270,14 @@ def get_msi_segment_dir(row, level='segment'):
     '''
     panel_type = row['dir_panels']
     crop_type = row['crop']
-    clip_type, wl_bands = get_clip_type(row)
-    smooth_type, window_size, order = get_smooth_type(row)
-    segment_type, method, wl1, wl2, wl3, mask_percentile, mask_side = get_segment_type(row)
+    clip_type, _ = get_clip_type(row)
+    smooth_type, _, _ = get_smooth_type(row)
+    bin_type, _, _, _ = get_bin_type(row)
+    segment_type, _, _, _, _, _, _ = get_segment_type(row)
     if level == 'segment':
-        msi_seg_dir = '/'.join((panel_type, crop_type, clip_type, smooth_type, segment_type))
+        msi_seg_dir = '/'.join((panel_type, crop_type, clip_type, smooth_type, bin_type, segment_type))
+    elif level == 'bin':
+        msi_seg_dir = '/'.join((panel_type, crop_type, clip_type, smooth_type, bin_type))
     elif level == 'smooth':
         msi_seg_dir = '/'.join((panel_type, crop_type, clip_type, smooth_type))
     elif level == 'clip':
@@ -296,6 +311,7 @@ def tier2_results_transfer(msi_result_dir, globus_client_id='684eb60a-9c5e-48af-
     subprocess.call(['s3cmd', 'put', '-r', dir_base + msi_result_dir, tier2_dir])
     subprocess.call(['rm', '-r', dir_base + msi_result_dir])
 
+
 def get_globus_data_dir(dir_base, msi_run_id, row,
                         msi_base='/home/yangc1/public',
                         level='segment'):
@@ -304,23 +320,24 @@ def get_globus_data_dir(dir_base, msi_run_id, row,
 
     Parameters:
         level (``str``): The data directory level to transfer; must
-            be one of ['segment', 'smooth', 'clip', 'crop'].
+            be one of ['segment', 'bin', 'smooth', 'clip', 'crop'].
     '''
     msi_seg_dir = get_msi_segment_dir(row, level=level)
-    label_base = 'msi_' + str(msi_run_id) + '_' + str(row.name).zfill(3)
+    dest_base_dir = os.path.basename(dir_base) + '_msi_run_' + str(msi_run_id)
     dir_source_data = '/'.join(
         (msi_base, os.path.basename(dir_base), 'data', msi_seg_dir + '/'))
     dir_dest_data = '/'.join(
-        ('/' + os.path.basename(dir_base), 'data', msi_seg_dir + '/'))
+        ('/' + dest_base_dir, 'data', msi_seg_dir + '/'))
     return dir_source_data, dir_dest_data
 
 def get_globus_results_dir(dir_base, msi_run_id, row, msi_base='/home/yangc1/public'):
     label_base = 'msi_' + str(msi_run_id) + '_' + str(row.name).zfill(3)
+    dest_base_dir = os.path.basename(dir_base) + '_msi_run_' + str(msi_run_id)
     dir_source_results = '/'.join(
         (msi_base,  os.path.basename(dir_base), 'results',
          'msi_' + str(msi_run_id) + '_results', label_base + '/'))
     dir_dest_results = '/'.join(
-        ('/' + os.path.basename(dir_base), 'results',
+        ('/' + dest_base_dir, 'results',
          'msi_' + str(msi_run_id) + '_results', label_base + '/'))
     return dir_source_results, dir_dest_results
 
@@ -331,10 +348,10 @@ def globus_autoactivate(tc, endpoint, if_expires_in=7200):
               "the following URL in a browser to activate the "
               "endpoint:")
         print("https://app.globus.org/file-manager?origin_id=%s"
-              % msi_endpoint)
+              % endpoint)
 
 def globus_transfer(dir_source_data, dir_dest_data, TRANSFER_REFRESH_TOKEN, client,
-                    TRANSFER_TOKEN, label=None, delete=True,
+                    TRANSFER_TOKEN, delete_only=None, label=None,
                     source_endpoint='d865fc6a-2db3-11e6-8070-22000b1701d1',
                     dest_endpoint='fb6f1c6b-86b1-11e8-9571-0a6d4e044368'):
     '''
@@ -346,12 +363,12 @@ def globus_transfer(dir_source_data, dir_dest_data, TRANSFER_REFRESH_TOKEN, clie
     dir_source_data = '/home/yangc1/public/hs_process/results/msi_1_results/'
     dir_dest_data = 'hs_process/results/msi_1_results'
     '''
-    if source_endpoint is None:
-        source_endpoint = tc.endpoint_search(filter_fulltext='umnmsi#home')
-    if dest_endpoint is None:
-        # dest_endpoint = tc.endpoint_search(filter_fulltext='umnmsi#tier2')
-        tier2_id = 'fb6f1c6b-86b1-11e8-9571-0a6d4e044368'
-        dest_endpoint = tc.get_endpoint(tier2_id)
+    # if source_endpoint is None:
+    #     source_endpoint = tc.endpoint_search(filter_fulltext='umnmsi#home')
+    # if dest_endpoint is None:
+    #     # dest_endpoint = tc.endpoint_search(filter_fulltext='umnmsi#tier2')
+    #     tier2_id = 'fb6f1c6b-86b1-11e8-9571-0a6d4e044368'
+    #     dest_endpoint = tc.get_endpoint(tier2_id)
 
     # First, get the transfer client using access tokens
     authorizer = globus_sdk.RefreshTokenAuthorizer(
@@ -369,23 +386,31 @@ def globus_transfer(dir_source_data, dir_dest_data, TRANSFER_REFRESH_TOKEN, clie
         encrypt_data=False, deadline=None, recursive_symlinks='ignore')
 
     tdata.add_item(dir_source_data, dir_dest_data, recursive=True)  # add directory
-    transfer_result = tc.submit_transfer(tdata)
-    print("GLOBUS TRANSFER task_id:", transfer_result["task_id"])
 
-    if delete is True:
+    transfer_result, delete_result = None, None
+    if delete_only == False or delete_only is None:  # transfer
+        transfer_result = tc.submit_transfer(tdata)
+        print("GLOBUS TRANSFER task_id:", transfer_result["task_id"])
         print('Waiting for transfer {0} to complete...'
               ''.format(transfer_result['task_id']))
         c = it.count(1)
         while not tc.task_wait(transfer_result['task_id'], timeout=60):
+            count = next(c)
             print('Transfer {0} has not yet finished; transfer submitted {1} '
-                  'minute(s) ago'.format(transfer_result['task_id'], next(c)))
+                  'minute(s) ago'.format(transfer_result['task_id'], count))
+            if count >= 6:
+                print('Cancelling task after {0} minutes.'.format(count))
+                tc.cancel_task(transfer_result['task_id'])
+            if count >= 8:
+                print('Looks like I have to break out of the while loop.')
+                break
         print('DONE.')
+    if delete_only == False or delete_only == True:  # delete
         ddata = globus_sdk.DeleteData(tc, source_endpoint, recursive=True)
         ddata.add_item(dir_source_data)
         delete_result = tc.submit_delete(ddata)
         print("GLOBUS DELETE task_id:", delete_result['task_id'])
-        return transfer_result, delete_result
-    return transfer_result
+    return transfer_result, delete_result
 
 def restart_script():
     print("argv was", sys.argv)
@@ -394,6 +419,17 @@ def restart_script():
     # os.execv(sys.executable, ['python'] + sys.argv)
     os.execv(sys.executable, ['python', __file__] + sys.argv[1:])
 
+def save_n_obs(dir_results_meta, df_join, msi_run_id, grid_idx, y_label, feat):
+    fname = os.path.join(dir_results_meta, 'msi_{0}_n_observations.csv'
+                         ''.format(msi_run_id))
+    if not os.path.exists(fname):
+        with open(fname, 'w+') as f:
+            f.write('msi_run_id, grid_idx, y_label, feature, obs_n\n')
+
+    with open(fname, 'a+') as f:
+        f.write('{0}, {1}, {2}, {3}, {4}\n'
+                ''.format(msi_run_id, grid_idx, y_label, feat, len(df_join)))
+
 # In[Timing functions]
 def time_setup_img(dir_out, msi_run_id):
     '''
@@ -401,10 +437,10 @@ def time_setup_img(dir_out, msi_run_id):
     row
     '''
     cols = ['msi_run_id', 'grid_idx', 'n_jobs', 'time_start', 'time_end', 'time_total',
-            'crop', 'clip', 'smooth', 'segment']
+            'crop', 'clip', 'smooth', 'bin', 'segment']
 
     pathlib.Path(dir_out).mkdir(parents=True, exist_ok=True)
-    fname_times = os.path.join(dir_out, 'time_msi_' + str(msi_run_id) + '_imgproc.csv')
+    fname_times = os.path.join(dir_out, 'msi_' + str(msi_run_id) + '_time_imgproc.csv')
     if not os.path.isfile(fname_times):
         df_times = pd.DataFrame(columns=cols)
         df_times.to_csv(fname_times, index=False)
@@ -417,10 +453,12 @@ def time_setup_training(dir_out, msi_run_id):
     row
     '''
     cols = ['n_jobs', 'msi_run_id', 'grid_idx', 'y_label', 'feats',
-            'time_start', 'time_end', 'time_total', 'init1', 'init2', 'init3',
-            'feat_sel', 'tune1', 'tune2', 'tune3', 'tune4', 'test', 'plot']
+            'time_start', 'time_end', 'time_total',
+            # 'init1', 'init2', 'init3',
+            'load_ground', 'load_spec', 'join_data', 'feat_sel', 'tune',
+            'test', 'plot']
     pathlib.Path(dir_out).mkdir(parents=True, exist_ok=True)
-    fname_times = os.path.join(dir_out, 'time_msi_' + str(msi_run_id) + '_train.csv')
+    fname_times = os.path.join(dir_out, 'msi_' + str(msi_run_id) + '_time_train.csv')
     if not os.path.isfile(fname_times):
         df_times = pd.DataFrame(columns=cols)
         df_times.to_csv(fname_times, index=False)
@@ -464,9 +502,9 @@ def append_times(dir_out, time_dict, msi_run_id):
     time_dict['time_total'] = [str(time_total)]
 
     if 'segment' in time_dict.keys():
-        fname = 'time_msi_' + str(msi_run_id) + '_imgproc.csv'
+        fname = 'msi_' + str(msi_run_id) + '_time_imgproc.csv'
     else:
-        fname = 'time_msi_' + str(msi_run_id) + '_train.csv'
+        fname = 'msi_' + str(msi_run_id) + '_time_train.csv'
     fname_times = os.path.join(dir_out, fname)
     df_time = pd.DataFrame.from_dict(time_dict)
     df_time.to_csv(fname_times, header=None, mode='a', index=False,
@@ -522,7 +560,9 @@ def proc_files_count(proc_dict, n_jobs, msi_run_id, key, dir_data, row, ext='.sp
     proc_dict['n_jobs'] = [n_jobs]
     proc_dict['msi_run_id'] = [msi_run_id]
     # dir_data has to be explicit if we're going to do this for every single level..
-    n_files_proc = len(recurs_dir(get_spec_data(dir_data, row), search_ext=ext))
+    # n_files_proc = len(recurs_dir(get_spec_data(dir_data, row, feat='reflectance'), search_ext=ext))
+    n_files_proc = len(fnmatch.filter(os.listdir(
+        get_spec_data(dir_data, row, feat='reflectance')), '*' + ext))
     proc_dict[key] = [n_files_proc]
     return proc_dict, n_files_proc
 
@@ -549,6 +589,7 @@ def print_details(row):
     print('Crop type: {0}'.format(row['crop']))
     print('Clip type: {0}'.format(row['clip']))
     print('Smooth type: {0}'.format(row['smooth']))
+    print('Bin type: {0}'.format(row['bin']))
     print('Segment type: {0}'.format(row['segment']))
 
 def get_clip_type(row):
@@ -585,6 +626,33 @@ def get_smooth_type(row):
         smooth_type = 'smooth_window_{0}'.format(window_size)
     return smooth_type, window_size, order
 
+def get_bin_type(row):
+    '''
+    Determines the bin type being used in this scenario (and updates
+    accordingly)
+
+    Parameters:
+        row (``pd.Series``):
+    '''
+    if pd.isnull(row['bin']):
+        method_bin = None
+    else:
+        method_bin = row['bin']['method']
+    if method_bin == 'spectral_mimic':
+        sensor = row['bin']['sensor']
+        bandwidth = None
+        bin_type = 'bin_mimic_{0}'.format(sensor.replace('-', '_'))
+    elif method_bin == 'spectral_resample':
+        sensor = None
+        bandwidth = row['bin']['bandwidth']
+        bin_type = 'bin_resample_{0}nm'.format(bandwidth)
+    else:
+        sensor = None
+        bandwidth = None
+        bin_type = 'bin_none'
+
+    return bin_type, method_bin, sensor, bandwidth
+
 def get_segment_type(row):
     '''
     Determines the segment type being used in this scenario and returns other relevant
@@ -603,6 +671,18 @@ def get_segment_type(row):
         wl1 = row['segment']['wl1']
         wl2 = row['segment']['wl2']
         wl3 = row['segment']['wl3']
+        mask_percentile = row['segment']['mask_percentile']
+        mask_side = row['segment']['mask_side']
+        if isinstance(mask_percentile, list):
+            mask_pctl_print = '_'.join([str(x) for x in mask_percentile])
+            segment_type = 'seg_{0}_{1}_{2}'.format(method, mask_pctl_print, get_side_inverse(mask_side))
+        else:
+            segment_type = 'seg_{0}_{1}_{2}'.format(method, mask_percentile, get_side_inverse(mask_side))
+    elif row['segment']['method'] == 'ndi':
+        method = row['segment']['method']
+        wl1 = row['segment']['wl1']
+        wl2 = row['segment']['wl2']
+        wl3 = None
         mask_percentile = row['segment']['mask_percentile']
         mask_side = row['segment']['mask_side']
         if isinstance(mask_percentile, list):
@@ -641,17 +721,31 @@ def smooth_get_base_dir(dir_data, panel_type, crop_type, clip_type):
         base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type)
     return base_dir
 
+def bin_get_base_dir(dir_data, panel_type, crop_type, clip_type, smooth_type):
+    '''
+    Gets the base directory for the binned images
+    '''
+    if smooth_type == 'smooth_none' and clip_type == 'clip_none':
+        base_dir = os.path.join(dir_data, panel_type, crop_type)
+    elif smooth_type == 'smooth_none' and clip_type != 'clip_none':
+        base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type)
+    else:  # smooth_type != 'smooth_none'
+        base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type, smooth_type)
+    return base_dir
+
 def seg_get_base_dir(dir_data, panel_type, crop_type, clip_type, smooth_type,
-                     wl_bands=None, window_size=None):
+                     bin_type):
     '''
     Gets the base directory for the segmented images
     '''
-    if wl_bands is None and window_size is None:
+    if bin_type == 'bin_none' and smooth_type == 'smooth_none' and clip_type == 'clip_none':
         base_dir = os.path.join(dir_data, panel_type, crop_type)
-    elif wl_bands is not None and window_size is None:  # wl_bands corresponds to clip_type
+    elif bin_type == 'bin_none' and smooth_type == 'smooth_none' and clip_type != 'clip_none':
         base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type)
-    else:  # basically, if window size is not none, use smooth_type directory
+    elif bin_type == 'bin_none' and smooth_type != 'smooth_none':
         base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type, smooth_type)
+    else:  # bin_type != 'bin_none'
+        base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type, smooth_type, bin_type)
     return base_dir
 
 def crop(df_crop, panel_type, dir_out_crop, out_force=True, n_files=854,
@@ -694,7 +788,43 @@ def crop(df_crop, panel_type, dir_out_crop, out_force=True, n_files=854,
     hsbatch.spatial_crop(fname_sheet=df_crop_aerf_whole, method='many_gdf',
                          gdf=gdf_aerf, base_dir_out=dir_out_crop,
                          folder_name=folder_name, name_append=name_append)
-    hsbatch = None
+
+def chunk_by_n(array, n):
+    np.random.shuffle(array)  # studies have different size images, so shuffling makes each chunk more similar
+    arrays = np.array_split(array, n)
+    list_out = []
+    for l in arrays:
+        list_out.append(l.tolist())
+    return list_out
+
+def check_missed_files(fname_list, base_dir_out, ext_out, f_pp, row, base_dir_f,
+                       out_force, lock):
+    '''
+    Check if any files were not processed that were supposed to be processed.
+
+    Parameters:
+        f_pp (function): The parallel processing function to run to
+            complete the processing of the missing files.
+        **kwargs (dict): keyword arguments to pass to f_pp.
+    '''
+    # Goal: take out filepaths and end text
+    to_process = [os.path.splitext(os.path.basename(i))[0].rsplit('-')[0] for i in fname_list]
+    name_ex, ext = os.path.splitext(fname_list[0])
+    end_str = '-' + '-'.join(name_ex.split('-')[1:]) + ext
+    # Find processed files without filepaths and end text
+    # base_dir_spec = os.path.join(dir_out_mask, 'reflectance')
+    fname_list_complete = fnmatch.filter(os.listdir(base_dir_out), '*' + ext_out)  # no filepath
+    processed = [os.path.splitext(i)[0].split('-')[0] for i in fname_list_complete]
+
+    missed = [f for f in to_process if f not in processed]
+    base_dir = os.path.dirname(fname_list[0])
+    fname_list_missed = [os.path.join(base_dir, f + end_str) for f in missed]
+    if len(missed) > 0:
+        print('There were {0} images that slipped through the cracks. '
+              'Processing them manually now...\n'.format(len(missed)))
+        print('Directory: {0}'.format(base_dir))
+        print('Here are the missed images:\n{0}\n'.format(missed))
+        f_pp(fname_list_missed, row, base_dir_f, out_force, lock)
 
 def clip(dir_data, row, out_force=True, n_files=854):
     '''
@@ -719,30 +849,6 @@ def clip(dir_data, row, out_force=True, n_files=854):
                               wl_bands=wl_bands)
     else:
         print('Clip: ``clip_type`` is None, so there is nothing to process.')
-
-# def clip_init(dir_data, row, n_files=854):
-#     '''
-#     Determines the image files that should be clipped
-#     '''
-#     panel_type = row['dir_panels']
-#     crop_type = row['crop']
-#     clip_type, wl_bands = get_clip_type(row)
-#     base_dir = os.path.join(dir_data, panel_type, crop_type)
-#     dir_out_clip = os.path.join(dir_data, panel_type, crop_type, clip_type)
-#     if check_processing(dir_out_clip, ext='.bip', n_files=n_files):
-#         fname_list = []
-#     elif wl_bands is None:
-#         fname_list = []
-#     else:
-#         fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
-#     return fname_list, wl_bands, dir_out_clip
-
-def chunk_by_n(array, n):
-    arrays = np.array_split(array, n)
-    list_out = []
-    for l in arrays:
-        list_out.append(l.tolist())
-    return list_out
 
 def clip_f_pp(fname_list_clip, wl_bands, dir_out_clip, out_force, lock):
     '''
@@ -771,7 +877,6 @@ def clip_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
     m = Manager()
     lock = m.Lock()
 
-    # fname_list_clip, wl_bands, dir_out_clip = clip_init(dir_data, row, n_files=n_files)
     panel_type = row['dir_panels']
     crop_type = row['crop']
     clip_type, wl_bands = get_clip_type(row)
@@ -780,30 +885,27 @@ def clip_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
     already_processed = check_processing(dir_out_clip, ext='.bip', n_files=n_files)
     if out_force is False and already_processed is True:
         fname_list = []
-    elif wl_bands is None:
+    elif clip_type == 'clip_none':
         fname_list = []
     else:
-        fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
+        fname_list = fnmatch.filter(os.listdir(base_dir), '*.bip')  # no filepath
+        fname_list = [os.path.join(base_dir, f) for f in fname_list]
+        # fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
 
     chunk_size = int(len(fname_list) / (n_jobs*2))
-    if wl_bands is None or len(fname_list) == 0:
+    if len(fname_list) == 0:
         print('Clip: ``clip_type`` is either None and there is nothing to '
               'process, or all the images are already processed.')
     else:
-        np.random.shuffle(fname_list)  # studies have different size images, so shuffling makes each chunk more similar
         chunks = chunk_by_n(fname_list, n_jobs*2)
         with ProcessPoolExecutor(max_workers=n_jobs) as executor:
             executor.map(
                 clip_f_pp, chunks, it.repeat(wl_bands),
                 it.repeat(dir_out_clip), it.repeat(out_force), it.repeat(lock))
 
-        # np.random.shuffle(fname_list)  # studies have different size images, so shuffling makes each chunk more similar
-        # if chunk_size == 0:
-        #     chunk_size = 1
-        # chunks = [fname_list[x:x+chunk_size] for x in range(0, len(fname_list), chunk_size)]
-        # with ProcessPoolExecutor() as executor:
-        #     array = [(fname_chunk, wl_bands, dir_out_clip, out_force) for fname_chunk in chunks]
-        #     executor.map(clip_f_pp, *zip(*array))
+        ext_out = '.bip'
+        check_missed_files(fname_list, dir_out_clip, ext_out, clip_f_pp, row,
+                           dir_out_clip, out_force, lock)
 
 def smooth(dir_data, row, out_force=True, n_files=854):
     '''
@@ -866,12 +968,14 @@ def smooth_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
     already_processed = check_processing(dir_out_smooth, ext='.bip', n_files=n_files)
     if out_force is False and already_processed is True:
         fname_list = []
-    elif window_size is None:
+    elif smooth_type == 'smooth_none':
         fname_list = []
     else:
-        fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
+        fname_list = fnmatch.filter(os.listdir(base_dir), '*.bip')  # no filepath
+        fname_list = [os.path.join(base_dir, f) for f in fname_list]
+        # fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
 
-    if window_size is None or len(fname_list) == 0:
+    if len(fname_list) == 0:
         print('Smooth: ``smooth_type`` is either None and there is nothing to '
               'process, or all the images are already processed.')
     else:
@@ -883,13 +987,94 @@ def smooth_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
                 it.repeat(order), it.repeat(dir_out_smooth),
                 it.repeat(out_force), it.repeat(lock))
 
-        # chunk_size = int(len(fname_list) / (os.cpu_count()*2))
-        # if chunk_size == 0:
-        #     chunk_size = 1
-        # chunks = [fname_list[x:x+chunk_size] for x in range(0, len(fname_list), chunk_size)]
-        # with ProcessPoolExecutor() as executor:
-        #     array = [(fname_chunk, window_size, order, dir_out_smooth, out_force) for fname_chunk in chunks]
-        #     executor.map(smooth_f_pp, *zip(*array))
+        ext = '.bip'
+        check_missed_files(fname_list, dir_out_smooth, ext, smooth_f_pp, row,
+                           dir_out_smooth, out_force, lock)
+
+def bin_f_pp(fname_list_bin, row, dir_out_bin, out_force, lock):
+    '''
+    Parallel processing: spectral mimic/resampling for each of the datacubes
+    according to instructions in df_grid organized for multi-core processing.
+    '''
+    bin_type, method_bin, sensor, bandwidth = get_bin_type(row)
+    msg = ('``bin_type`` must not be ``None``')
+    assert bin_type is not None, msg
+
+    hsbatch = batch(lock=lock)
+    hsbatch.io.set_io_defaults(force=out_force)
+    folder_name = None
+    name_append = os.path.split(dir_out_bin)[-1].replace('_', '-')
+    if method_bin == 'spectral_resample':
+        hsbatch.spectral_resample(
+            fname_list=fname_list_bin, folder_name=folder_name,
+            name_append=name_append, base_dir_out=dir_out_bin,
+            bandwidth=bandwidth)
+    elif method_bin == 'spectral_mimic':
+        hsbatch.spectral_mimic(
+            fname_list=fname_list_bin, folder_name=folder_name,
+            name_append=name_append, base_dir_out=dir_out_bin,
+            sensor=sensor)
+    else:
+        print('Bin: method "{0}" is not supported.'.format(method_bin))
+
+def bin_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
+    '''
+    Actual execution of spectral resampling/mimicking via multi-core processing
+    '''
+    m = Manager()
+    lock = m.Lock()
+    panel_type = row['dir_panels']
+    crop_type = row['crop']
+    clip_type, wl_bands = get_clip_type(row)
+    smooth_type, window_size, order = get_smooth_type(row)
+    bin_type, method_bin, sensor, bandwidth = get_bin_type(row)
+
+    base_dir = bin_get_base_dir(dir_data, panel_type, crop_type, clip_type,
+                                smooth_type)
+    dir_out_bin = os.path.join(dir_data, panel_type, crop_type, clip_type,
+                               smooth_type, bin_type)
+    already_processed = check_processing(dir_out_bin, ext='.bip', n_files=n_files)
+    if out_force is False and already_processed is True:
+        fname_list = []
+    elif bin_type == 'bin_none':
+        fname_list = []
+    else:
+        fname_list = fnmatch.filter(os.listdir(base_dir), '*.bip')  # no filepath
+        fname_list = [os.path.join(base_dir, f) for f in fname_list]
+        # fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
+
+    if len(fname_list) == 0:
+        print('Bin: ``bin_type`` is either None and there is nothing to '
+              'process, or all the images are already processed.')
+    else:
+        chunks = chunk_by_n(fname_list, n_jobs*2)
+        chunk_avg = sum([len(i) for i in chunks]) / len(chunks)
+        with ProcessPoolExecutor(max_workers=n_jobs) as executor:
+            executor.map(
+                bin_f_pp, chunks, it.repeat(row),
+                it.repeat(dir_out_bin), it.repeat(out_force), it.repeat(lock))
+
+        ext = '.bip'
+        check_missed_files(fname_list, dir_out_bin, ext, bin_f_pp, row,
+                           dir_out_bin, out_force, lock)
+
+        # # Goal: take out filepaths and end text
+        # to_process = [os.path.splitext(os.path.basename(i))[0].rsplit('-')[0] for i in fname_list]
+        # name_ex, ext = os.path.splitext(fname_list[0])
+        # end_str = '-' + '-'.join(name_ex.split('-')[1:]) + ext
+        # # Find processed files without filepaths and end text
+        # base_dir_seg = os.path.join(base_dir_bm, segment_type)
+        # fname_list_complete = fnmatch.filter(os.listdir(base_dir_seg), '*' + '.spec')  # no filepath
+        # processed = [os.path.splitext(i)[0].rsplit('-')[0] for i in fname_list_complete]
+
+        # missed = [f for f in to_process if f not in processed]
+        # # base_dir = os.path.dirname(fname_list[0])
+        # fname_list_missed = [os.path.join(base_dir, f + end_str) for f in missed]
+        # if len(missed) > 0:
+        #     print('There were {0} images that slipped through the cracks. '
+        #           'Processing them manually now...\n'.format(len(missed)))
+        #     print('Here are the missed images:\n{0}\n'.format(missed))
+        #     bin_f_pp(fname_list_missed, row, dir_out_bin, out_force, lock)
 
 def parse_wls(wl, idx=0):
     '''
@@ -933,6 +1118,41 @@ def get_side_inverse(mask_side):
         mask_side_inv = 'outside'
     return mask_side_inv
 
+def seg_spec_and_derivative(fname_list_seg, dir_out_mask, name_append,
+                            hsbatch):
+    '''
+    Calculates spectra and derivative spectra for all files and saves to
+    "reflectance" and "derivative_x" folders.
+    '''
+    fname_list_names = [os.path.splitext(os.path.basename(f))[0].split('-')[0] for f in fname_list_seg]
+
+    # If seg is None, then be sure to grab dirname(fname_list_seg[0])
+    if os.path.split(dir_out_mask)[-1] == 'seg_none':
+        dir_unmask = os.path.dirname(fname_list_seg[0])
+        fname_sample = fnmatch.filter(os.listdir(dir_unmask), '*.bip')[0]
+        name_append_dirname = os.path.splitext(fname_sample)[0].split('-', maxsplit=1)[-1]
+        fname_list_mask = [os.path.join(dir_unmask, f) + '-' + name_append_dirname + '.bip' for f in fname_list_names]
+    else:
+        fname_list_mask = [os.path.join(dir_out_mask, f) + '-' + name_append + '.bip' for f in fname_list_names]
+
+    hsbatch.cube_to_spectra(
+        fname_list=fname_list_mask, base_dir_out=dir_out_mask,
+        folder_name='reflectance', name_append=name_append,
+        write_geotiff=False)
+
+    dir_out_spec = os.path.join(dir_out_mask, 'reflectance')
+    fname_list_der = [os.path.join(dir_out_spec, f) + '-' + name_append + '-mean.spec' for f in fname_list_names]
+    name_append_der = name_append + '-derivative'
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_der, name_append=name_append_der, order=1,
+        base_dir_out=dir_out_mask, folder_name='derivative_1')
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_der, name_append=name_append_der, order=2,
+        base_dir_out=dir_out_mask, folder_name='derivative_2')
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_der, name_append=name_append_der, order=3,
+        base_dir_out=dir_out_mask, folder_name='derivative_3')
+
 def seg_zero_step(fname_list_seg, base_dir_bm, hsbatch, row):
     '''
     During the analysis, we may want to include auxiliary features from the
@@ -943,44 +1163,44 @@ def seg_zero_step(fname_list_seg, base_dir_bm, hsbatch, row):
     base_dir can also be a list of filenames (implemented for multi-core
     processing)
     '''
-    segment_type, method, wl1, wl2, wl3, mask_percentile, mask_side = get_segment_type(row)
+    segment_type, _, _, _, _, _, _ = get_segment_type(row)
 
-    name_append_spec = segment_type.replace('_', '-')
-    hsbatch.cube_to_spectra(
-        fname_list=fname_list_seg, folder_name=segment_type,
-        name_append=name_append_spec, base_dir_out=base_dir_bm, geotiff=False)
+    dir_out_mask = os.path.join(base_dir_bm, segment_type)
+    name_append = segment_type.replace('_', '-')
+    seg_spec_and_derivative(fname_list_seg, dir_out_mask, name_append, hsbatch)
 
     folder_name = 'bm_mcari2'
     name_append = folder_name.replace('_', '-')
-    # base_dir_bm = os.path.join(base_dir_bm, folder_name)
     hsbatch.segment_band_math(
         fname_list=fname_list_seg, folder_name=folder_name,
-        name_append=name_append, base_dir_out=base_dir_bm, geotiff=False,
+        name_append=name_append, base_dir_out=base_dir_bm, write_geotiff=False,
         method='mcari2', wl1=[800], wl2=[670], wl3=[550], plot_out=False,
         out_force=False)
+    folder_name = 'bm_ndi'
+    name_append = folder_name.replace('_', '-')
+    hsbatch.segment_band_math(
+        fname_list=fname_list_seg, folder_name=folder_name,
+        name_append=name_append, base_dir_out=base_dir_bm, write_geotiff=False,
+        method='ndi', wl1=[770, 800], wl2=[650, 680], plot_out=False,
+        out_force=False)
 
-def seg_one_step(base_dir, base_dir_bm, hsbatch, row):
+def seg_one_step(fname_list_seg, base_dir_bm, hsbatch, row):
     '''
     Perform band math then performs one-step segmentation. "one-step" refers to
     having only a single masking step rather than two masking steps (e.g.,
     mask below 75th pctl then above 95th pctl)
-    base_dir can also be a list of filenames (implemented for multi-core
+    fname_list_seg should be a list of filenames (implemented for multi-core
     processing)
     '''
-    if isinstance(base_dir, list):
-        fname_list_seg = base_dir
-        base_dir = None
-    else:
-        fname_list_seg = None
     segment_type, method, wl1, wl2, wl3, mask_percentile, mask_side = get_segment_type(row)
-    # hsbatch = batch()
-    if method == 'mcari2':
-        folder_name = 'bm_mcari2'
+
+    if isinstance(method, str):
+        folder_name = 'bm_{0}'.format(method)
         name_append = folder_name.replace('_', '-')
         base_dir_bm = os.path.join(base_dir_bm, folder_name)
         hsbatch.segment_band_math(
-            fname_list=fname_list_seg, base_dir=base_dir, folder_name=None,
-            name_append=name_append, base_dir_out=base_dir_bm, geotiff=False,
+            fname_list=fname_list_seg, folder_name=None,
+            name_append=name_append, base_dir_out=base_dir_bm, write_geotiff=False,
             method=method, wl1=wl1, wl2=wl2, wl3=wl3, plot_out=False,
             out_force=False)
     elif method == [545, 565]:
@@ -988,86 +1208,74 @@ def seg_one_step(base_dir, base_dir_bm, hsbatch, row):
         name_append = folder_name.replace('_', '-')
         base_dir_bm = os.path.join(base_dir_bm, folder_name)
         hsbatch.segment_composite_band(
-            fname_list=fname_list_seg, base_dir=base_dir, folder_name=None,
-            name_append=name_append, base_dir_out=base_dir_bm, geotiff=False,
+            fname_list=fname_list_seg, folder_name=None,
+            name_append=name_append, base_dir_out=base_dir_bm, write_geotiff=False,
             wl1=method, list_range=True, plot_out=False, out_force=False)
     elif method == [800, 820]:
         folder_name = 'bm_nir'
         name_append = folder_name.replace('_', '-')
         base_dir_bm = os.path.join(base_dir_bm, folder_name)
         hsbatch.segment_composite_band(
-            fname_list=fname_list_seg, base_dir=base_dir, folder_name=None,
-            name_append=name_append, base_dir_out=base_dir_bm, geotiff=False,
+            fname_list=fname_list_seg, folder_name=None,
+            name_append=name_append, base_dir_out=base_dir_bm, write_geotiff=False,
             wl1=method, list_range=True, plot_out=False, out_force=False)
 
-    base_dir_out = os.path.split(base_dir_bm)[0]
+    dir_out_mask = os.path.join(os.path.split(base_dir_bm)[0], segment_type)
     name_append = segment_type.replace('_', '-')
+
     hsbatch.segment_create_mask(
-        fname_list=fname_list_seg,
-        base_dir=base_dir, mask_dir=base_dir_bm, folder_name=segment_type,
-        name_append=name_append, base_dir_out=base_dir_out,
-        write_datacube=True, write_spec=True, write_geotiff=False,
+        fname_list=fname_list_seg, mask_dir=base_dir_bm, folder_name=None,
+        name_append=name_append, base_dir_out=dir_out_mask,
+        write_datacube=True, write_spec=False, write_geotiff=False,
         mask_percentile=mask_percentile, mask_side=mask_side, out_force=True)
 
-def seg_two_step(base_dir, base_dir_bm, hsbatch, row):
+    seg_spec_and_derivative(fname_list_seg, dir_out_mask, name_append, hsbatch)
+
+def seg_two_step(fname_list_seg, base_dir_bm, hsbatch, row):
     '''
     Performs band math then performs two-step segmentation. "two-step" refers to
     having more than a single masking step rather than a simple single masking
     step (e.g., mask only below 90th pctl)
-
-    base_dir can also be a list of filenames (implemented for multi-core
-    processing)
     '''
-    if isinstance(base_dir, list):
-        fname_list_seg = base_dir
-        base_dir = None
-    else:
-        fname_list_seg = None
     segment_type, methods, wl1, wl2, wl3, mask_percentiles, mask_sides = get_segment_type(row)
     mask_dirs = []
     for i, method in enumerate(methods):
-        if method == 'mcari2':
-            folder_name = 'bm_mcari2'
+        if isinstance(method, str):
+        # if method == 'mcari2':
+            folder_name = 'bm_{0}'.format(method)
             name_append = folder_name.replace('_', '-')
             mask_dirs.append(os.path.join(base_dir_bm, folder_name))
             hsbatch.segment_band_math(
-                fname_list=fname_list_seg, base_dir=base_dir, folder_name=None,  name_append=name_append,
-                base_dir_out=mask_dirs[i], geotiff=False, method=method,
-                wl1=wl1[i], wl2=wl2[i], wl3=wl3[i], plot_out=False, out_force=False)
+                fname_list=fname_list_seg, folder_name=None,  name_append=name_append,
+                base_dir_out=mask_dirs[i], write_geotiff=False, method=method,
+                wl1=wl1[i], wl2=wl2[i], wl3=wl3[i], plot_out=False)
         elif method == [545, 565]:
             folder_name = 'bm_green'
             name_append = folder_name.replace('_', '-')
             mask_dirs.append(os.path.join(base_dir_bm, folder_name))
             hsbatch.segment_composite_band(
-                fname_list=fname_list_seg, base_dir=base_dir, folder_name=None, name_append=name_append,
-                base_dir_out=mask_dirs[i], geotiff=False, wl1=method,
-                list_range=True, plot_out=False, out_force=False)
+                fname_list=fname_list_seg, folder_name=None, name_append=name_append,
+                base_dir_out=mask_dirs[i], write_geotiff=False, wl1=method,
+                list_range=True, plot_out=False)
         elif method == [800, 820]:
             folder_name = 'bm_nir'
             name_append = folder_name.replace('_', '-')
             mask_dirs.append(os.path.join(base_dir_bm, folder_name))
             hsbatch.segment_composite_band(
-                fname_list=fname_list_seg, base_dir=base_dir, folder_name=None, name_append=name_append,
-                base_dir_out=mask_dirs[i], geotiff=False, wl1=method,
-                list_range=True, plot_out=False, out_force=False)
+                fname_list=fname_list_seg, folder_name=None, name_append=name_append,
+                base_dir_out=mask_dirs[i], write_geotiff=False, wl1=method,
+                list_range=True, plot_out=False)
 
-    base_dir_out = os.path.split(mask_dirs[0])[0]
+    dir_out_mask = os.path.join(os.path.split(mask_dirs[0])[0], segment_type)
     name_append = segment_type.replace('_', '-')
-    hsbatch.segment_create_mask(
-        fname_list=fname_list_seg, base_dir=base_dir, mask_dir=mask_dirs, folder_name=segment_type,
-        name_append=name_append, base_dir_out=base_dir_out,
-        write_datacube=True, write_spec=True, write_geotiff=False,
-        mask_percentile=mask_percentiles, mask_side=mask_sides, out_force=True)
 
-    # base_dir_mask = os.path.join(base_dir_bm, segment_type)
-    # fname_list_complete = fnmatch.filter(os.listdir(base_dir_out), '*' + '.spec')
-    # fnames1 = [os.path.splitext(i)[0] for i in fname_list_seg]
-    # fnames2 = [os.path.splitext(i)[0] for i in fname_list_complete]
-    # fname_list_missed = [f + '.spec' for f in fnames1 if f not in fnames2]
-    # fname_list_missed_incorrect = [f + '.spec' for f in fnames2 if f not in fnames1]
-    # if len(fname_list_missed) > 0:
-    #     print('The following {0} files were not processed.. Why? --> {1}\n'.format(len(fname_list_missed), fname_list_missed))
-    #     print('Or were these {0} files not processed.. we must have been right in May --> {1}\n'.format(len(fname_list_missed_incorrect), fname_list_missed_incorrect))
+    hsbatch.segment_create_mask(  # it would be much faster to write_spec, but then we have to reorganize reflectance, derivative folders
+        fname_list=fname_list_seg, mask_dir=mask_dirs, folder_name=None,
+        name_append=name_append, base_dir_out=dir_out_mask,
+        write_datacube=True, write_spec=False, write_geotiff=False,
+        mask_percentile=mask_percentiles, mask_side=mask_sides, out_force=False)
+
+    seg_spec_and_derivative(fname_list_seg, dir_out_mask, name_append, hsbatch)
 
 def seg(dir_data, row, out_force=True, n_files=854):
     '''
@@ -1078,9 +1286,10 @@ def seg(dir_data, row, out_force=True, n_files=854):
     crop_type = row['crop']
     clip_type, wl_bands = get_clip_type(row)
     smooth_type, window_size, order = get_smooth_type(row)
+    bin_type, _, _, _ = get_bin_type(row)
     segment_type, method, _, _, _, _, _ = get_segment_type(row)
 
-    base_dir = seg_get_base_dir(dir_data, panel_type, crop_type, clip_type, smooth_type, wl_bands, window_size)
+    base_dir = seg_get_base_dir(dir_data, panel_type, crop_type, clip_type, smooth_type, bin_type)
     base_dir_bm = os.path.join(dir_data, panel_type, crop_type, clip_type,
                                smooth_type)
     dir_out_mask = os.path.join(dir_data, panel_type, crop_type, clip_type,
@@ -1103,26 +1312,23 @@ def seg(dir_data, row, out_force=True, n_files=854):
         name_append = segment_type.replace('_', '-')
         hsbatch.cube_to_spectra(base_dir=base_dir, folder_name=segment_type,
                                 name_append=name_append,
-                                base_dir_out=base_dir_bm, geotiff=False)
+                                base_dir_out=base_dir_bm, write_geotiff=False)
 
 def seg_f_pp(fname_list_seg, row, base_dir_bm, out_force, lock):
     '''
     Parallel processing: segments each of the datacubes according to
     instructions in df_grid organized for multi-core processing.
     '''
-    segment_type, method, _, _, _, _, _ = get_segment_type(row)
-    msg = ('``segment_type`` must not be ``None``')
-    assert segment_type is not None, msg
+    _, method_seg, _, _, _, _, _ = get_segment_type(row)
 
     hsbatch = batch(lock=lock)
     hsbatch.io.set_io_defaults(force=out_force)
-    if isinstance(method, list) and len(method) == 2: # two step
+    if isinstance(method_seg, list) and len(method_seg) == 2: # two step
         seg_two_step(fname_list_seg, base_dir_bm, hsbatch, row)
-    elif method is not None:  # one step
+    elif method_seg is not None:  # one step
         seg_one_step(fname_list_seg, base_dir_bm, hsbatch, row)
     else:
         seg_zero_step(fname_list_seg, base_dir_bm, hsbatch, row)
-
 
 def seg_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
     '''
@@ -1133,83 +1339,130 @@ def seg_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
 
     panel_type = row['dir_panels']
     crop_type = row['crop']
-    clip_type, wl_bands = get_clip_type(row)
-    smooth_type, window_size, order = get_smooth_type(row)
-    segment_type, method, _, _, _, _, _ = get_segment_type(row)
+    clip_type, _ = get_clip_type(row)
+    smooth_type, _, _ = get_smooth_type(row)
+    bin_type, _, _, _ = get_bin_type(row)
+    segment_type, method_seg, _, _, _, _, _ = get_segment_type(row)
 
     base_dir = seg_get_base_dir(dir_data, panel_type, crop_type, clip_type,
-                                smooth_type, wl_bands, window_size)
+                                smooth_type, bin_type)
     base_dir_bm = os.path.join(dir_data, panel_type, crop_type, clip_type,
-                               smooth_type)
+                               smooth_type, bin_type)
     dir_out_mask = os.path.join(dir_data, panel_type, crop_type, clip_type,
-                                smooth_type, segment_type)
-    already_processed = check_processing(dir_out_mask, ext='.bip', n_files=n_files)
-    if out_force is False and already_processed is True:
+                                smooth_type, bin_type, segment_type)
+    dir_out_spec = os.path.join(dir_out_mask, 'reflectance')
+    # dir_out_der1 = os.path.join(dir_out_mask, 'derivative_1')
+    pathlib.Path(dir_out_spec).mkdir(parents=True, exist_ok=True)
+
+    proc_mask = check_processing(dir_out_mask, ext='.bip', n_files=n_files)
+    proc_spec = check_processing(dir_out_spec, ext='.spec', n_files=n_files)
+    # proc_der = check_processing(dir_out_der1, ext='.spec', n_files=n_files)
+    if out_force is False and proc_mask is True and proc_spec is True:
         fname_list = []
-    # elif window_size is None:
+    # elif segment_type == 'seg_none':  # can't do this because we still have to run seg_zero_step
     #     fname_list = []
     else:
-        fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
+        fname_list = fnmatch.filter(os.listdir(base_dir), '*.bip')  # no filepath
+        fname_list = [os.path.join(base_dir, f) for f in fname_list]
+        # fname_list = recurs_dir(base_dir, search_ext='.bip', level=0)
 
     if len(fname_list) == 0:
-        print('Segment: There are no images in ``fname_list`` to process.\n')
+        print('Segment: all images are already processed.\n')
     else:
-        if method is None:
+        if method_seg is None:
             print('Segment: ``segment_type`` is None, so there will not be any '
-                  'segmentation/masking performed.')
+                  'segmentation/masking performed. Mean spectra and derivative '
+                  'spectra are being extracted...')
+
         chunks = chunk_by_n(fname_list, n_jobs*2)
-        print('Length of fname_list: {0}'.format(len(fname_list)))
-        print('Number of chunks: {0}'.format(len(chunks)))
+        # print('Length of fname_list: {0}'.format(len(fname_list)))
+        # print('Number of chunks: {0}'.format(len(chunks)))
         chunk_avg = sum([len(i) for i in chunks]) / len(chunks)
-        print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
-        print('Number of cores: {0}\n'.format(n_jobs))
+        # print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
+        # print('Number of cores: {0}\n'.format(n_jobs))
         with ProcessPoolExecutor(max_workers=n_jobs) as executor:
             executor.map(
                 seg_f_pp, chunks, it.repeat(row),
                 it.repeat(base_dir_bm), it.repeat(out_force), it.repeat(lock))
 
-        # Goal: take out filepaths and end text
-        to_process = [os.path.splitext(os.path.basename(i))[0].rsplit('-')[0] for i in fname_list]
-        name_ex, ext = os.path.splitext(fname_list[0])
-        end_str = '-' + '-'.join(name_ex.split('-')[1:]) + ext
-        # Find processed files without filepaths and end text
-        base_dir_seg = os.path.join(base_dir_bm, segment_type)
-        fname_list_complete = fnmatch.filter(os.listdir(base_dir_seg), '*' + '.spec')  # no filepath
-        processed = [os.path.splitext(i)[0].rsplit('-')[0] for i in fname_list_complete]
+        ext_out = '.spec'
+        check_missed_files(fname_list, dir_out_spec, ext_out, seg_f_pp, row,
+                           base_dir_bm, out_force, lock)
 
-        missed = [f for f in to_process if f not in processed]
-        # base_dir = os.path.dirname(fname_list[0])
-        fname_list_missed = [os.path.join(base_dir, f + end_str) for f in missed]
-        if len(missed) > 0:
-            print('There were {0} images that slipped through the cracks. '
-                  'Processing them manually now...\n'.format(len(missed)))
-            print('Here are the missed images:\n{0}\n'.format(missed))
-            seg_f_pp(fname_list_missed, row, base_dir_bm, out_force, lock)
-            # print('Here are the filenames that are being passed to '
-            #       '"seg_f_pp": {0}\n'.format(fname_list_missed))
-            # print('Here is the full fname_list: {0}\n'.format(fname_list))
-            # print('Here is the full fname_list_complete: {0}\n'.format(fname_list_complete))
-            # print('Here is the full processed: {0}\n'.format(processed))
-            # print('Here is base_dir_seg: {0}\n'.format(base_dir_seg))
+def feats_f_pp(fname_list_derivative, dir_out_derivative, name_append,
+               out_force, lock):
+    '''
+    Parallel processing: calculates the derivative spectra for each of the
+    datacubes according to instructions in df_grid organized for multi-core
+    processing.
+    '''
+    hsbatch = batch(lock=lock)
+    hsbatch.io.set_io_defaults(force=out_force)
+    folder_name = None
+    # name_append = os.path.split(dir_out_derivative)[-1].replace('_', '-')
+    hsbatch.spectra_derivative(
+        fname_list=fname_list_derivative, folder_name=None,
+        name_append=name_append, base_dir_out=dir_out_derivative)
+
+def feats_pp(dir_data, row, n_jobs, out_force=True, n_files=854):
+    '''
+    Actual execution of spectral derivative calculation via multi-core processing
+    '''
+    m = Manager()
+    lock = m.Lock()
+
+    panel_type = row['dir_panels']
+    crop_type = row['crop']
+    clip_type, wl_bands = get_clip_type(row)
+    smooth_type, window_size, order = get_smooth_type(row)
+    bin_type, _, _, _ = get_bin_type(row)
+    segment_type, method_seg, _, _, _, _, _ = get_segment_type(row)
+    feature_type = row['features']
+
+    if feature_type == 'reflectance' or feature_type is None:  # we don't have to do anything since this was already done in segmentatino step
+        print('Features: ``feature_type`` is either None or "reflectance" and '
+              'there is nothing to process.')
+        return
+
+    # base_dir_feat = seg_get_base_dir(dir_data, panel_type, crop_type,
+    #                                  clip_type, smooth_type, bin_type)
+    base_dir = os.path.join(dir_data, panel_type, crop_type, clip_type,
+                            smooth_type, bin_type, segment_type)
+    dir_out_derivative = os.path.join(base_dir, feature_type)
+    name_append = segment_type.replace('_', '-')  #  want to keep this to keep file names unique
+    already_processed = check_processing(dir_out_derivative, ext='.spec', n_files=n_files)
+    if out_force is False and already_processed is True:
+        fname_list = []
+    else:
+        fname_list = recurs_dir(os.path.join(base_dir, 'reflectance'), search_ext='.spec', level=0)
+
+    chunk_size = int(len(fname_list) / (n_jobs*2))
+    np.random.shuffle(fname_list)  # studies have different size images, so shuffling makes each chunk more similar
+    chunks = chunk_by_n(fname_list, n_jobs*2)
+    with ProcessPoolExecutor(max_workers=n_jobs) as executor:
+        executor.map(
+            feats_f_pp, chunks, it.repeat(dir_out_derivative),
+            it.repeat(name_append), it.repeat(out_force), it.repeat(lock))
 
 # In[Training initialization functions]
-def load_ground_data(data_dir):
+def load_ground_data(dir_data, y_label='biomass_kgha'):
     '''
     Loads the ground data for supervised regression. This should be saved to the
     MSI data directory
     '''
-    fname_wells_18 = os.path.join(data_dir, 'wells_ground_data_2018.csv')
-    fname_wells_19 = os.path.join(data_dir, 'wells_ground_data_2019.csv')
-    fname_aerf_19 = os.path.join(data_dir, 'aerf_ground_data.csv')
+    fname_wells_18 = os.path.join(dir_data, 'wells_ground_data_2018.csv')
+    fname_wells_19 = os.path.join(dir_data, 'wells_ground_data_2019.csv')
+    fname_aerf_19 = os.path.join(dir_data, 'aerf_ground_data.csv')
     df1 = pd.read_csv(fname_wells_18)
     df2 = pd.read_csv(fname_wells_19)
     df3 = pd.read_csv(fname_aerf_19)
     col = ['study', 'date_image', 'plot_id', 'trt', 'rate_n_pp_kgha',
            'rate_n_sd_plan_kgha', 'rate_n_total_kgha', 'growth_stage',
-           'tissue_n_pct', 'biomass_kgha', 'nup_kgha']
-    df_wells1 = df1[pd.notnull(df1['growth_stage'])][col].reset_index(drop=True)
-    df_wells2 = df2[pd.notnull(df2['growth_stage'])][col].reset_index(drop=True)
-    df_aerf = df3[pd.notnull(df3['growth_stage'])][col].reset_index(drop=True)
+           y_label]
+           # 'tissue_n_pct', 'biomass_kgha', 'nup_kgha']
+    df_wells1 = df1[pd.notnull(df1[y_label])][col].reset_index(drop=True)
+    df_wells2 = df2[pd.notnull(df2[y_label])][col].reset_index(drop=True)
+    df_aerf = df3[pd.notnull(df3[y_label])][col].reset_index(drop=True)
     df_ground = df_wells1.append(df_wells2).reset_index(drop=True)
     df_ground = df_ground.append(df_aerf).reset_index(drop=True)
     df_ground.insert(1, 'date', None)
@@ -1217,28 +1470,35 @@ def load_ground_data(data_dir):
     del df_ground['date_image']
     return df_ground
 
-def get_spec_data(dir_data, row):
+def get_spec_data(dir_data, row, feat='reflectance'):
     '''
     Searches for hyperspectral .spec files; from here, can be loaed in for
     supervised regression or simply counted to be sure all expected files were
     processed
+
+    Parameters:
+        feat (``str``): must be either "reflectance" or "derivative",
+        indicating which directory path to return.
     '''
     panel_type = row['dir_panels']
     crop_type = row['crop']
     clip_type, _ = get_clip_type(row)
     smooth_type, _, _ = get_smooth_type(row)
+    bin_type, _, _, _ = get_bin_type(row)
     segment_type, _, _, _, _, _, _ = get_segment_type(row)
-    base_dir_spec = os.path.join(dir_data, panel_type, crop_type,
-                                 clip_type, smooth_type, segment_type)
+    base_dir_spec = os.path.join(dir_data, panel_type, crop_type, clip_type,
+                                 smooth_type, bin_type, segment_type, feat)
     return base_dir_spec
 
-def load_spec_data(dir_data, row):
+def load_spec_data(dir_data, row, feat='reflectance'):
     '''
     Loads the hyperspectral image data for supervised regression
 
     Must have the following meta columns: study, date, plot_id
+
+    feat must be one of "reflectance" or "derivative".
     '''
-    base_dir_spec = get_spec_data(dir_data, row)
+    base_dir_spec = get_spec_data(dir_data, row, feat)
     hsbatch = batch()
     df_spec = hsbatch.spectra_to_df(
         base_dir=base_dir_spec, search_ext='spec', dir_level=0)
@@ -1261,9 +1521,10 @@ def load_preseg_stats(dir_data, row, bm_folder_name='bm_mcari2'):
     crop_type = row['crop']
     clip_type, _ = get_clip_type(row)
     smooth_type, _, _ = get_smooth_type(row)
+    bin_type, _, _, _ = get_bin_type(row)
     segment_type, _, _, _, _, _, _ = get_segment_type(row)
-    base_dir_bm = os.path.join(dir_data, panel_type, crop_type,
-                               clip_type, smooth_type, bm_folder_name)
+    base_dir_bm = os.path.join(dir_data, panel_type, crop_type, clip_type,
+                               smooth_type, bin_type, bm_folder_name)
     stats_csv = bm_folder_name.replace('_', '-') + '-stats.csv'
     df_bm_stats = pd.read_csv(os.path.join(base_dir_bm, stats_csv))
     df_bm_stats = insert_date_study(df_bm_stats)
@@ -1299,10 +1560,23 @@ def join_ground_bm_spec(df_ground, df_bm_stats, df_spec, on=['study', 'date', 'p
     unique dataset will be given an "dataset_id" to help with stratified
     sampling later on
     '''
-    df_ground.insert(0, 'dataset_id', None)
-    df_ground['dataset_id'] = df_ground.groupby(['study','date']).ngroup()
-    df_join = df_ground.merge(df_bm_stats, on=on)
+    df_ground_copy = df_ground.copy()
+    df_ground_copy.insert(0, 'dataset_id', None)
+    df_ground_copy['dataset_id'] = df_ground_copy.groupby(['study','date']).ngroup()
+    df_join = df_ground_copy.merge(df_bm_stats, on=on)
     df_join = df_join.merge(df_spec, on=on)
+    return df_join
+
+def join_ground_spec(df_ground, df_spec, on=['study', 'date', 'plot_id']):
+    '''
+    Joins data so it is available in a single dataframe. Before joining, each
+    unique dataset will be given an "dataset_id" to help with stratified
+    sampling later on
+    '''
+    df_ground_copy = df_ground.copy()
+    df_ground_copy.insert(0, 'dataset_id', None)
+    df_ground_copy['dataset_id'] = df_ground_copy.groupby(['study','date']).ngroup()
+    df_join = df_ground_copy.merge(df_spec, on=on)
     return df_join
 
 def save_joined_df(dir_results, df_join, msi_run_id, grid_idx, y_label):
@@ -1337,6 +1611,7 @@ def create_readme(dir_results, msi_run_id, row):
         f.write('Crop type: {0}\n'.format(row['crop']))
         f.write('Clip type: {0}\n'.format(row['clip']))
         f.write('Smooth type: {0}\n'.format(row['smooth']))
+        f.write('Bin type: {0}\n'.format(row['bin']))
         f.write('Segment type: {0}\n\n'.format(row['segment']))
 
 def write_to_readme(msg, dir_results, msi_run_id, row):
@@ -1487,6 +1762,7 @@ def param_grid_add_key(param_grid_dict, key='regressor__'):
         param_grid_mod[model] = {f'{key}{k}': v for k, v in param_grid_mod[model].items()}
     return param_grid_mod
 
+@ignore_warnings(category=ConvergenceWarning)
 def feat_selection_lasso(X, y, alpha, max_iter, random_seed):
     '''
     Feature selection via lasso algorithm
@@ -1875,11 +2151,11 @@ def filter_logspace_list_pp(logspace_list, X1, y1, max_iter, random_seed, n_jobs
     chunks = chunk_by_n(logspace_list, n_jobs*2)
     if len(logspace_list) < n_jobs * 2:
         chunks = chunk_by_n(logspace_list, n_jobs)
-    print('Length of logspace_list: {0}'.format(len(logspace_list)))
-    print('Number of chunks: {0}'.format(len(chunks)))
+    # print('Length of logspace_list: {0}'.format(len(logspace_list)))
+    # print('Number of chunks: {0}'.format(len(chunks)))
     chunk_avg = sum([len(i) for i in chunks]) / len(chunks)
-    print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
-    print('Number of cores: {0}\n'.format(n_jobs))
+    # print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
+    # print('Number of cores: {0}\n'.format(n_jobs))
     df_all = None
     with ProcessPoolExecutor(max_workers=n_jobs) as executor:
         for df_feats in executor.map(
@@ -1894,6 +2170,7 @@ def filter_logspace_list_pp(logspace_list, X1, y1, max_iter, random_seed, n_jobs
     logspace_list_filtered = list(reversed(sorted(df_all['alpha'])))
     return logspace_list_filtered
 
+@ignore_warnings(category=ConvergenceWarning)
 def model_tuning(model, param_grid, standardize, scoring, refit,
                  X_select, y, cv_rep_strat, n_jobs=1):
     '''
@@ -1911,6 +2188,7 @@ def model_tuning(model, param_grid, standardize, scoring, refit,
             'yeo-johnson', standardize=standardize))
     clf = GridSearchCV(transformer, param_grid, n_jobs=n_jobs, cv=cv_rep_strat,
                        return_train_score=True, scoring=scoring, refit=refit)
+    # with ignore_warnings(category=ConvergenceWarning):
     clf.fit(X_select, y)
     df_tune = pd.DataFrame(clf.cv_results_)
     return df_tune, transformer
@@ -2034,33 +2312,41 @@ def execute_tuning(alpha_list, X, y, model_list, param_grid_dict, standardize, s
         'score_train_r2', 'std_train_r2', 'score_val_r2', 'std_val_r2',
         'tune_params', 'features', 'feat_ranking']
 
-    param_grid_dict = param_grid_add_key(param_grid_dict, key)
-    # pg_las_mod, pg_svr_mod, pg_rf_mod, pg_pls_mod = get_param_grids(
-    #     key, pg_las, pg_svr, pg_rf, pg_pls)
+    param_grid_dict_key = param_grid_add_key(param_grid_dict, key)
     df_tune_feat_list = (None,) * len(model_list)
+    # alpha_list = chunks[7]
     for alpha in alpha_list:
         X_select, feats, feat_ranking = feat_selection_lasso(
             X, y, alpha, max_iter, random_seed)
 
         print('Number of features: {0}'.format(len(feats)))
         temp_list = []
-        for idx1, (model, param_grid) in enumerate(zip(model_list, param_grid_dict)):
+        for idx1, (model, param_grid) in enumerate(zip(model_list, param_grid_dict_key.values())):
             cv_rep_strat = get_repeated_stratified_kfold(
                 df_train, n_splits, n_repeats, random_seed)
+
+            param_grid_dc = deepcopy(param_grid)
+            # will show a verbose warning if n_components exceeds n_feats
+            if f'{key}n_components' in param_grid_dc:
+                n_comp = param_grid_dc[f'{key}n_components']
+                if len(feats) < max(n_comp):
+                    print('Trimming excess components in <param_grid>...')
+                    n_comp_trim = [i for i in n_comp if i <= len(feats)]
+                    param_grid_dc[f'{key}n_components'] = n_comp_trim
+                    # print('n_components: {0}'.format(param_grid_dc[f'{key}n_components']))
             df_tune_temp = tune_model(
-                X_select, y, model, param_grid_dict[param_grid],
+                X_select, y, model, param_grid_dc,
                 standardize, scoring, scoring_refit, key, cv_rep_strat,
                 feats, feat_ranking, alpha, cols)
             if print_results is True:
                 print_model(model)
                 print('R2: {0:.3f}\n'.format(df_tune_temp['score_val_r2'].values[0]))
             temp_list.append(df_tune_temp)
-        if df_tune_feat_list is None:
-            df_tune_feat_list = tuple(temp_list)
-        else:
-            df_tune_feat_list = append_tuning_results(df_tune_feat_list, temp_list)
+        df_tune_feat_list = append_tuning_results(df_tune_feat_list, temp_list)
     return df_tune_feat_list
 
+# len(df_tune_feat_list[0])
+# len(df_tune_feat_list[1])
 # @ignore_warnings(category=ConvergenceWarning)
 def execute_tuning_pp(
         logspace_list, X1, y1, model_list, param_grid_dict, standardize,
@@ -2073,14 +2359,15 @@ def execute_tuning_pp(
     # lock = m.Lock()
     # chunks = chunk_by_n(reversed(logspace_list))
     # chunk_size = int(len(logspace_list) / (n_jobs*2)) + 1
-    chunks = chunk_by_n(logspace_list, n_jobs*2)
+    chunks = chunk_by_n(logspace_list, n_jobs*2)  # remember this shuffles logspace_list
     if len(logspace_list) < n_jobs * 2:
         chunks = chunk_by_n(logspace_list, n_jobs)
-    print('Length of logspace_list: {0}'.format(len(logspace_list)))
-    print('Number of chunks: {0}'.format(len(chunks)))
+    # print('Length of logspace_list: {0}'.format(len(logspace_list)))
+    # print('Number of chunks: {0}'.format(len(chunks)))
     chunk_avg = sum([len(i) for i in chunks]) / len(chunks)
-    print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
-    print('Number of cores: {0}\n'.format(n_jobs))
+    # print('Average length of each chunk: {0:.1f}'.format(chunk_avg))
+    # print('Number of cores: {0}\n'.format(n_jobs))
+
     with ProcessPoolExecutor(max_workers=n_jobs) as executor:
         # for alpha, df_tune_feat_list in zip(reversed(logspace_list), executor.map(execute_tuning, it.repeat(X1), it.repeat(y1), it.repeat(model_list), it.repeat(param_grid_dict), reversed(logspace_list),
         #                                                                           it.repeat(standardize), it.repeat(scoring), it.repeat(scoring_refit), it.repeat(max_iter), it.repeat(random_seed),
@@ -2120,65 +2407,18 @@ def filter_tuning_results(df_tune_all_list, score):
     '''
     df_tune_list = ()
     for df_tune in df_tune_all_list:
-        # if df_tune is not None:
-        idx = df_tune.groupby(['feat_n'])[score].transform(max) == df_tune[score]
-        idx_feat1 = df_tune['feat_n'].searchsorted(1, side='left')  # if first non-zero feat_n row is NaN, include that so other dfs have same number of rows (PLS)
-        if np.isnan(df_tune.iloc[idx_feat1][score]):
-            idx.iloc[idx_feat1] = True
+        df_tune = df_tune.reset_index(drop=True)
+        array_idx = df_tune.groupby(['feat_n'])[score].transform(max) == df_tune[score]
+        # if first non-zero feat_n row is NaN, include that so other dfs have same number of rows (PLS)
+        if np.isnan(df_tune.loc[df_tune['feat_n'].idxmin(),score]):
+            array_idx.loc[df_tune['feat_n'].idxmin()] = True
         df_tune['feat_n'] = df_tune['feat_n'].apply(pd.to_numeric)
-        df_filtered = df_tune[idx].drop_duplicates(['feat_n']).sort_values('feat_n').reset_index(drop=True)
-        # df_tune_list.append(df_filtered)
+        df_filtered = df_tune[array_idx].drop_duplicates(['feat_n']).sort_values('feat_n').reset_index(drop=True)
         df_tune_list += (df_filtered,)
     return df_tune_list
 
-def summarize_tuning_loop(df_tune_list, model_list, idx, data, df_params, key):
-    '''
-    Detailed loop getting hyperparameters for all the models
-    '''
-    for idx_df, df in enumerate(df_tune_list):
-        if isinstance(model_list[idx_df], Lasso):
-            las_params = df.loc[idx]['tune_params']
-            try:
-                las_alpha = las_params[f'{key}alpha']
-            except TypeError:  # when cell is nan instead of dict
-                continue  # go to next index where there is actually data
-            data.extend([las_alpha])
-        elif isinstance(model_list[idx_df], SVR):
-            svr_params = df.loc[idx]['tune_params']
-            svr_kernel = svr_params[f'{key}kernel']
-            try:
-                svr_gamma = svr_params[f'{key}gamma']
-            except KeyError:
-                svr_gamma = np.nan
-            svr_C = svr_params[f'{key}C']
-            svr_epsilon = svr_params[f'{key}epsilon']
-            data.extend([svr_kernel, svr_gamma, svr_C, svr_epsilon])
-        elif isinstance(model_list[idx_df], RandomForestRegressor):
-            rf_params = df.loc[idx]['tune_params']
-            rf_min_samples_split = rf_params[f'{key}min_samples_split']
-            rf_max_feats = rf_params[f'{key}max_features']
-            data.extend([rf_min_samples_split, rf_max_feats])
-        elif isinstance(model_list[idx_df], PLSRegression) and len(df) > idx:
-            try:
-                pls_params = df.loc[idx]['tune_params']
-                try:
-                    pls_n_components = pls_params[f'{key}n_components']
-                    pls_scale = pls_params[f'{key}scale']
-                except TypeError:
-                    pls_n_components = np.nan
-                    pls_scale = np.nan
-            except KeyError:
-                pls_n_components = np.nan
-                pls_scale = np.nan
-
-            data.extend([pls_n_components, pls_scale])
-        elif isinstance(model_list[idx_df], PLSRegression) and len(df) <= idx:
-            data.extend([np.nan, np.nan])
-    df_temp = pd.DataFrame(data=[data], columns=df_params.columns)
-    df_params = df_params.append(df_temp)
-    return df_params
-
-def summarize_tuning_results(df_tune_list, model_list, param_grid_dict, key=''):
+def summarize_tuning_results(df_tune_list, model_list, param_grid_dict,
+                             key=''):
     '''
     Summarizes the hyperparameters from the tuning process into a single
     dataframe
@@ -2187,34 +2427,80 @@ def summarize_tuning_results(df_tune_list, model_list, param_grid_dict, key=''):
     for k1, v1 in param_grid_dict.items():
         for k2, v2 in param_grid_dict[k1].items():
             k2_short = k2.replace(key, '')
-            print(k1 + '_' + k2_short)
             cols_params.append(k1 + '_' + k2_short)
+            
     df_params = pd.DataFrame(columns=cols_params)
-    num_rows = len(df_tune_list[0])  # all dfs should be same length
-    for idx in range(num_rows):
-        feat_n = df_tune_list[0].loc[idx]['feat_n']  # should be the same for all dfs
-        data = [feat_n]
-        df_params = summarize_tuning_loop(
-            df_tune_list, model_list, idx, data, df_params, key)
+    # for each feature (if missing just put nan)
+    feat_max = max([df['feat_n'].max() for df in df_tune_list])
+    for feat_n in range(1,feat_max+1):
+        data_dict = {i: np.nan for i in cols_params}
+        data_dict['feat_n'] = [feat_n]
+        for idx_df, df_original in enumerate(df_tune_list):
+            df = df_original.copy()
+            df.set_index('feat_n', inplace=True)
+            if isinstance(model_list[idx_df], Lasso) and feat_n in df.index:
+                las_params = df.loc[feat_n]['tune_params']
+                try:
+                    las_alpha = las_params[f'{key}alpha']
+                except TypeError:  # when cell is nan instead of dict
+                    continue  # go to next index where there is actually data
+                data_dict['las_alpha'] = [las_alpha]
+            elif isinstance(model_list[idx_df], SVR) and feat_n in df.index:
+                svr_params = df.loc[feat_n]['tune_params']
+                svr_kernel = svr_params[f'{key}kernel']
+                try:
+                    svr_gamma = svr_params[f'{key}gamma']
+                except KeyError:
+                    svr_gamma = np.nan
+                svr_C = svr_params[f'{key}C']
+                svr_epsilon = svr_params[f'{key}epsilon']
+                data_dict['svr_kernel'] = [svr_kernel]
+                data_dict['svr_gamma'] = [svr_gamma]
+                data_dict['svr_C'] = [svr_C]
+                data_dict['svr_epsilon'] = [svr_epsilon]
+            elif isinstance(model_list[idx_df], RandomForestRegressor) and feat_n in df.index:
+                rf_params = df.loc[feat_n]['tune_params']
+                rf_min_samples_split = rf_params[f'{key}min_samples_split']
+                rf_max_feats = rf_params[f'{key}max_features']
+                data_dict['rf_min_samples_split'] = [rf_min_samples_split]
+                data_dict['rf_max_feats'] = [rf_max_feats]
+            elif isinstance(model_list[idx_df], PLSRegression) and feat_n in df.index:
+                # The model shouldn't even be in model_list if there is no information for it.
+                # This was changed when the PLS component list was modified to cut out
+                # components that are greater than number of features (e.g., we can't
+                # tune on 8 components with 4 features).
+    
+                # Thus, assume the "garbage" was filtered out already and we will only
+                # arrive here if 'tune_params' exists.
+                pls_params = df.loc[feat_n]['tune_params']
+                if pd.notnull(pls_params):
+                    pls_n_components = pls_params[f'{key}n_components']
+                    pls_scale = pls_params[f'{key}scale']
+                else:
+                    pls_n_components = np.nan
+                    pls_scale = np.nan
+                data_dict['pls_n_components'] = [pls_n_components]
+                data_dict['pls_scale'] = [pls_scale]
+        df_summary_row = pd.DataFrame.from_dict(data=data_dict)
+        df_params = df_params.append(df_summary_row)
     return df_params.reset_index(drop=True)
 
 def append_tuning_results(df_tune_all_list, df_tune_feat_list):
+    '''
+    Appends tune_feat to tune_all as a list/tuple
+    '''
+    msg = ('<df_tune_all_list> and <df_tune_feat_list> must be the same '
+           'length.')
+    assert len(df_tune_all_list) == len(df_tune_feat_list), msg
     df_out_list = ()
     for df_all, df_single in zip(df_tune_all_list, df_tune_feat_list):
-        # print(df_single)
-        # print('\n\n\n')
-        # print(df_single[0])
+
         if df_all is None and df_single is not None:
             df_all = df_single.copy()
-
-        # if df_all is None:
-        #     if df_single is not None:
-        #         df_all = df_single.copy()
         elif df_all is not None and df_single is not None:
             df_all = df_all.append(df_single)
         else:
             pass
-        # df_out_list.append(df_all)
         df_out_list += (df_all,)
     return df_out_list
 
@@ -2259,9 +2545,10 @@ def feats_readme(fname_feats_readme, fname_data, meta_bands, extra_feats=None):
     '''
     with open(os.path.join(fname_feats_readme), 'w+') as f:
         f.write('Features available for tuning:\n\n')
-        f.write('Feature number: Wavelength (for spectral features only)\n'
-                '"Extra" features are described by the column name from their '
-                'input data source\n')
+        f.write('Feature number: Wavelength (for spectral and derivative '
+                'features only)\n'
+                'Any "extra" features are described by the column name from '
+                'their input data source\n')
         f.write('Training data is saved at:\n')
         f.write('{0}\n'.format(fname_data))
         for k, v in sorted(meta_bands.items()):
@@ -2854,13 +3141,12 @@ def plot_meas_pred(feat_n, y_col, df_preds, ax,
         _, min_plot = get_min_max(df_preds, feat_n, y_col)
 
     x_lin = np.linspace(min_plot, max_plot, 2)
-    ax = sns.lineplot(x_lin, x_lin, color=linecolor, ax=ax, zorder=0.8, linewidth=2)
+    ax = sns.lineplot(x=x_lin, y=x_lin, color=linecolor, ax=ax, zorder=0.8, linewidth=2)
     ax.lines[0].set_linestyle('--')
     ax = sns.scatterplot(x=feat_n, y=y_col, data=df_preds,
                          hue='study', style=style,
                          hue_order=hue_order, style_order=style_order,
-                         markers=markers,
-                          ax=ax,
+                         markers=markers[:len(style_order)], ax=ax,
                          legend=legend, palette=colors)
     ax.set_ylim([min_plot, max_plot])
     ax.set_xlim([min_plot, max_plot])
@@ -2938,7 +3224,7 @@ def plot_legend(fig, ax, df_preds, feat_n, colors,
         h1_new.append(handle_new)
     h1_new.append(mlines.Line2D([], [], alpha=0.0, label=l1[-1]))
     leg = fig.legend(h2 + h1_new, l2 + l1, loc='upper center',
-                      bbox_to_anchor=(0.5, 1.0),
+                     bbox_to_anchor=(0.5, 1.0),
                      fontsize=fontsize*0.85, framealpha=0.85,
                      ncol=ncol, handletextpad=0.1,  # spacing between handle and label
                      columnspacing=0.5,
@@ -3109,7 +3395,7 @@ def plot_pred_figure(fname_out, feat_n,
                      x_label='Predicted', y_label='Measured', y_col='nup_kgha',
                      units=None, save_plot=True,
                      fontsize=16, fontcolor='#464646', linecolor='#464646',
-                      legend_cols=4):
+                     legend_cols=4):
     '''
     Builds an axes for every regression model, then adds them dynamically to
     the matplotlib figure to be saved

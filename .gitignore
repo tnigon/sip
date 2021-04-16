@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# MSI job reports
+jobs/reports_procimg_array/*
+jobs/reports_procimg_setup/*
+jobs/reports_tunetrain_array/*
+
+!jobs/reports_procimg_array/.gitkeep
+!jobs/reports_procimg_setup/.gitkeep
+!jobs/reports_tunetrain_array/.gitkeep
+
+
