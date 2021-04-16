@@ -5,17 +5,17 @@ Created on Tue Dec 15 16:42:15 2020
 @author: nigo0024
 """
 # %% Get number of missing scenarios
-import os
-import pandas as pd
+# import os
+# import pandas as pd
 
-base_dir_results = r'G:\BBE\AGROBOT\Shared Work\hs_process_results\results\msi_2_results_meta'
+# base_dir_results = r'G:\BBE\AGROBOT\Shared Work\hs_process_results\results\msi_2_results_meta'
 
-df_time = pd.read_csv(os.path.join(base_dir_results, 'msi_2_time_train.csv'))
-df_count = df_time.groupby(['grid_idx'])['y_label', 'feats'].count()
-df_missing = df_count[(df_count['y_label'] != 9) & (df_count['feats'] != 9)]
+# df_time = pd.read_csv(os.path.join(base_dir_results, 'msi_2_time_train.csv'))
+# df_count = df_time.groupby(['grid_idx'])['y_label', 'feats'].count()
+# df_missing = df_count[(df_count['y_label'] != 9) & (df_count['feats'] != 9)]
 
-# This tells me that there are 223 scenarios that did not complete all testing
-print(len(df_missing))
+# # This tells me that there are 223 scenarios that did not complete all testing
+# print(len(df_missing))
 
 # %% Violin plots
 import numpy as np
@@ -131,6 +131,16 @@ def plot_violin_by_scenario_opt(df_opt, name, y='value'):
     return fig
 
 
+# # %% SPOTPY example
+# import spotpy
+# from spotpy import analyser
+# from spotpy.examples.spot_setup_rosenbrock import spot_setup
+
+# sampler = spotpy.algorithms.mc(spot_setup(), dbname='RosenMC', dbformat='csv')
+
+# sampler.sample(100000)
+# results=sampler.getdata()
+
 # %% Sensitivity analysis using SALib
 import os
 import pandas as pd
@@ -142,11 +152,11 @@ problem = {
     'num_vars': 6,
     'names': ['dir_panels', 'crop', 'clip', 'smooth', 'bin', 'segment'],
     'bounds': [[0, 1],
-               [0, 1],
-               [0, 2],
-               [0, 1],
-               [0, 2],
-               [0, 8]]}
+                [0, 1],
+                [0, 2],
+                [0, 1],
+                [0, 2],
+                [0, 8]]}
 
 param_values = saltelli.sample(problem, 1)
 
@@ -161,7 +171,7 @@ for response in ['biomass_kgha', 'nup_kgha', 'tissue_n_pct']:
     for feature_set in ['reflectance', 'derivative_1', 'derivative_2']:
         # for model in ['Lasso', 'PLSRegression']:
         for objective_f in ['R2', 'MAE', 'RMSE']:
-            df_opt_filter = sip_f.sip_n_feats_opt_filter(
+            df_opt_filter = sip_n_feats_opt_filter(
                 df_opt, response, feature_set, objective_f)
             break
         break
@@ -177,16 +187,16 @@ df_opt = df_opt.append(df_opt_row)
 
 response = 'nup_kgha'
 feature_set = 'reflectance'
-objective_f = 'R2'
+objective_f = 'RMSE'
 model = 'Lasso'
 
 df_opt_filter = sip_n_feats_opt_filter(df_opt, response, feature_set, objective_f)
 
-    df_opt_filter.sort_values(by=['model_name', 'segment', 'bin', 'smooth', 'clip', 'crop', 'dir_panels'], axis=0, inplace=True)
+df_opt_filter.sort_values(by=['model_name', 'segment', 'bin', 'smooth', 'clip', 'crop', 'dir_panels'], axis=0, inplace=True)
 df_opt_filter = df_opt_filter[df_opt_filter['model_name'] == model]
 
 
-Y = df_opt_filter['value'].array
+Y = df_opt_filter['value'].to_numpy()
 
 from SALib.sample import saltelli
 param_values = saltelli.sample(problem, 46)
@@ -210,8 +220,8 @@ problem = {
     'num_vars': 3,
     'names': ['x1', 'x2', 'x3'],
     'bounds': [[-3.14159265359, 3.14159265359],
-               [-3.14159265359, 3.14159265359],
-               [-3.14159265359, 3.14159265359]]
+                [-3.14159265359, 3.14159265359],
+                [-3.14159265359, 3.14159265359]]
 }
 param_values = saltelli.sample(problem, 1000)
 Y = Ishigami.evaluate(param_values)
@@ -229,18 +239,18 @@ problem = {
     'num_vars': 3,
     'names': ['x1', 'x2', 'x3'],
     'bounds': [[-3.14159265359, 3.14159265359],
-               [-3.14159265359, 3.14159265359],
-               [-3.14159265359, 3.14159265359]]
+                [-3.14159265359, 3.14159265359],
+                [-3.14159265359, 3.14159265359]]
 }
 problem = {
     'num_vars': 6,
     'names': ['dir_panels', 'crop', 'clip', 'smooth', 'bin', 'segment'],
     'bounds': [[0, 1],
-               [0, 1],
-               [0, 2],
-               [0, 1],
-               [0, 2],
-               [0, 8]]}
+                [0, 1],
+                [0, 2],
+                [0, 1],
+                [0, 2],
+                [0, 8]]}
 
 N = 1
 seed=998
